@@ -1,0 +1,31 @@
+//
+// Prefix header for all source files of the 'FlatUILearning' target in the 'FlatUILearning' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    //#import "AppDelegate.h"
+    #import "AllStringDefine.h"
+    #import "AllObjectDefine.h"
+    #import "CoreData+MagicalRecord.h"
+    #import "ECSlidingViewController.h"
+    #import "BaseViewController.h"
+    #import "BaseListViewController.h"
+    #import "MenuViewController.h"
+//    #import "Log4Cocoa.h"
+    #import "SetMenu.h"
+    #import "SingleMenu.h"
+    #import "FlatUIKit.h"
+    #import "AppUtilities.h"
+    #import "TTColor.h"
+    #import "TTLabel.h"
+    #import "AppUtilities.h"
+    #import "SVProgressHUD.h"
+#endif

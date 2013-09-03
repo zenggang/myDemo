@@ -1,0 +1,1219 @@
+TSSToolkitResources
+v5
+r1
+cCheck dependencies
+cProcessInfoPlistFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/Info.plist Resources/SSToolkitResources-Info.plist
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/en.lproj/SSToolkit.strings Resources/en.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/de.lproj/SSToolkit.strings Resources/de.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/es.lproj/SSToolkit.strings Resources/es.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/fr.lproj/SSToolkit.strings Resources/fr.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/id.lproj/SSToolkit.strings Resources/id.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/it.lproj/SSToolkit.strings Resources/it.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ja.lproj/SSToolkit.strings Resources/ja.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ko.lproj/SSToolkit.strings Resources/ko.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ms.lproj/SSToolkit.strings Resources/ms.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/nl.lproj/SSToolkit.strings Resources/nl.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt_PT.lproj/SSToolkit.strings Resources/pt_PT.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt.lproj/SSToolkit.strings Resources/pt.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ru.lproj/SSToolkit.strings Resources/ru.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/sv.lproj/SSToolkit.strings Resources/sv.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hant.lproj/SSToolkit.strings Resources/zh_Hant.lproj/SSToolkit.strings
+cCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hans.lproj/SSToolkit.strings Resources/zh_Hans.lproj/SSToolkit.strings
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check.png Resources/Images/hud-check.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check@2x.png Resources/Images/hud-check@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x.png Resources/Images/hud-x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x@2x.png Resources/Images/hud-x@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star.png Resources/Images/gray-star.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star@2x.png Resources/Images/gray-star@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star.png Resources/Images/orange-star.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star@2x.png Resources/Images/orange-star@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground.png Resources/Images/SSAddressBarTextFieldBackground.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground@2x.png Resources/Images/SSAddressBarTextFieldBackground@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload.png Resources/Images/SSAddressBarTextFieldReload.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload@2x.png Resources/Images/SSAddressBarTextFieldReload@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop.png Resources/Images/SSAddressBarTextFieldStop.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop@2x.png Resources/Images/SSAddressBarTextFieldStop@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton.png Resources/Images/UISegmentBarButton.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton@2x.png Resources/Images/UISegmentBarButton@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted.png Resources/Images/UISegmentBarButtonHighlighted.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted@2x.png Resources/Images/UISegmentBarButtonHighlighted@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider.png Resources/Images/UISegmentBarDivider.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider@2x.png Resources/Images/UISegmentBarDivider@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted.png Resources/Images/UISegmentBarDividerHighlighted.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted@2x.png Resources/Images/UISegmentBarDividerHighlighted@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini.png Resources/Images/action-button-mini.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini@2x.png Resources/Images/action-button-mini@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button.png Resources/Images/action-button.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button@2x.png Resources/Images/action-button@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini.png Resources/Images/back-button-mini.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini@2x.png Resources/Images/back-button-mini@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button.png Resources/Images/back-button.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button@2x.png Resources/Images/back-button@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini.png Resources/Images/forward-button-mini.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini@2x.png Resources/Images/forward-button-mini@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button.png Resources/Images/forward-button.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button@2x.png Resources/Images/forward-button@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini.png Resources/Images/reload-button-mini.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini@2x.png Resources/Images/reload-button-mini@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button.png Resources/Images/reload-button.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button@2x.png Resources/Images/reload-button@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini.png Resources/Images/safari-button-mini.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini@2x.png Resources/Images/safari-button-mini@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button.png Resources/Images/safari-button.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button@2x.png Resources/Images/safari-button@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini.png Resources/Images/stop-button-mini.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button.png Resources/Images/stop-button.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini@2x.png Resources/Images/stop-button-mini@2x.png
+cCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button@2x.png Resources/Images/stop-button@2x.png
+cTouch /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/Info.plist
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/de.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/en.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/es.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/fr.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/id.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/it.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ja.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ko.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ms.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/nl.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt_PT.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ru.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button@2x.png
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/sv.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hans.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hant.lproj/SSToolkit.strings
+t2
+s0
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldBackground.png
+c0000000051AEBCFA0000000000000100
+t1370406138
+s256
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldBackground@2x.png
+c0000000051AEBCFA000000000000015E
+t1370406138
+s350
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldReload.png
+c0000000051AEBCFA000000000000036F
+t1370406138
+s879
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldReload@2x.png
+c0000000051AEBCFA00000000000004E0
+t1370406138
+s1248
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldStop.png
+c0000000051AEBCFA000000000000027C
+t1370406138
+s636
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldStop@2x.png
+c0000000051AEBCFA00000000000003C9
+t1370406138
+s969
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButton.png
+c0000000051AEBCFA0000000000000240
+t1370406138
+s576
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButton@2x.png
+c0000000051AEBCFA0000000000000525
+t1370406138
+s1317
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButtonHighlighted.png
+c0000000051AEBCFA0000000000000248
+t1370406138
+s584
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButtonHighlighted@2x.png
+c0000000051AEBCFA000000000000053E
+t1370406138
+s1342
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDivider.png
+c0000000051AEBCFA000000000000008E
+t1370406138
+s142
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDivider@2x.png
+c0000000051AEBCFA00000000000000CC
+t1370406138
+s204
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDividerHighlighted.png
+c0000000051AEBCFA000000000000008E
+t1370406138
+s142
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDividerHighlighted@2x.png
+c0000000051AEBCFA00000000000000E7
+t1370406138
+s231
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button-mini.png
+c0000000051AEBCFA000000000000012C
+t1370406138
+s300
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button-mini@2x.png
+c0000000051AEBCFA00000000000001FE
+t1370406138
+s510
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button.png
+c0000000051AEBCFA000000000000015F
+t1370406138
+s351
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button@2x.png
+c0000000051AEBCFA0000000000000262
+t1370406138
+s610
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button-mini.png
+c0000000051AEBCFA000000000000008E
+t1370406138
+s142
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button-mini@2x.png
+c0000000051AEBCFA00000000000000FC
+t1370406138
+s252
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button.png
+c0000000051AEBCFA00000000000000BB
+t1370406138
+s187
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button@2x.png
+c0000000051AEBCFA00000000000000FD
+t1370406138
+s253
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button-mini.png
+c0000000051AEBCFA0000000000000094
+t1370406138
+s148
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button-mini@2x.png
+c0000000051AEBCFA00000000000000ED
+t1370406138
+s237
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button.png
+c0000000051AEBCFA00000000000000AE
+t1370406138
+s174
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button@2x.png
+c0000000051AEBCFA0000000000000104
+t1370406138
+s260
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/gray-star.png
+c0000000051AEBCFA0000000000000DC4
+t1370406138
+s3524
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/gray-star@2x.png
+c0000000051AEBCFA000000000000118E
+t1370406138
+s4494
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-check.png
+c0000000051AEBCFA00000000000001A1
+t1370406138
+s417
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-check@2x.png
+c0000000051AEBCFA0000000000000299
+t1370406138
+s665
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-x.png
+c0000000051AEBCFA00000000000001BA
+t1370406138
+s442
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-x@2x.png
+c0000000051AEBCFA0000000000000310
+t1370406138
+s784
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/orange-star.png
+c0000000051AEBCFA0000000000000EB3
+t1370406138
+s3763
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/orange-star@2x.png
+c0000000051AEBCFA0000000000001456
+t1370406138
+s5206
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button-mini.png
+c0000000051AEBCFA0000000000000106
+t1370406138
+s262
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button-mini@2x.png
+c0000000051AEBCFA000000000000020E
+t1370406138
+s526
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button.png
+c0000000051AEBCFA0000000000000175
+t1370406138
+s373
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button@2x.png
+c0000000051AEBCFA00000000000002AE
+t1370406138
+s686
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button-mini.png
+c0000000051AEBCFA0000000000000116
+t1370406138
+s278
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button-mini@2x.png
+c0000000051AEBCFA00000000000002A4
+t1370406138
+s676
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button.png
+c0000000051AEBCFA00000000000001A2
+t1370406138
+s418
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button@2x.png
+c0000000051AEBCFA0000000000000317
+t1370406138
+s791
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button-mini.png
+c0000000051AEBCFA00000000000000D2
+t1370406138
+s210
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button-mini@2x.png
+c0000000051AEBCFA0000000000000135
+t1370406138
+s309
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button.png
+c0000000051AEBCFA00000000000000FC
+t1370406138
+s252
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button@2x.png
+c0000000051AEBCFA0000000000000170
+t1370406138
+s368
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/de.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000369
+t1370406138
+s873
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/en.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000352
+t1370406138
+s850
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/es.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000374
+t1370406138
+s884
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/fr.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000361
+t1370406138
+s865
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/id.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000361
+t1370406138
+s865
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/it.lproj/SSToolkit.strings
+c0000000051AEBCFA000000000000035C
+t1370406138
+s860
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ja.lproj/SSToolkit.strings
+c0000000051AEBCFA00000000000005F0
+t1370406138
+s1520
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ko.lproj/SSToolkit.strings
+c0000000051AEBCFA000000000000033A
+t1370406138
+s826
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ms.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000370
+t1370406138
+s880
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/nl.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000376
+t1370406138
+s886
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/pt.lproj/SSToolkit.strings
+c0000000051AEBCFA000000000000035A
+t1370406138
+s858
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/pt_PT.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000361
+t1370406138
+s865
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ru.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000382
+t1370406138
+s898
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/sv.lproj/SSToolkit.strings
+c0000000051AEBCFA000000000000036C
+t1370406138
+s876
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/zh_Hans.lproj/SSToolkit.strings
+c0000000051AEBCFA000000000000035A
+t1370406138
+s858
+
+N/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/zh_Hant.lproj/SSToolkit.strings
+c0000000051AEBCFA0000000000000358
+t1370406138
+s856
+
+NResources/SSToolkitResources-Info.plist
+c0000000051AEBCFA0000000000000572
+t1370406138
+s1394
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies823a917bf45eb741^2ea9a27bf45eb741^---0#1#0#--18"Check dependencies36"512C759A-A37E-4590-8FD9-57F163AC99AF-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground.png Resources/Images/SSAddressBarTextFieldBackground.png
+s392098939.817741
+e392098939.849598
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground.png
+xResources/Images/SSAddressBarTextFieldBackground.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection128"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldBackground.png Resources/Images/SSAddressBarTextFieldBackground.png0472d17bf45eb741^2d93d97bf45eb741^---0#0#0#-19%DVTDocumentLocation2@124"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldBackground.png0000000000000000^804"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldBackground.png Resources/Images/SSAddressBarTextFieldBackground.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldBackground.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground.png36"ABD178F7-6919-40AD-B408-19F0A7692B4F-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground@2x.png Resources/Images/SSAddressBarTextFieldBackground@2x.png
+s392098939.819394
+e392098939.852250
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground@2x.png
+xResources/Images/SSAddressBarTextFieldBackground@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection134"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldBackground@2x.png Resources/Images/SSAddressBarTextFieldBackground@2x.png8cd6d17bf45eb741^a52dda7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@127"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldBackground@2x.png0000000000000000^824"CopyPNGFile "./SSToolkitResources.bundle/SSAddressBarTextFieldBackground@2x.png" "Resources/Images/SSAddressBarTextFieldBackground@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldBackground@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldBackground@2x.png"36"68EC7EF5-E46E-4A94-A965-668053B50859-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload.png Resources/Images/SSAddressBarTextFieldReload.png
+s392098939.819514
+e392098939.855929
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload.png
+xResources/Images/SSAddressBarTextFieldReload.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldReload.png Resources/Images/SSAddressBarTextFieldReload.pngb9e3d17bf45eb741^9d2edb7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldReload.png0000000000000000^788"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldReload.png Resources/Images/SSAddressBarTextFieldReload.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldReload.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload.png36"9860418D-E00C-4577-A79B-FC3C05DD24C4-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload@2x.png Resources/Images/SSAddressBarTextFieldReload@2x.png
+s392098939.819819
+e392098939.859125
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload@2x.png
+xResources/Images/SSAddressBarTextFieldReload@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldReload@2x.png Resources/Images/SSAddressBarTextFieldReload@2x.pngd8efd17bf45eb741^5befdb7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldReload@2x.png0000000000000000^808"CopyPNGFile "./SSToolkitResources.bundle/SSAddressBarTextFieldReload@2x.png" "Resources/Images/SSAddressBarTextFieldReload@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldReload@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldReload@2x.png"36"5225F059-D76B-4259-8374-4949C28C7241-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop.png Resources/Images/SSAddressBarTextFieldStop.png
+s392098939.819827
+e392098939.858257
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop.png
+xResources/Images/SSAddressBarTextFieldStop.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection116"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldStop.png Resources/Images/SSAddressBarTextFieldStop.png17f1d17bf45eb741^49b9db7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@118"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldStop.png0000000000000000^780"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldStop.png Resources/Images/SSAddressBarTextFieldStop.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldStop.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop.png36"6E1BD75D-C395-4CD4-B881-8744EF09A93A-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop@2x.png Resources/Images/SSAddressBarTextFieldStop@2x.png
+s392098939.820076
+e392098939.862846
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop@2x.png
+xResources/Images/SSAddressBarTextFieldStop@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection122"CopyPNGFile ./SSToolkitResources.bundle/SSAddressBarTextFieldStop@2x.png Resources/Images/SSAddressBarTextFieldStop@2x.png952dd27bf45eb741^86e4dc7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@121"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldStop@2x.png0000000000000000^800"CopyPNGFile "./SSToolkitResources.bundle/SSAddressBarTextFieldStop@2x.png" "Resources/Images/SSAddressBarTextFieldStop@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/SSAddressBarTextFieldStop@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/SSAddressBarTextFieldStop@2x.png"36"E362B5AA-C49C-4EC2-A268-F9BD77EBDC13-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton.png Resources/Images/UISegmentBarButton.png
+s392098939.821536
+e392098939.862658
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton.png
+xResources/Images/UISegmentBarButton.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarButton.png Resources/Images/UISegmentBarButton.pnged4ad37bf45eb741^99d8dc7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButton.png0000000000000000^752"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarButton.png Resources/Images/UISegmentBarButton.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButton.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton.png36"54180706-B5F8-42C6-BCD1-3F631045E2BF-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton@2x.png Resources/Images/UISegmentBarButton@2x.png
+s392098939.821540
+e392098939.866124
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton@2x.png
+xResources/Images/UISegmentBarButton@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarButton@2x.png Resources/Images/UISegmentBarButton@2x.pnged4ad37bf45eb741^f5badd7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButton@2x.png0000000000000000^772"CopyPNGFile "./SSToolkitResources.bundle/UISegmentBarButton@2x.png" "Resources/Images/UISegmentBarButton@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButton@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButton@2x.png"36"DB9D4ED0-BB27-42B6-AE0C-5EB645AB49DB-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted.png Resources/Images/UISegmentBarButtonHighlighted.png
+s392098939.850871
+e392098939.883863
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted.png
+xResources/Images/UISegmentBarButtonHighlighted.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection124"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarButtonHighlighted.png Resources/Images/UISegmentBarButtonHighlighted.pngaaeed97bf45eb741^e754e27bf45eb741^---0#0#0#-19%DVTDocumentLocation2@122"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButtonHighlighted.png0000000000000000^796"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarButtonHighlighted.png Resources/Images/UISegmentBarButtonHighlighted.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButtonHighlighted.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted.png36"0368B295-027A-4D70-AE0E-6A59CD6B744D-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted@2x.png Resources/Images/UISegmentBarButtonHighlighted@2x.png
+s392098939.853537
+e392098939.887327
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted@2x.png
+xResources/Images/UISegmentBarButtonHighlighted@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection130"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarButtonHighlighted@2x.png Resources/Images/UISegmentBarButtonHighlighted@2x.pngae9bda7bf45eb741^2c29e37bf45eb741^---0#0#0#-19%DVTDocumentLocation2@125"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButtonHighlighted@2x.png0000000000000000^816"CopyPNGFile "./SSToolkitResources.bundle/UISegmentBarButtonHighlighted@2x.png" "Resources/Images/UISegmentBarButtonHighlighted@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarButtonHighlighted@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarButtonHighlighted@2x.png"36"400FBDEB-4934-4B10-9974-D6872C4A3957-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider.png Resources/Images/UISegmentBarDivider.png
+s392098939.857214
+e392098939.889400
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider.png
+xResources/Images/UISegmentBarDivider.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarDivider.png Resources/Images/UISegmentBarDivider.png438cdb7bf45eb741^1bb8e37bf45eb741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDivider.png0000000000000000^756"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarDivider.png Resources/Images/UISegmentBarDivider.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDivider.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider.png36"FE82C2CA-523F-4587-994B-EAC82258AEC8-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider@2x.png Resources/Images/UISegmentBarDivider@2x.png
+s392098939.859432
+e392098939.891067
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider@2x.png
+xResources/Images/UISegmentBarDivider@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarDivider@2x.png Resources/Images/UISegmentBarDivider@2x.pngfc1bdc7bf45eb741^0821e47bf45eb741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDivider@2x.png0000000000000000^776"CopyPNGFile "./SSToolkitResources.bundle/UISegmentBarDivider@2x.png" "Resources/Images/UISegmentBarDivider@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDivider@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDivider@2x.png"36"946C9C9A-2E87-4856-B814-C6591DE85D26-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted.png Resources/Images/UISegmentBarDividerHighlighted.png
+s392098939.859448
+e392098939.890648
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted.png
+xResources/Images/UISegmentBarDividerHighlighted.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection126"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarDividerHighlighted.png Resources/Images/UISegmentBarDividerHighlighted.png6d1ddc7bf45eb741^410ce47bf45eb741^---0#0#0#-19%DVTDocumentLocation2@123"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDividerHighlighted.png0000000000000000^800"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarDividerHighlighted.png Resources/Images/UISegmentBarDividerHighlighted.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDividerHighlighted.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted.png36"44D4C174-1A0E-4305-801B-7C9791536D34-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted@2x.png Resources/Images/UISegmentBarDividerHighlighted@2x.png
+s392098939.863864
+e392098939.893520
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted@2x.png
+xResources/Images/UISegmentBarDividerHighlighted@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection132"CopyPNGFile ./SSToolkitResources.bundle/UISegmentBarDividerHighlighted@2x.png Resources/Images/UISegmentBarDividerHighlighted@2x.pngd043dd7bf45eb741^12c1e47bf45eb741^---0#0#0#-19%DVTDocumentLocation2@126"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDividerHighlighted@2x.png0000000000000000^820"CopyPNGFile "./SSToolkitResources.bundle/UISegmentBarDividerHighlighted@2x.png" "Resources/Images/UISegmentBarDividerHighlighted@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/UISegmentBarDividerHighlighted@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/UISegmentBarDividerHighlighted@2x.png"36"C1F869D3-FFAE-4706-B121-11C9C8B9885A-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini.png Resources/Images/action-button-mini.png
+s392098939.864469
+e392098939.895899
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini.png
+xResources/Images/action-button-mini.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"CopyPNGFile ./SSToolkitResources.bundle/action-button-mini.png Resources/Images/action-button-mini.png0666dd7bf45eb741^c05ae57bf45eb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button-mini.png0000000000000000^752"CopyPNGFile ./SSToolkitResources.bundle/action-button-mini.png Resources/Images/action-button-mini.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button-mini.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini.png36"8BD8E0F7-8C29-4B3B-8D0B-6FD72254E096-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini@2x.png Resources/Images/action-button-mini@2x.png
+s392098939.867514
+e392098939.901959
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini@2x.png
+xResources/Images/action-button-mini@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"CopyPNGFile ./SSToolkitResources.bundle/action-button-mini@2x.png Resources/Images/action-button-mini@2x.png7634de7bf45eb741^54e6e67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button-mini@2x.png0000000000000000^772"CopyPNGFile "./SSToolkitResources.bundle/action-button-mini@2x.png" "Resources/Images/action-button-mini@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button-mini@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button-mini@2x.png"36"8A53556A-3A66-4DB6-B641-32EE7A81A2F4-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button.png Resources/Images/action-button.png
+s392098939.885128
+e392098939.920889
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button.png
+xResources/Images/action-button.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"CopyPNGFile ./SSToolkitResources.bundle/action-button.png Resources/Images/action-button.pngafb2e27bf45eb741^cbbeeb7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button.png0000000000000000^732"CopyPNGFile ./SSToolkitResources.bundle/action-button.png Resources/Images/action-button.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button.png36"CC7C6143-E728-408F-9D65-1D38B64A0269-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button@2x.png Resources/Images/action-button@2x.png
+s392098939.888581
+e392098939.925604
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button@2x.png
+xResources/Images/action-button@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"CopyPNGFile ./SSToolkitResources.bundle/action-button@2x.png Resources/Images/action-button@2x.png7c9ae37bf45eb741^cbf7ec7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button@2x.png0000000000000000^752"CopyPNGFile "./SSToolkitResources.bundle/action-button@2x.png" "Resources/Images/action-button@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/action-button@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/action-button@2x.png"36"3C49E707-7C27-4C5E-8C3F-2C28B546C2D9-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini.png Resources/Images/back-button-mini.png
+s392098939.890558
+e392098939.922263
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini.png
+xResources/Images/back-button-mini.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"CopyPNGFile ./SSToolkitResources.bundle/back-button-mini.png Resources/Images/back-button-mini.png4816e47bf45eb741^8d29ec7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button-mini.png0000000000000000^744"CopyPNGFile ./SSToolkitResources.bundle/back-button-mini.png Resources/Images/back-button-mini.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button-mini.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini.png36"5F0A2EB3-FAA4-42B1-956B-653DB3290BD1-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini@2x.png Resources/Images/back-button-mini@2x.png
+s392098939.891852
+e392098939.925609
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini@2x.png
+xResources/Images/back-button-mini@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"CopyPNGFile ./SSToolkitResources.bundle/back-button-mini@2x.png Resources/Images/back-button-mini@2x.pnga569e47bf45eb741^9607ed7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button-mini@2x.png0000000000000000^764"CopyPNGFile "./SSToolkitResources.bundle/back-button-mini@2x.png" "Resources/Images/back-button-mini@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button-mini@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button-mini@2x.png"36"B6CFEE76-1530-4E61-B41F-994C7CE4584E-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button.png Resources/Images/back-button.png
+s392098939.891858
+e392098939.922752
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button.png
+xResources/Images/back-button.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"CopyPNGFile ./SSToolkitResources.bundle/back-button.png Resources/Images/back-button.pngec68e47bf45eb741^ea3eec7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button.png0000000000000000^724"CopyPNGFile ./SSToolkitResources.bundle/back-button.png Resources/Images/back-button.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button.png36"A84B9700-BCA1-404B-8500-B44E29D730DC-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button@2x.png Resources/Images/back-button@2x.png
+s392098939.894675
+e392098939.927115
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button@2x.png
+xResources/Images/back-button@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"CopyPNGFile ./SSToolkitResources.bundle/back-button@2x.png Resources/Images/back-button@2x.png0f2ae57bf45eb741^904aed7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button@2x.png0000000000000000^744"CopyPNGFile "./SSToolkitResources.bundle/back-button@2x.png" "Resources/Images/back-button@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/back-button@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/back-button@2x.png"36"401D4D38-BE40-4BC7-9CD1-66511B87448F-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini.png Resources/Images/forward-button-mini.png
+s392098939.897157
+e392098939.930760
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini.png
+xResources/Images/forward-button-mini.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"CopyPNGFile ./SSToolkitResources.bundle/forward-button-mini.png Resources/Images/forward-button-mini.png3acee57bf45eb741^d445ee7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button-mini.png0000000000000000^756"CopyPNGFile ./SSToolkitResources.bundle/forward-button-mini.png Resources/Images/forward-button-mini.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button-mini.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini.png36"79BE2FC4-375A-4BB5-BE95-40A738B89C73-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini@2x.png Resources/Images/forward-button-mini@2x.png
+s392098939.903701
+e392098939.942808
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini@2x.png
+xResources/Images/forward-button-mini@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection110"CopyPNGFile ./SSToolkitResources.bundle/forward-button-mini@2x.png Resources/Images/forward-button-mini@2x.png2288e77bf45eb741^2862f17bf45eb741^---0#0#0#-19%DVTDocumentLocation2@115"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button-mini@2x.png0000000000000000^776"CopyPNGFile "./SSToolkitResources.bundle/forward-button-mini@2x.png" "Resources/Images/forward-button-mini@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button-mini@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button-mini@2x.png"36"2AEC3A1C-69EB-4358-B64D-F5A1E4E242E2-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button.png Resources/Images/forward-button.png
+s392098939.922704
+e392098939.963581
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button.png
+xResources/Images/forward-button.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"CopyPNGFile ./SSToolkitResources.bundle/forward-button.png Resources/Images/forward-button.png5551ec7bf45eb741^4ab6f67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button.png0000000000000000^736"CopyPNGFile ./SSToolkitResources.bundle/forward-button.png Resources/Images/forward-button.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button.png36"3D0B6F4A-3FEE-4514-AFE3-F9C9F518DF91-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button@2x.png Resources/Images/forward-button@2x.png
+s392098939.922925
+e392098939.963865
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button@2x.png
+xResources/Images/forward-button@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"CopyPNGFile ./SSToolkitResources.bundle/forward-button@2x.png Resources/Images/forward-button@2x.png795cec7bf45eb741^34bff67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@110"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button@2x.png0000000000000000^756"CopyPNGFile "./SSToolkitResources.bundle/forward-button@2x.png" "Resources/Images/forward-button@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/forward-button@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/forward-button@2x.png"36"2C114606-C5E7-4C2B-8C4A-24A5D4A9E10A-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star.png Resources/Images/gray-star.png
+s392098939.678729
+e392098939.816294
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star.png
+xResources/Images/gray-star.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"CopyPNGFile ./SSToolkitResources.bundle/gray-star.png Resources/Images/gray-star.pngcccfad7bf45eb741^1e32d17bf45eb741^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/gray-star.png0000000000000000^716"CopyPNGFile ./SSToolkitResources.bundle/gray-star.png Resources/Images/gray-star.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/gray-star.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star.png36"4AE99FFB-902E-4CEC-8B2D-AB55F1ED0DFE-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star@2x.png Resources/Images/gray-star@2x.png
+s392098939.680662
+e392098939.818800
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star@2x.png
+xResources/Images/gray-star@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"CopyPNGFile ./SSToolkitResources.bundle/gray-star@2x.png Resources/Images/gray-star@2x.png554fae7bf45eb741^dcb8d17bf45eb741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/gray-star@2x.png0000000000000000^736"CopyPNGFile "./SSToolkitResources.bundle/gray-star@2x.png" "Resources/Images/gray-star@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/gray-star@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/gray-star@2x.png"36"D4DC7E8D-7E7D-4279-99CE-34BA9AB01BAF-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check.png Resources/Images/hud-check.png
+s392098939.673908
+e392098939.816026
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check.png
+xResources/Images/hud-check.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"CopyPNGFile ./SSToolkitResources.bundle/hud-check.png Resources/Images/hud-check.png46b5ac7bf45eb741^a3e9d07bf45eb741^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-check.png0000000000000000^716"CopyPNGFile ./SSToolkitResources.bundle/hud-check.png Resources/Images/hud-check.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-check.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check.png36"3713C574-1271-42D1-A9DB-9C66110594D4-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check@2x.png Resources/Images/hud-check@2x.png
+s392098939.675578
+e392098939.817995
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check@2x.png
+xResources/Images/hud-check@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"CopyPNGFile ./SSToolkitResources.bundle/hud-check@2x.png Resources/Images/hud-check@2x.png1003ad7bf45eb741^596ed17bf45eb741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-check@2x.png0000000000000000^736"CopyPNGFile "./SSToolkitResources.bundle/hud-check@2x.png" "Resources/Images/hud-check@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-check@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-check@2x.png"36"B7955DD1-20A9-45A3-B1A1-099FAC30E1C3-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x.png Resources/Images/hud-x.png
+s392098939.675579
+e392098939.813770
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x.png
+xResources/Images/hud-x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"CopyPNGFile ./SSToolkitResources.bundle/hud-x.png Resources/Images/hud-x.png2e04ad7bf45eb741^12a2d07bf45eb741^---0#0#0#-19%DVTDocumentLocation2@98"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-x.png0000000000000000^700"CopyPNGFile ./SSToolkitResources.bundle/hud-x.png Resources/Images/hud-x.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-x.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x.png36"66DC894E-8315-436D-9D6F-6F84E84A6F9D-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x@2x.png Resources/Images/hud-x@2x.png
+s392098939.677537
+e392098939.818000
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x@2x.png
+xResources/Images/hud-x@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection82"CopyPNGFile ./SSToolkitResources.bundle/hud-x@2x.png Resources/Images/hud-x@2x.png4582ad7bf45eb741^2576d17bf45eb741^---0#0#0#-19%DVTDocumentLocation2@101"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-x@2x.png0000000000000000^720"CopyPNGFile "./SSToolkitResources.bundle/hud-x@2x.png" "Resources/Images/hud-x@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/hud-x@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/hud-x@2x.png"36"7FEA3D1B-71A2-4279-A3BA-CEF239ED789D-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star.png Resources/Images/orange-star.png
+s392098939.680912
+e392098939.817327
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star.png
+xResources/Images/orange-star.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"CopyPNGFile ./SSToolkitResources.bundle/orange-star.png Resources/Images/orange-star.pngd95fae7bf45eb741^183fd17bf45eb741^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/orange-star.png0000000000000000^724"CopyPNGFile ./SSToolkitResources.bundle/orange-star.png Resources/Images/orange-star.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/orange-star.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star.png36"FBA6ADF4-421F-4EDE-A625-4255F29CD0A5-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star@2x.png Resources/Images/orange-star@2x.png
+s392098939.682523
+e392098939.818802
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star@2x.png
+xResources/Images/orange-star@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"CopyPNGFile ./SSToolkitResources.bundle/orange-star@2x.png Resources/Images/orange-star@2x.pngaccaae7bf45eb741^dfbfd17bf45eb741^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/orange-star@2x.png0000000000000000^744"CopyPNGFile "./SSToolkitResources.bundle/orange-star@2x.png" "Resources/Images/orange-star@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/orange-star@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/orange-star@2x.png"36"023C0780-7E1F-4671-88B3-8760B15B2744-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini.png Resources/Images/reload-button-mini.png
+s392098939.923964
+e392098939.963884
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini.png
+xResources/Images/reload-button-mini.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"CopyPNGFile ./SSToolkitResources.bundle/reload-button-mini.png Resources/Images/reload-button-mini.pngd3a0ec7bf45eb741^d2c5f67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button-mini.png0000000000000000^752"CopyPNGFile ./SSToolkitResources.bundle/reload-button-mini.png Resources/Images/reload-button-mini.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button-mini.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini.png36"4DA8937A-ED88-4DC4-BEA8-BCFB759D1E30-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini@2x.png Resources/Images/reload-button-mini@2x.png
+s392098939.926898
+e392098939.963993
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini@2x.png
+xResources/Images/reload-button-mini@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"CopyPNGFile ./SSToolkitResources.bundle/reload-button-mini@2x.png Resources/Images/reload-button-mini@2x.png2c65ed7bf45eb741^c7d7f67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button-mini@2x.png0000000000000000^772"CopyPNGFile "./SSToolkitResources.bundle/reload-button-mini@2x.png" "Resources/Images/reload-button-mini@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button-mini@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button-mini@2x.png"36"400E5F60-85CB-4985-9D96-8EB6866D38EB-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button.png Resources/Images/reload-button.png
+s392098939.927224
+e392098939.964140
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button.png
+xResources/Images/reload-button.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"CopyPNGFile ./SSToolkitResources.bundle/reload-button.png Resources/Images/reload-button.png7d75ed7bf45eb741^cadef67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button.png0000000000000000^732"CopyPNGFile ./SSToolkitResources.bundle/reload-button.png Resources/Images/reload-button.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button.png36"A2153E1F-7705-4962-92E4-03356F8F8423-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button@2x.png Resources/Images/reload-button@2x.png
+s392098939.928341
+e392098939.964195
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button@2x.png
+xResources/Images/reload-button@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"CopyPNGFile ./SSToolkitResources.bundle/reload-button@2x.png Resources/Images/reload-button@2x.png59c3ed7bf45eb741^5ce4f67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button@2x.png0000000000000000^752"CopyPNGFile "./SSToolkitResources.bundle/reload-button@2x.png" "Resources/Images/reload-button@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/reload-button@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/reload-button@2x.png"36"0D21DB45-2B12-4FBF-8321-83C2DDCDE344-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini.png Resources/Images/safari-button-mini.png
+s392098939.932150
+e392098939.963951
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini.png
+xResources/Images/safari-button-mini.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"CopyPNGFile ./SSToolkitResources.bundle/safari-button-mini.png Resources/Images/safari-button-mini.png98bfee7bf45eb741^c9cbf67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button-mini.png0000000000000000^752"CopyPNGFile ./SSToolkitResources.bundle/safari-button-mini.png Resources/Images/safari-button-mini.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button-mini.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini.png36"EDDF8413-8EE6-430B-8113-02558CC576F3-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini@2x.png Resources/Images/safari-button-mini@2x.png
+s392098939.944139
+e392098939.976818
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini@2x.png
+xResources/Images/safari-button-mini@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"CopyPNGFile ./SSToolkitResources.bundle/safari-button-mini@2x.png Resources/Images/safari-button-mini@2x.png20d4f17bf45eb741^601efa7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@114"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button-mini@2x.png0000000000000000^772"CopyPNGFile "./SSToolkitResources.bundle/safari-button-mini@2x.png" "Resources/Images/safari-button-mini@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button-mini@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button-mini@2x.png"36"2944D1BA-6991-4C40-9E69-8E00AD520A7C-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button.png Resources/Images/safari-button.png
+s392098939.964766
+e392098939.996120
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button.png
+xResources/Images/safari-button.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"CopyPNGFile ./SSToolkitResources.bundle/safari-button.png Resources/Images/safari-button.pngaa0cf77bf45eb741^a801ff7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@106"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button.png0000000000000000^732"CopyPNGFile ./SSToolkitResources.bundle/safari-button.png Resources/Images/safari-button.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button.png36"BA4EA1B7-D18D-445C-9279-A3FCB2E96604-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button@2x.png Resources/Images/safari-button@2x.png
+s392098939.965006
+e392098939.996137
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button@2x.png
+xResources/Images/safari-button@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"CopyPNGFile ./SSToolkitResources.bundle/safari-button@2x.png Resources/Images/safari-button@2x.png6c22f77bf45eb741^200dff7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button@2x.png0000000000000000^752"CopyPNGFile "./SSToolkitResources.bundle/safari-button@2x.png" "Resources/Images/safari-button@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/safari-button@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/safari-button@2x.png"36"747DC5F5-B718-40E9-A5E3-01FFADD3D8B1-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini.png Resources/Images/stop-button-mini.png
+s392098939.965012
+e392098939.999401
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini.png
+xResources/Images/stop-button-mini.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"CopyPNGFile ./SSToolkitResources.bundle/stop-button-mini.png Resources/Images/stop-button-mini.png2523f77bf45eb741^02d9ff7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@109"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button-mini.png0000000000000000^744"CopyPNGFile ./SSToolkitResources.bundle/stop-button-mini.png Resources/Images/stop-button-mini.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button-mini.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini.png36"B53B98A5-E3A0-4D6C-A5FB-D789BBC0FB23-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini@2x.png Resources/Images/stop-button-mini@2x.png
+s392098939.965031
+e392098940.000757
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini@2x.png
+xResources/Images/stop-button-mini@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"CopyPNGFile ./SSToolkitResources.bundle/stop-button-mini@2x.png Resources/Images/stop-button-mini@2x.pngee23f77bf45eb741^df31007cf45eb741^---0#0#0#-19%DVTDocumentLocation2@112"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button-mini@2x.png0000000000000000^764"CopyPNGFile "./SSToolkitResources.bundle/stop-button-mini@2x.png" "Resources/Images/stop-button-mini@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button-mini@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button-mini@2x.png"36"C439A5DA-CFFA-4150-AA4D-2B201527EBAF-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button.png Resources/Images/stop-button.png
+s392098939.965020
+e392098939.999462
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button.png
+xResources/Images/stop-button.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"CopyPNGFile ./SSToolkitResources.bundle/stop-button.png Resources/Images/stop-button.png3a22f77bf45eb741^33ddff7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button.png0000000000000000^724"CopyPNGFile ./SSToolkitResources.bundle/stop-button.png Resources/Images/stop-button.png    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button.png /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button.png36"BB05C425-D8AA-4411-A785-EB3BB71D6DF4-
+
+CCopyPNGFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button@2x.png Resources/Images/stop-button@2x.png
+s392098939.965043
+e392098939.996131
+r1
+xCopyPNGFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button@2x.png
+xResources/Images/stop-button@2x.png
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"CopyPNGFile ./SSToolkitResources.bundle/stop-button@2x.png Resources/Images/stop-button@2x.png2523f77bf45eb741^f60aff7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@107"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button@2x.png0000000000000000^744"CopyPNGFile "./SSToolkitResources.bundle/stop-button@2x.png" "Resources/Images/stop-button@2x.png"    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/copypng -compress "" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/Images/stop-button@2x.png" "/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/stop-button@2x.png"36"C5C1F353-DEEB-4CBD-9A83-2F8FBC01FB4A-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/de.lproj/SSToolkit.strings Resources/de.lproj/SSToolkit.strings
+s392098939.660718
+e392098939.664551
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/de.lproj/SSToolkit.strings
+xResources/de.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/de.lproj/SSToolkit.strings043ca97bf45eb741^f31faa7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/de.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/de.lproj/SSToolkit.strings Resources/de.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/de.lproj -- Resources/de.lproj/SSToolkit.strings36"A11D441D-4677-4DB7-83A7-3F3271F9D973-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/en.lproj/SSToolkit.strings Resources/en.lproj/SSToolkit.strings
+s392098939.660703
+e392098939.664505
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/en.lproj/SSToolkit.strings
+xResources/en.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/en.lproj/SSToolkit.stringsf33ba97bf45eb741^861daa7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/en.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/en.lproj/SSToolkit.strings Resources/en.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/en.lproj -- Resources/en.lproj/SSToolkit.strings36"833FBA2D-F297-4591-906B-713EA72F8CF6-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/es.lproj/SSToolkit.strings Resources/es.lproj/SSToolkit.strings
+s392098939.661121
+e392098939.666200
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/es.lproj/SSToolkit.strings
+xResources/es.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/es.lproj/SSToolkit.strings6957a97bf45eb741^058caa7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/es.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/es.lproj/SSToolkit.strings Resources/es.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/es.lproj -- Resources/es.lproj/SSToolkit.strings36"D020A40B-CE44-47A1-8E14-73CDD90641BD-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/fr.lproj/SSToolkit.strings Resources/fr.lproj/SSToolkit.strings
+s392098939.661177
+e392098939.669096
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/fr.lproj/SSToolkit.strings
+xResources/fr.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/fr.lproj/SSToolkit.stringsfb5ca97bf45eb741^454aab7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/fr.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/fr.lproj/SSToolkit.strings Resources/fr.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/fr.lproj -- Resources/fr.lproj/SSToolkit.strings36"208D39C1-A658-4B84-8B98-8A0CAC437EE2-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/id.lproj/SSToolkit.strings Resources/id.lproj/SSToolkit.strings
+s392098939.661182
+e392098939.671562
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/id.lproj/SSToolkit.strings
+xResources/id.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/id.lproj/SSToolkit.strings395ea97bf45eb741^8eebab7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/id.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/id.lproj/SSToolkit.strings Resources/id.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/id.lproj -- Resources/id.lproj/SSToolkit.strings36"788363C6-55FE-4BD6-9078-A5BA6C181BE1-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/it.lproj/SSToolkit.strings Resources/it.lproj/SSToolkit.strings
+s392098939.661191
+e392098939.667040
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/it.lproj/SSToolkit.strings
+xResources/it.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/it.lproj/SSToolkit.stringsbc57a97bf45eb741^76c3aa7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/it.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/it.lproj/SSToolkit.strings Resources/it.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/it.lproj -- Resources/it.lproj/SSToolkit.strings36"52AAA4E6-2211-46C0-91F8-3BB9EC8003B8-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ja.lproj/SSToolkit.strings Resources/ja.lproj/SSToolkit.strings
+s392098939.661206
+e392098939.670560
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ja.lproj/SSToolkit.strings
+xResources/ja.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/ja.lproj/SSToolkit.stringsaf5ea97bf45eb741^f4a9ab7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ja.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/ja.lproj/SSToolkit.strings Resources/ja.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ja.lproj -- Resources/ja.lproj/SSToolkit.strings36"B585CD16-A29E-46DA-B10E-C16EC069C2CC-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ko.lproj/SSToolkit.strings Resources/ko.lproj/SSToolkit.strings
+s392098939.661226
+e392098939.668497
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ko.lproj/SSToolkit.strings
+xResources/ko.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/ko.lproj/SSToolkit.strings9758a97bf45eb741^3e25ab7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ko.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/ko.lproj/SSToolkit.strings Resources/ko.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ko.lproj -- Resources/ko.lproj/SSToolkit.strings36"0B7A288A-1D98-42D0-8213-A88BA955DCC8-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ms.lproj/SSToolkit.strings Resources/ms.lproj/SSToolkit.strings
+s392098939.665723
+e392098939.672695
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ms.lproj/SSToolkit.strings
+xResources/ms.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/ms.lproj/SSToolkit.strings4a7caa7bf45eb741^6536ac7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ms.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/ms.lproj/SSToolkit.strings Resources/ms.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ms.lproj -- Resources/ms.lproj/SSToolkit.strings36"D06E2869-570B-458A-9557-992BBCBA4A3E-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/nl.lproj/SSToolkit.strings Resources/nl.lproj/SSToolkit.strings
+s392098939.665768
+e392098939.674402
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/nl.lproj/SSToolkit.strings
+xResources/nl.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/nl.lproj/SSToolkit.strings5186aa7bf45eb741^bea5ac7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/nl.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/nl.lproj/SSToolkit.strings Resources/nl.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/nl.lproj -- Resources/nl.lproj/SSToolkit.strings36"939E141F-835F-400B-9856-8FBBFDF37460-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt.lproj/SSToolkit.strings Resources/pt.lproj/SSToolkit.strings
+s392098939.667657
+e392098939.676278
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt.lproj/SSToolkit.strings
+xResources/pt.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/pt.lproj/SSToolkit.stringsb5faaa7bf45eb741^f320ad7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/pt.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/pt.lproj/SSToolkit.strings Resources/pt.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt.lproj -- Resources/pt.lproj/SSToolkit.strings36"EEACDFFF-D031-4D15-8095-C7279BE04F25-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt_PT.lproj/SSToolkit.strings Resources/pt_PT.lproj/SSToolkit.strings
+s392098939.667315
+e392098939.675075
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt_PT.lproj/SSToolkit.strings
+xResources/pt_PT.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection44"Copy Resources/pt_PT.lproj/SSToolkit.strings08e4aa7bf45eb741^e9d1ac7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/pt_PT.lproj/SSToolkit.strings0000000000000000^675"CopyStringsFile ./SSToolkitResources.bundle/pt_PT.lproj/SSToolkit.strings Resources/pt_PT.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/pt_PT.lproj -- Resources/pt_PT.lproj/SSToolkit.strings36"0EA78B40-A70A-4A3B-8749-C483C7EA6674-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ru.lproj/SSToolkit.strings Resources/ru.lproj/SSToolkit.strings
+s392098939.669692
+e392098939.677464
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ru.lproj/SSToolkit.strings
+xResources/ru.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/ru.lproj/SSToolkit.strings7c7fab7bf45eb741^486ead7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/ru.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/ru.lproj/SSToolkit.strings Resources/ru.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/ru.lproj -- Resources/ru.lproj/SSToolkit.strings36"0B8B016A-BF1E-47F5-AC3B-7677E91C4D22-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/sv.lproj/SSToolkit.strings Resources/sv.lproj/SSToolkit.strings
+s392098939.669697
+e392098939.679426
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/sv.lproj/SSToolkit.strings
+xResources/sv.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection41"Copy Resources/sv.lproj/SSToolkit.stringsa681ab7bf45eb741^eeeead7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@108"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/sv.lproj/SSToolkit.strings0000000000000000^663"CopyStringsFile ./SSToolkitResources.bundle/sv.lproj/SSToolkit.strings Resources/sv.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/sv.lproj -- Resources/sv.lproj/SSToolkit.strings36"B5FE197A-AA92-4607-B398-4E0FF17D72D6-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hans.lproj/SSToolkit.strings Resources/zh_Hans.lproj/SSToolkit.strings
+s392098939.671782
+e392098939.681091
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hans.lproj/SSToolkit.strings
+xResources/zh_Hans.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy Resources/zh_Hans.lproj/SSToolkit.strings2d09ac7bf45eb741^3e5cae7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/zh_Hans.lproj/SSToolkit.strings0000000000000000^683"CopyStringsFile ./SSToolkitResources.bundle/zh_Hans.lproj/SSToolkit.strings Resources/zh_Hans.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hans.lproj -- Resources/zh_Hans.lproj/SSToolkit.strings36"E217CACE-1C92-4564-8889-CA03D9164C88-
+
+CCopyStringsFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hant.lproj/SSToolkit.strings Resources/zh_Hant.lproj/SSToolkit.strings
+s392098939.671666
+e392098939.679599
+r1
+xCopyStringsFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hant.lproj/SSToolkit.strings
+xResources/zh_Hant.lproj/SSToolkit.strings
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection46"Copy Resources/zh_Hant.lproj/SSToolkit.stringsc501ac7bf45eb741^adf9ad7bf45eb741^---0#0#0#-19%DVTDocumentLocation2@113"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/zh_Hant.lproj/SSToolkit.strings0000000000000000^683"CopyStringsFile ./SSToolkitResources.bundle/zh_Hant.lproj/SSToolkit.strings Resources/zh_Hant.lproj/SSToolkit.strings    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-copyStrings --validate --inputencoding utf-8 --outputencoding binary --outdir /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/zh_Hant.lproj -- Resources/zh_Hant.lproj/SSToolkit.strings36"662900A4-6EEA-4D00-97B2-37479636D972-
+
+CProcessInfoPlistFile /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/Info.plist Resources/SSToolkitResources-Info.plist
+s392098939.645907
+e392098939.651835
+r1
+xProcessInfoPlistFile
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/Info.plist
+xResources/SSToolkitResources-Info.plist
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Process Resources/SSToolkitResources-Info.plistf4dda57bf45eb741^ace1a67bf45eb741^---0#0#0#-19%DVTDocumentLocation2@111"file://localhost/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/Resources/SSToolkitResources-Info.plist0000000000000000^654"ProcessInfoPlistFile ./SSToolkitResources.bundle/Info.plist Resources/SSToolkitResources-Info.plist    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    builtin-infoPlistUtility Resources/SSToolkitResources-Info.plist -expandbuildsettings -format binary -platform iphoneos -o /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle/Info.plist36"6FC04A72-52A8-4A05-BB31-D68FDC015A8E-
+
+CTouch /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle
+s392098940.008581
+e392098940.015653
+r1
+xTouch
+x/Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Touch /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle7c42027cf45eb741^0802047cf45eb741^---0#0#0#--472"Touch ./SSToolkitResources.bundle    cd /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit    setenv PATH "/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/usr/local/mysql/bin/:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:/Users/Shared/grails-1.3.7/bin"    /usr/bin/touch -c /Users/javababy/Documents/FlatUILearning/Pods/SSToolkit/./SSToolkitResources.bundle36"5BA86E5C-DA23-433F-AE44-D826B31B66AD-
+

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="11E53" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="GoldCoreData" representedClassName="GoldCoreData" syncable="YES">
+        <attribute name="gold" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="platform" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="MenuToSet" representedClassName="MenuToSet" syncable="YES">
+        <attribute name="setId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="setTitle" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES">
+        <attribute name="age" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SetMenuCoreData" representedClassName="SetMenuCoreData" syncable="YES">
+        <attribute name="menusString" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="picUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="saveMoney" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="setId" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="setTitle" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="SingleMenuCoreData" representedClassName="SingleMenuCoreData" syncable="YES">
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="MenuToSet" positionX="243" positionY="216" width="128" height="90"/>
+        <element name="Person" positionX="232" positionY="42" width="128" height="75"/>
+        <element name="SetMenuCoreData" positionX="-9" positionY="36" width="128" height="135"/>
+        <element name="SingleMenuCoreData" positionX="-9" positionY="204" width="128" height="75"/>
+        <element name="GoldCoreData" positionX="-0" positionY="357" width="128" height="75"/>
+    </elements>
+</model>
