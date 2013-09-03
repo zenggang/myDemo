@@ -343,24 +343,6 @@
     //有米
     if (((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:YOUMI_ID]).state==1) {
         int totalPoint =[YouMiPointsManager pointsRemained];
- //       int oldGold=[[APPDELEGATE.userGoldDict objectForKey:YOUMI_ID] intValue];
- //       _latestGoldAmount=_latestGoldAmount+totalPoint;
-//        if (oldGold!=totalPoint) {
- //           if(totalPoint>oldGold){
-//                [UserGold addGoldOnSuccess:^(id json) {
-//                    //log4Debug(json);
-//                } failure:^(id json) {
-//                    [SVProgressHUD showErrorWithStatus:[json objectForKey:@"message"]];
-//                } withGoldData:[AppUtilities goldDataEncryptWithPid:YOUMI_ID_INT andGoldAmount:(totalPoint-oldGold)] withSecret:[AppUtilities TheSecretForAddGold:(totalPoint-oldGold) WithOldGold:oldGold withPid:YOUMI_ID_INT]];
-//            }else if (totalPoint<oldGold){
-//                [UserGold synchroGoldOnSuccess:^(id json) {
-//                    //log4Debug(json);
-//                } failure:^(id json) {
-//                    [SVProgressHUD showErrorWithStatus:[json objectForKey:@"message"]];
-//                } withGoldData:[AppUtilities goldDataEncryptWithPid:YOUMI_ID_INT andGoldAmount:totalPoint]];
-//            }
-//            [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:totalPoint] forKey:YOUMI_ID];
-//        }
         if (totalPoint>0) {
             [self reduceGoldInPid:YOUMI_ID withGold:totalPoint];
         }
@@ -388,27 +370,7 @@
 -(void) handlePlatformGoldReturnWithGold:(int) totalPoint andPid:(int) pid pidStr:(NSString *) pidStr
 {    @synchronized(self)
     {
-        
-//        _latestGoldAmount=_latestGoldAmount+totalPoint;
- //       int oldGold=[[APPDELEGATE.userGoldDict objectForKey:pidStr] intValue];
         if (pid!=SYS_GIF_ID_INT) {
-            
-//            if (totalPoint!=oldGold) {
-//                if(totalPoint>oldGold){
-//                    [UserGold addGoldOnSuccess:^(id json) {
-//                        //log4Debug(json);
-//                    } failure:^(id json) {
-//                       [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:oldGold] forKey:pidStr];
-//                    } withGoldData:[AppUtilities goldDataEncryptWithPid:pid andGoldAmount:(totalPoint-oldGold)] withSecret:[AppUtilities TheSecretForAddGold:(totalPoint-oldGold) WithOldGold:oldGold withPid:pid]];
-//                }else if (totalPoint<oldGold){
-//                    [UserGold synchroGoldOnSuccess:^(id json) {
-//                        //log4Debug(json);
-//                    } failure:^(id json) {
-//                        [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:oldGold] forKey:pidStr];
-//                    } withGoldData:[AppUtilities goldDataEncryptWithPid:pid andGoldAmount:totalPoint]];
-//                }
-//                [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:totalPoint] forKey:pidStr];
-//            }
             if (totalPoint>0) {
                 [self reduceGoldInPid:pidStr withGold:totalPoint];
                 //_addToSysGoldAmount=totalPoint;
