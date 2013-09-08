@@ -26,6 +26,7 @@
 
 -(void)viewDidLoad
 {
+    [super viewDidLoad];
     self.view.backgroundColor=[UIColor whiteColor];
     _qqInputField.delegate=self;
     _qqInputField.layer.borderWidth=1;

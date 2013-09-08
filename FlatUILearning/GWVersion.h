@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSString *url_scheme;
 @property (nonatomic,assign) int isHide;
 @property (nonatomic,strong) NSMutableArray *platFormList;
+@property (nonatomic, strong) NSString *weixinId;
+@property (nonatomic, strong) NSString *appId;
 
 - (id)initWithAttributes:(NSDictionary *)attributes;
 +(AFHTTPRequestOperation *) CheckAppInfoOnSuccess:(void (^)(id))success failure:(void (^)(id))failure;

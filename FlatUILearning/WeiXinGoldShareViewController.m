@@ -41,6 +41,7 @@
 
 -(void)viewDidLoad
 {
+    [super viewDidLoad];
     self.title=@"分享到朋友圈";
     _weixinController =[[BaseWeiXInController alloc] init];
     _weixinController.delegate=self;

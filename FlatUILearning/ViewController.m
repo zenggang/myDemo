@@ -31,7 +31,7 @@
     self.title = @"麦当劳优惠劵";
     _dataArray =APPDELEGATE.allMenuSet;
     self.view.backgroundColor = [UIColor cloudsColor];
-    [self checkDownloadPicInfo];
+    
     _carouseView = [[iCarousel alloc] initWithFrame:CGRectMake(0, 35, 320, 360)];
     _carouseView.delegate=self;
     _carouseView.dataSource=self; 
@@ -39,7 +39,6 @@
     _carouseView.scrollSpeed=0.7f;
     _carouseView.bounceDistance=0.4f;
     _carouseView.decelerationRate=0.8f;
-    //_carouseView.dataSource=
 
     [self.view addSubview:_carouseView];
     _carouseView.clipsToBounds=YES;
@@ -52,7 +51,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(buildScrollTextView) name:STRING_ARRAY_FOR_WALL_LOADED object:nil];
     
     [self buildScrollTextView];
-    
+    [self checkDownloadPicInfo];
 }
 
 -(void) buildScrollTextView
@@ -193,7 +192,7 @@
 - (void)downloadFaild:(McDownload *)aDownload didFailWithError:(NSError *)error
 {
     [aDownload stopAndClear];
-    //log4Error(error);
+    NSLog(@"%@",error);
     [self downLoadPicInOneProcess];
 }
 //下载结束

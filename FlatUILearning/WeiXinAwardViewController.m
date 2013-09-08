@@ -20,6 +20,7 @@
 
 -(void)viewDidLoad
 {
+    [super viewDidLoad];
     if (_describeType==DescribeTypeWeiXin) {
         self.title=@"微信关注奖励";
         _mainScrollView.contentSize=CGSizeMake(320, 1000);

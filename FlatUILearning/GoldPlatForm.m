@@ -16,6 +16,8 @@
     _pName =[attributes objectForKey:@"pName"];
     _pCnName=[attributes objectForKey:@"pCnName"];
     _state=[[attributes objectForKey:@"state"] intValue];
+    _appKey=[attributes objectForKey:@"appKey"];
+    _appSecret=[attributes objectForKey:@"appSecret"];
     
     return self;
 }

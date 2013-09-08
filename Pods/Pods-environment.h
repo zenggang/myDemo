@@ -24,12 +24,6 @@
 #define COCOAPODS_VERSION_MINOR_ECSlidingViewController 10
 #define COCOAPODS_VERSION_PATCH_ECSlidingViewController 0
 
-// Harpy
-#define COCOAPODS_POD_AVAILABLE_Harpy
-#define COCOAPODS_VERSION_MAJOR_Harpy 2
-#define COCOAPODS_VERSION_MINOR_Harpy 3
-#define COCOAPODS_VERSION_PATCH_Harpy 6
-
 // JSONKit
 #define COCOAPODS_POD_AVAILABLE_JSONKit
 // This library does not follow semantic-versioning,
@@ -40,7 +34,7 @@
 // MagicalRecord
 #define COCOAPODS_POD_AVAILABLE_MagicalRecord
 #define COCOAPODS_VERSION_MAJOR_MagicalRecord 2
-#define COCOAPODS_VERSION_MINOR_MagicalRecord 1
+#define COCOAPODS_VERSION_MINOR_MagicalRecord 2
 #define COCOAPODS_VERSION_PATCH_MagicalRecord 0
 
 // OpenUDID

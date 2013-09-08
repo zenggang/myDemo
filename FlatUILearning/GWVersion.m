@@ -23,7 +23,8 @@
     [self setAppVersion:[[attributes valueForKey:@"appVersion"] description]];
     [self setIconUrl:[attributes valueForKey:@"iconUrl"]];
     [self setUrl_scheme:[attributes valueForKey:@"url_scheme"]];
-    
+    _weixinId=[attributes objectForKey:@"weixinId"];
+    _appId=[attributes objectForKey:@"appId"];
     if ([attributes objectForKey:@"platFormList"]) {
         NSArray *platFormArray = [attributes objectForKey:@"platFormList"];
         _platFormList =[NSMutableArray arrayWithCapacity:[platFormArray count]];

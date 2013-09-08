@@ -86,16 +86,24 @@
 
 +(NSString *) HomeFilePath
 {
-    NSString *strDic;
-    if ( [AppUtilities isIOS5]) {
-        strDic = [NSString stringWithFormat:@"%@/Library/Caches/",
-                  NSHomeDirectory()];
-    } else {
-        strDic = [NSString stringWithFormat:@"%@/Library/%@/",
-                  NSHomeDirectory(),
-                  [[NSBundle mainBundle] bundleIdentifier]];
-    }
-    return strDic;
+ //   NSString *strDic;
+//    if ( [AppUtilities isIOS5]) {
+//        strDic = [NSString stringWithFormat:@"%@/Library/Caches/",
+//                  NSHomeDirectory()];
+//    } else {
+//        strDic = [NSString stringWithFormat:@"%@/Library/%@/",
+//                  NSHomeDirectory(),
+//                  [[NSBundle mainBundle] bundleIdentifier]];
+//    }
+    NSString *documentsDirectory= [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];//获取document目录然后将文件名追加进去
+//    NSString *tmpPath = NSTemporaryDirectory(); //获取tmp目录
+//    NSLog(@"%@",tmpPath);
+//    NSString *myDirectory = [documentsDirectory stringByAppendingPathComponent:@"test"];
+//    BOOL isDir;
+//    if ([[NSFileManager defaultManager] fileExistsAtPath:myDirectory isDirectory:&isDir] && isDir) {
+//        [[NSFileManager defaultManager] createDirectoryAtPath:myDirectory withIntermediateDirectories:NO attributes:nil error:nil];
+//    } 
+    return documentsDirectory;
 }
 // HUD helpers
 

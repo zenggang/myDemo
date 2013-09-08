@@ -51,25 +51,9 @@
     [self checkUserInfo];
     
     
-    //向微信注册wxd930ea5d5a258f4f
-    if ([APP_NAME isEqualToString:APPNAME_MCDONALD]) {
-        [WXApi registerApp:@"wx24525a8fe72188c6"];
-    }else if ([APP_NAME isEqualToString:APPNAME_GUAGUALE]){
-        [WXApi registerApp:@"wx0cb9c1a69fbfd2e6"]; 
-    }
-    [[Harpy sharedInstance] setAppID:@"<app_id>"];
+
     
-    /* (Optional) Set the Alert Type for your app
-     By default, the Singleton is initialized to HarpyAlertTypeOption */
-    [[Harpy sharedInstance] setAlertType:HarpyAlertTypeOption];
-    
-    /* (Optional) If your application is not availabe in the U.S. Store, you must specify the two-letter
-     country code for the region in which your applicaiton is available in. */
-    [[Harpy sharedInstance] setCountryCode:@"cn"];
-    
-    // Perform check for new version of your app
-    [[Harpy sharedInstance] checkVersion];
-    
+
     //[self registPushNotification];
     
     return YES;
@@ -84,6 +68,32 @@
     
 }
 
+
+-(void) checkAppUpdateWithAppId:(NSString *) appId andAppName:(NSString *) appName
+{
+    [[Harpy sharedInstance] setAppID:appId];
+    [[Harpy sharedInstance] setAppName:appName];
+    /* (Optional) Set the Alert Type for your app
+     By default, the Singleton is initialized to HarpyAlertTypeOption */
+    [[Harpy sharedInstance] setAlertType:HarpyAlertTypeOption];
+    /* (Optional) If your application is not availabe in the U.S. Store, you must specify the two-letter
+     country code for the region in which your applicaiton is available in. */
+    [[Harpy sharedInstance] setCountryCode:@"cn"];
+    // Perform check for new version of your app
+    [[Harpy sharedInstance] checkVersion];
+}
+
+-(void) registWeiXinWithWeinXinId:(NSString *) weiXinId
+{
+    //向微信注册wxd930ea5d5a258f4f
+//    if ([APP_NAME isEqualToString:APPNAME_MCDONALD]) {
+//        [WXApi registerApp:@"wx24525a8fe72188c6"];
+//    }else if ([APP_NAME isEqualToString:APPNAME_GUAGUALE]){
+//        [WXApi registerApp:@"wx0cb9c1a69fbfd2e6"];
+//    }
+    [WXApi registerApp:weiXinId];
+}
+
 -(void) checkAppInfo 
 {
     [GWVersion CheckAppInfoOnSuccess:^(GWVersion *version) {
@@ -91,6 +101,8 @@
         
         [self reloadWallArrayInfo];
         [self platFormInit];
+        [self checkAppUpdateWithAppId:_appVersionInfo.appId andAppName:_appVersionInfo.displayName];
+        [self registWeiXinWithWeinXinId:_appVersionInfo.weixinId];
         [[NSNotificationCenter defaultCenter] postNotificationName:APPINFO_DID_LOADED object:nil];
     } failure:^(id error) {
         
@@ -129,20 +141,31 @@
     _platformDict =[NSMutableDictionary dictionaryWithCapacity:_appVersionInfo.platFormList.count];
     for (GoldPlatForm *platform in _appVersionInfo.platFormList) {
         
-        if(platform.pid!=YOUMI_ID_INT && platform.state==1)
-            _platformWithDelegateCount++;
+        if( platform.state==1)
+            _platformCount++;
 
         [_platformDict setObject:platform forKey:[NSString stringWithFormat:@"%d",platform.pid]];
         switch (platform.pid) {
-            case DOMO_ID_INT:
+                case DOMO_ID_INT:
             {
-                if (platform.state==1) 
+                _DuoMenPlatform=platform;
+            }
+                break;
+            case LIMEI_ID_INT:{
+                _LiMeiPlatform=platform;
+            }
+                break;
+            case DIANRU_ID_INT:
+            {
+                _DianRuPlatform=platform;
+                if (platform.state==1)
                     //点入平台初始化0000210E0F000068 //test 000092040C0000C5
-                    [DianRuAdWall beforehandAdWallWithDianRuAppKey:@"0000210E0F000068"];
+                    [DianRuAdWall beforehandAdWallWithDianRuAppKey:_DianRuPlatform.appKey];
             }
                 break;
             case MIDI_ID_INT:
             {
+                _MidiPlatform=platform;
                 if (platform.state==1)
                     //米迪平台
                     // 设置发布应用的应用id, 应用密码等信息,必须在应用启动的时候呼叫
@@ -150,17 +173,18 @@
                     // 参数 appPassword	:开发者的安全密钥 ;  开发者到 www.miidi.net 上提交应用时候,获取id和密码
                     // 参数 testMode		:广告条请求模式 ;    正式发布应用,务必设置为NO,否则不能计费
                     //
-                    [MiidiManager setAppPublisher:@"13914"  withAppSecret:@"jkw334m8ou8r1bp4" withTestMode:NO];
+                    [MiidiManager setAppPublisher:_MidiPlatform.appKey  withAppSecret:_MidiPlatform.appSecret withTestMode:NO];
             }
                 break;
             case YOUMI_ID_INT:
             {
+                _YouMiPlatform=platform;
                 if (platform.state==1){
                     //有米
                     //warning 替换下面的appID和appSecret为你的appid和appSecret 6191437ca20f2a14 45e2b6f1f2a6ef2b
                     //my 4b77592b4375aa19 8a05c985c4fb77ea
                     [YouMiConfig setShouldGetLocation:NO];
-                    [YouMiConfig launchWithAppID:@"4b77592b4375aa19" appSecret:@"8a05c985c4fb77ea"];
+                    [YouMiConfig launchWithAppID:_YouMiPlatform.appKey appSecret:_YouMiPlatform.appSecret];
                     // 开启积分管理
                     [YouMiPointsManager enable];
                     [YouMiConfig useInAppStore];
@@ -169,9 +193,10 @@
                 break;
             case WANPU_ID_INT:
             {
+                _WanPuPlatform=platform;
                 if (platform.state==1)
                     //万普
-                    [AppConnect getConnect:@"17b99c6bf8a3a9ee28653d77ad3712c0" pid:@"appstore"];
+                    [AppConnect getConnect:_WanPuPlatform.appKey pid:_WanPuPlatform.appSecret];
             }
                 break; 
                 
@@ -185,12 +210,16 @@
     _isOldVesionUser=NO;
     _loginUser=user;
     _userGoldAmont=0;
-    _userGoldDict=[NSMutableDictionary dictionary];
+   // _userGoldDict=[NSMutableDictionary dictionary];
     for (UserGold *gold in _loginUser.userGoldList) {
-        [_userGoldDict setObject:[NSNumber numberWithInt:gold.goldAmount ] forKey:[NSString stringWithFormat:@"%d",gold.pid]];
-        _userGoldAmont+=gold.goldAmount;
+       // [_userGoldDict setObject:[NSNumber numberWithInt:gold.goldAmount ] forKey:[NSString stringWithFormat:@"%d",gold.pid]];
+        if (gold.pid==SYS_GIF_ID_INT) {
+            _userGoldAmont=gold.goldAmount;
+        }
+        
         if (gold.pid>1 && gold.goldAmount) {
             _isOldVesionUser=YES;
+            _oldVesionUserPlatIdCount++;
         }
     }
 }

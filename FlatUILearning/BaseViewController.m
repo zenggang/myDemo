@@ -36,6 +36,10 @@
         self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18],UITextAttributeTextColor:[UIColor whiteColor]};
         [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     }
+    if ([AppUtilities isIOS7]) {
+        self.edgesForExtendedLayout=UIRectEdgeNone;
+    }
+    
 }
 
 #pragma mark -

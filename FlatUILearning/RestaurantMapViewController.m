@@ -65,7 +65,7 @@
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    if ([AppUtilities isIOS6]) {
+    if ([AppUtilities isIOS6] || [AppUtilities isIOS7]) {
         [super locationManager:manager didUpdateLocations:locations];
         [self initMapLocationInfo:self.curCoord];
     }

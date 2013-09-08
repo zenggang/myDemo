@@ -150,19 +150,19 @@
     }else if(_awardValue>_benjin){
         //增加金币
         [SVProgressHUD showWithStatus:@"发送中..." maskType:SVProgressHUDMaskTypeClear];
-        int amount=_awardValue-_benjin;
-        int oldGold=[[APPDELEGATE.userGoldDict objectForKey:SYS_GIF_ID] intValue];
-        [UserGold addGoldOnSuccess:^(id json) {
-            [SVProgressHUD showSuccessWithStatus:@"购买成功!"];
-            _isScratched=NO;
-            
-            [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont-_benjin ]];
-            APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont+amount;
-            [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:oldGold+amount] forKey:SYS_GIF_ID];
-            
-        } failure:^(id json) {
-            [SVProgressHUD showErrorWithStatus:[json objectForKey:@"message"]];
-        } withGoldData:[AppUtilities goldDataEncryptWithPid:SYS_GIF_ID_INT andGoldAmount:amount] withSecret:[AppUtilities TheSecretForAddGold:amount WithOldGold:oldGold withPid:SYS_GIF_ID_INT]];
+//        int amount=_awardValue-_benjin;
+//        int oldGold=[[APPDELEGATE.userGoldDict objectForKey:SYS_GIF_ID] intValue];
+//        [UserGold addGoldOnSuccess:^(id json) {
+//            [SVProgressHUD showSuccessWithStatus:@"购买成功!"];
+//            _isScratched=NO;
+//            
+//            [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont-_benjin ]];
+//            APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont+amount;
+//            [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:oldGold+amount] forKey:SYS_GIF_ID];
+//            
+//        } failure:^(id json) {
+//            [SVProgressHUD showErrorWithStatus:[json objectForKey:@"message"]];
+//        } withGoldData:[AppUtilities goldDataEncryptWithPid:SYS_GIF_ID_INT andGoldAmount:amount] withSecret:[AppUtilities TheSecretForAddGold:amount WithOldGold:oldGold withPid:SYS_GIF_ID_INT]];
     }else{
         [SVProgressHUD showSuccessWithStatus:@"购买成功!"];
         _isScratched=NO;

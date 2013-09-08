@@ -21,17 +21,23 @@
 @property (nonatomic,assign) BOOL isAllGoldLoaded;
 @property (nonatomic, retain) YouMiWall *youmiWall;
 
-@property (nonatomic,assign) NSInteger addToSysGoldAmount;
-//@property (nonatomic,assign) int reducePlatformCount;
-//@property (atomic,assign) int reduceRoundCheckCount;
+@property (nonatomic,assign) NSInteger addGoldDOMOToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldLiMeiToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldDianRuToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldMIDIToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldYOUMiToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldWanPuToSysGoldAmount;
+
+
+@property (nonatomic,assign) int oldUserPlatformCheckCount;
 @property (nonatomic,assign) BOOL isRuduceGold;
 @property (nonatomic,strong) NSMutableString *reduceGoldData;
-@property (nonatomic,strong) NSMutableString *reduceGoldKeyString;
+@property (nonatomic,strong) NSString *reduceGoldKeyString;
 @end
 #define GIFT_ALERVIEW_TAG 888
 //96ZJ1DugzewKLwTA2p 我的
-#define DMO_PUBLISHER_ID @"96ZJ1DugzewKLwTA2p"
-#define LIMEI_PUBLISHER_ID @"cad9cd3a95588e5de2c65cd75b910ce2"
+//#define DMO_PUBLISHER_ID @"96ZJ1DugzewKLwTA2p"
+//#define LIMEI_PUBLISHER_ID @"cad9cd3a95588e5de2c65cd75b910ce2"
 
 
 
@@ -72,7 +78,7 @@
 -(void) initAllAdvWallInfo
 {
     if (!_DMOWallController) {
-        _DMOWallController = [[DMOfferWallViewController alloc] initWithPublisherID:DMO_PUBLISHER_ID];
+        _DMOWallController = [[DMOfferWallViewController alloc] initWithPublisherID:APPDELEGATE.DuoMenPlatform.appKey];
         _DMOWallController.disableStoreKit = YES;
         _DMOWallController.delegate = self;
         // 加载积分墙并等待delegate的回调。
@@ -81,7 +87,7 @@
     }
     
     if (!_liMei_AdWall) {
-        _liMei_AdWall=[[immobView alloc] initWithAdUnitID:LIMEI_PUBLISHER_ID];
+        _liMei_AdWall=[[immobView alloc] initWithAdUnitID:APPDELEGATE.LiMeiPlatform.appKey];
         _liMei_AdWall.delegate=self;
     }
     //点入平台
@@ -138,6 +144,7 @@
 
 -(void) openYOUMIWall
 {
+    [YouMiPointsManager rewardPoints:100];
     [YouMiWall showOffers:YES didShowBlock:^{
         //log4Debug(@"有米积分墙已显示");
     } didDismissBlock:^{
@@ -150,12 +157,47 @@
     [AppConnect showOffers:self.parentViewController];
 }
 
+
+
 -(void) changeTheGoldToNewVersion
 {
+    _oldUserPlatformCheckCount=0;
     for (UserGold *gold in APPDELEGATE.loginUser.userGoldList) {
         if (gold.pid>1 && gold.goldAmount) {
-            
+            int totalPoint=gold.goldAmount;
+            switch (gold.pid) {
+                case DOMO_ID_INT:
+                    _addGoldDOMOToSysGoldAmount=totalPoint;
+                    break;
+                case LIMEI_ID_INT:
+                    _addGoldLiMeiToSysGoldAmount=totalPoint;
+                    break;
+                case DIANRU_ID_INT:
+                    _addGoldDianRuToSysGoldAmount=totalPoint;
+                    break;
+                case MIDI_ID_INT:
+                    _addGoldMIDIToSysGoldAmount=totalPoint;
+                    break;
+                case YOUMI_ID_INT:
+                    _addGoldYOUMiToSysGoldAmount=totalPoint;
+                    break;
+                case WANPU_ID_INT:
+                    _addGoldWanPuToSysGoldAmount=totalPoint;
+                    break;
+                    
+                default:
+                    break;
+            }
+            [self reduceGoldInPid:[NSString stringWithFormat:@"%d",gold.pid] withGold:gold.goldAmount];
         }
+    }
+}
+
+-(void) handleOldUserGold
+{
+    if (APPDELEGATE.oldVesionUserPlatIdCount==_oldUserPlatformCheckCount) {
+        APPDELEGATE.isOldVesionUser=NO;
+        [self reloadGoldAmount];
     }
 }
 
@@ -170,16 +212,19 @@
     }
     [SVProgressHUD showWithStatus:@"更新金币数据中..." maskType:SVProgressHUDMaskTypeBlack];
     _platformRoundCheckCount=0;
-//    _latestGoldAmount=0;
-    
-
     
     [UserGold getUserGifGodOnSuccess:^(UserGold *gold) {
         [self handlePlatformGoldReturnWithGold:gold.goldAmount andPid:SYS_GIF_ID_INT pidStr:SYS_GIF_ID];
+        
+        if (((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:YOUMI_ID]).state==1) {
+            int totalPoint =[YouMiPointsManager pointsRemained];
+            [self handlePlatformGoldReturnWithGold:totalPoint andPid:YOUMI_ID_INT pidStr:YOUMI_ID];
+        }
+
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:DOMO_ID]).state==1)
             [_DMOWallController requestOnlinePointCheck];
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:LIMEI_ID]).state ==1)
-            [_liMei_AdWall immobViewQueryScoreWithAdUnitID:LIMEI_PUBLISHER_ID];
+            [_liMei_AdWall immobViewQueryScoreWithAdUnitID:APPDELEGATE.LiMeiPlatform.appKey];
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:DIANRU_ID] ).state==1)
             //    //获取积分，异步方法，结果在代理中进行回调
             [DianRuAdWall getRemainPoint];
@@ -198,28 +243,6 @@
 }
 
 
--(void) reduceGoldInPid:(NSString *) pidStr withGold:(int) reduceAmount
-{
-    if ([pidStr isEqualToString:DOMO_ID]){
-        [_DMOWallController requestOnlineConsumeWithPoint:reduceAmount];
-    }else if ([pidStr isEqualToString:LIMEI_ID]){
-        [_liMei_AdWall immobViewReduceScore:reduceAmount WithAdUnitID:LIMEI_PUBLISHER_ID];
-    }else if ([pidStr isEqualToString:DIANRU_ID]){
-        [DianRuAdWall spendPoint:reduceAmount];
-    }else if ([pidStr isEqualToString:MIDI_ID]){
-        [MiidiAdWall requestSpendPoints:reduceAmount withDelegate:self];
-    }else if ([pidStr isEqualToString:YOUMI_ID]){
-        //有米平台是同步返回的,所以扣完款循环检测也-1
-        if ([YouMiPointsManager spendPoints:reduceAmount]) {
-//            _reducePlatformCount--;
-        }
-    }else if ([pidStr isEqualToString:WANPU_ID]){
-        //万普平台回调接口唯一,所以要有标示符
-        _isRuduceGold=YES;
-        [AppConnect spendPoints:reduceAmount];
-    } 
-}
-
 -(void) reduceGold
 {
     if (_reduceGoldType==nil && !_isGuaGuaLeDeduce) {
@@ -227,101 +250,41 @@
     }
     [SVProgressHUD showWithStatus:@"发送中..." maskType:SVProgressHUDMaskTypeClear];
     //初始化变量
-    NSMutableDictionary *paltFormReducGoldDict=[NSMutableDictionary dictionary];
-//    _reducePlatformCount=0;
- //   _reduceRoundCheckCount=0;
     _reduceGoldData=[NSMutableString stringWithString:@""];
-    _reduceGoldKeyString=[NSMutableString stringWithString:@""];
+    
     int reduceGoldAmount=0;
     if (_isGuaGuaLeDeduce) {
         reduceGoldAmount=_guaGuaLeDeduceGoldAmount;
     }else{
         reduceGoldAmount=_reduceGoldType.goldAmount;
     }
-    //sysGif的金币不在前台扣
-    for (int i=2; i<=7; i++) {
-        int platGold=[[APPDELEGATE.userGoldDict objectForKey:[NSString stringWithFormat:@"%d",i]] intValue];
-        if (((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:[NSString stringWithFormat:@"%d",i]]).state ==0) {
-            continue;
-        }
-        if (platGold>=reduceGoldAmount) {
-            [paltFormReducGoldDict setObject:[NSNumber numberWithInt:reduceGoldAmount] forKey:[NSString stringWithFormat:@"%d",i]];
-//            _reducePlatformCount++;
-            [_reduceGoldData appendFormat:@"%@,",[AppUtilities goldDataEncryptWithPid:i andGoldAmount:reduceGoldAmount]];
-            [_reduceGoldKeyString appendFormat:@"%d,%d,%d,",reduceGoldAmount,platGold,i];
-            [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:(platGold-reduceGoldAmount)] forKey:[NSString stringWithFormat:@"%d",i]];
-            break;
-        }else if(platGold>0){
-            [paltFormReducGoldDict setObject:[NSNumber numberWithInt:platGold] forKey:[NSString stringWithFormat:@"%d",i]];
-            [_reduceGoldData appendFormat:@"%@,",[AppUtilities goldDataEncryptWithPid:i andGoldAmount:platGold]];
-            [_reduceGoldKeyString appendFormat:@"%d,%d,%d,",platGold,platGold,i];
-            [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:0] forKey:[NSString stringWithFormat:@"%d",i]];
-            reduceGoldAmount=reduceGoldAmount-platGold;
-//            _reducePlatformCount++;
-            if (reduceGoldAmount==0) {
-                break;
-            }
-        }
-    }
-    //其他平台扣完不足扣sysGif
-    if (reduceGoldAmount>0) {
-        int platGold=[[APPDELEGATE.userGoldDict objectForKey:@"1"] intValue];
-        [paltFormReducGoldDict setObject:[NSNumber numberWithInt:reduceGoldAmount] forKey:@"1"];
-        [_reduceGoldData appendFormat:@"%@,",[AppUtilities goldDataEncryptWithPid:1 andGoldAmount:reduceGoldAmount]];
-        [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:(platGold-reduceGoldAmount)] forKey:@"1"];
-    }
     
-    for (NSString *key in paltFormReducGoldDict.allKeys) {
-        int  reduceAmount = [[paltFormReducGoldDict objectForKey:key] intValue];
-        if ([key isEqualToString:DOMO_ID]){
-            [_DMOWallController requestOnlineConsumeWithPoint:reduceAmount];
-        }else if ([key isEqualToString:LIMEI_ID]){
-            [_liMei_AdWall immobViewReduceScore:reduceAmount WithAdUnitID:LIMEI_PUBLISHER_ID];
-        }else if ([key isEqualToString:DIANRU_ID]){
-            [DianRuAdWall spendPoint:reduceAmount];
-        }else if ([key isEqualToString:MIDI_ID]){
-            [MiidiAdWall requestSpendPoints:reduceAmount withDelegate:self];
-        }else if ([key isEqualToString:YOUMI_ID]){
-            //有米平台是同步返回的,所以扣完款循环检测也-1
-            if ([YouMiPointsManager spendPoints:reduceAmount]) {
-//                _reducePlatformCount--;
-            }
-        }else if ([key isEqualToString:WANPU_ID]){
-            //万普平台回调接口唯一,所以要有标示符
-            _isRuduceGold=YES;
-            [AppConnect spendPoints:reduceAmount];
-        }
-    }
-    
-//    if (_reducePlatformCount==0) {
-//        [self updateReduceGoldInfo:1];
-//    }
-}
 
-//循环扣积分回调
--(void) updateReduceGoldInfo:(int) pid
-{
-    //log4Debug(@"reduce %d %d",pid,_reduceRoundCheckCount);
     
-//    if (_reduceRoundCheckCount==_reducePlatformCount) {
+    if (APPDELEGATE.userGoldAmont>=reduceGoldAmount) {
+        
+        [_reduceGoldData appendFormat:@"%@,",[AppUtilities goldDataEncryptWithPid:1 andGoldAmount:reduceGoldAmount]];
+        _reduceGoldKeyString=[NSString stringWithFormat:@"%d,%d,%d,",reduceGoldAmount,APPDELEGATE.userGoldAmont,1];
+        
         if (_isGuaGuaLeDeduce) {
             [UserGold deductingGoldOnSuccess:^(id json) {
-                
                 [self afterGoldReduced];
             } failure:^(id error) {
                 [AppUtilities handleErrorMessage:error];
             } withGoldData:_reduceGoldData];
         }else{
             [UserGold ExcgangeGoldOnSuccess:^(id json) {
-                
                 [SVProgressHUD showSuccessWithStatus:@"操作成功!"];
                 [self afterGoldReduced];
             } failure:^(id error) {
                 [AppUtilities handleErrorMessage:error];
             } withreciveNumber:_exchangeNumber withData:_reduceGoldData withTypeId:_reduceGoldType.typeId withSecret:[AppUtilities TheSecretForExchangeGold:_reduceGoldKeyString]];
-//        }
+        }
     }
+    
+    
 }
+
 
 -(void) afterGoldReduced
 {
@@ -330,25 +293,12 @@
 
 -(void) updateGoldInfo:(int) pid
 {
-    //log4Debug(@"reload %d %d",pid,_platformRoundCheckCount);
-    if (_platformRoundCheckCount==APPDELEGATE.platformWithDelegateCount) {
-        [self checkUndelegateGold];
- //       APPDELEGATE.userGoldAmont=_latestGoldAmount;
+    if (_platformRoundCheckCount==APPDELEGATE.platformCount) {
         [self afterGoldReloaded];
     }
 }
 
--(void) checkUndelegateGold
-{
-    //有米
-    if (((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:YOUMI_ID]).state==1) {
-        int totalPoint =[YouMiPointsManager pointsRemained];
-        if (totalPoint>0) {
-            [self reduceGoldInPid:YOUMI_ID withGold:totalPoint];
-        }
-    }
-    
-}
+
 
 -(void) afterGoldReloaded{
     [SVProgressHUD showSuccessWithStatus:@"更新成功!"];
@@ -370,29 +320,138 @@
 -(void) handlePlatformGoldReturnWithGold:(int) totalPoint andPid:(int) pid pidStr:(NSString *) pidStr
 {    @synchronized(self)
     {
+        NSLog(@"return %d %d %d",pid,_platformRoundCheckCount,totalPoint);
+        switch (pid) {
+            case DOMO_ID_INT:
+                _addGoldDOMOToSysGoldAmount=totalPoint;
+                break;
+            case LIMEI_ID_INT:
+                _addGoldLiMeiToSysGoldAmount=totalPoint;
+                break;
+            case DIANRU_ID_INT:
+                _addGoldDianRuToSysGoldAmount=totalPoint;
+                break;
+            case MIDI_ID_INT:
+                _addGoldMIDIToSysGoldAmount=totalPoint;
+                break;
+            case YOUMI_ID_INT:
+                _addGoldYOUMiToSysGoldAmount=totalPoint;
+                break;
+            case WANPU_ID_INT:
+                _addGoldWanPuToSysGoldAmount=totalPoint;
+                break;
+                
+            default:
+                break;
+        }
         if (pid!=SYS_GIF_ID_INT) {
             if (totalPoint>0) {
+                //如果有金币,先扣除(转化到sysGif中)
                 [self reduceGoldInPid:pidStr withGold:totalPoint];
-                //_addToSysGoldAmount=totalPoint;
+            }else{
+                //如果没有了金币,则往下继续
+                _platformRoundCheckCount++;
+                [self updateGoldInfo:pid];
             }
         }else{
-            int oldGold=[[APPDELEGATE.userGoldDict objectForKey:pidStr] intValue];
-            if (totalPoint!=oldGold) 
-                [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:totalPoint] forKey:pidStr];
+            // 第一次返回sysGif的总量
+            _platformRoundCheckCount++;
+            APPDELEGATE.userGoldAmont=totalPoint;
+            
         }
-        _platformRoundCheckCount++;
-        [self updateGoldInfo:pid];
+        
     }
 }
 
--(void) handleReducePlatformGoldWithPid:(int) pid pidStr:(NSString *) pidStr{
+
+
+-(void) reduceGoldInPid:(NSString *) pidStr withGold:(int) reduceAmount
+{
+    if ([pidStr isEqualToString:DOMO_ID]){
+        [_DMOWallController requestOnlineConsumeWithPoint:reduceAmount];
+    }else if ([pidStr isEqualToString:LIMEI_ID]){
+        [_liMei_AdWall immobViewReduceScore:reduceAmount WithAdUnitID:APPDELEGATE.LiMeiPlatform.appKey];
+    }else if ([pidStr isEqualToString:DIANRU_ID]){
+        [DianRuAdWall spendPoint:reduceAmount];
+    }else if ([pidStr isEqualToString:MIDI_ID]){
+        [MiidiAdWall requestSpendPoints:reduceAmount withDelegate:self];
+    }else if ([pidStr isEqualToString:YOUMI_ID]){
+        //有米平台是同步返回的,所以扣完款循环检测也-1
+        if ([YouMiPointsManager spendPoints:reduceAmount]) {
+            [self handleReducePlatformGoldWithPid:YOUMI_ID_INT]; 
+        }else{
+            [self handleErrorReduceGoldWithPid:YOUMI_ID_INT];
+        }
+    }else if ([pidStr isEqualToString:WANPU_ID]){
+        //万普平台回调接口唯一,所以要有标示符
+        _isRuduceGold=YES;
+        [AppConnect spendPoints:reduceAmount];
+    }
+}
+
+-(void) handleErrorReduceGoldWithPid:(int ) pid
+{
+    if (!APPDELEGATE.isOldVesionUser) {
+        _platformRoundCheckCount++;
+        [self updateGoldInfo:pid];
+    }else{
+        _oldUserPlatformCheckCount++;
+        [self handleOldUserGold];
+    }
+    
+}
+
+-(void) handleReducePlatformGoldWithPid:(int) pid{
     @synchronized(self)
     {
+        int addGold=0;
+        switch (pid) {
+            case DOMO_ID_INT:
+                addGold =_addGoldDOMOToSysGoldAmount;
+                break;
+            case LIMEI_ID_INT:
+                addGold =_addGoldLiMeiToSysGoldAmount;
+                break;
+            case DIANRU_ID_INT:
+                addGold =_addGoldDianRuToSysGoldAmount;
+                break;
+            case MIDI_ID_INT:
+                addGold =_addGoldMIDIToSysGoldAmount;
+                break;
+            case YOUMI_ID_INT:
+                addGold =_addGoldYOUMiToSysGoldAmount;
+                break;
+            case WANPU_ID_INT:
+                addGold =_addGoldWanPuToSysGoldAmount;
+                break;
+                
+            default:
+                break;
+        }
+        
+        
         [UserGold addGoldOnSuccess:^(id json) {
-            APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont+_addToSysGoldAmount;
+            
+            if (!APPDELEGATE.isOldVesionUser) {
+                APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont+addGold;
+                _platformRoundCheckCount++;
+                [self updateGoldInfo:pid];
+            }else{
+                _oldUserPlatformCheckCount++;
+                [self handleOldUserGold];
+            }
+
         } failure:^(id json) {
             [SVProgressHUD showErrorWithStatus:[json objectForKey:@"message"]];
-        } withGoldData:[AppUtilities goldDataEncryptWithPid:pid andGoldAmount:_addToSysGoldAmount] withSecret:[AppUtilities TheSecretForAddGold:_addToSysGoldAmount WithTotalGold:APPDELEGATE.userGoldAmont withPid:pid]];
+            if (!APPDELEGATE.isOldVesionUser) {
+                _platformRoundCheckCount++;
+                [self updateGoldInfo:pid];
+            }else{
+                _oldUserPlatformCheckCount++;
+                [self handleOldUserGold];
+            }
+            
+        } withGoldData:[AppUtilities goldDataEncryptWithPid:pid andGoldAmount:addGold] withSecret:[AppUtilities TheSecretForAddGold:addGold WithTotalGold:APPDELEGATE.userGoldAmont withPid:SYS_GIF_ID_INT]];
         
     }
 }
@@ -457,7 +516,9 @@
                                   totalConsumedPoint:(NSInteger)consumed
 {
     if (statusCode==DMOfferWallConsumeStatusCodeSuccess) {
-        [self handleReducePlatformGoldWithPid:DOMO_ID_INT pidStr:DOMO_ID];
+        [self handleReducePlatformGoldWithPid:DOMO_ID_INT];
+    }else{
+        [self handleErrorReduceGoldWithPid:DOMO_ID_INT];
     }
 }
 // 消费请求异常应答后，回调该接口，并返回异常的错误原因。
@@ -503,7 +564,9 @@
 - (void) immobViewReduceScore:(BOOL)status WithMessage:(NSString *)message
 {
     if (status) {
-        [self handleReducePlatformGoldWithPid:LIMEI_ID_INT pidStr:LIMEI_ID];
+        [self handleReducePlatformGoldWithPid:LIMEI_ID_INT];
+    }else{
+        [self handleErrorReduceGoldWithPid:LIMEI_ID_INT];
     }
 }
 
@@ -514,7 +577,9 @@
 -(void)didReceiveSpendScoreResult:(BOOL)isSuccess
 {
     if (isSuccess) {
-        [self handleReducePlatformGoldWithPid:DIANRU_ID_INT pidStr:DIANRU_ID];
+        [self handleReducePlatformGoldWithPid:DIANRU_ID_INT];
+    }else{
+        [self handleErrorReduceGoldWithPid:DIANRU_ID_INT];
     }
 }
 
@@ -541,12 +606,12 @@
 
 - (void)didReceiveSpendPoints:(NSInteger)totalPoints{
 	
-	[self handleReducePlatformGoldWithPid:MIDI_ID_INT pidStr:MIDI_ID];
+	[self handleReducePlatformGoldWithPid:MIDI_ID_INT];
 }
 
 
 - (void)didFailReceiveSpendPoints:(NSError *)error{
-	//log4Debug(error);
+    [self handleErrorReduceGoldWithPid:MIDI_ID_INT];
 }
 
 #pragma mark  MiidiAdWallGetPointsDelegate
@@ -588,7 +653,7 @@
     WapsUserPoints *userPointsObj = notifyObj.object;
     int  pointsValue=[userPointsObj getPointsValue];
     if (_isRuduceGold) {
-        [self handleReducePlatformGoldWithPid:WANPU_ID_INT pidStr:WANPU_ID];
+        [self handleReducePlatformGoldWithPid:WANPU_ID_INT];
     }else{
         [self handlePlatformGoldReturnWithGold:pointsValue andPid:WANPU_ID_INT pidStr:WANPU_ID];
     }

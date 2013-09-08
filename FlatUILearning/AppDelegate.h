@@ -26,21 +26,31 @@
 
 //用户金币相关
 @property (nonatomic,assign) int userGoldAmont;
-@property (nonatomic,strong) NSMutableDictionary *userGoldDict;
+//@property (nonatomic,strong) NSMutableDictionary *userGoldDict;
 @property (nonatomic,strong) NSString *udid;
 @property (nonatomic,assign) BOOL isFirstTime;
 @property (nonatomic,assign) BOOL isOldVesionUser;
+@property (nonatomic,assign) int  oldVesionUserPlatIdCount;
 @property (nonatomic,strong) Users *loginUser;
 @property (nonatomic,strong) GWVersion *appVersionInfo;
 @property (nonatomic,strong) NSArray *exchangeArrayForWall;
 @property (nonatomic,strong) NSArray *getGoldArrayForWall;
 @property (nonatomic,strong) NSMutableDictionary *platformDict;
-@property (nonatomic,assign) int platformWithDelegateCount;
+@property (nonatomic,assign) int platformCount;
 
 
 @property (nonatomic, strong) NSTimer * timer;
 @property (nonatomic, assign) BOOL needUpdateWall;
 @property (nonatomic,strong) NSString *deviceToken;
+
+//平台相关
+@property (nonatomic,strong) GoldPlatForm *DuoMenPlatform;
+@property (nonatomic,strong) GoldPlatForm *LiMeiPlatform;
+@property (nonatomic,strong) GoldPlatForm *DianRuPlatform;
+@property (nonatomic,strong) GoldPlatForm *MidiPlatform;
+@property (nonatomic,strong) GoldPlatForm *YouMiPlatform;
+@property (nonatomic,strong) GoldPlatForm *WanPuPlatform;
+
 -(void) initUserInfo:(Users *) user;
 - (void) registPushNotification;
 @end

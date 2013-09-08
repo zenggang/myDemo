@@ -153,6 +153,8 @@
 		CDC973A0177ECACB001AF58F /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739F177ECACB001AF58F /* libz.1.2.5.dylib */; };
 		CDC973A9177EEBAC001AF58F /* GoldCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC973A8177EEBAC001AF58F /* GoldCoreData.m */; };
 		CDD1E4241782692D0033CCA4 /* UserGold.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD1E4231782692D0033CCA4 /* UserGold.m */; };
+		CDE174AB17DB321900A1022F /* Harpy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE174A817DB321900A1022F /* Harpy.bundle */; };
+		CDE174AC17DB321900A1022F /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE174AA17DB321900A1022F /* Harpy.m */; };
 		CDF176131797B3D600DF316C /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF176121797B3D600DF316C /* libYouMi.a */; };
 		CDF68DB5177827C7003B3B9A /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF68DB4177827C7003B3B9A /* Restaurant.m */; };
 		CDF68DB81778341C003B3B9A /* RestaurantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF68DB71778341C003B3B9A /* RestaurantListViewController.m */; };
@@ -395,6 +397,9 @@
 		CDC973A8177EEBAC001AF58F /* GoldCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldCoreData.m; sourceTree = "<group>"; };
 		CDD1E4221782692D0033CCA4 /* UserGold.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGold.h; sourceTree = "<group>"; };
 		CDD1E4231782692D0033CCA4 /* UserGold.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGold.m; sourceTree = "<group>"; };
+		CDE174A817DB321900A1022F /* Harpy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Harpy.bundle; sourceTree = "<group>"; };
+		CDE174A917DB321900A1022F /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
+		CDE174AA17DB321900A1022F /* Harpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Harpy.m; sourceTree = "<group>"; };
 		CDF1760A1797B3D600DF316C /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
 		CDF1760B1797B3D600DF316C /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
 		CDF1760C1797B3D600DF316C /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
@@ -806,6 +811,7 @@
 		CD56C9A317607EE2003F2A3D /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				CDE174A717DB321900A1022F /* Harpy */,
 				CD95753417A1293A0056015E /* zcSlotMachine */,
 				CDAEEAA3179FCB0800D429CC /* ReflectionView */,
 				CD85988A179B7DD60006F78B /* STScratchView */,
@@ -948,6 +954,16 @@
 			name = fileDownload;
 			sourceTree = "<group>";
 		};
+		CDE174A717DB321900A1022F /* Harpy */ = {
+			isa = PBXGroup;
+			children = (
+				CDE174A817DB321900A1022F /* Harpy.bundle */,
+				CDE174A917DB321900A1022F /* Harpy.h */,
+				CDE174AA17DB321900A1022F /* Harpy.m */,
+			);
+			path = Harpy;
+			sourceTree = "<group>";
+		};
 		CDF176091797B3D600DF316C /* include */ = {
 			isa = PBXGroup;
 			children = (
@@ -1083,6 +1099,7 @@
 				CD5576801783186A00D4EE37 /* dianru_set_btn.png in Resources */,
 				CD5576811783186A00D4EE37 /* dianru_title.jpg in Resources */,
 				CD5576821783186A00D4EE37 /* dianru_titlebg.jpg in Resources */,
+				CDE174AB17DB321900A1022F /* Harpy.bundle in Resources */,
 				CD5576831783186A00D4EE37 /* dianru_triangle.png in Resources */,
 				CD5576841783186A00D4EE37 /* dianru_yuanjiao.png in Resources */,
 				CD5576851783186A00D4EE37 /* DRBGLogo.png in Resources */,
@@ -1170,6 +1187,7 @@
 				CD5721C01771B7460058D544 /* TTDate.m in Sources */,
 				CD3971281773011A00BD5F57 /* TTLabel.m in Sources */,
 				CD39712B1773085800BD5F57 /* TTColor.m in Sources */,
+				CDE174AC17DB321900A1022F /* Harpy.m in Sources */,
 				CDC5BDF31773FD0D00726C81 /* McDownload.m in Sources */,
 				CDC5BDF61774488100726C81 /* SetMenu.m in Sources */,
 				CDC5BDF917744AB400726C81 /* SingleMenu.m in Sources */,
@@ -1318,7 +1336,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D5BFB262-AE6E-48FA-B7A3-4F9478F869FC";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "87DB00E6-5B69-47F4-BBD5-5DA2388766A8";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1350,7 +1368,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C0AFFEF5-E91E-47B7-8DE4-F47D66B98E47";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "032D0B8C-B9C5-4990-9052-34FAEE63F1E7";
 				USER_HEADER_SEARCH_PATHS = "${SRCROOT}/**";
 				WRAPPER_EXTENSION = app;
 			};

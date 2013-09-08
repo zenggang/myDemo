@@ -7,8 +7,8 @@
 //
   
 //APP
-#define APP_NAME @"GuaGuaLe"
-#define VERSION_STRING @"1.10"
+#define APP_NAME @"McDonald"
+#define VERSION_STRING @"2.00"
 
 //McDonald 版本 1.00 appStroe 1.01 91市场  1.02 测试版
 #define APPNAME_MCDONALD @"McDonald"
@@ -16,8 +16,8 @@
 #define APPNAME_GUAGUALE @"GuaGuaLe"
 //#define VERSION 1.0
 
-//麦当劳优惠劵 
-#define APP_FIRST_TAB_NAME @"全民刮刮乐"
+//麦当劳优惠劵  全民刮刮乐 
+#define APP_FIRST_TAB_NAME @"麦当劳优惠劵"
 
 
 #define PRIVATE_SECRET_KEY @"javababyzenggang"
@@ -48,8 +48,8 @@
 
 //Urls
 //#define BaseUrl @"http://121.199.42.54:8080/gold"
-#define BaseUrl @"http://192.168.1.100:8080/gold" 
-//#define BaseUrl @"http://192.168.1.105:8080/gold"
+#define BaseUrl @"http://192.168.1.100:8080/gold"
+//#define BaseUrl @"http://192.168.1.102:8080/gold"
 
 #define KRequestMenuPicUrl(url) [NSString stringWithFormat:@"http://www.mcdonalds.com.cn/images/mclub/%@",url]
 

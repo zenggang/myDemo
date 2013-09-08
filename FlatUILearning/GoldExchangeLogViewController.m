@@ -40,6 +40,12 @@
     [self.tableView.pullToRefreshView setArrowColor:GREEN_COLOR];
     [self.tableView.pullToRefreshView setTextColor:GREEN_COLOR];
     
+    
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
     [self reloadExchangeList];
 }
 
