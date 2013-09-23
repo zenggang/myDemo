@@ -92,7 +92,7 @@
     } withPath:GOLDRequestGifGold(APPDELEGATE.udid) parameters:nil];
 }
 
-+(AFHTTPRequestOperation *) getWeixinAwardOnSuccess:(void (^)(id))success failure:(void (^)(id))failure {
++(AFHTTPRequestOperation *) getWeixinAwardWithType:(NSString *) type OnSuccess:(void (^)(id))success failure:(void (^)(id))failure {
     return [ApiRequestCenter sendGetRequestOnSuccess:^(id json) {
         if (success) { 
             success(json); 
@@ -101,6 +101,6 @@
         if (failure) {
             failure(error);
         }
-    } withPath:GOLDWEINXINGShareAwardGold(APPDELEGATE.udid) parameters:nil];
+    } withPath:GOLDWEINXINGShareAwardGold(APPDELEGATE.udid) parameters:[NSDictionary dictionaryWithObjectsAndKeys:type,@"shareType", nil]];
 }
 @end

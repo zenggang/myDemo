@@ -9,8 +9,10 @@
 #import "BaseWeiXInController.h"
 
 @interface WeiXinGoldShareViewController : BaseViewController<sendMsgToWeChatViewDelegate>
-
+{
+    
+}
 
 @property (nonatomic,strong) BaseWeiXInController *weixinController;
-
+@property (nonatomic,assign) enum WXScene scene;
 @end

@@ -10,6 +10,7 @@
 typedef enum {
     DescribeTypeWeiXin =0,
     DescribeTypeFiveStar =1,
+    DescribeTypeShareToFriens =2,
 } DescribeType;
 
 @interface WeiXinAwardViewController : BaseViewController

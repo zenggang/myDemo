@@ -15,6 +15,8 @@
 
 @interface MainViewController ()
 
+@property (nonatomic,assign)  BOOL isReloadDataYet;
+
 -(void) checkMenuInfo;
 -(void) reloadMenusInfo;
 @end
@@ -34,18 +36,43 @@
 {
     [super viewDidLoad];
     
+    _isReloadDataYet=NO;
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     
     if ([APP_NAME isEqualToString: APPNAME_MCDONALD]) {
         [self checkMenuInfo];
         self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"firstViewController"];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkAppNeedUpdateInfo:) name:APPINFO_DID_LOADED object:nil];
     }else if ([APP_NAME isEqualToString:APPNAME_GUAGUALE]){
         
         self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"guagualeViewController"];
     }
     
+
     
-    
+}
+
+-(void) checkAppNeedUpdateInfo:(NSNotification *) notify
+{
+    int localDataNumber = [[NSUserDefaults standardUserDefaults] integerForKey:@"dataSynchNumber"];
+    if( APPDELEGATE.appVersionInfo.dataSynchNumber>localDataNumber)
+    {
+        if (!_isReloadDataYet) {
+            [self reloadMenusInfo];
+        }
+        
+        [[NSUserDefaults standardUserDefaults] setInteger:APPDELEGATE.appVersionInfo.dataSynchNumber forKey:@"dataSynchNumber"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+
+-(void) clearPicFileCache
+{
+    for (SetMenu *menu in APPDELEGATE.allMenuSet) {
+         NSString *destinationPath=[[AppUtilities HomeFilePath] stringByAppendingPathComponent:[menu getPicFileName]];
+        [AppUtilities removeFileAtPath:destinationPath];
+    }
 }
 
 -(void) checkMenuInfo
@@ -72,6 +99,11 @@
 
 -(void) reloadMenusInfo
 {
+    
+    if (APPDELEGATE.allMenuSet && APPDELEGATE.allMenuSet.count>0) {
+         [self clearPicFileCache];
+    }
+    _isReloadDataYet=YES;
     [AppUtilities showHUDWithStatusMaskTypeClear:@"数据加载中..."];
     [ApiRequestCenter sendGetRequestOnSuccess:^(id data) {
         

@@ -42,6 +42,7 @@
 -(void) handleWeiXinMessage:(NSNotification *) notify
 {
     SendMessageToWXResp *receiveData= [notify.userInfo objectForKey:@"sendMessageToWXResp"];
+    NSLog(@"%@",receiveData);
     if (receiveData.errCode==0) {
         [_delegate didSendMessageSuccess];
     }else
@@ -71,4 +72,27 @@
     [WXApi sendReq:req];
 }
 
+
+
+- (void) sendAppContentWithThumbData:(UIImage *) thumbImage withMessage:(NSString *) content withDescription:(NSString *) descripe andLink:(NSString *) url
+{
+    // 发送内容给微信
+    WXMediaMessage *message = [WXMediaMessage message];
+    message.title = content;
+    message.description =descripe;
+    [message setThumbImage:thumbImage];
+    
+    WXAppExtendObject *ext = [WXAppExtendObject object];
+    ext.extInfo = @"<xml>test</xml>";
+    ext.url = url;
+    ext.fileData = nil;
+    
+    message.mediaObject = ext;
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = _scene;
+    
+    [WXApi sendReq:req];
+}
 @end

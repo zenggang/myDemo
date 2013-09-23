@@ -18,6 +18,8 @@
 #import "YouMiPointsManager.h"
 #import "GoldExchangeType.h"
 #import "UserGold.h"
+#import <Escore/YJFIntegralWall.h>
+#import <Escore/YJFScore.h>
 
 #define exchangeGoldAlertTag 234
 #define goldNotEnoughAlertTag  235
@@ -26,7 +28,7 @@
 
 @interface BaseGoldViewController : BaseListViewController<DMOfferWallDelegate,immobViewDelegate,DianRuAdWallDelegate,MiidiAdWallShowAppOffersDelegate,MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
-, MiidiAdWallGetPointsDelegate>
+, MiidiAdWallGetPointsDelegate,YJFIntegralWallDelegate>
 
 -(void) afterGoldReloaded;
 -(void) reduceGold;

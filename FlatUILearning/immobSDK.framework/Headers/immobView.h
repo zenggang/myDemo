@@ -1,7 +1,7 @@
 //
 //  immobView.h
 //
-//  Version 2.5.0 BuildTime 130422
+//  Version 2.6.1 BuildTime 130902
 
 #import <UIKit/UIKit.h>
 
@@ -10,7 +10,7 @@
 
 @required
 /**
- *email phone sms 所需要
+ *email phone sms 等所需要
  */
 - (UIViewController *)immobViewController;
 
@@ -93,6 +93,8 @@
  *此方法用于immobView的初始化
  */
 -(id) initWithAdUnitID:(NSString *)adUnitID;
+
+
 /**
  *此方法用于开始加载广告
  */
@@ -124,6 +126,12 @@
  *此方法用于immobView的销毁
  */
 -(void)immobViewDestroy;
+
+/**
+ *此方法用于获取由力美提供的Udid
+ */
+
+-(NSString *)getLimeiUDID;
 
 /**
  *此方法用于查询服务器上的积分

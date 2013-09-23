@@ -22,5 +22,5 @@
 +(AFHTTPRequestOperation *) synchroGoldOnSuccess:(void (^)(id))success failure:(void (^)(id))failure withGoldData:(NSString *) data;
 +(AFHTTPRequestOperation *) getUserGifGodOnSuccess:(void (^)(id))success failure:(void (^)(id))failure ;
 +(AFHTTPRequestOperation *) ExcgangeGoldOnSuccess:(void (^)(id))success failure:(void (^)(id))failure withreciveNumber:(NSString *) reciveNo withData:(NSString *) data withTypeId:(int)typeId withSecret:(NSString *) secretKey;
-+(AFHTTPRequestOperation *) getWeixinAwardOnSuccess:(void (^)(id))success failure:(void (^)(id))failure ;
++(AFHTTPRequestOperation *) getWeixinAwardWithType:(NSString *) type OnSuccess:(void (^)(id))success failure:(void (^)(id))failure ;
 @end

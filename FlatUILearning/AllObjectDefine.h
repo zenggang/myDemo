@@ -25,6 +25,8 @@
 #define MIDI_ID      @"5"
 #define YOUMI_ID    @"6"
 #define WANPU_ID    @"7"
+#define ANWO_ID     @"8"
+#define YIJIFEN_ID  @"9"
 
 #define SYS_GIF_ID_INT   1
 #define DOMO_ID_INT 2
@@ -33,3 +35,5 @@
 #define MIDI_ID_INT 5
 #define YOUMI_ID_INT   6
 #define WANPU_ID_INT   7
+#define ANWO_ID_INT    8
+#define YIJIFEN_ID_INT 9

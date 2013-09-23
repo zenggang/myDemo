@@ -15,14 +15,14 @@
 {
     NSMutableDictionary *newParam =[NSMutableDictionary dictionaryWithDictionary:param];
 //    [newParam addEntriesFromDictionary:accessAppInfo];
-    [newParam addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:VERSION_STRING,@"version",APP_NAME,@"appName", nil]];
+    [newParam addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:VERSION_STRING,@"version",APP_NAME,@"appName",SYS_OS,@"os", nil]];
     return [ApiRequestCenter sendRequestOnSuccess:success failure:failure withPath:path parameters:newParam requestWithMethod:kRequestMethodGet];
 }
 
 +(AFHTTPRequestOperation *) sendPostRequestOnSuccess:(void (^)(id))success failure:(void (^)(id))failure withPath:(NSString *) path parameters:(NSMutableDictionary *) param
 {
     
-    [param addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:VERSION_STRING,@"version",APP_NAME,@"appName", nil]];
+    [param addEntriesFromDictionary:[NSDictionary dictionaryWithObjectsAndKeys:VERSION_STRING,@"version",APP_NAME,@"appName",SYS_OS,@"os", nil]];
     return [ApiRequestCenter sendRequestOnSuccess:success failure:failure withPath:path parameters:param requestWithMethod:kRequestMethodPost];
 }
 

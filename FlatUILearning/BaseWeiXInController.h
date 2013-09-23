@@ -19,5 +19,6 @@
 @property (nonatomic, weak) id<sendMsgToWeChatViewDelegate> delegate;
 
 - (void) sendImageContentWithThumbData:(NSData *) thumbData withImageData:(NSData *) imageData;
-
+-(void) changeScene:(NSInteger)scene;
+- (void) sendAppContentWithThumbData:(UIImage *) thumbImage withMessage:(NSString *) content withDescription:(NSString *) descripe andLink:(NSString *) url;
 @end

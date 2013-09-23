@@ -31,12 +31,6 @@
 // Please contact the author.
 // Version: 1.5pre.
 
-// MagicalRecord
-#define COCOAPODS_POD_AVAILABLE_MagicalRecord
-#define COCOAPODS_VERSION_MAJOR_MagicalRecord 2
-#define COCOAPODS_VERSION_MINOR_MagicalRecord 2
-#define COCOAPODS_VERSION_PATCH_MagicalRecord 0
-
 // OpenUDID
 #define COCOAPODS_POD_AVAILABLE_OpenUDID
 #define COCOAPODS_VERSION_MAJOR_OpenUDID 1

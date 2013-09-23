@@ -50,6 +50,8 @@
 @property (nonatomic,strong) GoldPlatForm *MidiPlatform;
 @property (nonatomic,strong) GoldPlatForm *YouMiPlatform;
 @property (nonatomic,strong) GoldPlatForm *WanPuPlatform;
+@property (nonatomic,strong) GoldPlatForm *AnWoPlatform;
+@property (nonatomic,strong) GoldPlatForm *YiJiFenPlatform;
 
 -(void) initUserInfo:(Users *) user;
 - (void) registPushNotification;

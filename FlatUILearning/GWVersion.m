@@ -23,6 +23,7 @@
     [self setAppVersion:[[attributes valueForKey:@"appVersion"] description]];
     [self setIconUrl:[attributes valueForKey:@"iconUrl"]];
     [self setUrl_scheme:[attributes valueForKey:@"url_scheme"]];
+    _isForceUpdate =[[attributes objectForKey:@"isForceUpdate"]  integerValue];
     _weixinId=[attributes objectForKey:@"weixinId"];
     _appId=[attributes objectForKey:@"appId"];
     if ([attributes objectForKey:@"platFormList"]) {
@@ -33,7 +34,7 @@
             [_platFormList addObject:platForm];
         }
     }
-    
+    _dataSynchNumber =[[attributes objectForKey:@"dataSynchNumber"] intValue];
     return self;
 }
 

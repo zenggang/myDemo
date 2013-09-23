@@ -15,6 +15,7 @@
 @property (nonatomic, strong) NSNumber * saveMoney;
 @property (nonatomic, strong) NSString * menusString;
 @property (nonatomic, strong) NSNumber * setId;
+@property (nonatomic,strong) NSString  *tempPicUrl;
 
 @property (nonatomic,assign) double progressValue;
 

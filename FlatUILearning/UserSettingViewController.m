@@ -10,7 +10,7 @@
 #import "ExchangeNOSettingViewController.h"
 #import "goldIntroductionViewController.h"
 #import "WeiXinAwardViewController.h"
-#import "WeiXinGoldShareViewController.h"
+#import "WeiXinShareViewCenterController.h"
 #import "ChangeColorViewController.h"
 
 @interface UserSettingViewController ()
@@ -87,7 +87,7 @@
             return 4;
         
     }else
-        return 3;
+        return 4;
 }
 
 
@@ -156,17 +156,23 @@
         switch (indexPath.row) {
         case 0:
             {
-                text=@"分享今日收入到微信";
-                describeLable.text=@"送10金币";
+                text=@"帮朋友快速安装";
+                describeLable.text=@"得推荐金币";
             }
                 break;
         case 1:
+            {
+                text=@"分享到微信赚金币";
+                describeLable.text=@"送12金币";
+            }
+                break;
+        case 2:
         {
             text=@"切换颜色主题";
             describeLable.text=[APPDELEGATE.colorDict objectForKey:[[NSUserDefaults standardUserDefaults] valueForKey:@"sysColor"]];
         }
             break;
-        case 2:
+        case 3:
         {
             text=@"开启消息推送";
             describeLable.text= APPDELEGATE.deviceToken==nil ?  @"未开启":@"已开启";
@@ -212,12 +218,16 @@
         }
     }else if(indexPath.section==1){
         if (indexPath.row==0) {
-            WeiXinGoldShareViewController *weiXinShareGoldVC=[self.storyboard instantiateViewControllerWithIdentifier:@"weiXinGoldShareViewController"];
-            [self.navigationController pushViewController:weiXinShareGoldVC animated:YES];
-        }else if (indexPath.row==1){
+            WeiXinAwardViewController *weixinVc=[self.storyboard instantiateViewControllerWithIdentifier:@"weiXinAwardViewController"];
+            weixinVc.describeType=DescribeTypeShareToFriens;
+            [self.navigationController pushViewController:weixinVc animated:YES];
+        }else if (indexPath.row==1) {
+            WeiXinShareViewCenterController *weiXinShareGoldVC=[self.storyboard instantiateViewControllerWithIdentifier:@"WeiXinShareViewCenterController"];
+            [self.navigationController pushViewController:weiXinShareGoldVC animated:YES]; 
+        }else if (indexPath.row==2){
             ChangeColorViewController *changeColorVc =[self.storyboard instantiateViewControllerWithIdentifier:@"changeColorViewController"];
             [self.navigationController pushViewController:changeColorVc animated:YES];
-        }else if (indexPath.row==2){
+        }else if (indexPath.row==3){
             
             if(APPDELEGATE.deviceToken==nil){
                 [self showFUIAlertViewWithTitle:@"提示" message:@"您关闭了推送服务,强烈建议您打开此服务,当有兑换完成或者金币赠送时能及时提醒您查收,手动打开方式(去设置-通知中找到程序然后打开.)" withTag:-1 cancleButtonTitle:@"好的!" otherButtonTitles: nil];

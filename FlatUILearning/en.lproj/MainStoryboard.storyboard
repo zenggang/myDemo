@@ -414,6 +414,36 @@
             </objects>
             <point key="canvasLocation" x="1442" y="2462"/>
         </scene>
+        <!--Wei Xin Share View Center Controller-->
+        <scene sceneID="8Zu-FE-BHu">
+            <objects>
+                <viewController storyboardIdentifier="WeiXinShareViewCenterController" id="Z28-5e-NWu" customClass="WeiXinShareViewCenterController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sJX-sn-suc">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZV7-Lh-fgq">
+                                <rect key="frame" x="8" y="-16" width="305" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">*分享到微信,每天最多可得12金币.
+*如果对方安装了记得要到对方绑定QQ
+ 号来领取每次最多50金币的推荐奖励哦
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="titleLabele" destination="ZV7-Lh-fgq" id="cjM-zL-QVW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30p-Zc-0HC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="960" y="1893"/>
+        </scene>
         <!--Wei Xin Gold Share View Controller-->
         <scene sceneID="XIW-sv-ZGM">
             <objects>
@@ -572,13 +602,13 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qud-jj-Uns">
                                 <rect key="frame" x="10" y="294" width="298" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">*每天第一次分享可奖励10金币.
+                                <string key="text">*每天第一次分享可奖励3金币.
 *分享次数不限制.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" red="0.2823529541" green="0.73725491759999995" blue="0.64705884459999996" alpha="1" colorSpace="deviceRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*今日可领取10金币." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1hv-Lr-sDl">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="*今日可领取3金币." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1hv-Lr-sDl">
                                 <rect key="frame" x="10" y="337" width="270" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -665,7 +695,7 @@
 2:金币达到一定数量时候可以去兑换不同的礼品(支付宝充值/手机充值等).
 3:客服会将相应礼品发到您绑定的接收号码上.
 4:发货状态可以在兑换金币项目中的"兑换中心"里查到进度,一般24小时内会发放完毕.
-5:如有遇到任何问题可以联系官方微信账号或者客服QQ(2517481594),您需要提供您绑定的QQ号来让客服帮助您查找数据.
+5:如有遇到任何问题可以联系官方微信账号,您需要提供您绑定的QQ号来让客服帮助您查找数据.
 
 (注:手机会直接给您充值,支付宝是直接转账到您支付宝账户上)</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
@@ -826,6 +856,138 @@
         <image name="weixing_step3@2x.jpg" width="344" height="344"/>
         <image name="white.png" width="320" height="316"/>
     </resources>
+    <classes>
+        <class className="BaseGoldViewController" superclassName="BaseListViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseGoldViewController.h"/>
+        </class>
+        <class className="BaseListViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseListViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="BaseLocationViewController" superclassName="BaseListViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseLocationViewController.h"/>
+        </class>
+        <class className="BaseViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BaseViewController.h"/>
+        </class>
+        <class className="ChangeColorViewController" superclassName="BaseListViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChangeColorViewController.h"/>
+        </class>
+        <class className="ECSlidingViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ECSlidingViewController.h"/>
+        </class>
+        <class className="ExchangeNOSettingViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ExchangeNOSettingViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cellPhoneInputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="describeView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="flatSegmentedControl" candidateClass="FUISegmentedControl"/>
+                <relationship kind="outlet" name="qqInputField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="zhifubaoInputField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="FUISegmentedControl" superclassName="UISegmentedControl">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/FUISegmentedControl.h"/>
+        </class>
+        <class className="GetGoldLogViewContrller" superclassName="BaseListViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GetGoldLogViewContrller.h"/>
+        </class>
+        <class className="GetGoldViewController" superclassName="BaseGoldViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GetGoldViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="describeLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goldLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mainScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="skillLable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GoldExchangeLogViewController" superclassName="BaseListViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoldExchangeLogViewController.h"/>
+        </class>
+        <class className="GoldExchangeViewController" superclassName="BaseGoldViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GoldExchangeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="goldLable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="GuagualeViewController" superclassName="BaseGoldViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GuagualeViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="carouseView" candidateClass="iCarousel"/>
+                <relationship kind="outlet" name="goldLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="goldMainView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="MainViewController" superclassName="ECSlidingViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MainViewController.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="BaseListViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="scoreView" candidateClass="UIView"/>
+            </relationships>
+        </class>
+        <class className="RestaurantListViewController" superclassName="BaseLocationViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantListViewController.h"/>
+        </class>
+        <class className="RestaurantMapViewController" superclassName="BaseLocationViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RestaurantMapViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+        <class className="RootNavigationViewController" superclassName="UINavigationController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RootNavigationViewController.h"/>
+        </class>
+        <class className="UserSettingViewController" superclassName="BaseListViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UserSettingViewController.h"/>
+        </class>
+        <class className="ViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+        </class>
+        <class className="WeiXinAwardViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeiXinAwardViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="describeView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="mainScrollView" candidateClass="UIScrollView"/>
+            </relationships>
+        </class>
+        <class className="WeiXinGoldShareViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeiXinGoldShareViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="countLable1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countLable2" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countLable3" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countLable4" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="countLable5" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="describeLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="flatSegmentedControl" candidateClass="FUISegmentedControl"/>
+                <relationship kind="outlet" name="getGoldLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="shareContainerView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="showGoldLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="showMoneyLable" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="showTimeLable" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="WeiXinShareViewCenterController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WeiXinShareViewCenterController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="titleLabele" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="goldIntroductionViewController" superclassName="BaseViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/goldIntroductionViewController.h"/>
+        </class>
+        <class className="iCarousel" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/iCarousel.h"/>
+            <relationships>
+                <relationship kind="outlet" name="dataSource"/>
+                <relationship kind="outlet" name="delegate"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

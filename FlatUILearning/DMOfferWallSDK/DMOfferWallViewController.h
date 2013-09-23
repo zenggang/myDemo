@@ -82,10 +82,6 @@ typedef enum {
 // Create OfferWallViewController with your own Publisher ID and User ID.
 - (id)initWithPublisherID:(NSString *)publisherID andUserID:(NSString *)userID;
 
-// 进行积分墙初始化配置检查。
-// Let offer wall start to work(Init config check).
-- (void)loadOfferWall;
-
 // 使用App的rootViewController来弹出并显示积分墙。
 // Present offer wall in ModelView way with App's rootViewController.
 - (void)presentOfferWall;

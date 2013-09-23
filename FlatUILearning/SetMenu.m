@@ -27,9 +27,13 @@
     self.saveMoney=[attributes objectForKey:@"s"];
     self.setId=[attributes objectForKey:@"h"];
     self.price=[attributes objectForKey:@"p"];
-    
+    self.tempPicUrl=[attributes objectForKey:@"l"];
     NSArray *menuArray=[attributes objectForKey:@"c"];
     self.menusString=[menuArray componentsJoinedByString:@","];
+    
+    if (_tempPicUrl && _tempPicUrl.length>0 && [_tempPicUrl hasPrefix:@"http"]) {
+        _picUrl=_tempPicUrl;
+    }
     
     return self;
 }

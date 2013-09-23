@@ -14,7 +14,9 @@
 #import "WapsOffer/AppConnect.h"
 #import "UIColor+FlatUI.h"
 #import "Harpy.h"
- 
+#import <Escore/YJFUserMessage.h>
+#import <Escore/YJFInitServer.h>
+
 #define LOOP_CHECK_FIRST_TIME_DELAY 1
 
 @implementation AppDelegate
@@ -69,13 +71,16 @@
 }
 
 
--(void) checkAppUpdateWithAppId:(NSString *) appId andAppName:(NSString *) appName
+-(void) checkAppUpdateWithAppId:(NSString *) appId andAppName:(NSString *) appName isForceUpdate:(BOOL) isForceUpdate
 {
     [[Harpy sharedInstance] setAppID:appId];
     [[Harpy sharedInstance] setAppName:appName];
     /* (Optional) Set the Alert Type for your app
      By default, the Singleton is initialized to HarpyAlertTypeOption */
-    [[Harpy sharedInstance] setAlertType:HarpyAlertTypeOption];
+    if (isForceUpdate) {
+        [[Harpy sharedInstance] setAlertType:HarpyAlertTypeForce];
+    }else
+        [[Harpy sharedInstance] setAlertType:HarpyAlertTypeOption];
     /* (Optional) If your application is not availabe in the U.S. Store, you must specify the two-letter
      country code for the region in which your applicaiton is available in. */
     [[Harpy sharedInstance] setCountryCode:@"cn"];
@@ -101,11 +106,11 @@
         
         [self reloadWallArrayInfo];
         [self platFormInit];
-        [self checkAppUpdateWithAppId:_appVersionInfo.appId andAppName:_appVersionInfo.displayName];
+        [self checkAppUpdateWithAppId:_appVersionInfo.appId andAppName:_appVersionInfo.displayName isForceUpdate:(_appVersionInfo.isForceUpdate == 1)];
         [self registWeiXinWithWeinXinId:_appVersionInfo.weixinId];
         [[NSNotificationCenter defaultCenter] postNotificationName:APPINFO_DID_LOADED object:nil];
     } failure:^(id error) {
-        
+         
         [self platFormInit];
         [AppUtilities handleErrorMessage:error];
     }]; 
@@ -199,7 +204,25 @@
                     [AppConnect getConnect:_WanPuPlatform.appKey pid:_WanPuPlatform.appSecret];
             }
                 break; 
-                
+            case ANWO_ID_INT:
+            {
+                _AnWoPlatform=platform;
+            }
+                break;
+                case YIJIFEN_ID_INT:
+            {
+                _YiJiFenPlatform = platform;
+                //开发者
+                YJFUserMessage *user = [[YJFUserMessage alloc]init];
+                [user setAppId:_YiJiFenPlatform.appSecret];//应用ID
+                [user setDevId:@"10620"];//开发者ID
+                [user setAppKey:_YiJiFenPlatform.appKey];//appKey
+                [user setChannel:@"IOS1.2.2"];//渠道号，默认当前SDK版本号
+                //初始化
+                YJFInitServer *InitData  = [[YJFInitServer alloc]init];
+                [InitData  getInitEscoreData];
+            }
+                break;
             default:
                 break;
         }
@@ -224,7 +247,13 @@
     }
 }
 
+
 #pragma mark sys
+-(void) application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
+{
+    NSLog(@"%@",error); 
+}
+
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     // Get a hex string from the device token with no spaces or < >
     /*
@@ -328,9 +357,9 @@
         [[NSNotificationCenter defaultCenter] postNotificationName:WEI_XIN_DID_RETURN object:self userInfo:[NSDictionary dictionaryWithObjectsAndKeys:resp,@"sendMessageToWXResp", nil]];
        
     }
-    else if([resp isKindOfClass:[SendAuthResp class]])
-    {
-        [[NSNotificationCenter defaultCenter] postNotificationName:WEI_XIN_OAuth_DID_RETURN object:self userInfo:[NSDictionary dictionaryWithObjectsAndKeys:resp,@"sendAuthResp", nil]];
-    }
+//    else if([resp isKindOfClass:[SendAuthResp class]])
+//    {
+//        [[NSNotificationCenter defaultCenter] postNotificationName:WEI_XIN_OAuth_DID_RETURN object:self userInfo:[NSDictionary dictionaryWithObjectsAndKeys:resp,@"sendAuthResp", nil]];
+//    }
 }
 @end

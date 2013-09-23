@@ -228,6 +228,7 @@
     NSURL *downloadUrl = [NSURL URLWithString:url];
     downloader.url = downloadUrl;
     downloader.filePath=[AppUtilities HomeFilePath];
+    
     downloader.fileName = fileName;
     [downloader start];
     return downloader;

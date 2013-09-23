@@ -18,6 +18,7 @@
 }
 
 @property (nonatomic,assign) int pageNo;
+@property (nonatomic,assign) BOOL isLoading;
 @end
 
 @implementation GetGoldLogViewContrller
@@ -34,10 +35,16 @@
     
     __weak GetGoldLogViewContrller *weakSelf=self;
     [self.tableView addInfiniteScrollingWithActionHandler:^{
+        if (_isLoading) {
+            return;
+        }
         _pageNo++;
         [weakSelf reloadGetGoldData];
     }];
     [self.tableView addPullToRefreshWithActionHandler:^{
+        if (_isLoading) {
+            return;
+        }
         _pageNo=1;
         [weakSelf reloadGetGoldData];
     }];
@@ -53,8 +60,15 @@
 
 -(void) reloadGetGoldData
 {
+    
+    if (_isLoading) {
+        return;
+    }
     __weak GetGoldLogViewContrller *weakSelf=self;
+    
+    _isLoading=YES;
     [UserGetGoldDetail getUserGetGoldLogOnSuccess:^(NSMutableArray *array) {
+        _isLoading=NO;
         [SVProgressHUD dismiss];
         if (_pageNo==1) {
             weakSelf.dataArray=array;
@@ -62,11 +76,15 @@
         }else{
             [weakSelf.dataArray addObjectsFromArray:array];
             [weakSelf.tableView.infiniteScrollingView stopAnimating];
+            if (array.count==0) {
+                _pageNo--;
+            }
         }
         
         [weakSelf.tableView reloadData];
         
     } failure:^(id error) {
+        _isLoading=NO;
         [AppUtilities handleErrorMessage:error];
         [weakSelf.tableView.pullToRefreshView stopAnimating];
     } pageNo:_pageNo];

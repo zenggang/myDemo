@@ -18,6 +18,8 @@
 @property (nonatomic,strong) NSMutableArray *platFormList;
 @property (nonatomic, strong) NSString *weixinId;
 @property (nonatomic, strong) NSString *appId;
+@property (nonatomic,assign) int isForceUpdate;
+@property (nonatomic,assign) int dataSynchNumber;
 
 - (id)initWithAttributes:(NSDictionary *)attributes;
 +(AFHTTPRequestOperation *) CheckAppInfoOnSuccess:(void (^)(id))success failure:(void (^)(id))failure;

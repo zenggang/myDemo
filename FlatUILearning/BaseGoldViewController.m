@@ -11,11 +11,15 @@
 #import "MiidiManager.h"
 #import "MiidiAdWall.h"
 #import "WapsOffer/AppConnect.h"
+#import "AdwoOfferWall.h"
+
+
 
 @interface BaseGoldViewController()
 @property (nonatomic,strong) DMOfferWallViewController *DMOWallController;
 
 @property (nonatomic,strong) immobView *liMei_AdWall;
+@property (nonatomic,strong)  YJFIntegralWall *integralWall;
 //@property (atomic,assign) int latestGoldAmount;
 @property (atomic,assign) int platformRoundCheckCount;
 @property (nonatomic,assign) BOOL isAllGoldLoaded;
@@ -27,6 +31,8 @@
 @property (nonatomic,assign) NSInteger addGoldMIDIToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldYOUMiToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldWanPuToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldAnWoToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldYiJIFenToSysGoldAmount;
 
 
 @property (nonatomic,assign) int oldUserPlatformCheckCount;
@@ -60,7 +66,11 @@
         [self reloadGoldAmount];
     }
     
+
+    
 }
+
+
 
 
 -(void)viewWillAppear:(BOOL)animated
@@ -144,7 +154,7 @@
 
 -(void) openYOUMIWall
 {
-    [YouMiPointsManager rewardPoints:100];
+    //[YouMiPointsManager rewardPoints:100];
     [YouMiWall showOffers:YES didShowBlock:^{
         //log4Debug(@"有米积分墙已显示");
     } didDismissBlock:^{
@@ -157,7 +167,48 @@
     [AppConnect showOffers:self.parentViewController];
 }
 
+//安沃平台
+-(void) openAnwoWall
+{
+    // 初始化并登录积分墙
+    BOOL result = AdwoOWPresentOfferWall(APPDELEGATE.AnWoPlatform.appKey, self);
+    if(!result)
+    {
+        NSLog(@"安沃初始化失败");
+    }
+}
 
+- (int)getAnWoPoints
+{
+    NSInteger currPoints = 0;
+    
+    // 通过传0来查询剩余虚拟货币
+    if(AdwoOWConsumePoints(0, &currPoints))
+        NSLog(@"Current points: %d", currPoints);
+    return currPoints;
+}
+
+//易积分平台
+//积分墙
+-(void)OpenYiJIFenWall
+{
+    if (!_integralWall) {
+        _integralWall = [[YJFIntegralWall alloc]init];
+        _integralWall.delegate = self;
+    }
+
+    [self presentModalViewController:_integralWall animated:YES];
+}
+
+-(int)getYiJifenScore
+{
+    NSString * str = [YJFScore getScore];
+    int score=0;
+    if (str) {
+        score = [str intValue];
+    }
+    return score;
+}
 
 -(void) changeTheGoldToNewVersion
 {
@@ -220,7 +271,14 @@
             int totalPoint =[YouMiPointsManager pointsRemained];
             [self handlePlatformGoldReturnWithGold:totalPoint andPid:YOUMI_ID_INT pidStr:YOUMI_ID];
         }
-
+        if (APPDELEGATE.AnWoPlatform.state==1) {
+            int totalPoint =[self getAnWoPoints];
+            [self handlePlatformGoldReturnWithGold:totalPoint andPid:ANWO_ID_INT pidStr:ANWO_ID];
+        }
+        if (APPDELEGATE.YiJiFenPlatform.state==1) {
+            int totalPoint =[self getYiJifenScore];
+            [self handlePlatformGoldReturnWithGold:totalPoint andPid:YIJIFEN_ID_INT pidStr:YIJIFEN_ID];
+        }
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:DOMO_ID]).state==1)
             [_DMOWallController requestOnlinePointCheck];
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:LIMEI_ID]).state ==1)
@@ -340,7 +398,12 @@
             case WANPU_ID_INT:
                 _addGoldWanPuToSysGoldAmount=totalPoint;
                 break;
-                
+            case ANWO_ID_INT:
+                _addGoldAnWoToSysGoldAmount=totalPoint;
+                break;
+             case YIJIFEN_ID_INT:
+                _addGoldYiJIFenToSysGoldAmount=totalPoint;
+                break;
             default:
                 break;
         }
@@ -357,7 +420,7 @@
             // 第一次返回sysGif的总量
             _platformRoundCheckCount++;
             APPDELEGATE.userGoldAmont=totalPoint;
-            
+            [self updateGoldInfo:pid];
         }
         
     }
@@ -386,6 +449,21 @@
         //万普平台回调接口唯一,所以要有标示符
         _isRuduceGold=YES;
         [AppConnect spendPoints:reduceAmount];
+    }else if([pidStr isEqualToString:ANWO_ID]){
+        // 消费value个虚拟货币
+        if(AdwoOWConsumePoints(reduceAmount, NULL))
+        {
+            [self handleReducePlatformGoldWithPid:ANWO_ID_INT];
+        }else{
+            [self handleErrorReduceGoldWithPid:ANWO_ID_INT];
+        }
+    }else if ([pidStr isEqualToString:YIJIFEN_ID]){
+        int succ = [YJFScore consumptionScore:reduceAmount]; //[yjfScore consumptionScore:_sc] 返回1 表示成功消耗  0 失败
+        if (succ == 1) {
+            [self handleReducePlatformGoldWithPid:YIJIFEN_ID_INT];
+        }else{
+            [self handleErrorReduceGoldWithPid:YIJIFEN_ID_INT];
+        }
     }
 }
 
@@ -423,6 +501,12 @@
                 break;
             case WANPU_ID_INT:
                 addGold =_addGoldWanPuToSysGoldAmount;
+                break;
+            case ANWO_ID_INT:
+                addGold=_addGoldAnWoToSysGoldAmount;
+                break;
+                case YIJIFEN_ID_INT:
+                addGold=_addGoldYiJIFenToSysGoldAmount;
                 break;
                 
             default:

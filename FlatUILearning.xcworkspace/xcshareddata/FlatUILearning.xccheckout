@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>29385281-4D04-4A6F-9B8A-C2C648A40193</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlatUILearning</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>218EE1B7-FE34-4B65-BD71-9B329DED9DAE</key>
+		<string>https://github.com/zenggang/myDemo.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlatUILearning.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>218EE1B7-FE34-4B65-BD71-9B329DED9DAE</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zenggang/myDemo.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>218EE1B7-FE34-4B65-BD71-9B329DED9DAE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>218EE1B7-FE34-4B65-BD71-9B329DED9DAE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlatUILearning</string>
+		</dict>
+	</array>
+</dict>
+</plist>

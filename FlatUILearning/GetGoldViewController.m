@@ -20,6 +20,8 @@
 @property (nonatomic,strong) FUIButton *MIDIButton;
 @property (nonatomic,strong) FUIButton *YOUMIButton;
 @property (nonatomic,strong) FUIButton *WANPUButton;
+@property (nonatomic,strong) FUIButton *ANWOButton;
+@property (nonatomic,strong) FUIButton *YiJiFenButton;
 
 
 @property (nonatomic,strong) FUIButton *awardQqButton;
@@ -32,6 +34,8 @@
 @property (nonatomic,weak) IBOutlet UILabel *goldLable;
 @property (nonatomic,weak) IBOutlet UILabel *describeLable;
 @property (nonatomic,weak) IBOutlet UILabel *skillLable;
+
+@property (nonatomic,assign) int theY_OffSet;
 
 @property (nonatomic,assign) int platformInuseCount;
 
@@ -55,47 +59,49 @@
     _mainScrollView.delegate=self;
     
     _platformInuseCount=0;
+    int thex=10;
+    int theY=125;
+    _theY_OffSet=125;
     for (GoldPlatForm *platForm in APPDELEGATE.appVersionInfo.platFormList) {
         if (platForm.state==0 || platForm.pid==SYS_GIF_ID_INT || APPDELEGATE.appVersionInfo.isHide==1) {
             continue;
         }
+        if (_platformInuseCount%3==0) {
+            thex=10;
+            _theY_OffSet+=60;
+            if (_platformInuseCount>1) {
+                theY+=60;
+            }
+        }else{
+            thex+=105;
+        }
         _platformInuseCount++;
+        
+        
         switch (platForm.pid) {
             case DOMO_ID_INT:
-            {
-                _DMOButton =[self createFUIButtonWithFrame:CGRectMake(10, 125, 90, 40) cornerRadius:2 clickAction:@selector(openDUOMENWall) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"多盟平台"];
-                [_mainScrollView addSubview:_DMOButton];
-            }
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_DMOButton andTitle:@"多盟平台" withAction:@selector(openDUOMENWall)];
                 break;
             case LIMEI_ID_INT:
-            {
-                _LIMEIButton =[self createFUIButtonWithFrame:CGRectMake(115, 125, 90, 40) cornerRadius:2 clickAction:@selector(openLiMeiWall) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"力美平台"];
-                 [_mainScrollView addSubview:_LIMEIButton];
-            }
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_LIMEIButton andTitle:@"力美平台" withAction:@selector(openLiMeiWall)];
                 break;
             case DIANRU_ID_INT:
-            {
-                _DIANDIANButton=[self createFUIButtonWithFrame:CGRectMake(220, 125, 90, 40) cornerRadius:2 clickAction:@selector(openDianRuWall) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"点入平台"];
-                [_mainScrollView addSubview:_DIANDIANButton];
-            }
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_DIANDIANButton andTitle:@"点入平台" withAction:@selector(openDianRuWall)];
                 break;
             case MIDI_ID_INT:
-            {
-                _MIDIButton =[self createFUIButtonWithFrame:CGRectMake(10, 185, 90, 40) cornerRadius:2 clickAction:@selector(openMIDIWall) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"米迪平台"];
-                [_mainScrollView addSubview:_MIDIButton];
-            }
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_MIDIButton andTitle:@"米迪平台" withAction:@selector(openMIDIWall)];
                 break;
             case YOUMI_ID_INT:
-            {
-                _YOUMIButton =[self createFUIButtonWithFrame:CGRectMake(115, 185, 90, 40) cornerRadius:2 clickAction:@selector(openYOUMIWall) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"有米平台"];
-                [_mainScrollView addSubview:_YOUMIButton];
-            }
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YOUMIButton andTitle:@"有米平台" withAction:@selector(openYOUMIWall)];
                 break;
             case WANPU_ID_INT:
-            {
-                _WANPUButton=[self createFUIButtonWithFrame:CGRectMake(220, 185, 90, 40) cornerRadius:2 clickAction:@selector(openWANPUWall) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"万普平台"];
-                [_mainScrollView addSubview:_WANPUButton];
-            }
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_WANPUButton andTitle:@"万普平台" withAction:@selector(openWANPUWall)];
+                break;
+            case ANWO_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_ANWOButton andTitle:@"安沃平台" withAction:@selector(openAnwoWall)];
+                break;
+            case YIJIFEN_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YiJiFenButton andTitle:@"易积分平台" withAction:@selector(OpenYiJIFenWall)];
                 break;
             default:
                 break;
@@ -114,18 +120,19 @@
     _describeLable.font=[UIFont boldFlatFontOfSize:20];
     _describeLable.textColor=GREEN_COLOR;
     
-
     
-    _awardQqButton=[self createFUIButtonWithFrame:CGRectMake(10, 365, 300, 40) cornerRadius:2 clickAction:@selector(openAwardQqView) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"当前可领推荐金币"];
+    _skillLable.frame = [AppUtilities changeViewFrameJustForY:_theY_OffSet withView:_skillLable];
+    
+    _awardQqButton=[self createFUIButtonWithFrame:CGRectMake(10, _theY_OffSet+120, 300, 40) cornerRadius:2 clickAction:@selector(openAwardQqView) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"当前可领推荐金币"];
     [_mainScrollView addSubview:_awardQqButton];
     
-    _awardWeixinShareButton=[self createFUIButtonWithFrame:CGRectMake(10, 415, 300, 40) cornerRadius:2 clickAction:@selector(openWeixinShareAward) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"分享收入到朋友圈,每天领10金币"];
+    _awardWeixinShareButton=[self createFUIButtonWithFrame:CGRectMake(10, _theY_OffSet+175, 300, 40) cornerRadius:2 clickAction:@selector(openWeixinShareAward) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"分享收入到微信,每天领12金币"];
     [_mainScrollView addSubview:_awardWeixinShareButton];
     
-    _awardWeiXinButton=[self createFUIButtonWithFrame:CGRectMake(10, 465, 300, 40) cornerRadius:2 clickAction:@selector(openAwardWeixinView) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"关注微信公共账号,领取30金币"];
+    _awardWeiXinButton=[self createFUIButtonWithFrame:CGRectMake(10, _theY_OffSet+230, 300, 40) cornerRadius:2 clickAction:@selector(openAwardWeixinView) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"关注微信公共账号,领取30金币"];
     [_mainScrollView addSubview:_awardWeiXinButton];
     
-    _awardFiveStarButton=[self createFUIButtonWithFrame:CGRectMake(10, 515, 300, 40) cornerRadius:2 clickAction:@selector(openAwardFiveStar) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"去AppStroe评价5星送金币!"];
+    _awardFiveStarButton=[self createFUIButtonWithFrame:CGRectMake(10, _theY_OffSet+285, 300, 40) cornerRadius:2 clickAction:@selector(openAwardFiveStar) fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:@"去AppStroe评价5星送金币!"];
     [_mainScrollView addSubview:_awardFiveStarButton];
     
     
@@ -145,6 +152,10 @@
         describeLable2.textColor=GREEN_COLOR;
         _skillLable.textColor=GREEN_COLOR;
         _skillLable.font=[UIFont flatFontOfSize:14];
+        UIView *theLineView=[_mainScrollView viewWithTag:21] ;
+        theLineView.frame=[AppUtilities changeViewFrameJustForY:_theY_OffSet+70 withView:theLineView];
+        theLineView=[_mainScrollView viewWithTag:22] ;
+        theLineView.frame=[AppUtilities changeViewFrameJustForY:_theY_OffSet+85 withView:theLineView];
         [self createNavigationRightButtonWithTitle:@"使用说明"  action:@selector(showMenuRight)];
     }
     
@@ -158,6 +169,12 @@
     [_mainScrollView.pullToRefreshView setTitle:@"释放开始刷新" forState:SVPullToRefreshStateTriggered];
     [_mainScrollView.pullToRefreshView setArrowColor:GREEN_COLOR];
     [_mainScrollView.pullToRefreshView setTextColor:GREEN_COLOR];
+}
+
+-(void) creatGoldButtonWithFrame:(CGRect) theframe andButton:(FUIButton *) fUIButton andTitle:(NSString *) title withAction:(SEL) action
+{
+    fUIButton=[self createFUIButtonWithFrame:theframe cornerRadius:2 clickAction:action fontSize:[UIFont boldFlatFontOfSize:17] buttonColor:nil shadowColor:nil titleColor:nil withText:title];
+    [_mainScrollView addSubview:fUIButton];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -179,7 +196,7 @@
     if (_mainScrollView.frame.size.height!=mainScreenHeightWithoutBar-158) {
         _mainScrollView.frame=[AppUtilities changeViewFrameJustForHight:mainScreenHeightWithoutBar-158 withView:_mainScrollView];
         if (_platformInuseCount>0) {
-            _mainScrollView.contentSize=CGSizeMake(320, 565);
+            _mainScrollView.contentSize=CGSizeMake(320, _theY_OffSet+350);
         }
         
     }
@@ -224,8 +241,8 @@
 }
 -(void)openWeixinShareAward
 {
-    WeiXinGoldShareViewController *weiXinShareGoldVC=[self.storyboard instantiateViewControllerWithIdentifier:@"weiXinGoldShareViewController"];
-    [self.navigationController pushViewController:weiXinShareGoldVC animated:YES];
+    WeiXinGoldShareViewController *weiXinShareGoldVC=[self.storyboard instantiateViewControllerWithIdentifier:@"WeiXinShareViewCenterController"];
+    [self.navigationController pushViewController:weiXinShareGoldVC animated:YES]; 
 }
 -(void)openAwardWeixinView
 {

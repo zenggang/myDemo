@@ -5,7 +5,6 @@ PODS:
   - ECSlidingViewController (0.10.0)
   - iCarousel (1.7.6)
   - JSONKit (1.5pre)
-  - MagicalRecord (2.2)
   - OpenUDID (1.0.0)
   - SSToolkit (1.0.4)
   - SVProgressHUD (0.9)
@@ -17,7 +16,6 @@ DEPENDENCIES:
   - ECSlidingViewController
   - iCarousel
   - JSONKit
-  - MagicalRecord
   - OpenUDID
   - SSToolkit
   - SVProgressHUD
@@ -29,7 +27,6 @@ SPEC CHECKSUMS:
   ECSlidingViewController: fc9a9a6564d4a64c0d8c7cf5583d2b9a469ecd04
   iCarousel: e23a26d7ba722215a42144e80adb0dcb59bebc41
   JSONKit: 409734ab3407fce90ef7eaa95d7168f38d9a6601
-  MagicalRecord: b1fc46c99a9749fe7fe7e6f43a89b62ef5201933
   OpenUDID: 13ab988776ef38dca1e2e799e961448cf83a8111
   SSToolkit: 689acaedac79c2079e492e528a55bcb5db9d98c4
   SVProgressHUD: 03d4845ec8e64591726428a08236c6a5489d45f8
