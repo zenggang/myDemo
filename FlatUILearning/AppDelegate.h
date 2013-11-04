@@ -39,6 +39,9 @@
 @property (nonatomic,assign) int platformCount;
 
 
+//图片缓存dict
+@property (nonatomic,strong) NSMutableDictionary *menuImageDict;
+
 @property (nonatomic, strong) NSTimer * timer;
 @property (nonatomic, assign) BOOL needUpdateWall;
 @property (nonatomic,strong) NSString *deviceToken;
@@ -52,6 +55,8 @@
 @property (nonatomic,strong) GoldPlatForm *WanPuPlatform;
 @property (nonatomic,strong) GoldPlatForm *AnWoPlatform;
 @property (nonatomic,strong) GoldPlatForm *YiJiFenPlatform;
+
+
 
 -(void) initUserInfo:(Users *) user;
 - (void) registPushNotification;

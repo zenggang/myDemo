@@ -33,6 +33,8 @@
 //    //定义输出目标与日志模板
 //    [[L4Logger rootLogger] addAppender: [[L4ConsoleAppender alloc] initTarget:YES withLayout: [L4Layout simpleLayout]]];
     
+    _menuImageDict =[NSMutableDictionary dictionary];
+    
     _colorDict=[NSDictionary dictionaryWithObjectsAndKeys:@"绿宝石",@"25af95",@"蓝色多瑙河",@"3498DB",@"紫宝石",@"9B59B6",@"太阳花",@"F1C40F",@"沥青色",@"34495E", nil];
     
     _colorbuttonShadowDict=[NSDictionary dictionaryWithObjectsAndKeys:@"16A085",@"25af95",@"2980B9",@"3498DB",@"8E44AD",@"9B59B6",@"F39C12",@"F1C40F",@"2C3E50",@"34495E", nil];
@@ -75,6 +77,7 @@
 {
     [[Harpy sharedInstance] setAppID:appId];
     [[Harpy sharedInstance] setAppName:appName];
+    [[Harpy sharedInstance] setAppUpdateMemo:_appVersionInfo.latestVersionMemo];
     /* (Optional) Set the Alert Type for your app
      By default, the Singleton is initialized to HarpyAlertTypeOption */
     if (isForceUpdate) {

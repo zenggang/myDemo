@@ -95,7 +95,7 @@
 //                  NSHomeDirectory(),
 //                  [[NSBundle mainBundle] bundleIdentifier]];
 //    }
-    NSString *documentsDirectory= [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];//获取document目录然后将文件名追加进去
+    NSString *documentsDirectory= [NSHomeDirectory() stringByAppendingPathComponent:@"tmp"];//获取document目录然后将文件名追加进去
 //    NSString *tmpPath = NSTemporaryDirectory(); //获取tmp目录
 //    NSLog(@"%@",tmpPath);
 //    NSString *myDirectory = [documentsDirectory stringByAppendingPathComponent:@"test"];

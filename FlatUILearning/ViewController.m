@@ -10,7 +10,7 @@
 #import "MenuView.h"
 #import "RestaurantMapViewController.h"
 
-@interface ViewController ()
+@interface ViewController () 
 {
      
 }
@@ -28,7 +28,7 @@
 {
     
     [super viewDidLoad];
-    self.title = @"麦当劳优惠劵";
+    self.title = APP_FIRST_TAB_NAME;
     _dataArray =APPDELEGATE.allMenuSet;
     self.view.backgroundColor = [UIColor cloudsColor];
     
@@ -198,7 +198,37 @@
 //下载结束
 - (void)downloadFinished:(McDownload *)aDownload
 {
+//    if(![APPDELEGATE.menuImageDict objectForKey:aDownload.fileName])
+//    {
+//        [APPDELEGATE.menuImageDict setObject:[UIImage imageWithContentsOfFile:[[AppUtilities HomeFilePath] stringByAppendingPathComponent:aDownload.fileName]] forKey:aDownload.fileName];
+//        
+//    }
     [self downLoadPicInOneProcess];
+    /* 建立线程操作队列 */
+    NSOperationQueue *queue = [NSOperationQueue new];
+    
+    /* 创建一个NSInvocationOperation对象来在线程中执行loadImagesWithThread操作 */
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                            selector:@selector(loadImagesWithThread:)
+                                                                              object:aDownload];
+    /* 将operation添加到线程队列 */
+    [queue addOperation:operation];
+}
+
+
+- (void) loadImagesWithThread:(McDownload *)aDownload{
+    
+        //线程从这里执行，可以向普通操作一样读取图片、完成后刷新界面等
+    if(![APPDELEGATE.menuImageDict objectForKey:aDownload.fileName] && [[NSFileManager defaultManager] fileExistsAtPath:[[AppUtilities HomeFilePath] stringByAppendingPathComponent:aDownload.fileName]])
+    {
+        UIImage *theImage = [UIImage imageWithContentsOfFile:[[AppUtilities HomeFilePath] stringByAppendingPathComponent:aDownload.fileName]];
+        if (theImage) {
+            [APPDELEGATE.menuImageDict setObject:theImage forKey:aDownload.fileName];
+            NSLog(@"%@下载后加载图片",aDownload.fileName);
+        }
+        
+    }
+    
 }
 
 -(void) downLoadPicInOneProcess

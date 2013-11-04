@@ -20,20 +20,21 @@
 }
 
 
--(void) setUpTicketWithinfo:(NSDictionary *) ticketInfo withTicketViewDelegate:(id) del
+-(void) setUpTicketWithinfo:(GuaGuaKa *) guaguaka withTicketViewDelegate:(id) del
 {
    
-    _ticketInfo=ticketInfo;
+    _guaguaka=guaguaka;
     _buyButton.hidden=YES;
     self.delegate=del;
     
-    int benjin=[[ticketInfo objectForKey:@"benjin"] intValue];
-    double baobenRate=[[ticketInfo objectForKey:@"baobenRate"] doubleValue];
+    int benjin=guaguaka.benjin;
+    double baobenRate=guaguaka.baobenRate;
     
     [_tickeWorthLable setText:[NSString stringWithFormat:@"%d金币刮刮卡",benjin]];
     [_tickeMostAwardLable setText:[NSString stringWithFormat:@"最高回报:%d金币",benjin*3]];
     [_tickeRateLable setText:[NSString stringWithFormat:@"保本率:%0.f%@",baobenRate*100,@"%"]];
     [self recrateScrachView];
+    _tickeLable.hidden=YES;
 }
 
 -(void) recrateScrachView
@@ -49,12 +50,12 @@
     [_scratchView setHideView:hideView];
     _scratchView.delegate=self;
     [self.ticketTextMainView addSubview:_scratchView];
-    int benjin=[[_ticketInfo objectForKey:@"benjin"] intValue];
-    double baobenRate=[[_ticketInfo objectForKey:@"baobenRate"] doubleValue];
+    int benjin=_guaguaka.benjin;
+    double baobenRate=_guaguaka.baobenRate;
     
     int ticketValue =[self calculateCardValueWithBaobenRate:baobenRate andBenJin:benjin];
     [_tickeLable setText:[NSString stringWithFormat:@"%d金币",ticketValue]];
-    _awardValue=ticketValue;
+    _awardValue=ticketValue; 
 }
 
 
@@ -83,11 +84,12 @@
 
 -(IBAction) buyTicket:(id) sender 
 {
-    [_delegate clickTheBuyButtonWithBenjin:[[_ticketInfo objectForKey:@"benjin"] intValue] WithAwardValue:_awardValue];
+    [_delegate clickTheBuyButtonWithBenjin:_guaguaka.benjin WithAwardValue:_awardValue withGid:_guaguaka.gid];
 }
 
 -(void) showTheTicketScratchArea
 {
+    _tickeLable.hidden=NO;
     [UIView animateWithDuration:0.5 animations:^{
         _tickeImageView.frame=CGRectMake(-100, 0, 401, 119);
         _ticketTextMainView.frame=CGRectMake(0, 0, 311, 119);

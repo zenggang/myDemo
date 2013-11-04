@@ -6,19 +6,26 @@
 //  Copyright (c) 2013年 gang zeng. All rights reserved.
 //
   
-//APP
-#define APP_NAME @"McDonald"
-#define VERSION_STRING @"3.00"
+//APP 
+#define APP_NAME @"ZuanZuanZuan"
+#define VERSION_STRING @"1.30"
 #define SYS_OS [[UIDevice currentDevice] systemVersion] 
 
 //McDonald 版本 1.00 appStroe 1.01 91市场  1.02 测试版
 #define APPNAME_MCDONALD @"McDonald"
+
 //GuaGuale 刮刮乐 1.10 appStroe 1.11 91市场  1.12 测试版
 #define APPNAME_GUAGUALE @"GuaGuaLe"
-//#define VERSION 1.0 
 
-//麦当劳优惠劵  全民刮刮赚
-#define APP_FIRST_TAB_NAME @"麦当劳优惠劵"
+//GuaGuale 肯德基 1.20 appStroe 1.21 91市场  1.22 测试版
+#define APPNAME_KFC @"Kfc"
+
+//ZuanZuanZuan 转转赚 1.30 appStroe 1.31 91市场  1.32 测试版
+#define APPNAME_ZuanZuanZuan @"ZuanZuanZuan"
+//#define VERSION 1.0
+
+//麦当劳优惠劵  全民刮刮赚  肯德基优惠劵 老虎机转转赚
+#define APP_FIRST_TAB_NAME @"老虎机转转赚"
 
 
 #define PRIVATE_SECRET_KEY @"javababyzenggang"
@@ -48,15 +55,18 @@
  
 
 //Urls
-#define BaseUrl @"http://121.199.42.54:8080/gold"
-//#define BaseUrl @"http://192.168.1.100:8080/gold"
-//#define BaseUrl @"http://192.168.1.106:8080/gold"
+//#define BaseUrl @"http://121.199.42.54:8080/gold"
+#define BaseUrl @"http://192.168.1.100:8080/gold"
+//#define BaseUrl @"http://192.168.1.104:8080/gold"
 
 #define KRequestMenuPicUrl(url) [NSString stringWithFormat:@"http://www.mcdonalds.com.cn/images/mclub/%@",url]
 
+
 #define KRequestLatestMenu  [NSString stringWithFormat:@"%@/api/version/getMcdonaldsData",BaseUrl]
 
-#define KRequestFindNearbyRestaurant(lat,lng) [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&sensor=false&language=zh-CN&radius=10000&keyword=mcdonalds&key=AIzaSyDJXuyKYYqUiSvGLmWxXRX0NL6xd8qmnfc",lat,lng]
+#define KRequestKfcMenu [NSString stringWithFormat:@"%@/api/version/getKfcData",BaseUrl]
+
+#define KRequestFindNearbyRestaurant(lat,lng) [NSString stringWithFormat:@"https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=%f,%f&sensor=false&language=zh-CN&radius=10000&keyword=%@&key=AIzaSyDJXuyKYYqUiSvGLmWxXRX0NL6xd8qmnfc",lat,lng,APP_NAME]
 
 #define GOLDRequestCheckUser(udid,deviceToken) [NSString stringWithFormat:@"%@/api/Users/checkUser/%@?deviceToken=%@",BaseUrl,udid,deviceToken ? deviceToken : @""]
 #define GOLDRequestCreateUser(udid) [NSString stringWithFormat:@"%@/api/Users/createUser/%@",BaseUrl,udid]
@@ -82,6 +92,14 @@
 
 #define GOLDRequestCheckAppInfo [NSString stringWithFormat:@"%@/api/version/checkAppInfo",BaseUrl] 
 #define GOLDRequestGetGoldAndExchangeWall [NSString stringWithFormat:@"%@/api/version/getGoldAndExchangeWall",BaseUrl]  
+
+#define GOLDRequestGAUGUAKaList [NSString stringWithFormat:@"%@/api/GuaGuaKa/cardList",BaseUrl] 
+
+
+#define GOLDRequestBuyGuaGuaKa(udid) [NSString stringWithFormat:@"%@/api/GuaGuaKa/BuyCard/%@",BaseUrl,udid] 
+
+#define GOLDRequestGAUGUAKaLogList(udid) [NSString stringWithFormat:@"%@/api/GuaGuaKa/cardRecords/%@",BaseUrl,udid] 
+
 
 //NSUserdefaults property key name
 #define defaults_latest_menu_date @"default_latest_menu_date" 

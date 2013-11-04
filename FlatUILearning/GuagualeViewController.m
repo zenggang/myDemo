@@ -8,7 +8,8 @@
 
 #import "GuagualeViewController.h"
 #import "SVPullToRefresh.h"
-
+#import "GuaGuaKa.h"
+#import "GuaGuaKaLogViewController.h"
 
 
 #define GOLD_NOT_ENOUGH_ALERT_TAG 2348
@@ -25,6 +26,7 @@
 
 @property (nonatomic,assign) int awardValue;
 @property (nonatomic,assign) int benjin;
+@property (nonatomic,assign) int theGid;
 @property (nonatomic,assign) BOOL isScratched;
 @property (nonatomic,strong) DMScrollingTicker *scrollTextView;
 -(void) buildScrollTextView;
@@ -38,12 +40,14 @@
 -(void)viewDidLoad
 {
     
-    self.title=@"金币刮刮乐";
+    self.title=@"金币刮刮赚";
     [self createNavigationLeftButtonWithTitle:@"菜单"  action:@selector(showMenuLeft)];
+    [self createNavigationRightButtonWithTitle:@"记录" action:@selector(showMenuRight)];
     _goldLable.textColor=[UIColor colorFromHexCode:@"f1c40f"];
     _isScratched=YES;
     [_goldMainView setBackgroundColor:[UIColor midnightBlueColor]];
     if ([AppUtilities isIOS7]) {
+         self.edgesForExtendedLayout=UIRectEdgeNone;
         self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18],UITextAttributeTextColor:[UIColor whiteColor]};
         [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
     }else{
@@ -65,14 +69,8 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(buildScrollTextView) name:STRING_ARRAY_FOR_WALL_LOADED object:nil];
     
-    [self buildScrollTextView];
-    self.dataArray=[NSMutableArray arrayWithObjects:
-                    [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:20],@"benjin",[NSNumber numberWithDouble:0.45],@"baobenRate", nil],
-                    [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:30],@"benjin",[NSNumber numberWithDouble:0.48],@"baobenRate", nil],
-                    [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:50],@"benjin",[NSNumber numberWithDouble:0.50],@"baobenRate", nil],
-                    [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:100],@"benjin",[NSNumber numberWithDouble:0.55],@"baobenRate", nil],
-                    [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:200],@"benjin",[NSNumber numberWithDouble:0.60],@"baobenRate", nil],
-                    [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:300],@"benjin",[NSNumber numberWithDouble:0.65],@"baobenRate", nil],nil];
+    
+
     _carouseView.delegate=self;
     _carouseView.dataSource=self;
     _carouseView.type = iCarouselTypeCoverFlow2;
@@ -83,12 +81,7 @@
     _carouseView.clipsToBounds=YES;
     
     
-    [_carouseView reloadData];
-    if (IS_IPHONE5) {
-        [_carouseView scrollToItemAtIndex:2 animated:YES];
-    }else
-        [_carouseView scrollToItemAtIndex:1 animated:YES];
-    
+
     _goldButton =[self createFUIButtonWithFrame:CGRectMake(220, 10, 90, 35) cornerRadius:3 clickAction:@selector(toGetGold) fontSize:[UIFont flatFontOfSize:15] buttonColor:[UIColor peterRiverColor] shadowColor:[UIColor midnightBlueColor] titleColor:[UIColor whiteColor] withText:@"免费赚金币"];
     [_goldMainView addSubview:_goldButton];
     
@@ -97,6 +90,19 @@
     if (APPDELEGATE.appVersionInfo.isHide==1) {
         _exchangeButton.hidden=YES;
     }
+    
+    [GuaGuaKa getGuaGuaKaListOnSuccess:^(id respons) {
+        self.dataArray=respons;
+        [_carouseView reloadData];
+        [self buildScrollTextView];
+        if (IS_IPHONE5) {
+            [_carouseView scrollToItemAtIndex:2 animated:YES];
+        }else
+            [_carouseView scrollToItemAtIndex:1 animated:YES];
+        
+    } failure:^(id error) {
+        [AppUtilities handleErrorMessage:error];
+    }];
     
 }
 
@@ -120,7 +126,7 @@
     
 }
 
--(void) checkGoldToBuyTicket:(int) benjin AwardValue:(int) awardValue
+-(void) checkGoldToBuyTicket:(int) benjin AwardValue:(int) awardValue andGid:(int) gid
 {
     
     if (APPDELEGATE.userGoldAmont<benjin) {
@@ -129,6 +135,7 @@
     }
     _benjin=benjin;
     _awardValue=awardValue;
+    _theGid=gid;
     if (benjin>=100) {
         [self showFUIAlertViewWithTitle:@"提示!" message:[NSString stringWithFormat:@"您确定要购买%d金币的刮刮卡吗?",benjin] withTag:GOLD_OVER_100_ALERT_TAG cancleButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
         return;
@@ -140,45 +147,17 @@
 
 -(void) afterTicketBought
 {
-    
-    if (_benjin>_awardValue) {
-        //减少金币
-        //log4Debug(@"减少金币:%d",_loseOrAwardValue);
-        self.isGuaGuaLeDeduce=YES;
-        self.guaGuaLeDeduceGoldAmount=_benjin-_awardValue;
-        [self reduceGold];
-    }else if(_awardValue>_benjin){
-        //增加金币
-        [SVProgressHUD showWithStatus:@"发送中..." maskType:SVProgressHUDMaskTypeClear];
-//        int amount=_awardValue-_benjin;
-//        int oldGold=[[APPDELEGATE.userGoldDict objectForKey:SYS_GIF_ID] intValue];
-//        [UserGold addGoldOnSuccess:^(id json) {
-//            [SVProgressHUD showSuccessWithStatus:@"购买成功!"];
-//            _isScratched=NO;
-//            
-//            [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont-_benjin ]];
-//            APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont+amount;
-//            [APPDELEGATE.userGoldDict setObject:[NSNumber numberWithInt:oldGold+amount] forKey:SYS_GIF_ID];
-//            
-//        } failure:^(id json) {
-//            [SVProgressHUD showErrorWithStatus:[json objectForKey:@"message"]];
-//        } withGoldData:[AppUtilities goldDataEncryptWithPid:SYS_GIF_ID_INT andGoldAmount:amount] withSecret:[AppUtilities TheSecretForAddGold:amount WithOldGold:oldGold withPid:SYS_GIF_ID_INT]];
-    }else{
-        [SVProgressHUD showSuccessWithStatus:@"购买成功!"];
-        _isScratched=NO;
-        [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont-_benjin ]];
-    }
-}
-
--(void)afterGoldReduced
-{
-    [SVProgressHUD showSuccessWithStatus:@"购买成功"];
     _isScratched=NO;
-    [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont-_benjin ]];
-    APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont-(_benjin-_awardValue);
-    self.isGuaGuaLeDeduce=NO;
-
+    [GuaGuaKa buyGuaGuaKaWithData:[AppUtilities goldDataEncryptWithPid:_theGid andGoldAmount:_awardValue] OnSuccess:^(id respons) {
+        [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont-_benjin ]];
+        
+        APPDELEGATE.userGoldAmont=[[respons objectForKey:@"goldAmount"] integerValue];
+    } failure:^(id error) {
+        [AppUtilities handleErrorMessage:error];
+    }];
+    
 }
+
 
 -(void) toGetGold
 {
@@ -225,9 +204,9 @@
     [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont]];
 }
 
--(void) clickTheBuyButtonWithBenjin:(int)benjin WithAwardValue:(int)awardValue
+-(void) clickTheBuyButtonWithBenjin:(int)benjin WithAwardValue:(int)awardValue withGid:(int) gid
 {
-    [self checkGoldToBuyTicket:benjin AwardValue:awardValue];
+    [self checkGoldToBuyTicket:benjin AwardValue:awardValue andGid:gid];
 }
 
 #pragma mark system
@@ -244,15 +223,27 @@
     if (![self.slidingViewController.underLeftViewController isKindOfClass:[MenuViewController class]]) {
         self.slidingViewController.underLeftViewController  = [self.storyboard instantiateViewControllerWithIdentifier:@"MenuViewController"];
     }
+    if (![self.slidingViewController.underRightViewController isKindOfClass:[GuaGuaKaLogViewController class]]) {
+        self.slidingViewController.underRightViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"guaGuaKaLogViewController"];
+    }
     
 }
-
+/**
+ 显示左侧
+ */
 -(void) showMenuLeft
 {
     if (![self checkUnScratchTickes]) {
         return;
     } 
     [super showMenuLeft];
+}
+-(void) showMenuRight
+{
+    if (![self checkUnScratchTickes]) {
+        return;
+    }
+    [super showMenuRight];
 }
 
 #pragma mark alert
@@ -280,12 +271,12 @@
 
 -(UIView *)carousel:(iCarousel *)carousel viewForItemAtIndex:(NSUInteger)index reusingView:(UIView *)view
 {
-    NSDictionary *ticket=[self.dataArray objectAtIndex:index];
+    GuaGuaKa *guaguaka=[self.dataArray objectAtIndex:index];
     if (!view) {
         view= [self loadViewFromXibName:@"TicketView"];
     }
     TicketView  *ticketView =(TicketView *)view;
-    [ticketView setUpTicketWithinfo:ticket withTicketViewDelegate:self];
+    [ticketView setUpTicketWithinfo:guaguaka withTicketViewDelegate:self];
     
     return ticketView; 
 }
@@ -338,6 +329,65 @@
     return value;
 }
 
+-(void) testCard
+{
+    int addTime=0;
+    int cutTime =0;
+    int benjinx=1000;
+    for (int i=0;i<20; i++) {
+        int result = [self calculateCardValueWithBaobenRate:0.55 andBenJin:100];
+        benjinx-=100;
+        if (result>100) {
+            addTime++;
+        }
+        if (result<100) {
+            cutTime++;
+        }
+        benjinx+=result;
+        NSLog(@"%d",result);
+        if (benjinx<0) {
+            break;
+        }
+    }
+    
+    NSLog(@"add %d  cut %d result:%d",addTime,cutTime,benjinx);
+    
+}
+
+
+-(int) calculateCardValueWithBaobenRate:(double) baobenRate andBenJin:(int) benjin
+{
+    double awardRate=(1-baobenRate)*0.5;
+    double loseRate=awardRate*2;
+    double equalRate=1-awardRate-loseRate;
+    int k=5;
+    if (benjin>=100) {
+        k=10;
+        if (benjin>=200) {
+            k=20;
+        }
+    }
+    
+    double rate =arc4random_uniform(1000) / 1000.0;
+    int kRate=arc4random_uniform(k)+1;
+    int kValue=(benjin/k)*kRate;
+    if (rate<=loseRate) {
+        if (benjin>=200) {
+            return benjin-(kValue*1.1) < 0 ? 0: benjin-(kValue*1.1);
+        }else
+            return benjin-kValue;
+    } else if(rate<=(loseRate+equalRate)){
+        return benjin;
+    }else{
+        if (benjin>=200) {
+            return benjin+(kValue*1.01);
+        }else{
+            return benjin+(kValue*1.1);
+        }
+        
+    }
+    
+}
 
 
 @end

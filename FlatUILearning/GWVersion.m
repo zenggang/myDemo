@@ -26,6 +26,11 @@
     _isForceUpdate =[[attributes objectForKey:@"isForceUpdate"]  integerValue];
     _weixinId=[attributes objectForKey:@"weixinId"];
     _appId=[attributes objectForKey:@"appId"];
+    
+    _storeVersion=[attributes objectForKey:@"storeVersion"];
+    _latestStoreVersion=[attributes objectForKey:@"latestStoreVersion"];
+    _latestVersionMemo=[attributes objectForKey:@"latestVersionMemo"];
+    
     if ([attributes objectForKey:@"platFormList"]) {
         NSArray *platFormArray = [attributes objectForKey:@"platFormList"];
         _platFormList =[NSMutableArray arrayWithCapacity:[platFormArray count]];

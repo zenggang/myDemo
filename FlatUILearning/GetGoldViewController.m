@@ -138,14 +138,15 @@
     
     if (_platformInuseCount==0 || APPDELEGATE.appVersionInfo.isHide==1) {
         _describeLable.text=@"推荐给朋友得金币!";
-        _awardQqButton.frame=[AppUtilities changeViewFrameJustForY:125 withView:_awardQqButton];
-        _awardWeiXinButton.frame=[AppUtilities changeViewFrameJustForY:175 withView:_awardWeiXinButton];
-        _awardWeixinShareButton.frame=[AppUtilities changeViewFrameJustForY:225 withView:_awardWeixinShareButton];
+       
+        _awardWeiXinButton.frame=[AppUtilities changeViewFrameJustForY:125 withView:_awardWeiXinButton];
+        _awardWeixinShareButton.frame=[AppUtilities changeViewFrameJustForY:175 withView:_awardWeixinShareButton];
 
         [[_mainScrollView viewWithTag:21] removeFromSuperview];
         [[_mainScrollView viewWithTag:22] removeFromSuperview];
         [_awardFiveStarButton removeFromSuperview];
-        [_skillLable removeFromSuperview]; 
+        [_skillLable removeFromSuperview];
+        [_awardQqButton removeFromSuperview];
     }else{
         UILabel *describeLable2 =(UILabel *) [_mainScrollView viewWithTag:22];
         describeLable2.font=[UIFont boldFlatFontOfSize:20];

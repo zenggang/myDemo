@@ -63,6 +63,9 @@
 #pragma mark tableView
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ( APPDELEGATE.appVersionInfo.isHide==1 && indexPath.section==0 && indexPath.row==2) {
+        return 0;
+    }
     return 50;
 }
 

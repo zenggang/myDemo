@@ -27,7 +27,6 @@
 @interface BaseViewController : UIViewController<FUIAlertViewDelegate>
  
 
-
 #pragma mark Custom metod
 -(DMScrollingTicker *) createTextScrollViewWithFrame:(CGRect) frame withTextArray:(NSArray *) textArray;
 -(void) createNavigationRightButtonWithTitle:(NSString *) title action:(SEL) action;
@@ -39,4 +38,6 @@
 
 -(McDownload *) downloadFileWithUrl:(NSString *) url fileName:(NSString *) fileName withDelegete:(id) delegate;
 -(void) showMenuLeft;
+-(void) showMenuRight;
+
 @end 

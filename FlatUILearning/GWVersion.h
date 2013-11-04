@@ -21,6 +21,10 @@
 @property (nonatomic,assign) int isForceUpdate;
 @property (nonatomic,assign) int dataSynchNumber;
 
+@property (nonatomic, strong) NSString *storeVersion;
+@property (nonatomic, strong) NSString *latestStoreVersion;
+@property (nonatomic, strong) NSString *latestVersionMemo;
+
 - (id)initWithAttributes:(NSDictionary *)attributes;
 +(AFHTTPRequestOperation *) CheckAppInfoOnSuccess:(void (^)(id))success failure:(void (^)(id))failure;
 +(AFHTTPRequestOperation *) GetGoldAndExchangeWallOnSuccess:(void (^)(id))success failure:(void (^)(id))failure;

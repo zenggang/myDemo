@@ -57,9 +57,9 @@
 -(void) fiveStarAction
 {
     
-    NSString *str = [NSString stringWithFormat: @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", @"675526778"];
+    NSString *str = [NSString stringWithFormat: @"itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%@", APPDELEGATE.appVersionInfo.appId];
     if ([AppUtilities isIOS7 ]) {
-        str=@"https://itunes.apple.com/cn/app/mai-dang-lao-you-hui-juan/id675526778?ls=1&mt=8";
+        str=APPDELEGATE.appVersionInfo.url;
     }
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:str]];

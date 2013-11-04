@@ -24,7 +24,12 @@
 
 -(void) setUpViewWithSetMenu:(SetMenu *) setmenu
 {
-    self.backgroundColor=[UIColor sunflowerColor];
+    if ([APP_NAME isEqualToString:APPNAME_KFC]) {
+        self.backgroundColor=[UIColor cloudsColor];
+    }else if([APP_NAME isEqualToString:APPNAME_MCDONALD]){
+        self.backgroundColor= [UIColor sunflowerColor];
+    }
+    
     ////log4Debug(setmenu.picUrl);
     for (int i=0;i<[[_setMenu.menusString componentsSeparatedByString:@","] count];i++) {
         UIView *tempView = [self viewWithTag:i+1];
@@ -84,7 +89,17 @@ self.layer.borderWidth=0.3;
             [self addSubview:_menuImageView];
         }
         
-        [_menuImageView setImage:[UIImage imageWithContentsOfFile:[_setMenu getPicFileLocation]]];
+        if(![APPDELEGATE.menuImageDict objectForKey:[_setMenu getPicFileName]])
+        {
+            UIImage *theImage=[UIImage imageWithContentsOfFile:[_setMenu getPicFileLocation]];
+            if (theImage) {
+                [APPDELEGATE.menuImageDict setObject:theImage forKey:[_setMenu getPicFileName]];
+            }
+            
+        }
+
+        [_menuImageView setImage:[APPDELEGATE.menuImageDict objectForKey:[_setMenu getPicFileName]]];
+        
     }else{
         if (_progressLable==nil) {
         

@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "STScratchView.h"
+#import "GuaGuaKa.h" 
 
 @protocol TicketViewDelegate <NSObject>
 -(void) didScratchTicket;
--(void) clickTheBuyButtonWithBenjin:(int) benjin WithAwardValue:(int) awardValue;
+-(void) clickTheBuyButtonWithBenjin:(int)benjin WithAwardValue:(int)awardValue withGid:(int) gid;
 @end
 
 @interface TicketView : UIView<STScratchViewDelegate>
@@ -26,10 +27,10 @@
 @property (nonatomic,weak) IBOutlet UIView *ticketTextMainView;
 @property (nonatomic, strong)  STScratchView *scratchView;
 @property (nonatomic,assign) int awardValue;
-@property (nonatomic,strong) NSDictionary *ticketInfo;
+@property (nonatomic,strong) GuaGuaKa *guaguaka;
 @property (nonatomic,weak) id<TicketViewDelegate> delegate;
 
--(void) setUpTicketWithinfo:(NSDictionary *) ticketInfo withTicketViewDelegate:(id) del;
+-(void) setUpTicketWithinfo:(GuaGuaKa *) guaguaka withTicketViewDelegate:(id) del;
 -(void) changeTicketToBuyModel;
 -(void) changeTicketToBeforeModel;
 -(void) showTheTicketScratchArea;

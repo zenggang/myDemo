@@ -11,7 +11,7 @@
 #import "TTDate.h"
 #import "SetMenuCoreData.h"
 #import "SingleMenuCoreData.h"
-
+#import "ZuanZuanZuanViewController.h"
 
 @interface MainViewController ()
 
@@ -38,14 +38,18 @@
     
     _isReloadDataYet=NO;
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    
-    if ([APP_NAME isEqualToString: APPNAME_MCDONALD]) {
+     
+    if ([APP_NAME isEqualToString: APPNAME_MCDONALD] || [APP_NAME isEqualToString:APPNAME_KFC]) {
         [self checkMenuInfo];
         self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"firstViewController"];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkAppNeedUpdateInfo:) name:APPINFO_DID_LOADED object:nil];
     }else if ([APP_NAME isEqualToString:APPNAME_GUAGUALE]){
         
         self.topViewController = [storyboard instantiateViewControllerWithIdentifier:@"guagualeViewController"];
+       
+    }else if ([APP_NAME isEqualToString:APPNAME_ZuanZuanZuan])
+    {
+        self.topViewController =[[ZuanZuanZuanViewController alloc] initWithNibName:@"ZuanZuanZuanViewController" bundle:nil];
     }
     
 
@@ -89,11 +93,43 @@
             APPDELEGATE.allSingleMenuArray=[SingleMenu convertCoreDateToModel:[SingleMenuCoreData MR_findAll]];
             if (APPDELEGATE.allMenuSet.count==0) {
                 [self reloadMenusInfo];
+            }else{
+                [self loadCacheImages];
             }
+            
             
         }
     }else{
         [self reloadMenusInfo];
+    }
+}
+
+- (void) loadCacheImages{
+	/* 建立线程操作队列 */
+    NSOperationQueue *queue = [NSOperationQueue new];
+    
+    /* 创建一个NSInvocationOperation对象来在线程中执行loadImagesWithThread操作 */
+    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+                                                                            selector:@selector(loadImagesWithThread)
+                                                                              object:nil];
+    /* 将operation添加到线程队列 */
+    [queue addOperation:operation];
+    
+}
+
+- (void) loadImagesWithThread{
+    
+    for (SetMenu *setMenu in APPDELEGATE.allMenuSet) {
+        //线程从这里执行，可以向普通操作一样读取图片、完成后刷新界面等
+        if(![APPDELEGATE.menuImageDict objectForKey:[setMenu getPicFileName]])
+        {
+            UIImage *theImage = [UIImage imageWithContentsOfFile:[setMenu getPicFileLocation]];
+            if (theImage) {
+                [APPDELEGATE.menuImageDict setObject:theImage forKey:[setMenu getPicFileName]];
+            }
+            
+        }
+        NSLog(@"加载图片");
     }
 }
 
@@ -105,6 +141,10 @@
     }
     _isReloadDataYet=YES;
     [AppUtilities showHUDWithStatusMaskTypeClear:@"数据加载中..."];
+    NSString *pathUrl=KRequestKfcMenu;
+    if ([APP_NAME isEqualToString:APPNAME_MCDONALD]) {
+        pathUrl=KRequestLatestMenu;
+    }
     [ApiRequestCenter sendGetRequestOnSuccess:^(id data) {
         
         NSArray *menuSetArray=[data objectForKey:@"m"];
@@ -141,7 +181,7 @@
     } failure:^(id error) {
         [AppUtilities dismissHUDWithErrorForAWhile:@"加载失败..."];
          
-    } withPath:KRequestLatestMenu parameters:nil];
+    } withPath:pathUrl parameters:nil];
 }
 
 

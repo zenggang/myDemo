@@ -71,16 +71,16 @@
         _isLoading=NO;
         [SVProgressHUD dismiss];
         if (_pageNo==1) {
-            weakSelf.dataArray=array;
-            [weakSelf.tableView.pullToRefreshView stopAnimating];
+            self.dataArray=array;
+            [self.tableView.pullToRefreshView stopAnimating];
         }else{
             [weakSelf.dataArray addObjectsFromArray:array];
             [weakSelf.tableView.infiniteScrollingView stopAnimating];
-            if (array.count==0) {
-                _pageNo--;
-            }
         }
-        
+        if ([array count]<40) {
+            weakSelf.tableView.showsInfiniteScrolling=NO;
+        }else
+            weakSelf.tableView.showsInfiniteScrolling=YES;
         [weakSelf.tableView reloadData];
         
     } failure:^(id error) {

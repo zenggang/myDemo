@@ -101,9 +101,9 @@
     }
     
     [_weixinController changeScene:_scene];
-     UIImage *myImage =[UIImage imageNamed:@"Icon-144"];
-    [_weixinController sendAppContentWithThumbData:myImage withMessage:title withDescription:description andLink:@"https://itunes.apple.com/cn/app/mai-dang-lao-you-hui-juan/id675526778?ls=1&mt=8"];
-    
+     UIImage *myImage =[UIImage imageNamed:@"Icon-120"];
+    [_weixinController sendAppContentWithThumbData:myImage withMessage:title withDescription:description andLink:APPDELEGATE.appVersionInfo.url];
+     
 }
 
 -(void) shareGoldToWeixin:(UIButton *) sender

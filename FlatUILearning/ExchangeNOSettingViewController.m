@@ -78,13 +78,13 @@
             _zhifubaoInputField.text=APPDELEGATE.loginUser.userExchangeNumber.zhifubao;
         _cellPhoneInputField.text=APPDELEGATE.loginUser.userExchangeNumber.cellphone.length>0 ?APPDELEGATE.loginUser.userExchangeNumber.cellphone : @"联通";
         
-        if(APPDELEGATE.appVersionInfo && APPDELEGATE.appVersionInfo.isHide==1){
-            [_flatSegmentedControl removeFromSuperview];
-            [_zhifubaoInputField removeFromSuperview];
-            [_cellPhoneInputField removeFromSuperview];
-            [[self.view viewWithTag:2] removeFromSuperview];
-            [[self.view viewWithTag:3] removeFromSuperview];
-        }
+//        if(APPDELEGATE.appVersionInfo && APPDELEGATE.appVersionInfo.isHide==1){
+//            [_flatSegmentedControl removeFromSuperview];
+//            [_zhifubaoInputField removeFromSuperview];
+//            [_cellPhoneInputField removeFromSuperview];
+//            [[self.view viewWithTag:2] removeFromSuperview];
+//            [[self.view viewWithTag:3] removeFromSuperview];
+//        }
     }
     
     

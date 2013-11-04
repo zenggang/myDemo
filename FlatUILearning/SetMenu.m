@@ -22,7 +22,7 @@
     }
     
     
-    self.picUrl=KRequestMenuPicUrl([attributes objectForKey:@"i"]);
+    self.picUrl=[[attributes objectForKey:@"i"] hasPrefix:@"http:"] ? [attributes objectForKey:@"i"] : KRequestMenuPicUrl([attributes objectForKey:@"i"]); 
     self.setTitle=[attributes objectForKey:@"t"];
     self.saveMoney=[attributes objectForKey:@"s"];
     self.setId=[attributes objectForKey:@"h"];
