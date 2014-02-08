@@ -37,10 +37,14 @@ typedef enum {
 
 
 @interface WapsCallsWrapper (WapsOffersViewHandler)
+- (UIView *)showOffersWithFrame:(CGRect)frame URL:(NSString *)url autoJudge:(BOOL)judge;
+
 //
 - (UIView *)showOffers;
 
 - (UIView *)showOffersWhitURL:(NSString *)url View:(UIView *)baseView;
+
+- (UIView *)showOffersWhitURL:(NSString *)url View:(UIView *)baseView showNavBar:(BOOL)flg;
 
 - (void)showOffers:(UIViewController *)vController;
 
@@ -50,7 +54,7 @@ typedef enum {
 
 - (void)showOffers:(UIViewController *)vController showNavBar:(BOOL)visible autoJudge:(BOOL)judge;
 
-- (UIView *)showOffersWithView:(UIView *)uiView;
+- (UIView *)showOffersWithSize:(CGSize)size;
 
 - (void)showFeedBack:(UIViewController *)vController;
 
@@ -60,7 +64,14 @@ typedef enum {
 
 
 @interface AppConnect (WapsOffersViewHandler)
-//
+
+#pragma mark -
+#pragma mark offer主要调用方法
+
++ (void)showOffers:(UIViewController *)vController;
+
++ (UIView *)showOffersWithSize:(CGSize)size;
+
 + (UIView *)showOffers;
 
 + (UIView *)showOffersWithURL:(NSString *)url;
@@ -69,15 +80,9 @@ typedef enum {
 
 + (void)showOffersWithURL:(NSString *)url Controller:(UIViewController *)vController showNavBar:(BOOL)visible;
 
-+ (void)showOffers:(UIViewController *)vController;
-
-+ (void)showGroupBuy:(UIViewController *)vController;
-
 + (void)showOffers:(UIViewController *)vController showNavBar:(BOOL)visible;
 
 + (void)showOffers:(UIViewController *)vController showNavBar:(BOOL)visible autoJudge:(BOOL)judge;
-
-+ (UIView *)showOffersWithView:(UIView *)uiView;
 
 + (void)showFeedBack:(UIViewController *)vController;
 

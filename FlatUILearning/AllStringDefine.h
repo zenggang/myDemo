@@ -6,12 +6,12 @@
 //  Copyright (c) 2013年 gang zeng. All rights reserved.
 //
   
-//APP 
+//APP
 #define APP_NAME @"ZuanZuanZuan"
 #define VERSION_STRING @"1.30"
 #define SYS_OS [[UIDevice currentDevice] systemVersion] 
 
-//McDonald 版本 1.00 appStroe 1.01 91市场  1.02 测试版
+//McDonald 版本 1.00 appStroe 1.01 91市场  1.02 测试版 
 #define APPNAME_MCDONALD @"McDonald"
 
 //GuaGuale 刮刮乐 1.10 appStroe 1.11 91市场  1.12 测试版
@@ -55,8 +55,8 @@
  
 
 //Urls
-//#define BaseUrl @"http://121.199.42.54:8080/gold"
-#define BaseUrl @"http://192.168.1.100:8080/gold"
+#define BaseUrl @"http://121.199.42.54:8080/gold"
+//#define BaseUrl @"http://192.168.1.103:8080/gold"
 //#define BaseUrl @"http://192.168.1.104:8080/gold"
 
 #define KRequestMenuPicUrl(url) [NSString stringWithFormat:@"http://www.mcdonalds.com.cn/images/mclub/%@",url]
@@ -90,7 +90,7 @@
 #define GOLDRequestBindingQQ(udid,qq) [NSString stringWithFormat:@"%@/api/Users/bandqq/%@?qq=%@",BaseUrl,udid,qq]
 #define GOLDRequestQqAward(udid,qq) [NSString stringWithFormat:@"%@/api/Users/qqAward/%@?qq=%@",BaseUrl,udid,qq] 
 
-#define GOLDRequestCheckAppInfo [NSString stringWithFormat:@"%@/api/version/checkAppInfo",BaseUrl] 
+#define GOLDRequestCheckAppInfo(udid) [NSString stringWithFormat:@"%@/api/version/checkAppInfo?udid=%@",BaseUrl,udid] 
 #define GOLDRequestGetGoldAndExchangeWall [NSString stringWithFormat:@"%@/api/version/getGoldAndExchangeWall",BaseUrl]  
 
 #define GOLDRequestGAUGUAKaList [NSString stringWithFormat:@"%@/api/GuaGuaKa/cardList",BaseUrl] 
@@ -99,6 +99,10 @@
 #define GOLDRequestBuyGuaGuaKa(udid) [NSString stringWithFormat:@"%@/api/GuaGuaKa/BuyCard/%@",BaseUrl,udid] 
 
 #define GOLDRequestGAUGUAKaLogList(udid) [NSString stringWithFormat:@"%@/api/GuaGuaKa/cardRecords/%@",BaseUrl,udid] 
+
+#define GOLDRequestLaoHuJiList [NSString stringWithFormat:@"%@/api/laohuji/typeList",BaseUrl]
+#define GOLDRequestBuyLaoHuJi(udid)  [NSString stringWithFormat:@"%@/api/laohuji/StartLaohuji/%@",BaseUrl,udid]
+
 
 
 //NSUserdefaults property key name

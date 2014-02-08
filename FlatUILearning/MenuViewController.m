@@ -6,6 +6,7 @@
 //  Copyright (c) 2013年 gang zeng. All rights reserved.
 //
 
+#import "ZuanZuanZuanViewController.h"
 #import "MenuViewController.h"
 
 @interface MenuViewController ()
@@ -46,6 +47,7 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkFirstLogin:) name:USER_CREATED_SUCCESS object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkFirstLogin:) name:APPINFO_DID_LOADED object:nil];
     
+    
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -73,12 +75,19 @@
         [self.tableView reloadData];
     }
     
-    [self changeViewToIdentifier:identifier];
+    [self changeViewToIdentifier:identifier isStoryBord:YES];
 }
 
--(void) changeViewToIdentifier:(NSString *) identifier
+-(void) changeViewToIdentifier:(NSString *) identifier isStoryBord:(BOOL) isStoryBord
 {
-    UIViewController *newTopViewController = [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    UIViewController *newTopViewController=nil;
+    
+    if (isStoryBord) {
+         newTopViewController= [self.storyboard instantiateViewControllerWithIdentifier:identifier];
+    }else{
+        newTopViewController = [[ZuanZuanZuanViewController alloc] initWithNibName:@"ZuanZuanZuanViewController" bundle:nil];
+    }
+    
     
     [self.slidingViewController anchorTopViewOffScreenTo:ECRight animations:nil onComplete:^{
         CGRect frame = self.slidingViewController.topViewController.view.frame;
@@ -140,14 +149,17 @@
 {
    [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:YES];
     NSString *identifier = @"";
-    
+    BOOL isStoryBord=YES;
     switch (indexPath.row) {
         case 0:
         {
             identifier = @"firstViewController";
             if ([APP_NAME isEqualToString:APPNAME_GUAGUALE]) {
                 identifier=@"guagualeViewController";
-            } 
+            }else if ([APP_NAME isEqualToString:APPNAME_ZuanZuanZuan]){
+                identifier=@"ZuanZuanZuanViewController";
+                isStoryBord=NO;
+            }
         }
             break;
         case 1:
@@ -174,9 +186,9 @@
     }
 
     if (APPDELEGATE.isFirstTime) {
-        [self changeViewToIdentifier:@"GetGoldViewController"];
+        [self changeViewToIdentifier:@"GetGoldViewController" isStoryBord:isStoryBord];
     }else
-        [self changeViewToIdentifier:identifier];
+        [self changeViewToIdentifier:identifier isStoryBord:isStoryBord];
     
 }
 

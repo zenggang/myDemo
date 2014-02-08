@@ -198,21 +198,21 @@
 //下载结束
 - (void)downloadFinished:(McDownload *)aDownload
 {
-//    if(![APPDELEGATE.menuImageDict objectForKey:aDownload.fileName])
-//    {
-//        [APPDELEGATE.menuImageDict setObject:[UIImage imageWithContentsOfFile:[[AppUtilities HomeFilePath] stringByAppendingPathComponent:aDownload.fileName]] forKey:aDownload.fileName];
-//        
-//    }
+
     [self downLoadPicInOneProcess];
     /* 建立线程操作队列 */
-    NSOperationQueue *queue = [NSOperationQueue new];
+//    NSOperationQueue *queue = [NSOperationQueue new];
+//    
+//    /* 创建一个NSInvocationOperation对象来在线程中执行loadImagesWithThread操作 */
+//    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+//                                                                            selector:@selector(loadImagesWithThread:)
+//                                                                              object:aDownload];
+//    /* 将operation添加到线程队列 */
+//    [queue addOperation:operation];
     
-    /* 创建一个NSInvocationOperation对象来在线程中执行loadImagesWithThread操作 */
-    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
-                                                                            selector:@selector(loadImagesWithThread:)
-                                                                              object:aDownload];
-    /* 将operation添加到线程队列 */
-    [queue addOperation:operation];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self loadImagesWithThread:aDownload];
+    });
 }
 
 

@@ -45,7 +45,9 @@
 @property (nonatomic, strong) NSTimer * timer;
 @property (nonatomic, assign) BOOL needUpdateWall;
 @property (nonatomic,strong) NSString *deviceToken;
-
+@property (nonatomic,assign) BOOL isAllowMusic;
+@property (nonatomic,assign) BOOL isAllowSound;
+@property (nonatomic,assign) BOOL isChangeStatusBarY;
 //平台相关
 @property (nonatomic,strong) GoldPlatForm *DuoMenPlatform;
 @property (nonatomic,strong) GoldPlatForm *LiMeiPlatform;

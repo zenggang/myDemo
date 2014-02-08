@@ -13,11 +13,10 @@
 
 + (NSDateFormatter *)loadNsDateFormatter  {
     static NSDateFormatter *instance;
-   
-    if(!instance) {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
         instance = [[NSDateFormatter alloc] init];
-        
-    }
+    });
     return instance;
 }
 

@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import <QuartzCore/QuartzCore.h>
+#import "WapsRefreshTableHeaderView.h"
 
 
 #define WapsUIWEBPAGE_ACTIVITY_INDICATOR_SIZE    60
@@ -22,7 +22,7 @@ static const float LOADING_PAGE_FADE_TIME = 0.25f;
 @end
 
 
-@interface WapsUIWebPageView : UIView <UIWebViewDelegate> {
+@interface WapsUIWebPageView : UIView <UIWebViewDelegate,UIScrollViewDelegate, WAPSRefreshTableHeaderDelegate> {
     UIWebView *cWebView_;
     NSString *lastClickedURL_;
     BOOL isViewVisible_;

@@ -54,7 +54,7 @@
         if (failure) {
             failure(error);
         }
-    } withPath:GOLDRequestCheckAppInfo parameters:nil];
+    } withPath:GOLDRequestCheckAppInfo(APPDELEGATE.udid) parameters:nil];
 }
 
 +(AFHTTPRequestOperation *) GetGoldAndExchangeWallOnSuccess:(void (^)(id))success failure:(void (^)(id))failure

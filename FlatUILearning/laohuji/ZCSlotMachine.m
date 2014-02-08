@@ -49,10 +49,17 @@ static const NSUInteger kMinTurn = 5;
         
         _coverImageView = [[UIImageView alloc] initWithFrame:frame];
         _coverImageView.contentMode = UIViewContentModeRedraw;
-        [_coverImageView setFrameOriginY:frame.origin.y +4.5];
-        [_coverImageView setFrameSizeHeight:frame.size.height-8];
-        [_coverImageView setFrameOriginX:frame.origin.x+10];
-        [_coverImageView setFrameSizeWidth:frame.size.width-20];
+        if (IS_IPHONE5) {
+            [_coverImageView setFrameOriginY:frame.origin.y +9.5];
+            [_coverImageView setFrameSizeHeight:frame.size.height-19];
+            [_coverImageView setFrameOriginX:frame.origin.x+12];
+            [_coverImageView setFrameSizeWidth:frame.size.width-24];
+        }else{
+            [_coverImageView setFrameOriginY:frame.origin.y +11];
+            [_coverImageView setFrameSizeHeight:frame.size.height-22];
+            [_coverImageView setFrameOriginX:frame.origin.x+11];
+            [_coverImageView setFrameSizeWidth:frame.size.width-22];
+        }
         [self addSubview:_coverImageView];
         
         _slotScrollLayerArray = [NSMutableArray array];

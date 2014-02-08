@@ -24,9 +24,19 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
-    
-    
+    _isChangeStatusBarY=NO;
     _deviceToken=[[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"];
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"isAllowMusic"] ) {
+        _isAllowMusic =[[[NSUserDefaults standardUserDefaults] valueForKey:@"isAllowMusic"] integerValue]==1;
+        _isAllowSound =[[[NSUserDefaults standardUserDefaults] valueForKey:@"isAllowSound"] integerValue]==1;
+    }else{
+        _isAllowMusic=YES;
+        _isAllowSound=YES;
+        [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"isAllowMusic"];
+        [[NSUserDefaults standardUserDefaults] setObject:@1 forKey:@"isAllowSound"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     
 //    //设置默认记录级别
 //    [[L4Logger rootLogger] setLevel:[L4Level debug]];
@@ -53,11 +63,6 @@
     _udid=[OpenUDID value];
     _needUpdateWall=NO;
     [self checkUserInfo];
-    
-    
-
-    
-
     //[self registPushNotification];
     
     return YES;

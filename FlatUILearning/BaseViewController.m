@@ -28,7 +28,7 @@
 {
     [super viewDidLoad];
 	self.view.backgroundColor = [UIColor whiteColor];
-
+    
     if ([AppUtilities isIOS7]) {
         self.navigationController.navigationBar.titleTextAttributes = @{UITextAttributeFont: [UIFont boldFlatFontOfSize:18],UITextAttributeTextColor:[UIColor whiteColor]};
         [self.navigationController.navigationBar configureFlatNavigationBarWithColor:[UIColor midnightBlueColor]];
@@ -39,6 +39,32 @@
     if ([AppUtilities isIOS7]) {
         self.edgesForExtendedLayout=UIRectEdgeNone;
     }
+    NSLog(@"view %@", self.view);
+    if (!isHideStatusBar) {
+        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && [APP_NAME isEqualToString:APPNAME_ZuanZuanZuan]){
+            if(APPDELEGATE.isChangeStatusBarY){
+                [self.view setFrameOriginY:0];
+                [self.view setFrameSizeHeight:[UIScreen mainScreen].bounds.size.height];
+                [self.navigationController.navigationBar setFrameOriginY:0];
+            }else{
+                [self.view setFrameOriginY:20];
+                [self.view setFrameSizeHeight:[UIScreen mainScreen].bounds.size.height];
+                [self.navigationController.navigationBar setFrameOriginY:20];
+            }
+        }
+    }
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    
     
 }
 

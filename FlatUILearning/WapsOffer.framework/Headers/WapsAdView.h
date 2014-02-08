@@ -1,67 +1,25 @@
-#import <Foundation/Foundation.h>
+#import "WapsUIWebPageView.h"
+#import <StoreKit/StoreKit.h>
 #import "AppConnect.h"
-#import "WapsFetchResponseProtocol.h"
 
-
-#define WAPS_AD_REFRESH_DELAY        (15.0)
-
-extern NSString *kWapsAdFailStr;
-
-@class WapsAdRequestHandler;
-
-@interface WapsAdView : UIView <WapsFetchResponseDelegate> {
-@private
-    NSURL *redirectURL_;
-    NSString *clickURL_;
-    NSString *imageDataStr_;
-    UIImageView *imageView_;
-    UIImageView *previousImageView_;
-    NSString *contentSizeStr_;
-    UIView *adViewOverlay_;
-    UIViewController *controller_;
-
-    WapsAdRequestHandler *adHandlerObj_;
+@interface WapsAdView : WapsUIWebPageView <SKStoreProductViewControllerDelegate>
+{
+    UIViewController *_parentVController;
+    NSString *isSelectorVisible_;
+    NSString *_contentSizeStr;
+    CGFloat _showX;
+    CGFloat _showY;
 }
 
-@property(copy) NSURL *redirectURL;
-@property(copy) NSString *clickURL;
-@property(copy) NSString *imageDataStr;
-@property(nonatomic, retain) UIImageView *imageView;
-@property(nonatomic, retain) UIImageView *previousImageView;
-@property(copy) NSString *contentSizeStr;
-@property(nonatomic, retain) UIView *adViewOverlay;
-@property(nonatomic, retain) UIViewController *controller;
+@property(nonatomic, retain) UIViewController *parentVController;
+@property(nonatomic, retain) NSString *isSelectorVisible_;
+@property(nonatomic, retain) NSString *contentSizeStr;
+@property(nonatomic, assign) CGFloat showX;
+@property(nonatomic, assign) CGFloat showY;
 
-@property(nonatomic, retain) WapsAdRequestHandler *adHandlerObj;
+- (id)initWithSize:(NSString *)aSize showX:(CGFloat)x showY:(CGFloat)y;
+- (id)initWithFrame:(CGRect)frame adSize:(NSString *)aSize showX:(CGFloat)x showY:(CGFloat)y;
 
-+ (WapsAdView *)sharedWapsAdView;
 
-- (id)getAdWithDelegate:(UIViewController *)vController adSize:(NSString *)aSize showX:(CGFloat)x showY:(CGFloat)y;
-
-- (void)fetchResponseSuccessWithData:(void *)dataObj withRequestTag:(int)aTag;
-
-- (void)fetchResponseError:(WapsResponseError)errorType errorDescription:(id)errorDescObj requestTag:(int)aTag;
-
-- (void)refreshAd:(NSTimer *)timer;
-
-- (BOOL)isAdLoaded;
-
+- (void)loadViewWithURL:(NSString *)URLString;
 @end
-
-
-@interface AppConnect (WapsAdView)
-
-+ (id)displayAd:(UIViewController *)vController;
-
-+ (id)displayAd:(UIViewController *)vController adSize:(NSString *)aSize;
-
-+ (id)displayAd:(UIViewController *)vController showX:(CGFloat)x showY:(CGFloat)y;
-
-+ (id)displayAd:(UIViewController *)vController adSize:(NSString *)aSize showX:(CGFloat)x showY:(CGFloat)y;
-
-+ (BOOL)isDisplayAdLoaded;
-
-+ (WapsAdView *)getDisplayAdView;
-
-@end
-

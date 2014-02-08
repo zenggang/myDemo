@@ -27,6 +27,7 @@
     return self;
 }
 
+
 +(AFHTTPRequestOperation *) getGuaGuaKaListOnSuccess:(void (^)(id))success failure:(void (^)(id))failure
 {
     return [ApiRequestCenter sendGetRequestOnSuccess:^(id json) {
@@ -51,8 +52,8 @@
     return [ApiRequestCenter sendPostRequestOnSuccess:^(id json) {
         
         if (success) {
-            success(json);
-        }
+            success(json); 
+        } 
     } failure:^(id error) {
         if (failure) {
             failure(error);

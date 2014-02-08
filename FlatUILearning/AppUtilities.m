@@ -48,17 +48,17 @@
     if (!newVer) {
         return NO;
     }
-    
-    NSString *curVer = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+
+    NSString *curVer      = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     NSArray *curVerTokens = [curVer componentsSeparatedByString:@"."];
     NSArray *newVerTokens = [newVer componentsSeparatedByString:@"."];
-    
-    for (int i=0; i<newVerTokens.count; i++) {
-        NSString *newToken = [newVerTokens objectAtIndex:i];
+
+    for (int i            = 0; i<newVerTokens.count; i++) {
+    NSString *newToken    = [newVerTokens objectAtIndex:i];
         if (i >= curVerTokens.count) { //如果新版本长度>当前版本
             return YES;
         } else {
-            NSString *curToken = [curVerTokens objectAtIndex:i];
+    NSString *curToken    = [curVerTokens objectAtIndex:i];
             if ([newToken intValue] == [curToken intValue]) { //如果子版本相同, 继续比较下一个子版本
                 continue;
             } else {
@@ -75,13 +75,13 @@
 + (BOOL) isIOS6 {
     return ([[[UIDevice currentDevice] systemVersion] floatValue] >= 6.0 && [[[UIDevice currentDevice] systemVersion] floatValue]< 7.0);
 }
-+ (BOOL) isIOS7 {  
++ (BOOL) isIOS7 {
     return ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0 && [[[UIDevice currentDevice] systemVersion] floatValue]< 8.0);
 }
 
 + (NSString *) deviceToken {
     NSString *token = [[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"];
-    return token ? token : @"";        
+    return token ? token : @"";
 }
 
 +(NSString *) HomeFilePath
@@ -162,9 +162,9 @@
 {
     NSTimeInterval t =[date timeIntervalSinceNow];
     int time = [[NSNumber numberWithDouble:t] intValue]*-1;
-    
+
     if (time<0) {
-        time=1;
+    time     = 1;
     }
     //gghhhhh
     if (time<2) {
@@ -172,28 +172,28 @@
     } else if (time<60) {
         return [NSString stringWithFormat:NSLocalizedString(@"%d秒前", nil),time==0 ? 1:time];
     } else if (time < 60*1.8){
-        time = [[NSNumber numberWithDouble:time*0.01666666667 ] intValue];
+        time     = [[NSNumber numberWithDouble:time*0.01666666667 ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d分钟前", nil),time==0 ? 1:time];
     } else if (time < 3600){
-        time = [[NSNumber numberWithDouble:round(time*0.01666666667) ] intValue];
+        time     = [[NSNumber numberWithDouble:round(time*0.01666666667) ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d分钟前", nil),time==0 ? 1:time];
     } else if (time < 3600*1.8){
-        time = [[NSNumber numberWithDouble:time*0.0002777777778 ] intValue];
+        time     = [[NSNumber numberWithDouble:time*0.0002777777778 ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d小时前", nil),time==0 ? 1:time];
     } else if (time<86400){
-        time = [[NSNumber numberWithDouble:round(time*0.0002777777778) ] intValue];
+        time     = [[NSNumber numberWithDouble:round(time*0.0002777777778) ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d小时前", nil),time==0 ? 1:time];
     } else if (time<86400*1.8){
-        time = [[NSNumber numberWithDouble:time*0.000011574074074 ] intValue];
+        time     = [[NSNumber numberWithDouble:time*0.000011574074074 ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d天前", nil),time==0 ? 1:time];
     } else if (time<2592000){
-        time = [[NSNumber numberWithDouble:time*0.000011574074074 ] intValue];
+        time     = [[NSNumber numberWithDouble:time*0.000011574074074 ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d天前", nil),time==0 ? 1:time];
     } else if (time<2592000*1.8){
-        time = [[NSNumber numberWithDouble:time*0.0000003858 ] intValue];
+        time     = [[NSNumber numberWithDouble:time*0.0000003858 ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d月前", nil),time==0 ? 1:time];
     } else {
-        time = [[NSNumber numberWithDouble:round(time*0.0000003858) ] intValue];
+        time     = [[NSNumber numberWithDouble:round(time*0.0000003858) ] intValue];
         return [NSString stringWithFormat:NSLocalizedString(@"%d月前", nil),time==0 ? 1:time];
     }
 }

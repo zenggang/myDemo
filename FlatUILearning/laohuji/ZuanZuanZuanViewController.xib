@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12E40" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12E40" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZuanZuanZuanViewController">
             <connections>
-                <outlet property="awardGoldLable" destination="21" id="26"/>
-                <outlet property="coinGoldLable" destination="19" id="20"/>
-                <outlet property="dropCoinButton" destination="15" id="16"/>
-                <outlet property="dropMaxCoinButton" destination="25" id="27"/>
+                <outlet property="betOneButton" destination="15" id="wB4-zE-wSg"/>
+                <outlet property="betTenutton" destination="25" id="vIz-Xq-n6K"/>
+                <outlet property="coinGoldLableBgImageView" destination="RQE-bc-59d" id="r3k-lI-qqA"/>
                 <outlet property="exchangeButton" destination="d1z-Jg-yf5" id="JwZ-Yf-XyX"/>
-                <outlet property="getGoldButtonl" destination="U9V-HR-Ib2" id="Ygv-aH-wZW"/>
-                <outlet property="mainGoldLable" destination="17" id="18"/>
+                <outlet property="getGoldButton" destination="U9V-HR-Ib2" id="tz7-y2-09H"/>
+                <outlet property="lineBreakImageView" destination="hME-Jl-zSL" id="Ljf-ag-kgh"/>
+                <outlet property="mainGoldLableBgImageView" destination="4PJ-HL-VSN" id="RLr-fI-ylT"/>
+                <outlet property="musicText" destination="THt-2b-8EL" id="zvK-Dl-wBe"/>
+                <outlet property="soundText" destination="YN0-pv-KQ2" id="2GW-Kv-fBm"/>
                 <outlet property="startButton" destination="12" id="14"/>
                 <outlet property="view" destination="9" id="10"/>
             </connections>
@@ -23,196 +25,97 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" id="oe4-W8-1yy">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="426"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laohuji_bg.png" id="eJ3-7P-YSO">
+                    <rect key="frame" x="-1" y="0.0" width="321" height="568"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="top_bg.png" id="wuL-Tz-QOx">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="425"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="24">
-                            <rect key="frame" x="101" y="380" width="41" height="42"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <state key="normal" image="payOut.png">
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="payOutAwardCoin:" destination="-1" eventType="touchUpInside" id="34"/>
-                            </connections>
-                        </button>
-                        <view contentMode="scaleToFill" id="17" customClass="ScorllNumberLable">
-                            <rect key="frame" x="213" y="389" width="101" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="19" customClass="ScorllNumberLable">
-                            <rect key="frame" x="149" y="389" width="55" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <view contentMode="scaleToFill" id="21" customClass="ScorllNumberLable">
-                            <rect key="frame" x="8" y="389" width="85" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="奖金池" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JnN-fB-2Y6">
-                            <rect key="frame" x="25" y="366" width="51" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.49803924560000001" green="0.19215688110000001" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="砝码" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Wu1-KI-foV">
-                            <rect key="frame" x="159" y="367" width="34" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.49803924560000001" green="0.19215688110000001" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的金币" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="InV-rU-C3I">
-                            <rect key="frame" x="229" y="367" width="68" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                            <color key="textColor" red="0.49803924560000001" green="0.19215688110000001" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </view>
-                <view contentMode="scaleToFill" id="KxC-fN-dDO">
-                    <rect key="frame" x="0.0" y="423" width="320" height="145"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <subviews>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="buttom_bg.png" id="l6t-AT-Ake">
-                            <rect key="frame" x="-1" y="0.0" width="321" height="145"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        </imageView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="12">
-                            <rect key="frame" x="167" y="20" width="143" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" size="button"/>
-                            <state key="normal" image="startButton.png">
-                                <color key="titleColor" red="0.49803924560546875" green="0.19215688109397888" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="36">
-                            <rect key="frame" x="4" y="115" width="80" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <state key="normal" title="音效" image="switch_open.png">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="controllSound:" destination="-1" eventType="touchUpInside" id="37"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="38">
-                            <rect key="frame" x="4" y="91" width="80" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <state key="normal" title="音乐" image="switch_open.png">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="controllBgSound:" destination="-1" eventType="touchUpInside" id="40"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="25">
-                            <rect key="frame" x="9" y="20" width="71" height="41"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="betTen.png">
-                                <color key="titleColor" red="0.49803924560546875" green="0.19215688109397888" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="15">
-                            <rect key="frame" x="88" y="20" width="71" height="43"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" image="betOne.png">
-                                <color key="titleColor" red="0.49803924560546875" green="0.19215688109397888" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d1z-Jg-yf5">
-                            <rect key="frame" x="129" y="96" width="78" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" title="兑换现金" backgroundImage="button_wood.png">
-                                <color key="titleColor" red="0.20392156862745098" green="0.15686274509803921" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U9V-HR-Ib2">
-                            <rect key="frame" x="215" y="96" width="89" height="35"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                            <state key="normal" title="赚金币" backgroundImage="button_wood.png">
-                                <color key="titleColor" red="0.20392156859999999" green="0.15686274510000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                </view>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4连星星      50倍 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="28">
-                    <rect key="frame" x="27" y="51" width="130" height="21"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="12">
+                    <rect key="frame" x="230" y="335" width="80" height="80"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="4连蘑菇      30倍 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="30">
-                    <rect key="frame" x="174" y="51" width="130" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                    <state key="normal" image="start_btn_normal.png">
+                        <color key="titleColor" red="0.49803924560546875" green="0.19215688109397888" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="start_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="25">
+                    <rect key="frame" x="117" y="404" width="87" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3连星星      15倍 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="29">
-                    <rect key="frame" x="27" y="80" width="130" height="21"/>
+                    <state key="normal" image="betTen_btn_nomal.png">
+                        <color key="titleColor" red="0.49803924560546875" green="0.19215688109397888" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="betTen_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="15">
+                    <rect key="frame" x="14" y="404" width="87" height="39"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="3连蘑菇      10倍 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="31">
-                    <rect key="frame" x="174" y="80" width="130" height="21"/>
+                    <state key="normal" image="betOne_btn_nomal.png">
+                        <color key="titleColor" red="0.49803924560546875" green="0.19215688109397888" blue="0.10196079313755035" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="betOne_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d1z-Jg-yf5">
+                    <rect key="frame" x="145" y="463" width="87" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2连星星       2倍 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="32">
-                    <rect key="frame" x="27" y="109" width="125" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="exchange_btn_nomal.png">
+                        <color key="titleColor" red="0.20392156862745098" green="0.15686274509803921" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="exchange_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="U9V-HR-Ib2">
+                    <rect key="frame" x="238" y="463" width="72" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="2连蘑菇     0.5倍 " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="35">
-                    <rect key="frame" x="173" y="109" width="131" height="21"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="earnGold_btn_normal.png">
+                        <color key="titleColor" red="0.20392156859999999" green="0.15686274510000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="earnGold_btn_clicked.png"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_break.png" id="hME-Jl-zSL">
+                    <rect key="frame" x="0.0" y="451" width="320" height="3"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RQE-bc-59d">
+                    <rect key="frame" x="15" y="308" width="75" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="4PJ-HL-VSN">
+                    <rect key="frame" x="103" y="308" width="129" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_text.png" id="THt-2b-8EL">
+                    <rect key="frame" x="90" y="463" width="31" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_text.png" id="YN0-pv-KQ2">
+                    <rect key="frame" x="90" y="489" width="34" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
     <resources>
-        <image name="betOne.png" width="78" height="47"/>
-        <image name="betTen.png" width="76" height="44"/>
-        <image name="buttom_bg.png" width="321" height="145"/>
-        <image name="button_wood.png" width="89" height="23"/>
-        <image name="payOut.png" width="51" height="53"/>
-        <image name="startButton.png" width="143" height="43"/>
-        <image name="switch_open.png" width="36" height="17"/>
-        <image name="top_bg.png" width="320" height="423"/>
+        <image name="betOne_btn_clicked.png" width="87" height="39"/>
+        <image name="betOne_btn_nomal.png" width="87" height="39"/>
+        <image name="betTen_btn_clicked.png" width="87" height="39"/>
+        <image name="betTen_btn_nomal.png" width="87" height="39"/>
+        <image name="earnGold_btn_clicked.png" width="72" height="38"/>
+        <image name="earnGold_btn_normal.png" width="72" height="38"/>
+        <image name="exchange_btn_clicked.png" width="87" height="38"/>
+        <image name="exchange_btn_nomal.png" width="87" height="38"/>
+        <image name="laohuji_bg.png" width="320" height="568"/>
+        <image name="line_break.png" width="319" height="2"/>
+        <image name="music_text.png" width="31" height="18"/>
+        <image name="sound_text.png" width="34" height="17"/>
+        <image name="start_btn_clicked.png" width="80" height="80"/>
+        <image name="start_btn_normal.png" width="80" height="80"/>
     </resources>
 </document>

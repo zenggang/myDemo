@@ -13,7 +13,8 @@
 @interface GoldExchangeViewController()
 
 @property (nonatomic,weak) IBOutlet UILabel *goldLable;
-
+@property (nonatomic,strong) DMScrollingTicker *scrollTextView;
+-(void) buildScrollTextView;
 @end
 
 
@@ -40,8 +41,24 @@
         }];
     }
 
+    [self buildScrollTextView];
 }
 
+-(void) buildScrollTextView
+{
+    if (APPDELEGATE.appVersionInfo && APPDELEGATE.appVersionInfo.isHide==0) {
+        if (_scrollTextView) {
+            [_scrollTextView removeFromSuperview];
+        }
+        NSArray *textArray=APPDELEGATE.exchangeArrayForWall;
+        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && [APP_NAME isEqualToString:APPNAME_ZuanZuanZuan] && !APPDELEGATE.isChangeStatusBarY){
+            _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 20, 320, 20) withTextArray:textArray];
+        }else
+            _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 0, 320, 20) withTextArray:textArray];
+        _scrollTextView.tag=786;
+        [self.view addSubview:_scrollTextView];
+    }
+}
 
 -(void)viewWillAppear:(BOOL)animated
 {

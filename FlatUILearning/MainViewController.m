@@ -10,8 +10,8 @@
 #import "ApiRequestCenter.h"
 #import "TTDate.h"
 #import "SetMenuCoreData.h"
-#import "SingleMenuCoreData.h"
 #import "ZuanZuanZuanViewController.h"
+#import "SingleMenuCoreData.h"
 
 @interface MainViewController ()
 
@@ -49,11 +49,15 @@
        
     }else if ([APP_NAME isEqualToString:APPNAME_ZuanZuanZuan])
     {
-        self.topViewController =[[ZuanZuanZuanViewController alloc] initWithNibName:@"ZuanZuanZuanViewController" bundle:nil];
+        self.topViewController =
+        
+        [[ZuanZuanZuanViewController alloc] initWithNibName:@"ZuanZuanZuanViewController" bundle:nil];
     }
-    
+}
 
-    
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
 }
 
 -(void) checkAppNeedUpdateInfo:(NSNotification *) notify
@@ -106,14 +110,18 @@
 
 - (void) loadCacheImages{
 	/* 建立线程操作队列 */
-    NSOperationQueue *queue = [NSOperationQueue new];
+//    NSOperationQueue *queue = [NSOperationQueue new];
+//    
+//    /* 创建一个NSInvocationOperation对象来在线程中执行loadImagesWithThread操作 */
+//    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
+//                                                                            selector:@selector(loadImagesWithThread)
+//                                                                              object:nil];
+//    /* 将operation添加到线程队列 */
+//    [queue addOperation:operation];
     
-    /* 创建一个NSInvocationOperation对象来在线程中执行loadImagesWithThread操作 */
-    NSInvocationOperation *operation = [[NSInvocationOperation alloc] initWithTarget:self
-                                                                            selector:@selector(loadImagesWithThread)
-                                                                              object:nil];
-    /* 将operation添加到线程队列 */
-    [queue addOperation:operation];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [self loadImagesWithThread];
+    });
     
 }
 

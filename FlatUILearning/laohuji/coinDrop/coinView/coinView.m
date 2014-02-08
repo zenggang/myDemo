@@ -70,16 +70,19 @@
         
         coinPoint = CGPointMake(frame.size.width / 2 - 20.0f, 0.0f);
         
-        textlabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0f, frame.size.height - 200.0f, frame.size.width, 200.0f)];
-//        NSString *textstr = [NSString stringWithFormat:@"+%d",num];
-//        
-//        [textlabel setText:textstr];
-//        [textlabel setBackgroundColor:[UIColor clearColor]];
-//        [textlabel setTextColor:[UIColor yellowColor]];
-//        [textlabel setTextAlignment:UITextAlignmentCenter];
-//        [textlabel setAdjustsFontSizeToFitWidth:YES];
-//        [textlabel setFont:[UIFont boldSystemFontOfSize:50]];
-//        [self addSubview:textlabel];
+        textlabel = [[UILabel alloc]initWithFrame:CGRectMake(0.0f, frame.size.height - 200.0f, 0,0)];
+        NSString *textstr = [NSString stringWithFormat:@"+%d",num];
+        
+        [textlabel setText:textstr];
+        [textlabel setBackgroundColor:[UIColor clearColor]];
+        [textlabel setTextColor:[UIColor yellowColor]];
+        [textlabel setTextAlignment:NSTextAlignmentCenter];
+        [textlabel setAdjustsFontSizeToFitWidth:YES];
+        [textlabel setFont:[UIFont boldSystemFontOfSize:50]];
+        [self addSubview:textlabel];
+        [UIView animateWithDuration:1 animations:^{
+            [textlabel setFrameSize:CGSizeMake(frame.size.width, 200.0f)];
+        }];
         
         emitters = [[NSMutableArray alloc] init];
         images = [[NSMutableArray alloc] init];

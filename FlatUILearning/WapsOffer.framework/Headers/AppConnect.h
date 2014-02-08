@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIkit.h>
 
-#define WAPS_SDK_VERSION_NUMBER            @"1.4"
+#define WAPS_SDK_VERSION_NUMBER            @"1.5.0"
 
 enum WapsConnectionType {
     WAPS_CONNECT_TYPE_CONNECT = 0,
@@ -20,7 +20,6 @@ enum WapsConnectionType {
     NSMutableData *data_;
     int connectAttempts_;
     BOOL isInitialConnect_;
-    BOOL isKY_;
     int responseCode_;
     NSURLConnection *connectConnection_;
     NSURLConnection *userIDConnection_;
@@ -38,7 +37,6 @@ enum WapsConnectionType {
 @property(nonatomic, copy) NSString *appCount;
 @property(nonatomic, copy) NSString *appleID;
 @property(assign) BOOL isInitialConnect;
-@property(assign) BOOL isKY;
 
 
 + (AppConnect *)getConnect:(NSString *)appID;

@@ -66,12 +66,9 @@
         [self reloadGoldAmount];
     }
     
-
+    
     
 }
-
-
-
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -144,11 +141,13 @@
 }
 
 -(void) openDianRuWall{
+    APPDELEGATE.isChangeStatusBarY=YES;
     [DianRuAdWall showAdWall:self];
 }
 
 -(void) openMIDIWall
 {
+    
     [MiidiAdWall showAppOffers:self withDelegate:self];
 }
 
@@ -170,6 +169,7 @@
 //安沃平台
 -(void) openAnwoWall
 {
+    APPDELEGATE.isChangeStatusBarY=YES;
     // 初始化并登录积分墙
     BOOL result = AdwoOWPresentOfferWall(APPDELEGATE.AnWoPlatform.appKey, self);
     if(!result)
@@ -361,7 +361,7 @@
 -(void) afterGoldReloaded{
     [SVProgressHUD showSuccessWithStatus:@"更新成功!"];
     //[MiidiAdWall requestAwardPoints:100 withDelegate:self];
-    //[YouMiPointsManager rewardPoints:100];
+    //[YouMiPointsManager rewardPoints:301];
     
 }
 
@@ -378,7 +378,7 @@
 -(void) handlePlatformGoldReturnWithGold:(int) totalPoint andPid:(int) pid pidStr:(NSString *) pidStr
 {    @synchronized(self)
     {
-        NSLog(@"return %d %d %d",pid,_platformRoundCheckCount,totalPoint);
+       // NSLog(@"return %d %d %d",pid,_platformRoundCheckCount,totalPoint);
         switch (pid) {
             case DOMO_ID_INT:
                 _addGoldDOMOToSysGoldAmount=totalPoint;
@@ -517,7 +517,8 @@
         [UserGold addGoldOnSuccess:^(id json) {
             
             if (!APPDELEGATE.isOldVesionUser) {
-                APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont+addGold;
+                int resultGold=[[json objectForKey:@"goldAmount"] intValue];
+                APPDELEGATE.userGoldAmont=APPDELEGATE.userGoldAmont+resultGold;
                 _platformRoundCheckCount++;
                 [self updateGoldInfo:pid];
             }else{

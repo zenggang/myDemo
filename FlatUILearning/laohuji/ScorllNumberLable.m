@@ -31,11 +31,11 @@
     digitBackView.backgroundColor = [UIColor clearColor];
     digitBackView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     digitBackView.autoresizesSubviews = YES;
-    image = [[UIImage imageNamed:@"money_back"] stretchableImageWithLeftCapWidth:12 topCapHeight:12];
-    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:image];
-    bgImageView.frame = frame;
-    bgImageView.autoresizingMask = kAllFullSuperviewMask;
-    [digitBackView addSubview:bgImageView];
+//    image = [[UIImage imageNamed:@"money_back"] stretchableImageWithLeftCapWidth:12 topCapHeight:12];
+//    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:image];
+//    bgImageView.frame = frame;
+//    bgImageView.autoresizingMask = kAllFullSuperviewMask;
+//    [digitBackView addSubview:bgImageView];
     //image = [[UIImage imageNamed:@"money_bg_mask"] stretchableImageWithLeftCapWidth:12 topCapHeight:12];
     //UIImageView *bgMaskImageView = [[UIImageView alloc] initWithImage:image];
     //bgMaskImageView.autoresizingMask = kAllFullSuperviewMask;

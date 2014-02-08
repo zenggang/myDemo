@@ -34,11 +34,12 @@
 @property (nonatomic,weak) IBOutlet UILabel *goldLable;
 @property (nonatomic,weak) IBOutlet UILabel *describeLable;
 @property (nonatomic,weak) IBOutlet UILabel *skillLable;
+@property (nonatomic,strong) DMScrollingTicker *scrollTextView;
 
 @property (nonatomic,assign) int theY_OffSet;
-
 @property (nonatomic,assign) int platformInuseCount;
 
+-(void) buildScrollTextView;
 @end
 
 @implementation GetGoldViewController
@@ -53,9 +54,6 @@
     [self.view setBackgroundColor:GREEN_COLOR];
     self.title=@"免费赚金币";
     [self createNavigationLeftButtonWithTitle:@"菜单"  action:@selector(showMenuLeft)];
-    
-    
-    
     _mainScrollView.delegate=self;
     
     _platformInuseCount=0;
@@ -111,7 +109,7 @@
     _mainScrollView.contentSize=CGSizeMake(320, _mainScrollView.frame.size.height+1);
    _mainScrollView.backgroundColor=[UIColor whiteColor];
     _goldScrollView = (goldToMoneyScrollView *)[self loadViewFromXibName:@"goldToMoneyScrollView"];
-    _goldScrollView.frame=CGRectMake(10, 10, 300, 140);
+    _goldScrollView.frame=CGRectMake(10, 25, 300, 140);
     [self.view addSubview:_goldScrollView];
     
     
@@ -170,6 +168,23 @@
     [_mainScrollView.pullToRefreshView setTitle:@"释放开始刷新" forState:SVPullToRefreshStateTriggered];
     [_mainScrollView.pullToRefreshView setArrowColor:GREEN_COLOR];
     [_mainScrollView.pullToRefreshView setTextColor:GREEN_COLOR];
+    [self buildScrollTextView];
+}
+
+-(void) buildScrollTextView
+{
+    if (APPDELEGATE.appVersionInfo && APPDELEGATE.appVersionInfo.isHide==0) {
+        if (_scrollTextView) {
+            [_scrollTextView removeFromSuperview];
+        }
+        NSArray *textArray=APPDELEGATE.exchangeArrayForWall;
+        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && [APP_NAME isEqualToString:APPNAME_ZuanZuanZuan] && !APPDELEGATE.isChangeStatusBarY){
+            _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 20, 320, 20) withTextArray:textArray];
+        }else
+            _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 0, 320, 20) withTextArray:textArray];
+        _scrollTextView.tag=786;
+        [self.view addSubview:_scrollTextView];
+    }
 }
 
 -(void) creatGoldButtonWithFrame:(CGRect) theframe andButton:(FUIButton *) fUIButton andTitle:(NSString *) title withAction:(SEL) action

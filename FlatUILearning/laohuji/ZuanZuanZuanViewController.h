@@ -6,8 +6,13 @@
 #import "ScorllNumberLable.h"
 #import "coinView.h"
 #import "BaseGoldViewController.h"
+#import "customSwitchButton.h"
 
-@interface ZuanZuanZuanViewController : BaseGoldViewController <ZCSlotMachineDelegate, ZCSlotMachineDataSource,UIAlertViewDelegate,coinViewDelegate>
 
+@interface ZuanZuanZuanViewController : BaseGoldViewController <ZCSlotMachineDelegate, ZCSlotMachineDataSource,UIAlertViewDelegate,coinViewDelegate,CustomSwitchButtonDelegate>
+
+{
+
+}
 
 @end

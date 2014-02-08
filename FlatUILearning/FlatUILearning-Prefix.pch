@@ -28,4 +28,5 @@
     #import "TTLabel.h"
     #import "AppUtilities.h"
     #import "SVProgressHUD.h"
+    #import "UIView+Helpers.h"
 #endif

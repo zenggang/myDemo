@@ -25,7 +25,9 @@
 #import "DMScrollingTicker.h"
 
 @interface BaseViewController : UIViewController<FUIAlertViewDelegate>
- 
+{
+    BOOL isHideStatusBar;
+}
 
 #pragma mark Custom metod
 -(DMScrollingTicker *) createTextScrollViewWithFrame:(CGRect) frame withTextArray:(NSArray *) textArray;
