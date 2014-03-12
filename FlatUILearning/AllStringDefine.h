@@ -7,25 +7,25 @@
 //
   
 //APP
-#define APP_NAME @"ZuanZuanZuan"
-#define VERSION_STRING @"1.30"
+#define APP_NAME @"GuaGuaLe"
+#define VERSION_STRING @"2.10"
 #define SYS_OS [[UIDevice currentDevice] systemVersion] 
 
-//McDonald 版本 1.00 appStroe 1.01 91市场  1.02 测试版 
+//McDonald 版本 1.00 2.0 3.0 4.0
 #define APPNAME_MCDONALD @"McDonald"
 
-//GuaGuale 刮刮乐 1.10 appStroe 1.11 91市场  1.12 测试版
+//GuaGuale 刮刮乐 1.10 2.10
 #define APPNAME_GUAGUALE @"GuaGuaLe"
 
-//GuaGuale 肯德基 1.20 appStroe 1.21 91市场  1.22 测试版
+//GuaGuale 肯德基 1.20 2.20
 #define APPNAME_KFC @"Kfc"
-
-//ZuanZuanZuan 转转赚 1.30 appStroe 1.31 91市场  1.32 测试版
+ 
+//ZuanZuanZuan 转转赚 1.30 2.30 3.30
 #define APPNAME_ZuanZuanZuan @"ZuanZuanZuan"
 //#define VERSION 1.0
 
 //麦当劳优惠劵  全民刮刮赚  肯德基优惠劵 老虎机转转赚
-#define APP_FIRST_TAB_NAME @"老虎机转转赚"
+#define APP_FIRST_TAB_NAME @"全民刮刮赚"
 
 
 #define PRIVATE_SECRET_KEY @"javababyzenggang"
@@ -56,8 +56,8 @@
 
 //Urls
 #define BaseUrl @"http://121.199.42.54:8080/gold"
-//#define BaseUrl @"http://192.168.1.103:8080/gold"
-//#define BaseUrl @"http://192.168.1.104:8080/gold"
+//#define BaseUrl @"http://10.221.149.74:8080/gold"
+//#define BaseUrl @"http://192.168.1.100:8080/gold"
 
 #define KRequestMenuPicUrl(url) [NSString stringWithFormat:@"http://www.mcdonalds.com.cn/images/mclub/%@",url]
 
@@ -96,7 +96,7 @@
 #define GOLDRequestGAUGUAKaList [NSString stringWithFormat:@"%@/api/GuaGuaKa/cardList",BaseUrl] 
 
 
-#define GOLDRequestBuyGuaGuaKa(udid) [NSString stringWithFormat:@"%@/api/GuaGuaKa/BuyCard/%@",BaseUrl,udid] 
+#define GOLDRequestBuyGuaGuaKa(udid) [NSString stringWithFormat:@"%@/api/GuaGuaKa/BuyCardNew/%@",BaseUrl,udid] 
 
 #define GOLDRequestGAUGUAKaLogList(udid) [NSString stringWithFormat:@"%@/api/GuaGuaKa/cardRecords/%@",BaseUrl,udid] 
 

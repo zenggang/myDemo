@@ -47,7 +47,7 @@
     } withPath:GOLDRequestGAUGUAKaList parameters:nil];
 }
 
-+(AFHTTPRequestOperation *) buyGuaGuaKaWithData:(NSString *) data OnSuccess:(void (^)(id))success failure:(void (^)(id))failure
++(AFHTTPRequestOperation *) buyGuaGuaKaWithGid:(int) gid OnSuccess:(void (^)(id))success failure:(void (^)(id))failure
 {
     return [ApiRequestCenter sendPostRequestOnSuccess:^(id json) {
         
@@ -58,7 +58,7 @@
         if (failure) {
             failure(error);
         }
-    } withPath:GOLDRequestBuyGuaGuaKa(APPDELEGATE.udid) parameters:[NSMutableDictionary dictionaryWithObjectsAndKeys:data,@"data", nil]];
+    } withPath:GOLDRequestBuyGuaGuaKa(APPDELEGATE.udid) parameters:[NSMutableDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:gid],@"gid", nil]];
 }
 
 @end

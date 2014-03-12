@@ -30,6 +30,8 @@
 #define WANPU_ID    @"7"
 #define ANWO_ID     @"8"
 #define YIJIFEN_ID  @"9"
+#define AIPUDONGLI_ID  @"10"
+#define MOPAN_ID  @"11"
 
 #define SYS_GIF_ID_INT   1
 #define DOMO_ID_INT 2
@@ -40,3 +42,5 @@
 #define WANPU_ID_INT   7
 #define ANWO_ID_INT    8
 #define YIJIFEN_ID_INT 9
+#define AIPUDONGLI_ID_INT  10
+#define MOPAN_ID_INT  11

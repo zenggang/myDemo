@@ -106,6 +106,15 @@
     
 }
 
+-(void)didReceiveAdView:(UIView*)adView
+{
+    [super didReceiveAdView:adView];
+    if(self.dianruBannarView)
+    {
+        self.dianruBannarView.center=CGPointMake(160, 23);
+    }
+}
+
 #pragma mark ---customer Actions
 -(void) afterGoldReloaded
 {
@@ -126,7 +135,7 @@
     
 }
 
--(void) checkGoldToBuyTicket:(int) benjin AwardValue:(int) awardValue andGid:(int) gid
+-(void) checkGoldToBuyTicket:(int) benjin  andGid:(int) gid
 {
     
     if (APPDELEGATE.userGoldAmont<benjin) {
@@ -134,13 +143,11 @@
         return;
     }
     _benjin=benjin;
-    _awardValue=awardValue;
     _theGid=gid;
     if (benjin>=100) {
         [self showFUIAlertViewWithTitle:@"提示!" message:[NSString stringWithFormat:@"您确定要购买%d金币的刮刮卡吗?",benjin] withTag:GOLD_OVER_100_ALERT_TAG cancleButtonTitle:@"取消" otherButtonTitles:@"确定",nil];
         return;
     }
-    [(TicketView *)_carouseView.currentItemView showTheTicketScratchArea];
     
     [self afterTicketBought];
 }
@@ -148,16 +155,17 @@
 -(void) afterTicketBought
 {
     _isScratched=NO;
-    [GuaGuaKa buyGuaGuaKaWithData:[AppUtilities goldDataEncryptWithPid:_theGid andGoldAmount:_awardValue] OnSuccess:^(id respons) {
+    [AppUtilities showHUDWithStatus:@"购买中..."];
+    [GuaGuaKa buyGuaGuaKaWithGid:_theGid OnSuccess:^(id respons) {
+        [AppUtilities dismissHUD];
+        [(TicketView *)_carouseView.currentItemView showTheTicketScratchArea];
+        [(TicketView *)_carouseView.currentItemView setResultValue:[[respons objectForKey:@"resultValue"] integerValue]];
         [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont-_benjin ]];
-        
         APPDELEGATE.userGoldAmont=[[respons objectForKey:@"goldAmount"] integerValue];
-    } failure:^(id error) {
+    } failure:^(id error) { 
         [AppUtilities handleErrorMessage:error];
     }];
-    
 }
-
 
 -(void) toGetGold
 {
@@ -204,9 +212,9 @@
     [_goldLable setText:[NSString stringWithFormat:@"金币:%d",APPDELEGATE.userGoldAmont]];
 }
 
--(void) clickTheBuyButtonWithBenjin:(int)benjin WithAwardValue:(int)awardValue withGid:(int) gid
+-(void) clickTheBuyButtonwithGid:(int) gid  withBenJin:(int) benjin
 {
-    [self checkGoldToBuyTicket:benjin AwardValue:awardValue andGid:gid];
+    [self checkGoldToBuyTicket:benjin andGid:gid];
 }
 
 #pragma mark system

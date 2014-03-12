@@ -43,8 +43,11 @@
 
 @property (nonatomic,strong) TheLightsView *theLightView;
 
+@property (nonatomic, strong) immobView *adView_Banner;
+
 -(void) toExchangeMoney;
--(void) toGetGold; 
+-(void) toGetGold;
+-(void) showBannerAd;
 @end
 #define GET_GOLD_ALERT_TAG 4563
 
@@ -251,6 +254,10 @@
 
     [_exchangeButton addTarget:self action:@selector(toExchangeMoney) forControlEvents:UIControlEventTouchUpInside];
     [_getGoldButton addTarget:self action:@selector(toGetGold) forControlEvents:UIControlEventTouchUpInside];
+    
+    //bannar广告
+
+    
 }
 
 -(void) viewWillAppear:(BOOL)animated
@@ -281,6 +288,7 @@
 {
     [super afterGoldReloaded];
     [self setAwardGoldAmount:0];
+    NSLog(@"%d",APPDELEGATE.userGoldAmont);
     [self setTotalAmount:APPDELEGATE.userGoldAmont];
 }
 
@@ -468,6 +476,8 @@
     [self setTotalAmount:APPDELEGATE.userGoldAmont];
     [self setCoinAmount:0];
     awardTimes=0;
+    if (APPDELEGATE.appVersionInfo.isHide==1)
+        [self showBannerAd];
 }
 
 #pragma mark - ZCSlotMachineDataSource
@@ -598,6 +608,23 @@
     [super alertView:alertView clickedButtonAtIndex:buttonIndex];
     if (alertView.tag==GET_GOLD_ALERT_TAG) {
         [self toGetGold];
+    }
+}
+
+
+
+
+-(void) showBannerAd
+{
+    if(self.dianruBannarView){
+        [UIView animateWithDuration:1.0f animations:^{
+            self.dianruBannarView.center=CGPointMake(160, 25);
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:1 delay:4 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+                self.dianruBannarView.center=CGPointMake(160, -25);
+            } completion:^(BOOL finished) {
+            }];
+        }];
     }
 }
 @end

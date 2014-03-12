@@ -14,9 +14,9 @@
 #import "AdwoOfferWall.h"
 
 
-
 @interface BaseGoldViewController()
 @property (nonatomic,strong) DMOfferWallViewController *DMOWallController;
+@property (nonatomic,strong) DMOfferWallManager *offerWallManager;
 
 @property (nonatomic,strong) immobView *liMei_AdWall;
 @property (nonatomic,strong)  YJFIntegralWall *integralWall;
@@ -33,12 +33,17 @@
 @property (nonatomic,assign) NSInteger addGoldWanPuToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldAnWoToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldYiJIFenToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldAiPuDongLiToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldMoPanToSysGoldAmount;
+
 
 
 @property (nonatomic,assign) int oldUserPlatformCheckCount;
 @property (nonatomic,assign) BOOL isRuduceGold;
 @property (nonatomic,strong) NSMutableString *reduceGoldData;
 @property (nonatomic,strong) NSString *reduceGoldKeyString;
+
+
 @end
 #define GIFT_ALERVIEW_TAG 888
 //96ZJ1DugzewKLwTA2p 我的
@@ -60,10 +65,23 @@
         }
         if (APPDELEGATE.appVersionInfo.isHide==1) {
             [self showFUIAlertViewWithTitle:@"欢迎使用!" message:@"您是第一次使用,系统将赠送给您一份神秘大礼!" withTag:GIFT_ALERVIEW_TAG cancleButtonTitle:@"确认接收" otherButtonTitles:nil];
+            [DianRuSDK requestAdmobileViewWithDelegate:self];
         }else
             [self showFUIAlertViewWithTitle:@"欢迎使用!" message:@"您是第一次使用免费赚金币功能,系统将赠送给您一份神秘大礼!" withTag:GIFT_ALERVIEW_TAG cancleButtonTitle:@"确认接收"  otherButtonTitles:nil];
     }else{
         [self reloadGoldAmount];
+        if (APPDELEGATE.appVersionInfo.isHide==1) {
+             [DianRuSDK requestAdmobileViewWithDelegate:self];
+        }else{
+            if (APPDELEGATE.appVersionInfo.announcementId!=APPDELEGATE.announcementId) {
+                if (APPDELEGATE.appVersionInfo.announcement && APPDELEGATE.appVersionInfo.announcement.length>0) {
+                    [self showFUIAlertViewWithTitle:@"系统公告" message:APPDELEGATE.appVersionInfo.announcement withTag:-1 cancleButtonTitle:@"好的" otherButtonTitles: nil];
+                    APPDELEGATE.announcementId=APPDELEGATE.appVersionInfo.announcementId;
+                    [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:APPDELEGATE.announcementId] forKey:@"announcementId"];
+                    [[NSUserDefaults standardUserDefaults] synchronize];
+                }
+            }
+        }
     }
     
     
@@ -84,36 +102,66 @@
 
 -(void) initAllAdvWallInfo
 {
-    if (!_DMOWallController) {
+    if (APPDELEGATE.DuoMenPlatform.state==1 && !_DMOWallController) {
         _DMOWallController = [[DMOfferWallViewController alloc] initWithPublisherID:APPDELEGATE.DuoMenPlatform.appKey];
         _DMOWallController.disableStoreKit = YES;
         _DMOWallController.delegate = self;
         // 加载积分墙并等待delegate的回调。
         UIViewController *rootViewController = [UIApplication sharedApplication].keyWindow.rootViewController;
         _DMOWallController.rootViewController=rootViewController;
+        _offerWallManager = [[DMOfferWallManager alloc] initWithPublishId:APPDELEGATE.DuoMenPlatform.appKey userId:nil];
+        _offerWallManager.delegate = self;
     }
     
-    if (!_liMei_AdWall) {
+    if (APPDELEGATE.LiMeiPlatform.state==1 && !_liMei_AdWall) {
         _liMei_AdWall=[[immobView alloc] initWithAdUnitID:APPDELEGATE.LiMeiPlatform.appKey];
         _liMei_AdWall.delegate=self;
     }
     //点入平台
+    
     [DianRuAdWall initAdWallWithDianRuAdWallDelegate:self];
+    
     //有米
-    self.youmiWall = [YouMiWall new] ;
+    if (APPDELEGATE.YouMiPlatform.state==1 && !self.youmiWall) {
+        self.youmiWall = [YouMiWall new] ;
+    }
+    
 
     //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(pointsGotted:) name:kYouMiPointsManagerRecivedPointsNotification object:nil];
     //指定获取用户积分的回调方法
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(getUpdatedPoints:)
-                                                 name:WAPS_GET_POINTS_SUCCESS
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(getUpdatedPointsFailed:)
-                                                 name:WAPS_GET_POINTS_FAILED
-                                               object:nil];
+    if (APPDELEGATE.WanPuPlatform.state==1) {
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(getUpdatedPoints:)
+                                                     name:WAPS_GET_POINTS_SUCCESS
+                                                   object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(getUpdatedPointsFailed:)
+                                                     name:WAPS_GET_POINTS_FAILED
+                                                   object:nil];
+    }
 
+
+    //磨盘
+    if (APPDELEGATE.MoPanPlatform.state==1 && !_mopanAdWallControl) {
+        _mopanAdWallControl = [[MopanAdWall alloc] initWithMopan:APPDELEGATE.MoPanPlatform.appKey withAppSecret:APPDELEGATE.MoPanPlatform.appSecret];
+        _mopanAdWallControl.delegate = self;
+        _mopanAdWallControl.rootViewController = self;
+    }
+    
+    
+    //爱普动力
+    if (APPDELEGATE.MoPanPlatform.state==1 && !_powerWallViewController) {
+        _powerWallViewController = [ADCPowerWallViewController initWithSiteId:APPDELEGATE.AiPuDongLiPlatform.appKey
+                                                                      siteKey:APPDELEGATE.AiPuDongLiPlatform.appSecret
+                                                                      mediaId:APPDELEGATE.AiPuDongLiPlatform.mediaId
+                                                               userIdentifier:APPDELEGATE.udid
+                                                                   useSandBox:NO
+                                                                    useReward:YES
+                                              powerWallViewControllerDelegate:self];
+        _powerWallViewController.delegate=self;
+    }
+    
     
 }
 
@@ -121,8 +169,11 @@
 -(void)viewWillUnload{
     [super viewWillUnload];
 //    [[NSNotificationCenter defaultCenter] removeObserver:self name:kYouMiPointsManagerRecivedPointsNotification object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:WAPS_GET_POINTS_SUCCESS object:nil];
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:WAPS_GET_POINTS_FAILED object:nil];
+    if (APPDELEGATE.WanPuPlatform.state==1) {
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:WAPS_GET_POINTS_SUCCESS object:nil];
+        [[NSNotificationCenter defaultCenter] removeObserver:self name:WAPS_GET_POINTS_FAILED object:nil];
+    }
+
     
 }
 
@@ -209,6 +260,26 @@
     }
     return score;
 }
+//艾普动力
+- (void)openAiPuDongLiWall
+{
+    
+    [ADCPowerWallViewController showPowerWallViewFromViewController:self
+                                                             siteId:APPDELEGATE.AiPuDongLiPlatform.appKey
+                                                            siteKey:APPDELEGATE.AiPuDongLiPlatform.appSecret
+                                                            mediaId:APPDELEGATE.AiPuDongLiPlatform.mediaId
+                                                     userIdentifier:APPDELEGATE.udid
+                                                          useReward:YES
+                                                         useSandBox:NO];
+    
+}
+
+//磨盘平台
+-(void) openMoPanWall
+{
+    [_mopanAdWallControl showAppOffers];
+}
+
 
 -(void) changeTheGoldToNewVersion
 {
@@ -279,8 +350,11 @@
             int totalPoint =[self getYiJifenScore];
             [self handlePlatformGoldReturnWithGold:totalPoint andPid:YIJIFEN_ID_INT pidStr:YIJIFEN_ID];
         }
+        if (((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:AIPUDONGLI_ID]).state==1)
+            [_powerWallViewController getScore];
+        
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:DOMO_ID]).state==1)
-            [_DMOWallController requestOnlinePointCheck];
+            [_offerWallManager requestOnlinePointCheck];
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:LIMEI_ID]).state ==1)
             [_liMei_AdWall immobViewQueryScoreWithAdUnitID:APPDELEGATE.LiMeiPlatform.appKey];
         if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:DIANRU_ID] ).state==1)
@@ -294,6 +368,11 @@
             _isRuduceGold=NO;
             [AppConnect getPoints];
         }
+        if(((GoldPlatForm *)[APPDELEGATE.platformDict objectForKey:MOPAN_ID]).state==1)
+            [_mopanAdWallControl getMoney];
+        
+
+        
     } failure:^(id error) {
         [self handleErrorLoadGoldWithPid:SYS_GIF_ID_INT];
     }];
@@ -378,7 +457,7 @@
 -(void) handlePlatformGoldReturnWithGold:(int) totalPoint andPid:(int) pid pidStr:(NSString *) pidStr
 {    @synchronized(self)
     {
-       // NSLog(@"return %d %d %d",pid,_platformRoundCheckCount,totalPoint);
+        NSLog(@"return %d %d %d",pid,_platformRoundCheckCount,totalPoint);
         switch (pid) {
             case DOMO_ID_INT:
                 _addGoldDOMOToSysGoldAmount=totalPoint;
@@ -403,6 +482,12 @@
                 break;
              case YIJIFEN_ID_INT:
                 _addGoldYiJIFenToSysGoldAmount=totalPoint;
+                break;
+            case MOPAN_ID_INT:
+                _addGoldMoPanToSysGoldAmount=totalPoint;
+                break;
+            case AIPUDONGLI_ID_INT:
+                _addGoldAiPuDongLiToSysGoldAmount=totalPoint;
                 break;
             default:
                 break;
@@ -431,7 +516,7 @@
 -(void) reduceGoldInPid:(NSString *) pidStr withGold:(int) reduceAmount
 {
     if ([pidStr isEqualToString:DOMO_ID]){
-        [_DMOWallController requestOnlineConsumeWithPoint:reduceAmount];
+        [_offerWallManager requestOnlineConsumeWithPoint:reduceAmount];
     }else if ([pidStr isEqualToString:LIMEI_ID]){
         [_liMei_AdWall immobViewReduceScore:reduceAmount WithAdUnitID:APPDELEGATE.LiMeiPlatform.appKey];
     }else if ([pidStr isEqualToString:DIANRU_ID]){
@@ -464,6 +549,10 @@
         }else{
             [self handleErrorReduceGoldWithPid:YIJIFEN_ID_INT];
         }
+    }else if ([pidStr isEqualToString:MOPAN_ID]){
+        [_mopanAdWallControl spendMoney:reduceAmount];
+    }else if([pidStr isEqualToString:AIPUDONGLI_ID]){
+        [_powerWallViewController reduceScore:reduceAmount];
     }
 }
 
@@ -505,10 +594,15 @@
             case ANWO_ID_INT:
                 addGold=_addGoldAnWoToSysGoldAmount;
                 break;
-                case YIJIFEN_ID_INT:
+            case YIJIFEN_ID_INT:
                 addGold=_addGoldYiJIFenToSysGoldAmount;
                 break;
-                
+            case MOPAN_ID_INT:
+                addGold=_addGoldMoPanToSysGoldAmount;
+                break;
+            case AIPUDONGLI_ID_INT:
+                addGold=_addGoldAiPuDongLiToSysGoldAmount;
+                break;
             default:
                 break;
         }
@@ -748,4 +842,161 @@
 {
     [self handleErrorLoadGoldWithPid:WANPU_ID_INT];
 }
+#pragma mark -
+#pragma mark DianRu delegate
+
+- (NSString *)applicationKey {
+    if (APPDELEGATE.appVersionInfo.isHide==1) {
+        return @"00001304090000C5";
+    }else
+        return APPDELEGATE.DianRuPlatform.appKey;
+}
+
+- (int) adType
+{
+    return 0;
+}
+
+
+- (NSString *)keyWords
+{
+    return @"生活";
+}
+
+
+- (UIViewController *)viewControllerForPresentingModalView {
+    return self;
+}
+
+- (BOOL)shouldUsingOrientationRelatedContent
+{
+    return YES;
+}
+
+//此处需要判断一下sdkView是否已设置，如果已存在直接更新Frame即可
+-(void)didReceiveAdView:(UIView*)adView
+{
+    
+    if(!_dianruBannarView)
+    {
+        _dianruBannarView = (DianRuSDK *)adView;
+        [self.view addSubview:_dianruBannarView];
+        self.dianruBannarView.center=CGPointMake(160, -25);
+    }
+}
+
+
+#pragma mark Point Check Callbacks
+// 积分墙开始加载数据。
+// Adall starts to work.
+- (void)adwallDidShowAppsStartLoad
+{
+    NSLog(@"[mopan] 开始加载积分墙");
+	
+	
+}
+
+// 关闭积分墙页面。
+// Offer wall closed.
+- (void)adwallDidShowAppsClosed
+{
+}
+
+// 积分墙加载失败。可能的原因由error部分提供，例如网络连接失败、被禁用等。
+- (void)adwallDidFailShowAppsWithError:(NSError *)error
+{
+	
+}
+
+// 请求积分值成功后调用
+//
+// 详解:当接收服务器返回的积分值成功后调用该函数
+// 补充：totalMoney: 返回用户的总积分
+//      moneyName  : 返回的积分名称
+- (void)adwallSuccessGetMoney:(NSInteger)totalMoney forMoneyName:(NSString*)moneyName
+{
+    NSLog(@"[mopan] 成功获取金币! 总金币值=%d",totalMoney);
+    [self handlePlatformGoldReturnWithGold:totalMoney andPid:MOPAN_ID_INT pidStr:MOPAN_ID];
+	
+}
+
+// 请求积分值数据失败后调用
+//
+// 详解:当接收服务器返回的数据失败后调用该函数
+// 补充：第一次和接下来每次如果请求失败都会调用该函数
+- (void)adwallFailGetMoney:(NSError *)error
+{
+    NSLog(@"[mopan] 获取金币失败!");
+    [self handleErrorLoadGoldWithPid:MOPAN_ID_INT];
+}
+
+// 消耗金币成功后调用
+//
+// 详解:当接收服务器返回的消耗积分成功后调用该函数
+// 补充：totalMoney: 返回用户的总积分
+
+- (void)adwallSuccessSpendMoney:(NSInteger)totalMoney
+{
+    NSLog(@"[mopan] 成功减少金币! 总金币值=%d",totalMoney);
+	[self handleReducePlatformGoldWithPid:MOPAN_ID_INT];
+}
+
+
+// 请求消耗积分数据失败后调用
+//
+// 详解:当接收服务器返回的数据失败后调用该函数
+// 补充：第一次和接下来每次如果请求失败都会调用该函数
+- (void)adwallFailSpendMoney:(NSError *)error
+{
+    NSLog(@"[mopan] 减少金币失败!");
+    [self handleErrorReduceGoldWithPid:MOPAN_ID_INT];
+}
+
+#pragma mark - ADCADCPowerWallViewControllerDelegate methods
+
+- (void)powerWallDidDismiss{
+    NSLog(@"power wall dismiss !");
+}
+
+-(void)iOSAppListLoaded:(id)responseObject
+{
+    if ([[responseObject class] isSubclassOfClass:[NSString class]]) {      // 获取iPhoneApp数据成功
+        NSLog(@"%@", (NSString *)responseObject);
+    }else if ([[responseObject class] isSubclassOfClass:[ADCError class]]) {    // 获取iPhoneApp数据失败
+        NSLog(@"%@", [(ADCError *)responseObject description]);
+    }
+}
+
+-(void)iOSRecommendAppListLoaded:(id)responseObject
+{
+    if ([[responseObject class] isSubclassOfClass:[NSString class]]) {      // 获取特别赞助数据数据成功
+        NSLog(@"%@", (NSString *)responseObject);
+    }else if ([[responseObject class] isSubclassOfClass:[ADCError class]]) {    // 获取特别赞助数据数据失败
+        NSLog(@"%@", [(ADCError *)responseObject description]);
+    }
+}
+
+-(void)getScoreFinished:(CGFloat)totalScore
+{
+   // _scoreLabel.text = [NSString stringWithFormat:@"当前积分：%.0f", totalScore];
+    [self handlePlatformGoldReturnWithGold:totalScore andPid:AIPUDONGLI_ID_INT  pidStr:AIPUDONGLI_ID];
+
+}
+
+- (void)reduceScoreFinished:(CGFloat)totalScore{
+    //_scoreLabel.text = [NSString stringWithFormat:@"消耗掉 5 个积分， 剩余积分 %.0f", totalScore];
+    [self handleReducePlatformGoldWithPid:AIPUDONGLI_ID_INT];
+    
+}
+
+- (void)getScoreFailed:(ADCError *)error{
+    NSLog(@"%@",[error description]);
+    [self handleErrorLoadGoldWithPid:AIPUDONGLI_ID_INT];
+}
+
+- (void)reduceScoreFailed:(ADCError *) error{
+    NSLog(@"%@",[error description]);
+    [self handleErrorReduceGoldWithPid:AIPUDONGLI_ID_INT];
+}
+
 @end

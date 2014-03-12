@@ -30,6 +30,8 @@
     _storeVersion=[attributes objectForKey:@"storeVersion"];
     _latestStoreVersion=[attributes objectForKey:@"latestStoreVersion"];
     _latestVersionMemo=[attributes objectForKey:@"latestVersionMemo"];
+    _announcement=[attributes objectForKey:@"announcement"];
+    _announcementId =[[attributes objectForKey:@"announcementId"] integerValue];
     
     if ([attributes objectForKey:@"platFormList"]) {
         NSArray *platFormArray = [attributes objectForKey:@"platFormList"];

@@ -6,19 +6,6 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 
-// 消费结果状态码
-typedef enum {
-    // 消费成功
-    // Consume Successfully
-    DMOfferWallConsumeStatusCodeSuccess = 1,
-    // 剩余积分不足
-    // Not enough point
-    DMOfferWallConsumeStatusCodeInsufficient,
-    // 订单重复
-    // Duplicate consume order
-    DMOfferWallConsumeStatusCodeDuplicateOrder
-} DMOfferWallConsumeStatusCode;
-
 @class DMOfferWallViewController;
 @protocol DMOfferWallDelegate <NSObject>
 // 积分墙开始加载列表数据。
@@ -33,23 +20,6 @@ typedef enum {
 // 积分墙页面被关闭。
 // Offer wall closed.
 - (void)offerWallDidClosed;
-#pragma mark Point Check Callbacks
-// 积分查询成功之后，回调该接口，获取总积分和总已消费积分。
-// Called when finished to do point check.
-- (void)offerWallDidFinishCheckPointWithTotalPoint:(NSInteger)totalPoint
-                             andTotalConsumedPoint:(NSInteger)consumed;
-// 积分查询失败之后，回调该接口，返回查询失败的错误原因。
-// Called when failed to do point check.
-- (void)offerWallDidFailCheckPointWithError:(NSError *)error;
-#pragma mark Consume Callbacks
-// 消费请求正常应答后，回调该接口，并返回消费状态（成功或余额不足），以及总积分和总已消费积分。
-// Called when finished to do consume point request and return the result of this consume.
-- (void)offerWallDidFinishConsumePointWithStatusCode:(DMOfferWallConsumeStatusCode)statusCode
-                                          totalPoint:(NSInteger)totalPoint
-                                  totalConsumedPoint:(NSInteger)consumed;
-// 消费请求异常应答后，回调该接口，并返回异常的错误原因。
-// Called when failed to do consume request.
-- (void)offerWallDidFailConsumePointWithError:(NSError *)error;
 
 @optional
 #pragma mark OfferWall Interstitial
@@ -89,13 +59,6 @@ typedef enum {
 // 使用开发者传入的UIViewController来弹出显示OfferWallViewController。
 // Present OfferWallViewController with developer's controller.
 - (void)presentOfferWallWithViewController:(UIViewController *)controller;
-
-#pragma mark Online Usage Methods
-// 请求在线积分检查，成功或失败都会回调Online Usage Callbacks中关于point check的相应方法。
-- (void)requestOnlinePointCheck;
-// 请求在线消费指定积分，成功或失败都会回调Online Usage Callbacks中关于consume的相应方法。
-// 请特别注意参数类型为unsigned int，需要消费的积分为非负值。
-- (void)requestOnlineConsumeWithPoint:(NSUInteger)pointToConsume;
 
 #pragma mark OfferWall Interstitial
 // 请求加载插屏积分墙

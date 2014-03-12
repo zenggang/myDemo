@@ -101,6 +101,12 @@
             case YIJIFEN_ID_INT:
                 [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YiJiFenButton andTitle:@"易积分平台" withAction:@selector(OpenYiJIFenWall)];
                 break;
+            case AIPUDONGLI_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YiJiFenButton andTitle:@"爱普动力" withAction:@selector(openAiPuDongLiWall)];
+                break;
+            case MOPAN_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YiJiFenButton andTitle:@"磨盘平台" withAction:@selector(openMoPanWall)];
+                break;
             default:
                 break;
         }

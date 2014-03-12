@@ -16,5 +16,6 @@
 @property (nonatomic,assign) int state;
 @property (nonatomic,strong) NSString *appKey;
 @property (nonatomic,strong) NSString *appSecret;
+@property (nonatomic,strong) NSString *mediaId;
 - (id)initWithAttributes:(NSDictionary *)attributes;
 @end

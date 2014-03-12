@@ -17,7 +17,7 @@
     for (int i=0; i<zeroCount; i++) {
         [fomartString insertString:@"0" atIndex:0];
     }
-    [self updateText:[NSString stringWithFormat:@"%@",fomartString]];
+    [self updateText:fomartString];
 }
 -(void) updateText:(NSString *) text
 {

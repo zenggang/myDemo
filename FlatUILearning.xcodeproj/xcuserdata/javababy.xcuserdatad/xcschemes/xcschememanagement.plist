@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Mcdonalds.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 		<key>ZuanZuanZuan.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +38,11 @@
 			<true/>
 		</dict>
 		<key>CDD3FB24181E96E6002B8EC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CDD5B62C18CCC0D00091D2C2</key>
 		<dict>
 			<key>primary</key>
 			<true/>

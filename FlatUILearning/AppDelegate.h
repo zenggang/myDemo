@@ -37,7 +37,7 @@
 @property (nonatomic,strong) NSArray *getGoldArrayForWall;
 @property (nonatomic,strong) NSMutableDictionary *platformDict;
 @property (nonatomic,assign) int platformCount;
-
+@property (nonatomic,assign) int announcementId;
 
 //图片缓存dict
 @property (nonatomic,strong) NSMutableDictionary *menuImageDict;
@@ -48,6 +48,7 @@
 @property (nonatomic,assign) BOOL isAllowMusic;
 @property (nonatomic,assign) BOOL isAllowSound;
 @property (nonatomic,assign) BOOL isChangeStatusBarY;
+
 //平台相关
 @property (nonatomic,strong) GoldPlatForm *DuoMenPlatform;
 @property (nonatomic,strong) GoldPlatForm *LiMeiPlatform;
@@ -57,7 +58,8 @@
 @property (nonatomic,strong) GoldPlatForm *WanPuPlatform;
 @property (nonatomic,strong) GoldPlatForm *AnWoPlatform;
 @property (nonatomic,strong) GoldPlatForm *YiJiFenPlatform;
-
+@property (nonatomic,strong) GoldPlatForm *MoPanPlatform;
+@property (nonatomic,strong) GoldPlatForm *AiPuDongLiPlatform;
 
 
 -(void) initUserInfo:(Users *) user;

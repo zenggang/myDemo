@@ -15,5 +15,5 @@
 @property (nonatomic, assign) int state;
 
 +(AFHTTPRequestOperation *) getGuaGuaKaListOnSuccess:(void (^)(id))success failure:(void (^)(id))failure;
-+(AFHTTPRequestOperation *) buyGuaGuaKaWithData:(NSString *) data OnSuccess:(void (^)(id))success failure:(void (^)(id))failure;
++(AFHTTPRequestOperation *) buyGuaGuaKaWithGid:(int) gid OnSuccess:(void (^)(id))success failure:(void (^)(id))failure;
 @end

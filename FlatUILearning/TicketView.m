@@ -50,12 +50,11 @@
     [_scratchView setHideView:hideView];
     _scratchView.delegate=self;
     [self.ticketTextMainView addSubview:_scratchView];
-    int benjin=_guaguaka.benjin;
-    double baobenRate=_guaguaka.baobenRate;
-    
-    int ticketValue =[self calculateCardValueWithBaobenRate:baobenRate andBenJin:benjin];
-    [_tickeLable setText:[NSString stringWithFormat:@"%d金币",ticketValue]];
-    _awardValue=ticketValue; 
+}
+
+-(void) setResultValue:(int) resultValue
+{
+    [_tickeLable setText:[NSString stringWithFormat:@"%d金币",resultValue]];
 }
 
 
@@ -84,7 +83,7 @@
 
 -(IBAction) buyTicket:(id) sender 
 {
-    [_delegate clickTheBuyButtonWithBenjin:_guaguaka.benjin WithAwardValue:_awardValue withGid:_guaguaka.gid];
+    [_delegate clickTheBuyButtonwithGid:_guaguaka.gid withBenJin:_guaguaka.benjin];
 }
 
 -(void) showTheTicketScratchArea
@@ -101,29 +100,6 @@
 -(void)didShowTheMainArea
 {
     [_delegate didScratchTicket];
-}
-
--(int) calculateCardValueWithBaobenRate:(double) baobenRate andBenJin:(int) benjin
-{
-    double awardRate=(1-baobenRate)*0.5;
-    double loseRate=awardRate*2;
-    double equalRate=1-awardRate-loseRate;
-    int k=5;
-    if (benjin>=100) {
-        k=10;
-    }
-    
-    double rate =arc4random_uniform(1000) / 1000.0;
-    int kRate=arc4random_uniform(k)+1;
-    int kValue=(benjin/k)*kRate;
-    if (rate<=loseRate) {
-        return benjin-kValue;
-    } else if(rate<=(loseRate+equalRate)){
-        return benjin;
-    }else{
-        return benjin+(kValue*1.1);
-    }
-    
 }
 
 /*

@@ -26,6 +26,13 @@
     [MagicalRecord setupCoreDataStackWithStoreNamed:@"MyDatabase.sqlite"];
     _isChangeStatusBarY=NO;
     _deviceToken=[[NSUserDefaults standardUserDefaults] valueForKey:@"deviceToken"];
+    if ([[NSUserDefaults standardUserDefaults] valueForKey:@"announcementId"]) {
+        _announcementId=[[[NSUserDefaults standardUserDefaults] valueForKey:@"announcementId"] integerValue];
+    }else{
+        [[NSUserDefaults standardUserDefaults] setObject:@0 forKey:@"announcementId"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    
     if ([[NSUserDefaults standardUserDefaults] valueForKey:@"isAllowMusic"] ) {
         _isAllowMusic =[[[NSUserDefaults standardUserDefaults] valueForKey:@"isAllowMusic"] integerValue]==1;
         _isAllowSound =[[[NSUserDefaults standardUserDefaults] valueForKey:@"isAllowSound"] integerValue]==1;
@@ -116,6 +123,7 @@
         [self platFormInit];
         [self checkAppUpdateWithAppId:_appVersionInfo.appId andAppName:_appVersionInfo.displayName isForceUpdate:(_appVersionInfo.isForceUpdate == 1)];
         [self registWeiXinWithWeinXinId:_appVersionInfo.weixinId];
+
         [[NSNotificationCenter defaultCenter] postNotificationName:APPINFO_DID_LOADED object:nil];
     } failure:^(id error) {
          
@@ -231,6 +239,14 @@
                 [InitData  getInitEscoreData];
             }
                 break;
+            case AIPUDONGLI_ID_INT:
+                _AiPuDongLiPlatform=platform;
+               
+            break;
+            case MOPAN_ID_INT:
+            {
+                _MoPanPlatform=platform;
+            }
             default:
                 break;
         }

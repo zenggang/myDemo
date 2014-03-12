@@ -18,7 +18,7 @@
     _state=[[attributes objectForKey:@"state"] intValue];
     _appKey=[attributes objectForKey:@"appKey"];
     _appSecret=[attributes objectForKey:@"appSecret"];
-    
+    _mediaId =[attributes objectForKey:@"mediaId"];
     return self;
 }
 @end

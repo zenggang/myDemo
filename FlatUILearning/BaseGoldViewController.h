@@ -20,15 +20,22 @@
 #import "UserGold.h"
 #import <Escore/YJFIntegralWall.h>
 #import <Escore/YJFScore.h>
+#import "DianRuSDK.h"
+#import "MopanAdWall.h"
+#import "ADCPowerWallViewController.h"
+#import "ADCADCPowerWallViewControllerDelegate.h"
+#import "ADCError.h"
+#import "DMOfferWallManager.h"
+
 
 #define exchangeGoldAlertTag 234
 #define goldNotEnoughAlertTag  235
 #define exchangeGoldNotSetNumberAlertTag 236
 #define ReduceGoldSuccessAlertTag 237
 
-@interface BaseGoldViewController : BaseListViewController<DMOfferWallDelegate,immobViewDelegate,DianRuAdWallDelegate,MiidiAdWallShowAppOffersDelegate,MiidiAdWallAwardPointsDelegate
+@interface BaseGoldViewController : BaseListViewController<DMOfferWallDelegate,immobViewDelegate,DianRuAdWallDelegate,DianRuSDKDelegate,MiidiAdWallShowAppOffersDelegate,MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
-, MiidiAdWallGetPointsDelegate,YJFIntegralWallDelegate>
+, MiidiAdWallGetPointsDelegate,YJFIntegralWallDelegate,MopanAdWallDelegate,ADCADCPowerWallViewControllerDelegate,DMOfferWallManagerDelegate>
 
 -(void) afterGoldReloaded;
 -(void) reduceGold;
@@ -37,4 +44,8 @@
 @property (nonatomic,strong) NSString *exchangeNumber;
 @property (nonatomic,assign) BOOL isGuaGuaLeDeduce;
 @property (nonatomic,assign) int guaGuaLeDeduceGoldAmount;
+@property (nonatomic,strong) DianRuSDK *dianruBannarView;
+@property (nonatomic,strong) MopanAdWall *mopanAdWallControl;
+@property (nonatomic,strong) ADCPowerWallViewController *powerWallViewController;
+
 @end

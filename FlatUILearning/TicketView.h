@@ -12,7 +12,7 @@
 
 @protocol TicketViewDelegate <NSObject>
 -(void) didScratchTicket;
--(void) clickTheBuyButtonWithBenjin:(int)benjin WithAwardValue:(int)awardValue withGid:(int) gid;
+-(void) clickTheBuyButtonwithGid:(int) gid withBenJin:(int) benjin;
 @end
 
 @interface TicketView : UIView<STScratchViewDelegate>
@@ -34,5 +34,6 @@
 -(void) changeTicketToBuyModel;
 -(void) changeTicketToBeforeModel;
 -(void) showTheTicketScratchArea;
+-(void) setResultValue:(int) resultValue;
 @end
 

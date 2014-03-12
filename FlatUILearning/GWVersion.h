@@ -25,6 +25,9 @@
 @property (nonatomic, strong) NSString *latestStoreVersion;
 @property (nonatomic, strong) NSString *latestVersionMemo;
 
+@property (nonatomic,strong) NSString *announcement;
+@property (nonatomic,assign) int announcementId;
+
 - (id)initWithAttributes:(NSDictionary *)attributes;
 +(AFHTTPRequestOperation *) CheckAppInfoOnSuccess:(void (^)(id))success failure:(void (^)(id))failure;
 +(AFHTTPRequestOperation *) GetGoldAndExchangeWallOnSuccess:(void (^)(id))success failure:(void (^)(id))failure;

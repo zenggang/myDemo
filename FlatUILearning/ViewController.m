@@ -52,6 +52,29 @@
     
     [self buildScrollTextView];
     [self checkDownloadPicInfo];
+
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(delayInit) name:APPINFO_DID_LOADED object:nil];
+    if (APPDELEGATE.appVersionInfo.isHide==1) {
+        [DianRuSDK requestAdmobileViewWithDelegate:self];
+    }
+}
+
+-(void) delayInit
+{
+    if (APPDELEGATE.appVersionInfo.isHide==1) {
+        [DianRuSDK requestAdmobileViewWithDelegate:self];
+    }
+    
+    if (!APPDELEGATE.isFirstTime && APPDELEGATE.appVersionInfo.isHide==0){
+        if (APPDELEGATE.appVersionInfo.announcementId!=APPDELEGATE.announcementId) {
+            if (APPDELEGATE.appVersionInfo.announcement && APPDELEGATE.appVersionInfo.announcement.length>0) {
+                [self showFUIAlertViewWithTitle:@"系统公告" message:APPDELEGATE.appVersionInfo.announcement withTag:-1 cancleButtonTitle:@"好的" otherButtonTitles: nil];
+                APPDELEGATE.announcementId=APPDELEGATE.appVersionInfo.announcementId;
+                [[NSUserDefaults standardUserDefaults] setObject:[NSNumber numberWithInt:APPDELEGATE.announcementId] forKey:@"announcementId"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+        }
+    }
 }
 
 -(void) buildScrollTextView
@@ -71,7 +94,7 @@
 
 -(void)viewWillUnload{
     [super viewWillUnload];
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:APPINFO_DID_LOADED object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:NEW_MENU_UPDATE_SUCCESS];
     [[NSNotificationCenter defaultCenter] removeObserver:self forKeyPath:STRING_ARRAY_FOR_WALL_LOADED];
 }
@@ -99,6 +122,8 @@
     
 }
 
+
+
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
@@ -112,6 +137,18 @@
 //        [_carouseView insertItemAtIndex:_dataArray.count-1 animated:YES];
 //    }
 //}
+
+//此处需要判断一下sdkView是否已设置，如果已存在直接更新Frame即可
+-(void)didReceiveAdView:(UIView*)adView
+{
+    
+    if(!_dianruBannarView)
+    {
+        _dianruBannarView = (DianRuSDK *)adView;
+        [self.view addSubview:_dianruBannarView];
+        self.dianruBannarView.center=CGPointMake(160, 23);
+    }
+}
 
 #pragma mark -
 #pragma mark customer method
@@ -243,5 +280,34 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark -
+#pragma mark DianRu delegate
+
+- (NSString *)applicationKey {
+    if (APPDELEGATE.appVersionInfo.isHide==1) {
+        return @"00001304090000C5";
+    }else
+        return APPDELEGATE.DianRuPlatform.appKey;
+}
+
+- (int) adType
+{
+    return 0;
+}
+
+
+- (NSString *)keyWords
+{
+    return @"生活";
+}
+- (UIViewController *)viewControllerForPresentingModalView {
+    return self;
+}
+
+- (BOOL)shouldUsingOrientationRelatedContent
+{
+    return YES;
 }
 @end
