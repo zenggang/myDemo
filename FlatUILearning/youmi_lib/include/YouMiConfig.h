@@ -12,9 +12,6 @@
 @interface YouMiConfig : NSObject
 
 + (void)launchWithAppID:(NSString *)appid appSecret:(NSString *)secret;
-
-+ (id)onlineValueForKey:(NSString *)key;
-
 // 应用ID
 //
 // 详解:
@@ -30,6 +27,10 @@
 //
 + (void)setAppSecret:(NSString *)secret;
 + (NSString *)appSecret;
+
+//对于在线参数的请求，我们采用的是同步请求的方式
+//设置在线参数请到http://www.youmi.net/ 网站上。广告设置->在线参数设置
++ (id)onlineValueForKey:(NSString *)key;
 
 /*! 设置全屏广告显示在的window [建议设置]
  *
@@ -94,4 +95,7 @@
 + (void)setUseInAppStore:(BOOL)flag;
 + (BOOL)useInAppStore;
 
+
+//设置货币单位，默认是金币
++ (void)setUnitName:(NSString *)name;
 @end

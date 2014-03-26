@@ -7,98 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ADCUrlImageQueueDelegate.h"
 #import "ADCProtocolEngineDelegate.h"
-#import "ADCADCPowerWallViewControllerDelegate.h"
-#import <QuartzCore/QuartzCore.h>
-#import "ADCNavigationBarView.h"
-#import "ADCActivitiesTypeView.h"
-#import "ADCRecommendView.h"
+#import "ADCPowerWallViewControllerDelegate.h"
 
-@class ADCUrlImageQueue;
-@class ADCApp;
-@class ADCRecommendView;
-@class ADCNavigationBarView;
-@class ADCActivitiesTypeView;
 
-typedef enum
-{
-    ADCAppActivity = 1,
-    ADCWebActivity,
-    ADCECommerceActivity,
-    ADCRecommendActivity
-} _ADCAppType;
-typedef NSInteger ADCAppType;
-
-@interface ADCPowerWallViewController : UIViewController <ADCUrlImageQueueDelegate, ADCProtocolEngineDelegate,
-UITableViewDelegate, UITableViewDataSource, ADCNavigationBarViewDelegate, ADCActivitiesTypeViewDelegate, ADCRecommendViewDelegate>
-{
-    NSString                    *_userIdentifier;
-    NSString                    *_siteId;
-    NSString                    *_siteKey;
-    NSString                    *_mediaId;
-    BOOL                        _useReward;
-    BOOL                        _useSandBox;
-    BOOL                        _needRefreshUI;
-    id<ADCADCPowerWallViewControllerDelegate> _delegate;
-    
-@private
-    NSString                    *_navigationTitle;
-    ADCUrlImageQueue            *_urlImageQueue;
-    NSInteger                   _loadedUIImageCount;
-    BOOL                        _isUnload;
-    NSMutableArray              *_requestIDArray;
-    NSInteger                   _selectedIndex;
-    NSMutableArray              *_needShowAppArray;
-    NSString                    *_timestampString;
-    NSMutableDictionary         *_reportedAppInfoDictionary;
-    
-    BOOL                        _isLoadListWall;
-    BOOL                        _isLoadingCache;
-    NSInteger                   _iosAppPageSize;
-    NSInteger                   _iosApppageNumber;
-    NSInteger                   _sponsorPageSize;
-    NSInteger                   _sponsorpageNumber;
-    BOOL                        _isSearchMode;
-    BOOL                        _isLoadOnWindow;
-    
-    float                       _currentScore;
-    NSInteger                   _actionCount;
-    BOOL                        _customPowerWallUI;
-    BOOL                        _iOSAppListLoading;
-    BOOL                        _isLoadAppList;
-    BOOL                        _moreIOSApp;
-    BOOL                        _thereIsNotAppFlag;
-    BOOL                        _sponsorLoading;
-    BOOL                        _moreSponsor;
-    BOOL                        _thereIsNotSponsorFlag;
-    BOOL                        _isFirstLoadCache;
-    BOOL                        _isFirstAppear;
-    BOOL                        _loadingScore;
-    NSMutableArray              *_getScoreRequestIDArray;
-    NSMutableArray              *_sponsorAppArray;
-    NSMutableArray              *_recommendAppArray;
-    NSInteger                   _loadScoreErrorTimes;
-    NSInteger                   _loadAppErrorTimes;
-    NSInteger                   _loadSponsorErrorTimes;
-    ADCApp                      *_selectedApp;
-    UIView                      *_alertView;
-    UILabel                     *_appListMessageLabel;
-    CGFloat                      _alertHeight;
-    NSString                    *_mediaCurrency;
-    
-}
+@interface ADCPowerWallViewController : UIViewController<ADCProtocolEngineDelegate>
 
 @property (nonatomic, copy) NSString *mediaCurrency;
 @property (nonatomic, copy) NSString *userIdentifier;
 @property (nonatomic, copy) NSString *siteId;
 @property (nonatomic, copy) NSString *siteKey;
 @property (nonatomic, copy) NSString *mediaId;
-@property (nonatomic, assign) BOOL useReward;
 @property (nonatomic, assign) BOOL useSandBox;
-@property (nonatomic, assign) BOOL needRefreshUI;
-@property (nonatomic, assign) id<ADCADCPowerWallViewControllerDelegate> delegate;
-@property (nonatomic, copy) NSString *navigationTitle;
+@property (nonatomic, assign) id<ADCPowerWallViewControllerDelegate> delegate;
 
 /*
  function: 创建并返回一个新的ADCPowerWallViewController实例。
@@ -112,12 +33,11 @@ UITableViewDelegate, UITableViewDataSource, ADCNavigationBarViewDelegate, ADCAct
  retrun value: ADCPowerWallViewController 对象
  */
 + (ADCPowerWallViewController *)initWithSiteId:(NSString *)siteId
-    siteKey:(NSString *)siteKey
-    mediaId:(NSString *)mediaId
-    userIdentifier:(NSString *)userIdentifier 
-    useSandBox:(BOOL)useSandBox
-    useReward:(BOOL)useReward
-    powerWallViewControllerDelegate:(id)powerWallViewControllerDelegate;
+                                       siteKey:(NSString *)siteKey
+                                       mediaId:(NSString *)mediaId
+                                userIdentifier:(NSString *)userIdentifier
+                                    useSandBox:(BOOL)useSandBox
+               powerWallViewControllerDelegate:(id)powerWallViewControllerDelegate;
 
 /*
  function: 创建并返回一个新的ADCPowerWallViewController实例。
@@ -135,27 +55,14 @@ UITableViewDelegate, UITableViewDataSource, ADCNavigationBarViewDelegate, ADCAct
                                                             siteKey:(NSString *)siteKey
                                                             mediaId:(NSString *)mediaId
                                                      userIdentifier:(NSString *)userIdentifier 
-                                                          useReward:(BOOL)useReward
                                                          useSandBox:(BOOL)useSandBox;
 
 /*
- function: 加载动力墙iPhone App列表（当您需要自定义动力墙UI时使用）。
+ function: 获取动力墙上的激励列表（当您需要自定义动力墙UI时使用）。
  parameter: @pageSize，每一页返回数据的大小（条数）。
             @pageNumber，请求哪一页数据。起始页码从1开始。
  */
-- (void)loadiOSAppListWithPageSize:(NSInteger)pageSize pageNumber:(NSInteger)pageNumber;
-
-/*
- function: 加载动力墙特别赞助列表（当您需要自定义动力墙UI时使用）。
- parameter: @pageSize，每一页返回数据的大小（条数）。
-            @pageNumber，请求哪一页数据。起始页码从1开始。
- */
-//- (void)loadSponsorAppListWithPageSize:(NSInteger)pageSize pageNumber:(NSInteger)pageNumber;
-
-/*
- function: 加载推荐列表（当您需要自定义动力墙UI时使用）。
- */
-- (void)loadAppRecommendList;
+- (void)loadiOSAppList;
 
 /*
  function: 使用积分后，对积分进行减操作。

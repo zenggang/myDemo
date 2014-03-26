@@ -29,8 +29,6 @@
 //@property (nonatomic,strong) NSMutableDictionary *userGoldDict;
 @property (nonatomic,strong) NSString *udid;
 @property (nonatomic,assign) BOOL isFirstTime;
-@property (nonatomic,assign) BOOL isOldVesionUser;
-@property (nonatomic,assign) int  oldVesionUserPlatIdCount;
 @property (nonatomic,strong) Users *loginUser;
 @property (nonatomic,strong) GWVersion *appVersionInfo;
 @property (nonatomic,strong) NSArray *exchangeArrayForWall;
@@ -60,7 +58,8 @@
 @property (nonatomic,strong) GoldPlatForm *YiJiFenPlatform;
 @property (nonatomic,strong) GoldPlatForm *MoPanPlatform;
 @property (nonatomic,strong) GoldPlatForm *AiPuDongLiPlatform;
-
+@property (nonatomic,strong) GoldPlatForm *AiDeSiQiPlatform;
+@property (nonatomic,strong) GoldPlatForm *XingYunPlatform;
 
 -(void) initUserInfo:(Users *) user;
 - (void) registPushNotification;

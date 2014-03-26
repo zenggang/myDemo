@@ -43,21 +43,6 @@
  */
 - (void)makeRegisterWithDelegate:(id<ADCRegisterDelegate>)delegate sourceURL:(NSURL *)registerURL;
 
-/*
- function: 获得某个特别推荐的详情URL，根据这个URL可以加载一个UIWebView展示这个特别赞助的详情。
- parameter: @siteId， AppDriver生成，开发者从AppDriver网站上可获得。
-            @mediaId，AppDriver生成，开发者从AppDriver网站上可获得。
-            @siteKey，AppDriver生成，开发者从AppDriver网站上可获得。
-            @campaignId，开放接口中可以获得一个特别赞助的campaignId。
-            @campaignType，开放接口中可以获得一个特别赞助的campaignType。
-            @sandBox，YES用测试环境，NO用正式环境
- */
-+ (NSString *)sponsorDetailURLStringWithSiteId:(NSString *)siteId 
-                                       mediaId:(NSString *)mediaId 
-                                       siteKey:(NSString *)siteKey  
-                                    campaignId:(NSString *)campaignId
-                                  campaignType:(NSInteger)campaignType
-                                       sandBox:(BOOL)sanBox;
 
 @end
 

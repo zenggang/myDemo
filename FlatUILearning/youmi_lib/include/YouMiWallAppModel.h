@@ -41,10 +41,21 @@
 // 简短广告词
 @property(nonatomic, retain, readonly)    NSString    *adText;
 
+//提示语（例如：首次安装并创建新角色获取积分）
+@property(nonatomic, retain, readonly)     NSString   *task_brief;
+
+//步骤提示（例如：打开游戏创建新角色并体验3分钟 回到本应用即可获取{积分单位}）
+@property(nonatomic, retain, readonly)     NSString   *task_steps;
+
 // 过期时间
 @property(nonatomic, retain, readonly)    NSDate      *expiredDate;
 
 // 积分值[该值对有积分应用有效，无积分应用默认为0]
 @property(nonatomic, assign, readonly)    NSInteger   points;
 
+//appStoreID
+@property(nonatomic, assign, readonly)     NSInteger    appStoreID;
+
+//appStoreURL
+@property(nonatomic, retain, readonly)     NSString    *linkURL;
 @end

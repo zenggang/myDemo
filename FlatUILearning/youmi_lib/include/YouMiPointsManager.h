@@ -57,12 +57,20 @@ extern NSString *const kYouMiPointsManagerPointProductNameKey;
 + (BOOL)rewardPoints:(NSUInteger)points;
 
 // [自动积分管理]剩余积分
-+ (NSUInteger)pointsRemained;
+///调用了这个函数后记得free()一下返回值的指针
++ (int *)pointsRemained;
 
 
 /////////////// 手动积分管理 ///////////////
 
-// 开启手动积分管理
+// 开启手动积分管理。
 + (void)enableManually;
 
+//[手动查询积分] 查询积分。使用手动查询积分依然需要监听kYouMiPointsManagerRecivedPointsNotification，在这个nitification中拿积分
++ (void)checkPoints;
+
+//如果要手动查询积分，传YES。
+//自动查询积分，传NO。
+//不设置，默认是自动查询积分
++ (void)setManualCheck:(BOOL)manualCheck;
 @end

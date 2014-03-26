@@ -3,7 +3,7 @@
 //  AppDriverSDK
 //
 //  Created by li fengrong on 13-4-18.
-//  Copyright (c) 2013年 adways. All rights reserved.
+//  Copyright (c) 2014年 adways. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

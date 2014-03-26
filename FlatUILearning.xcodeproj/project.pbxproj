@@ -20,16 +20,16 @@
 		CD060B691783BEA90012AA58 /* BaseGoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD060B681783BEA90012AA58 /* BaseGoldViewController.m */; };
 		CD060B781783CE850012AA58 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD060B771783CE850012AA58 /* ImageIO.framework */; };
 		CD060B7A1783CEAD0012AA58 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CD060B791783CEAD0012AA58 /* libsqlite3.dylib */; };
+		CD09048018D189860088A438 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD09047F18D189860088A438 /* CoreMotion.framework */; };
+		CD09048118D189900088A438 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD09047F18D189860088A438 /* CoreMotion.framework */; };
+		CD09048218D1899A0088A438 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD09047F18D189860088A438 /* CoreMotion.framework */; };
+		CD09048318D189A20088A438 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD09047F18D189860088A438 /* CoreMotion.framework */; };
 		CD0EDD96187AB9150022A1AB /* number.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD0EDD95187AB9150022A1AB /* number.ttf */; };
 		CD0EDD97187AC5750022A1AB /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDD3FC71181EA7B9002B8EC1 /* OpenGLES.framework */; };
 		CD0EDD98187AC5A20022A1AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD033D72181EA98F00484912 /* AVFoundation.framework */; };
 		CD0EDD9A187AC69A0022A1AB /* TheLightsView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7915B91874748C00B12CD9 /* TheLightsView.m */; };
 		CD0EDD9C187AC6B20022A1AB /* ZCWScrollNumView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDD3FC6F181EA748002B8EC1 /* ZCWScrollNumView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		CD1574AA17E3831D00D55D51 /* immobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC97387177EC95B001AF58F /* immobSDK.framework */; };
-		CD1574AC17E383AE00D55D51 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574A817E3806F00D55D51 /* libYouMi.a */; };
-		CD1574B517E384D900D55D51 /* libAdwoOfferWall1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B117E384D900D55D51 /* libAdwoOfferWall1.2.0.a */; };
-		CD1574B617E384D900D55D51 /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B317E384D900D55D51 /* libminizip.a */; };
-		CD1574B717E384D900D55D51 /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CD1574B417E384D900D55D51 /* wall_template.zip */; };
 		CD1AFAB817911066001F37B1 /* ChangeColorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD1AFAB717911066001F37B1 /* ChangeColorViewController.m */; };
 		CD1D08CD18CD9FE50065835D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCFA43E18CD9FA4001DDFD3 /* CoreMedia.framework */; };
 		CD1D08CE18CD9FF20065835D /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCFA43E18CD9FA4001DDFD3 /* CoreMedia.framework */; };
@@ -233,7 +233,6 @@
 		CD74B2E818CF20AB009E638F /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = CD74B2E718CF20AB009E638F /* Icon-144.png */; };
 		CD74CC2F17DE245900C69F65 /* WeiXinShareViewCenterController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD74CC2E17DE245900C69F65 /* WeiXinShareViewCenterController.m */; };
 		CD7586B417F2DBCF0014EE33 /* GuaGuaKa.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7586B317F2DBCF0014EE33 /* GuaGuaKa.m */; };
-		CD77AC0017E69F950006A543 /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD77ABF617E69F950006A543 /* MiidiAdLib.a */; };
 		CD7915A21873C62800B12CD9 /* customSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CD7915A11873C62800B12CD9 /* customSwitchButton.m */; };
 		CD7915A41873C65700B12CD9 /* customSwitchButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD7915A31873C65700B12CD9 /* customSwitchButton.xib */; };
 		CD7915A61874078500B12CD9 /* track_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD7915A51874078500B12CD9 /* track_mask@2x.png */; };
@@ -250,87 +249,6 @@
 		CD81ECD418C96B3C00F269D9 /* MopanAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81ECD218C96B3C00F269D9 /* MopanAdLib.a */; };
 		CD81ECD518C96B3C00F269D9 /* MopanAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81ECD218C96B3C00F269D9 /* MopanAdLib.a */; };
 		CD81ECD618C96B3C00F269D9 /* MopanAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81ECD218C96B3C00F269D9 /* MopanAdLib.a */; };
-		CD81ED0118C9B9C800F269D9 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81ECE518C9B9C800F269D9 /* appDriver.a */; };
-		CD81ED0218C9B9C800F269D9 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81ECE518C9B9C800F269D9 /* appDriver.a */; };
-		CD81ED0318C9B9C800F269D9 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81ECE518C9B9C800F269D9 /* appDriver.a */; };
-		CD81ED0418C9B9C800F269D9 /* appdriver_appactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE718C9B9C800F269D9 /* appdriver_appactivity_off.png */; };
-		CD81ED0518C9B9C800F269D9 /* appdriver_appactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE718C9B9C800F269D9 /* appdriver_appactivity_off.png */; };
-		CD81ED0618C9B9C800F269D9 /* appdriver_appactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE718C9B9C800F269D9 /* appdriver_appactivity_off.png */; };
-		CD81ED0718C9B9C800F269D9 /* appdriver_appactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE818C9B9C800F269D9 /* appdriver_appactivity_on.png */; };
-		CD81ED0818C9B9C800F269D9 /* appdriver_appactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE818C9B9C800F269D9 /* appdriver_appactivity_on.png */; };
-		CD81ED0918C9B9C800F269D9 /* appdriver_appactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE818C9B9C800F269D9 /* appdriver_appactivity_on.png */; };
-		CD81ED0A18C9B9C800F269D9 /* appdriver_appinfo_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE918C9B9C800F269D9 /* appdriver_appinfo_bg.png */; };
-		CD81ED0B18C9B9C800F269D9 /* appdriver_appinfo_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE918C9B9C800F269D9 /* appdriver_appinfo_bg.png */; };
-		CD81ED0C18C9B9C800F269D9 /* appdriver_appinfo_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE918C9B9C800F269D9 /* appdriver_appinfo_bg.png */; };
-		CD81ED0D18C9B9C800F269D9 /* appdriver_arrow_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEA18C9B9C800F269D9 /* appdriver_arrow_icon.png */; };
-		CD81ED0E18C9B9C800F269D9 /* appdriver_arrow_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEA18C9B9C800F269D9 /* appdriver_arrow_icon.png */; };
-		CD81ED0F18C9B9C800F269D9 /* appdriver_arrow_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEA18C9B9C800F269D9 /* appdriver_arrow_icon.png */; };
-		CD81ED1018C9B9C800F269D9 /* appdriver_cell_backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEB18C9B9C800F269D9 /* appdriver_cell_backgroundImage.png */; };
-		CD81ED1118C9B9C800F269D9 /* appdriver_cell_backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEB18C9B9C800F269D9 /* appdriver_cell_backgroundImage.png */; };
-		CD81ED1218C9B9C800F269D9 /* appdriver_cell_backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEB18C9B9C800F269D9 /* appdriver_cell_backgroundImage.png */; };
-		CD81ED1318C9B9C800F269D9 /* appdriver_cell_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEC18C9B9C800F269D9 /* appdriver_cell_icon.png */; };
-		CD81ED1418C9B9C800F269D9 /* appdriver_cell_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEC18C9B9C800F269D9 /* appdriver_cell_icon.png */; };
-		CD81ED1518C9B9C800F269D9 /* appdriver_cell_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEC18C9B9C800F269D9 /* appdriver_cell_icon.png */; };
-		CD81ED1618C9B9C800F269D9 /* appdriver_defaultAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECED18C9B9C800F269D9 /* appdriver_defaultAppIcon.png */; };
-		CD81ED1718C9B9C800F269D9 /* appdriver_defaultAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECED18C9B9C800F269D9 /* appdriver_defaultAppIcon.png */; };
-		CD81ED1818C9B9C800F269D9 /* appdriver_defaultAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECED18C9B9C800F269D9 /* appdriver_defaultAppIcon.png */; };
-		CD81ED1918C9B9C800F269D9 /* appdriver_download_app_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEE18C9B9C800F269D9 /* appdriver_download_app_off.png */; };
-		CD81ED1A18C9B9C800F269D9 /* appdriver_download_app_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEE18C9B9C800F269D9 /* appdriver_download_app_off.png */; };
-		CD81ED1B18C9B9C800F269D9 /* appdriver_download_app_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEE18C9B9C800F269D9 /* appdriver_download_app_off.png */; };
-		CD81ED1C18C9B9C800F269D9 /* appdriver_download_app_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEF18C9B9C800F269D9 /* appdriver_download_app_on.png */; };
-		CD81ED1D18C9B9C800F269D9 /* appdriver_download_app_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEF18C9B9C800F269D9 /* appdriver_download_app_on.png */; };
-		CD81ED1E18C9B9C800F269D9 /* appdriver_download_app_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEF18C9B9C800F269D9 /* appdriver_download_app_on.png */; };
-		CD81ED1F18C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png */; };
-		CD81ED2018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png */; };
-		CD81ED2118C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png */; };
-		CD81ED2218C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF118C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png */; };
-		CD81ED2318C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF118C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png */; };
-		CD81ED2418C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF118C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png */; };
-		CD81ED2518C9B9C800F269D9 /* appdriver_freeapp.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF218C9B9C800F269D9 /* appdriver_freeapp.png */; };
-		CD81ED2618C9B9C800F269D9 /* appdriver_freeapp.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF218C9B9C800F269D9 /* appdriver_freeapp.png */; };
-		CD81ED2718C9B9C800F269D9 /* appdriver_freeapp.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF218C9B9C800F269D9 /* appdriver_freeapp.png */; };
-		CD81ED2818C9B9C800F269D9 /* appdriver_head_bar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF318C9B9C800F269D9 /* appdriver_head_bar_bg.png */; };
-		CD81ED2918C9B9C800F269D9 /* appdriver_head_bar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF318C9B9C800F269D9 /* appdriver_head_bar_bg.png */; };
-		CD81ED2A18C9B9C800F269D9 /* appdriver_head_bar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF318C9B9C800F269D9 /* appdriver_head_bar_bg.png */; };
-		CD81ED2B18C9B9C800F269D9 /* appdriver_header_line.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF418C9B9C800F269D9 /* appdriver_header_line.png */; };
-		CD81ED2C18C9B9C800F269D9 /* appdriver_header_line.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF418C9B9C800F269D9 /* appdriver_header_line.png */; };
-		CD81ED2D18C9B9C800F269D9 /* appdriver_header_line.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF418C9B9C800F269D9 /* appdriver_header_line.png */; };
-		CD81ED2E18C9B9C800F269D9 /* appdriver_navback_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF518C9B9C800F269D9 /* appdriver_navback_off.png */; };
-		CD81ED2F18C9B9C800F269D9 /* appdriver_navback_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF518C9B9C800F269D9 /* appdriver_navback_off.png */; };
-		CD81ED3018C9B9C800F269D9 /* appdriver_navback_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF518C9B9C800F269D9 /* appdriver_navback_off.png */; };
-		CD81ED3118C9B9C800F269D9 /* appdriver_navback_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF618C9B9C800F269D9 /* appdriver_navback_on.png */; };
-		CD81ED3218C9B9C800F269D9 /* appdriver_navback_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF618C9B9C800F269D9 /* appdriver_navback_on.png */; };
-		CD81ED3318C9B9C800F269D9 /* appdriver_navback_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF618C9B9C800F269D9 /* appdriver_navback_on.png */; };
-		CD81ED3418C9B9C800F269D9 /* appdriver_numbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF718C9B9C800F269D9 /* appdriver_numbackground.png */; };
-		CD81ED3518C9B9C800F269D9 /* appdriver_numbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF718C9B9C800F269D9 /* appdriver_numbackground.png */; };
-		CD81ED3618C9B9C800F269D9 /* appdriver_numbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF718C9B9C800F269D9 /* appdriver_numbackground.png */; };
-		CD81ED3718C9B9C800F269D9 /* appdriver_recommend_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF818C9B9C800F269D9 /* appdriver_recommend_bg.png */; };
-		CD81ED3818C9B9C800F269D9 /* appdriver_recommend_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF818C9B9C800F269D9 /* appdriver_recommend_bg.png */; };
-		CD81ED3918C9B9C800F269D9 /* appdriver_recommend_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF818C9B9C800F269D9 /* appdriver_recommend_bg.png */; };
-		CD81ED3A18C9B9C800F269D9 /* appdriver_recommendactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF918C9B9C800F269D9 /* appdriver_recommendactivity_off.png */; };
-		CD81ED3B18C9B9C800F269D9 /* appdriver_recommendactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF918C9B9C800F269D9 /* appdriver_recommendactivity_off.png */; };
-		CD81ED3C18C9B9C800F269D9 /* appdriver_recommendactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF918C9B9C800F269D9 /* appdriver_recommendactivity_off.png */; };
-		CD81ED3D18C9B9C800F269D9 /* appdriver_recommendactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFA18C9B9C800F269D9 /* appdriver_recommendactivity_on.png */; };
-		CD81ED3E18C9B9C800F269D9 /* appdriver_recommendactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFA18C9B9C800F269D9 /* appdriver_recommendactivity_on.png */; };
-		CD81ED3F18C9B9C800F269D9 /* appdriver_recommendactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFA18C9B9C800F269D9 /* appdriver_recommendactivity_on.png */; };
-		CD81ED4018C9B9C800F269D9 /* appdriver_reward_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFB18C9B9C800F269D9 /* appdriver_reward_icon.png */; };
-		CD81ED4118C9B9C800F269D9 /* appdriver_reward_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFB18C9B9C800F269D9 /* appdriver_reward_icon.png */; };
-		CD81ED4218C9B9C800F269D9 /* appdriver_reward_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFB18C9B9C800F269D9 /* appdriver_reward_icon.png */; };
-		CD81ED4318C9B9C800F269D9 /* appdriver_rewardtask.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFC18C9B9C800F269D9 /* appdriver_rewardtask.png */; };
-		CD81ED4418C9B9C800F269D9 /* appdriver_rewardtask.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFC18C9B9C800F269D9 /* appdriver_rewardtask.png */; };
-		CD81ED4518C9B9C800F269D9 /* appdriver_rewardtask.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFC18C9B9C800F269D9 /* appdriver_rewardtask.png */; };
-		CD81ED4618C9B9C800F269D9 /* appdriver_splashclose.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFD18C9B9C800F269D9 /* appdriver_splashclose.png */; };
-		CD81ED4718C9B9C800F269D9 /* appdriver_splashclose.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFD18C9B9C800F269D9 /* appdriver_splashclose.png */; };
-		CD81ED4818C9B9C800F269D9 /* appdriver_splashclose.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFD18C9B9C800F269D9 /* appdriver_splashclose.png */; };
-		CD81ED4918C9B9C800F269D9 /* appdriver_web_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFE18C9B9C800F269D9 /* appdriver_web_download.png */; };
-		CD81ED4A18C9B9C800F269D9 /* appdriver_web_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFE18C9B9C800F269D9 /* appdriver_web_download.png */; };
-		CD81ED4B18C9B9C800F269D9 /* appdriver_web_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFE18C9B9C800F269D9 /* appdriver_web_download.png */; };
-		CD81ED4C18C9B9C800F269D9 /* appdriver_webactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFF18C9B9C800F269D9 /* appdriver_webactivity_off.png */; };
-		CD81ED4D18C9B9C800F269D9 /* appdriver_webactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFF18C9B9C800F269D9 /* appdriver_webactivity_off.png */; };
-		CD81ED4E18C9B9C800F269D9 /* appdriver_webactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFF18C9B9C800F269D9 /* appdriver_webactivity_off.png */; };
-		CD81ED4F18C9B9C800F269D9 /* appdriver_webactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ED0018C9B9C800F269D9 /* appdriver_webactivity_on.png */; };
-		CD81ED5018C9B9C800F269D9 /* appdriver_webactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ED0018C9B9C800F269D9 /* appdriver_webactivity_on.png */; };
-		CD81ED5118C9B9C800F269D9 /* appdriver_webactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ED0018C9B9C800F269D9 /* appdriver_webactivity_on.png */; };
 		CD85988D179B7DD60006F78B /* STScratchView.m in Sources */ = {isa = PBXBuildFile; fileRef = CD85988C179B7DD60006F78B /* STScratchView.m */; };
 		CD859890179BEC270006F78B /* CGPointTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CD85988F179BEC270006F78B /* CGPointTool.m */; };
 		CD8DF9F118A9C59A00E3D9CF /* DianruBrowserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8DF9EC18A9C59A00E3D9CF /* DianruBrowserController.xib */; };
@@ -359,6 +277,46 @@
 		CD9CCFAF1781883D000126A9 /* Users.m in Sources */ = {isa = PBXBuildFile; fileRef = CD9CCFAE1781883D000126A9 /* Users.m */; };
 		CDA20F8C18138DC700469669 /* sharePic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA20F8B18138DC700469669 /* sharePic@2x.png */; };
 		CDA20F90181397ED00469669 /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = CDA20F8F181397ED00469669 /* Icon-144.png */; };
+		CDA27CEB18E17FC900B461E0 /* libAdwoOfferWall2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE718E17FC900B461E0 /* libAdwoOfferWall2.0.a */; };
+		CDA27CEC18E17FC900B461E0 /* libAdwoOfferWall2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE718E17FC900B461E0 /* libAdwoOfferWall2.0.a */; };
+		CDA27CED18E17FC900B461E0 /* libAdwoOfferWall2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE718E17FC900B461E0 /* libAdwoOfferWall2.0.a */; };
+		CDA27CEE18E17FCA00B461E0 /* libAdwoOfferWall2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE718E17FC900B461E0 /* libAdwoOfferWall2.0.a */; };
+		CDA27CEF18E17FCA00B461E0 /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE918E17FC900B461E0 /* libminizip.a */; };
+		CDA27CF018E17FCA00B461E0 /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE918E17FC900B461E0 /* libminizip.a */; };
+		CDA27CF118E17FCA00B461E0 /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE918E17FC900B461E0 /* libminizip.a */; };
+		CDA27CF218E17FCA00B461E0 /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CE918E17FC900B461E0 /* libminizip.a */; };
+		CDA27CF318E17FCA00B461E0 /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CDA27CEA18E17FC900B461E0 /* wall_template.zip */; };
+		CDA27CF418E17FCA00B461E0 /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CDA27CEA18E17FC900B461E0 /* wall_template.zip */; };
+		CDA27CF518E17FCA00B461E0 /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CDA27CEA18E17FC900B461E0 /* wall_template.zip */; };
+		CDA27CF618E17FCA00B461E0 /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CDA27CEA18E17FC900B461E0 /* wall_template.zip */; };
+		CDA27D0418E18A8200B461E0 /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CF918E18A8200B461E0 /* MiidiAdLib.a */; };
+		CDA27D0518E18A8200B461E0 /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CF918E18A8200B461E0 /* MiidiAdLib.a */; };
+		CDA27D0618E18A8200B461E0 /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CF918E18A8200B461E0 /* MiidiAdLib.a */; };
+		CDA27D0718E18A8200B461E0 /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27CF918E18A8200B461E0 /* MiidiAdLib.a */; };
+		CDA27D1418E1916200B461E0 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D1218E1916200B461E0 /* appDriver.a */; };
+		CDA27D1518E1916200B461E0 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D1218E1916200B461E0 /* appDriver.a */; };
+		CDA27D1618E1916200B461E0 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D1218E1916200B461E0 /* appDriver.a */; };
+		CDA27D1718E1916200B461E0 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D1218E1916200B461E0 /* appDriver.a */; };
+		CDA27D1818E1916200B461E0 /* AppdriverResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D1318E1916200B461E0 /* AppdriverResources.bundle */; };
+		CDA27D1918E1916200B461E0 /* AppdriverResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D1318E1916200B461E0 /* AppdriverResources.bundle */; };
+		CDA27D1A18E1916200B461E0 /* AppdriverResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D1318E1916200B461E0 /* AppdriverResources.bundle */; };
+		CDA27D1B18E1916200B461E0 /* AppdriverResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D1318E1916200B461E0 /* AppdriverResources.bundle */; };
+		CDA27D2818E1939900B461E0 /* libOpenIDFA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2618E1939900B461E0 /* libOpenIDFA.a */; };
+		CDA27D2918E1939900B461E0 /* libOpenIDFA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2618E1939900B461E0 /* libOpenIDFA.a */; };
+		CDA27D2A18E1939900B461E0 /* libOpenIDFA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2618E1939900B461E0 /* libOpenIDFA.a */; };
+		CDA27D2B18E1939900B461E0 /* libOpenIDFA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2618E1939900B461E0 /* libOpenIDFA.a */; };
+		CDA27D2C18E1939900B461E0 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2718E1939900B461E0 /* libYouMi.a */; };
+		CDA27D2D18E1939900B461E0 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2718E1939900B461E0 /* libYouMi.a */; };
+		CDA27D2E18E1939900B461E0 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2718E1939900B461E0 /* libYouMi.a */; };
+		CDA27D2F18E1939900B461E0 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D2718E1939900B461E0 /* libYouMi.a */; };
+		CDA27D3318E19A6400B461E0 /* AdWalker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D3118E19A6400B461E0 /* AdWalker.bundle */; };
+		CDA27D3418E19A6400B461E0 /* AdWalker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D3118E19A6400B461E0 /* AdWalker.bundle */; };
+		CDA27D3518E19A6400B461E0 /* AdWalker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D3118E19A6400B461E0 /* AdWalker.bundle */; };
+		CDA27D3618E19A6400B461E0 /* AdWalker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDA27D3118E19A6400B461E0 /* AdWalker.bundle */; };
+		CDA27D3718E19A6400B461E0 /* AdWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D3218E19A6400B461E0 /* AdWalker.framework */; };
+		CDA27D3818E19A6400B461E0 /* AdWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D3218E19A6400B461E0 /* AdWalker.framework */; };
+		CDA27D3918E19A6400B461E0 /* AdWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D3218E19A6400B461E0 /* AdWalker.framework */; };
+		CDA27D3A18E19A6400B461E0 /* AdWalker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDA27D3218E19A6400B461E0 /* AdWalker.framework */; };
 		CDA285D817F41E4E003034F9 /* GuaGuaKaLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA285D717F41E4E003034F9 /* GuaGuaKaLogViewController.m */; };
 		CDA285DB17F41FB3003034F9 /* GuaGuaKaLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA285DA17F41FB3003034F9 /* GuaGuaKaLog.m */; };
 		CDA2CE72178E4C6D007FC95E /* BaseWeiXInController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDA2CE71178E4C6D007FC95E /* BaseWeiXInController.m */; };
@@ -393,6 +351,26 @@
 		CDAA57AB185ADDD400D9E1F8 /* track_left_sigin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAA578D185ADDD400D9E1F8 /* track_left_sigin@2x.png */; };
 		CDAA57AC185ADDD400D9E1F8 /* track_mark_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAA578E185ADDD400D9E1F8 /* track_mark_bg@2x.png */; };
 		CDAA57AD185ADDD400D9E1F8 /* track_right_sigin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAA578F185ADDD400D9E1F8 /* track_right_sigin@2x.png */; };
+		CDAC867018D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAC866418D162D1001D4C30 /* libMobiSageOfferWall.a */; };
+		CDAC867118D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAC866418D162D1001D4C30 /* libMobiSageOfferWall.a */; };
+		CDAC867218D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAC866418D162D1001D4C30 /* libMobiSageOfferWall.a */; };
+		CDAC867318D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDAC866418D162D1001D4C30 /* libMobiSageOfferWall.a */; };
+		CDAC867418D162D1001D4C30 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866718D162D1001D4C30 /* ioapi.c */; };
+		CDAC867518D162D1001D4C30 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866718D162D1001D4C30 /* ioapi.c */; };
+		CDAC867618D162D1001D4C30 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866718D162D1001D4C30 /* ioapi.c */; };
+		CDAC867718D162D1001D4C30 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866718D162D1001D4C30 /* ioapi.c */; };
+		CDAC867818D162D1001D4C30 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866918D162D1001D4C30 /* mztools.c */; };
+		CDAC867918D162D1001D4C30 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866918D162D1001D4C30 /* mztools.c */; };
+		CDAC867A18D162D1001D4C30 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866918D162D1001D4C30 /* mztools.c */; };
+		CDAC867B18D162D1001D4C30 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866918D162D1001D4C30 /* mztools.c */; };
+		CDAC867C18D162D1001D4C30 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866B18D162D1001D4C30 /* unzip.c */; };
+		CDAC867D18D162D1001D4C30 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866B18D162D1001D4C30 /* unzip.c */; };
+		CDAC867E18D162D1001D4C30 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866B18D162D1001D4C30 /* unzip.c */; };
+		CDAC867F18D162D1001D4C30 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866B18D162D1001D4C30 /* unzip.c */; };
+		CDAC868018D162D1001D4C30 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866D18D162D1001D4C30 /* zip.c */; };
+		CDAC868118D162D1001D4C30 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866D18D162D1001D4C30 /* zip.c */; };
+		CDAC868218D162D1001D4C30 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866D18D162D1001D4C30 /* zip.c */; };
+		CDAC868318D162D1001D4C30 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = CDAC866D18D162D1001D4C30 /* zip.c */; };
 		CDADA7881865479D00DA2928 /* track_small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDADA7871865479D00DA2928 /* track_small@2x.png */; };
 		CDADA78C1865536D00DA2928 /* track_small_mask@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDADA78B1865536D00DA2928 /* track_small_mask@2x.png */; };
 		CDAEEAA6179FCB0800D429CC /* ReflectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDAEEAA5179FCB0800D429CC /* ReflectionView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -524,14 +502,10 @@
 		CDAF02D6180F964C0073A9FC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739D177ECAA5001AF58F /* SystemConfiguration.framework */; };
 		CDAF02D7180F964C0073A9FC /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739B177ECA87001AF58F /* Security.framework */; };
 		CDAF02D8180F964C0073A9FC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2EB6D91744C1C700A222D6 /* UIKit.framework */; };
-		CDAF02D9180F964C0073A9FC /* libAdwoOfferWall1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B117E384D900D55D51 /* libAdwoOfferWall1.2.0.a */; };
 		CDAF02DA180F964C0073A9FC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8DFB6E17EFDE89005EA47D /* libWeChatSDK.a */; };
 		CDAF02DB180F964C0073A9FC /* libDianRuAdWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3B2B5A17F352A70007435A /* libDianRuAdWall.a */; };
 		CDAF02DC180F964C0073A9FC /* immobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC97387177EC95B001AF58F /* immobSDK.framework */; };
-		CDAF02DD180F964C0073A9FC /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B317E384D900D55D51 /* libminizip.a */; };
-		CDAF02DE180F964C0073A9FC /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574A817E3806F00D55D51 /* libYouMi.a */; };
 		CDAF02DF180F964C0073A9FC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F60BA28C8C4C4FA04B3714 /* libPods.a */; };
-		CDAF02E1180F964C0073A9FC /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD77ABF617E69F950006A543 /* MiidiAdLib.a */; };
 		CDAF02E3180F964C0073A9FC /* dianru_blue_dianru_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B0B17F352A70007435A /* dianru_blue_dianru_download.png */; };
 		CDAF02E4180F964C0073A9FC /* dianru_purple_left_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4817F352A70007435A /* dianru_purple_left_cell.png */; };
 		CDAF02E5180F964C0073A9FC /* dianru_blue_right_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1217F352A70007435A /* dianru_blue_right_cell.png */; };
@@ -586,7 +560,6 @@
 		CDAF0318180F964C0073A9FC /* goldToMoneyScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD225070177D26680008DF1E /* goldToMoneyScrollView.xib */; };
 		CDAF0319180F964C0073A9FC /* dianru_red_left_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5617F352A70007435A /* dianru_red_left_view.png */; };
 		CDAF031B180F964C0073A9FC /* dianru_purple_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4117F352A70007435A /* dianru_purple_all_cell.png */; };
-		CDAF0321180F964C0073A9FC /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CD1574B417E384D900D55D51 /* wall_template.zip */; };
 		CDAF0322180F964C0073A9FC /* dianru_orange_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3517F352A70007435A /* dianru_orange_all_cell.png */; };
 		CDAF0323180F964C0073A9FC /* dianru_red_dianru_info.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5117F352A70007435A /* dianru_red_dianru_info.png */; };
 		CDAF0325180F964C0073A9FC /* dianru_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1F17F352A70007435A /* dianru_logo.png */; };
@@ -835,14 +808,10 @@
 		CDD3FBA7181E96E6002B8EC1 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739D177ECAA5001AF58F /* SystemConfiguration.framework */; };
 		CDD3FBA8181E96E6002B8EC1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739B177ECA87001AF58F /* Security.framework */; };
 		CDD3FBA9181E96E6002B8EC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2EB6D91744C1C700A222D6 /* UIKit.framework */; };
-		CDD3FBAA181E96E6002B8EC1 /* libAdwoOfferWall1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B117E384D900D55D51 /* libAdwoOfferWall1.2.0.a */; };
 		CDD3FBAB181E96E6002B8EC1 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8DFB6E17EFDE89005EA47D /* libWeChatSDK.a */; };
 		CDD3FBAC181E96E6002B8EC1 /* libDianRuAdWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3B2B5A17F352A70007435A /* libDianRuAdWall.a */; };
 		CDD3FBAD181E96E6002B8EC1 /* immobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC97387177EC95B001AF58F /* immobSDK.framework */; };
-		CDD3FBAE181E96E6002B8EC1 /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B317E384D900D55D51 /* libminizip.a */; };
-		CDD3FBAF181E96E6002B8EC1 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574A817E3806F00D55D51 /* libYouMi.a */; };
 		CDD3FBB0181E96E6002B8EC1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F60BA28C8C4C4FA04B3714 /* libPods.a */; };
-		CDD3FBB2181E96E6002B8EC1 /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD77ABF617E69F950006A543 /* MiidiAdLib.a */; };
 		CDD3FBB4181E96E6002B8EC1 /* dianru_blue_dianru_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B0B17F352A70007435A /* dianru_blue_dianru_download.png */; };
 		CDD3FBB5181E96E6002B8EC1 /* dianru_purple_left_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4817F352A70007435A /* dianru_purple_left_cell.png */; };
 		CDD3FBB6181E96E6002B8EC1 /* dianru_blue_right_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1217F352A70007435A /* dianru_blue_right_cell.png */; };
@@ -901,7 +870,6 @@
 		CDD3FBF3181E96E6002B8EC1 /* dianru_red_left_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5617F352A70007435A /* dianru_red_left_view.png */; };
 		CDD3FBF4181E96E6002B8EC1 /* dianru_purple_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4117F352A70007435A /* dianru_purple_all_cell.png */; };
 		CDD3FBF5181E96E6002B8EC1 /* buy_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAF035E180FDB7B0073A9FC /* buy_btn@2x.png */; };
-		CDD3FBF6181E96E6002B8EC1 /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CD1574B417E384D900D55D51 /* wall_template.zip */; };
 		CDD3FBF8181E96E6002B8EC1 /* dianru_orange_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3517F352A70007435A /* dianru_orange_all_cell.png */; };
 		CDD3FBF9181E96E6002B8EC1 /* dianru_red_dianru_info.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5117F352A70007435A /* dianru_red_dianru_info.png */; };
 		CDD3FBFA181E96E6002B8EC1 /* dianru_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1F17F352A70007435A /* dianru_logo.png */; };
@@ -1106,7 +1074,6 @@
 		CDD5B6B118CCC0D00091D2C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2EB6DD1744C1C700A222D6 /* CoreGraphics.framework */; };
 		CDD5B6B218CCC0D00091D2C2 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF68DBE17783ADF003B3B9A /* CoreLocation.framework */; };
 		CDD5B6B318CCC0D00091D2C2 /* Escore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9B447517EE8EB3009CD31D /* Escore.framework */; };
-		CDD5B6B418CCC0D00091D2C2 /* appDriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD81ECE518C9B9C800F269D9 /* appDriver.a */; };
 		CDD5B6B518CCC0D00091D2C2 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC97389177EC992001AF58F /* CFNetwork.framework */; };
 		CDD5B6B618CCC0D00091D2C2 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9738F177EC9C8001AF58F /* EventKit.framework */; };
 		CDD5B6B718CCC0D00091D2C2 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC97390177EC9C8001AF58F /* EventKitUI.framework */; };
@@ -1119,24 +1086,17 @@
 		CDD5B6BE18CCC0D00091D2C2 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739D177ECAA5001AF58F /* SystemConfiguration.framework */; };
 		CDD5B6BF18CCC0D00091D2C2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739B177ECA87001AF58F /* Security.framework */; };
 		CDD5B6C018CCC0D00091D2C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2EB6D91744C1C700A222D6 /* UIKit.framework */; };
-		CDD5B6C118CCC0D00091D2C2 /* libAdwoOfferWall1.2.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B117E384D900D55D51 /* libAdwoOfferWall1.2.0.a */; };
 		CDD5B6C218CCC0D00091D2C2 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD8DFB6E17EFDE89005EA47D /* libWeChatSDK.a */; };
 		CDD5B6C318CCC0D00091D2C2 /* libDianRuAdWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD3B2B5A17F352A70007435A /* libDianRuAdWall.a */; };
 		CDD5B6C418CCC0D00091D2C2 /* immobSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC97387177EC95B001AF58F /* immobSDK.framework */; };
-		CDD5B6C518CCC0D00091D2C2 /* libminizip.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574B317E384D900D55D51 /* libminizip.a */; };
-		CDD5B6C618CCC0D00091D2C2 /* libYouMi.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD1574A817E3806F00D55D51 /* libYouMi.a */; };
 		CDD5B6C718CCC0D00091D2C2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 24F60BA28C8C4C4FA04B3714 /* libPods.a */; };
-		CDD5B6C918CCC0D00091D2C2 /* MiidiAdLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CD77ABF617E69F950006A543 /* MiidiAdLib.a */; };
 		CDD5B6CC18CCC0D00091D2C2 /* dianru_blue_dianru_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B0B17F352A70007435A /* dianru_blue_dianru_download.png */; };
-		CDD5B6CD18CCC0D00091D2C2 /* appdriver_defaultAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECED18C9B9C800F269D9 /* appdriver_defaultAppIcon.png */; };
 		CDD5B6CE18CCC0D00091D2C2 /* dianru_purple_left_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4817F352A70007435A /* dianru_purple_left_cell.png */; };
 		CDD5B6CF18CCC0D00091D2C2 /* dianru_blue_right_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1217F352A70007435A /* dianru_blue_right_cell.png */; };
 		CDD5B6D018CCC0D00091D2C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD2EB6E21744C1C700A222D6 /* InfoPlist.strings */; };
 		CDD5B6D118CCC0D00091D2C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CD2EB6EB1744C1C800A222D6 /* Default.png */; };
-		CDD5B6D218CCC0D00091D2C2 /* appdriver_ecommerceactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png */; };
 		CDD5B6D318CCC0D00091D2C2 /* dianru_DRBGLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1C17F352A70007435A /* dianru_DRBGLogo@2x.png */; };
 		CDD5B6D518CCC0D00091D2C2 /* dianru_back.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1417F352A70007435A /* dianru_back.png */; };
-		CDD5B6D618CCC0D00091D2C2 /* appdriver_appactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE718C9B9C800F269D9 /* appdriver_appactivity_off.png */; };
 		CDD5B6D718CCC0D00091D2C2 /* dianru_purple_dianru_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4717F352A70007435A /* dianru_purple_dianru_triangle.png */; };
 		CDD5B6D818CCC0D00091D2C2 /* dianru_banner.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1717F352A70007435A /* dianru_banner.png */; };
 		CDD5B6D918CCC0D00091D2C2 /* dianru_cell_head.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1A17F352A70007435A /* dianru_cell_head.png */; };
@@ -1147,8 +1107,6 @@
 		CDD5B6DF18CCC0D00091D2C2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD2EB6F11744C1C800A222D6 /* MainStoryboard.storyboard */; };
 		CDD5B6E018CCC0D00091D2C2 /* dianru_set_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2217F352A70007435A /* dianru_set_btn.png */; };
 		CDD5B6E118CCC0D00091D2C2 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD332884175C91B7001D9BEF /* Lato-Black.ttf */; };
-		CDD5B6E218CCC0D00091D2C2 /* appdriver_freeapp.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF218C9B9C800F269D9 /* appdriver_freeapp.png */; };
-		CDD5B6E318CCC0D00091D2C2 /* appdriver_webactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ED0018C9B9C800F269D9 /* appdriver_webactivity_on.png */; };
 		CDD5B6E418CCC0D00091D2C2 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD332885175C91B7001D9BEF /* Lato-BlackItalic.ttf */; };
 		CDD5B6E518CCC0D00091D2C2 /* dianru_help.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1E17F352A70007435A /* dianru_help.png */; };
 		CDD5B6E618CCC0D00091D2C2 /* dianru_blue_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B0917F352A70007435A /* dianru_blue_all_cell.png */; };
@@ -1158,14 +1116,11 @@
 		CDD5B6EA18CCC0D00091D2C2 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD332887175C91B7001D9BEF /* Lato-BoldItalic.ttf */; };
 		CDD5B6EB18CCC0D00091D2C2 /* dianru_green_dianru_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2B17F352A70007435A /* dianru_green_dianru_download.png */; };
 		CDD5B6EC18CCC0D00091D2C2 /* Lato-Hairline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD332888175C91B7001D9BEF /* Lato-Hairline.ttf */; };
-		CDD5B6ED18CCC0D00091D2C2 /* appdriver_numbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF718C9B9C800F269D9 /* appdriver_numbackground.png */; };
 		CDD5B6EF18CCC0D00091D2C2 /* Lato-HairlineItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD332889175C91B7001D9BEF /* Lato-HairlineItalic.ttf */; };
 		CDD5B6F118CCC0D00091D2C2 /* dianrubutton.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8DF9ED18A9C59A00E3D9CF /* dianrubutton.png */; };
 		CDD5B6F218CCC0D00091D2C2 /* dianru_blue_dianru_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B0A17F352A70007435A /* dianru_blue_dianru_bottom.png */; };
 		CDD5B6F418CCC0D00091D2C2 /* Lato-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CD33288A175C91B7001D9BEF /* Lato-Italic.ttf */; };
 		CDD5B6F518CCC0D00091D2C2 /* dianru_yuanjiao_horizontal.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2717F352A70007435A /* dianru_yuanjiao_horizontal.png */; };
-		CDD5B6F618CCC0D00091D2C2 /* appdriver_navback_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF618C9B9C800F269D9 /* appdriver_navback_on.png */; };
-		CDD5B6F718CCC0D00091D2C2 /* appdriver_rewardtask.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFC18C9B9C800F269D9 /* appdriver_rewardtask.png */; };
 		CDD5B6F818CCC0D00091D2C2 /* ZuanZuanZuanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDD3FC41181EA609002B8EC1 /* ZuanZuanZuanViewController.xib */; };
 		CDD5B6F918CCC0D00091D2C2 /* dianru_red_dianru_iphone_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5217F352A70007435A /* dianru_red_dianru_iphone_download.png */; };
 		CDD5B6FA18CCC0D00091D2C2 /* dianru_back_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1517F352A70007435A /* dianru_back_btn.png */; };
@@ -1191,20 +1146,14 @@
 		CDD5B70F18CCC0D00091D2C2 /* goldToMoneyScrollView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD225070177D26680008DF1E /* goldToMoneyScrollView.xib */; };
 		CDD5B71018CCC0D00091D2C2 /* dianru_red_left_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5617F352A70007435A /* dianru_red_left_view.png */; };
 		CDD5B71118CCC0D00091D2C2 /* dianru_purple_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4117F352A70007435A /* dianru_purple_all_cell.png */; };
-		CDD5B71218CCC0D00091D2C2 /* wall_template.zip in Resources */ = {isa = PBXBuildFile; fileRef = CD1574B417E384D900D55D51 /* wall_template.zip */; };
-		CDD5B71318CCC0D00091D2C2 /* appdriver_appactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE818C9B9C800F269D9 /* appdriver_appactivity_on.png */; };
-		CDD5B71418CCC0D00091D2C2 /* appdriver_arrow_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEA18C9B9C800F269D9 /* appdriver_arrow_icon.png */; };
 		CDD5B71618CCC0D00091D2C2 /* dianru_orange_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3517F352A70007435A /* dianru_orange_all_cell.png */; };
 		CDD5B71718CCC0D00091D2C2 /* dianru_red_dianru_info.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5117F352A70007435A /* dianru_red_dianru_info.png */; };
 		CDD5B71818CCC0D00091D2C2 /* dianru_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1F17F352A70007435A /* dianru_logo.png */; };
 		CDD5B71918CCC0D00091D2C2 /* dianru_orange_dianru_iphone_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3917F352A70007435A /* dianru_orange_dianru_iphone_download.png */; };
 		CDD5B71A18CCC0D00091D2C2 /* dianru_red_right_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5717F352A70007435A /* dianru_red_right_cell.png */; };
-		CDD5B71B18CCC0D00091D2C2 /* appdriver_header_line.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF418C9B9C800F269D9 /* appdriver_header_line.png */; };
-		CDD5B71D18CCC0D00091D2C2 /* appdriver_recommendactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF918C9B9C800F269D9 /* appdriver_recommendactivity_off.png */; };
 		CDD5B71E18CCC0D00091D2C2 /* dianru_purple_right_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4A17F352A70007435A /* dianru_purple_right_cell.png */; };
 		CDD5B71F18CCC0D00091D2C2 /* dianru_msg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2017F352A70007435A /* dianru_msg.png */; };
 		CDD5B72018CCC0D00091D2C2 /* dianru_blue_right_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1317F352A70007435A /* dianru_blue_right_view.png */; };
-		CDD5B72118CCC0D00091D2C2 /* appdriver_cell_backgroundImage.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEB18C9B9C800F269D9 /* appdriver_cell_backgroundImage.png */; };
 		CDD5B72218CCC0D00091D2C2 /* dianru_red_dianru_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4F17F352A70007435A /* dianru_red_dianru_bottom.png */; };
 		CDD5B72318CCC0D00091D2C2 /* dianru_green_left_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3117F352A70007435A /* dianru_green_left_view.png */; };
 		CDD5B72418CCC0D00091D2C2 /* Escore.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CD9B447417EE8EB3009CD31D /* Escore.bundle */; };
@@ -1212,7 +1161,6 @@
 		CDD5B72718CCC0D00091D2C2 /* dianru_orange_dianru_titlebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3A17F352A70007435A /* dianru_orange_dianru_titlebg.jpg */; };
 		CDD5B72818CCC0D00091D2C2 /* dianru_orange_dianru_info.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3817F352A70007435A /* dianru_orange_dianru_info.png */; };
 		CDD5B72918CCC0D00091D2C2 /* dianru_cell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1817F352A70007435A /* dianru_cell.jpg */; };
-		CDD5B72A18CCC0D00091D2C2 /* appdriver_download_app_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEE18C9B9C800F269D9 /* appdriver_download_app_off.png */; };
 		CDD5B72B18CCC0D00091D2C2 /* dianru_title_1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2417F352A70007435A /* dianru_title_1.jpg */; };
 		CDD5B72D18CCC0D00091D2C2 /* dianru_title.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2317F352A70007435A /* dianru_title.jpg */; };
 		CDD5B73018CCC0D00091D2C2 /* dianru_purple_dianru_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4217F352A70007435A /* dianru_purple_dianru_bottom.png */; };
@@ -1220,38 +1168,26 @@
 		CDD5B73218CCC0D00091D2C2 /* Harpy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE174A817DB321900A1022F /* Harpy.bundle */; };
 		CDD5B73318CCC0D00091D2C2 /* dianru_purple_dianru_titlebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4617F352A70007435A /* dianru_purple_dianru_titlebg.jpg */; };
 		CDD5B73418CCC0D00091D2C2 /* weixing_step1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3FDABD178BB69400B25AFE /* weixing_step1@2x.png */; };
-		CDD5B73518CCC0D00091D2C2 /* appdriver_reward_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFB18C9B9C800F269D9 /* appdriver_reward_icon.png */; };
 		CDD5B73618CCC0D00091D2C2 /* dianru_purple_right_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4B17F352A70007435A /* dianru_purple_right_view.png */; };
-		CDD5B73718CCC0D00091D2C2 /* appdriver_splashclose.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFD18C9B9C800F269D9 /* appdriver_splashclose.png */; };
 		CDD5B73818CCC0D00091D2C2 /* weixing_step2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3FDABE178BB69400B25AFE /* weixing_step2@2x.png */; };
-		CDD5B73918CCC0D00091D2C2 /* appdriver_ecommerceactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF118C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png */; };
 		CDD5B73A18CCC0D00091D2C2 /* dianru_blue_dianru_info.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B0C17F352A70007435A /* dianru_blue_dianru_info.png */; };
 		CDD5B73B18CCC0D00091D2C2 /* dianru_green_dianru_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2A17F352A70007435A /* dianru_green_dianru_bottom.png */; };
 		CDD5B73C18CCC0D00091D2C2 /* dianru_orange_right_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3F17F352A70007435A /* dianru_orange_right_view.png */; };
 		CDD5B73D18CCC0D00091D2C2 /* dianrulogo.png in Resources */ = {isa = PBXBuildFile; fileRef = CD8DF9EE18A9C59A00E3D9CF /* dianrulogo.png */; };
-		CDD5B73E18CCC0D00091D2C2 /* appdriver_appinfo_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECE918C9B9C800F269D9 /* appdriver_appinfo_bg.png */; };
 		CDD5B73F18CCC0D00091D2C2 /* weixing_step3@2x.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3FDAC4178BB7E800B25AFE /* weixing_step3@2x.jpg */; };
-		CDD5B74018CCC0D00091D2C2 /* appdriver_navback_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF518C9B9C800F269D9 /* appdriver_navback_off.png */; };
 		CDD5B74118CCC0D00091D2C2 /* dianru_orange_dianru_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3B17F352A70007435A /* dianru_orange_dianru_triangle.png */; };
-		CDD5B74218CCC0D00091D2C2 /* appdriver_head_bar_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF318C9B9C800F269D9 /* appdriver_head_bar_bg.png */; };
 		CDD5B74318CCC0D00091D2C2 /* TicketView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CDB9404A179E621000199D7A /* TicketView.xib */; };
 		CDD5B74518CCC0D00091D2C2 /* dianru_orange_dianru_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3717F352A70007435A /* dianru_orange_dianru_download.png */; };
 		CDD5B74618CCC0D00091D2C2 /* dianru_red_right_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B5817F352A70007435A /* dianru_red_right_view.png */; };
 		CDD5B74718CCC0D00091D2C2 /* dianru_blue_left_view.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1117F352A70007435A /* dianru_blue_left_view.png */; };
-		CDD5B74818CCC0D00091D2C2 /* appdriver_cell_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEC18C9B9C800F269D9 /* appdriver_cell_icon.png */; };
-		CDD5B74918CCC0D00091D2C2 /* appdriver_recommend_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECF818C9B9C800F269D9 /* appdriver_recommend_bg.png */; };
 		CDD5B74A18CCC0D00091D2C2 /* DianruBrowserController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD8DF9EC18A9C59A00E3D9CF /* DianruBrowserController.xib */; };
-		CDD5B74B18CCC0D00091D2C2 /* appdriver_recommendactivity_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFA18C9B9C800F269D9 /* appdriver_recommendactivity_on.png */; };
 		CDD5B74C18CCC0D00091D2C2 /* dianru_green_dianru_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2F17F352A70007435A /* dianru_green_dianru_triangle.png */; };
 		CDD5B74D18CCC0D00091D2C2 /* dianru_purple_dianru_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B4317F352A70007435A /* dianru_purple_dianru_download.png */; };
-		CDD5B74E18CCC0D00091D2C2 /* appdriver_web_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFE18C9B9C800F269D9 /* appdriver_web_download.png */; };
 		CDD5B74F18CCC0D00091D2C2 /* dianru_titlebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2517F352A70007435A /* dianru_titlebg.jpg */; };
 		CDD5B75018CCC0D00091D2C2 /* dianru_green_right_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B3217F352A70007435A /* dianru_green_right_cell.png */; };
 		CDD5B75118CCC0D00091D2C2 /* dianru_DRDefaultIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1D17F352A70007435A /* dianru_DRDefaultIcon.png */; };
 		CDD5B75218CCC0D00091D2C2 /* dianru_background.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1617F352A70007435A /* dianru_background.png */; };
 		CDD5B75318CCC0D00091D2C2 /* dianru_green_dianru_iphone_download.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2D17F352A70007435A /* dianru_green_dianru_iphone_download.png */; };
-		CDD5B75418CCC0D00091D2C2 /* appdriver_webactivity_off.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECFF18C9B9C800F269D9 /* appdriver_webactivity_off.png */; };
-		CDD5B75518CCC0D00091D2C2 /* appdriver_download_app_on.png in Resources */ = {isa = PBXBuildFile; fileRef = CD81ECEF18C9B9C800F269D9 /* appdriver_download_app_on.png */; };
 		CDD5B75618CCC0D00091D2C2 /* dianru_cell_.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B1917F352A70007435A /* dianru_cell_.jpg */; };
 		CDD5B75718CCC0D00091D2C2 /* dianru_green_all_cell.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B2917F352A70007435A /* dianru_green_all_cell.png */; };
 		CDD5B75818CCC0D00091D2C2 /* dianru_blue_dianru_titlebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD3B2B0E17F352A70007435A /* dianru_blue_dianru_titlebg.jpg */; };
@@ -1309,20 +1245,8 @@
 		CD060B681783BEA90012AA58 /* BaseGoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseGoldViewController.m; sourceTree = "<group>"; };
 		CD060B771783CE850012AA58 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CD060B791783CEAD0012AA58 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CD09047F18D189860088A438 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		CD0EDD95187AB9150022A1AB /* number.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = number.ttf; sourceTree = "<group>"; };
-		CD1574A017E3806F00D55D51 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
-		CD1574A117E3806F00D55D51 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
-		CD1574A217E3806F00D55D51 /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
-		CD1574A317E3806F00D55D51 /* YouMiSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiSpot.h; sourceTree = "<group>"; };
-		CD1574A417E3806F00D55D51 /* YouMiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiView.h; sourceTree = "<group>"; };
-		CD1574A517E3806F00D55D51 /* YouMiWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWall.h; sourceTree = "<group>"; };
-		CD1574A617E3806F00D55D51 /* YouMiWallAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallAppModel.h; sourceTree = "<group>"; };
-		CD1574A717E3806F00D55D51 /* YouMiWallBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallBanner.h; sourceTree = "<group>"; };
-		CD1574A817E3806F00D55D51 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
-		CD1574B017E384D900D55D51 /* AdwoOfferWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdwoOfferWall.h; sourceTree = "<group>"; };
-		CD1574B117E384D900D55D51 /* libAdwoOfferWall1.2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdwoOfferWall1.2.0.a; sourceTree = "<group>"; };
-		CD1574B317E384D900D55D51 /* libminizip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libminizip.a; sourceTree = "<group>"; };
-		CD1574B417E384D900D55D51 /* wall_template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = wall_template.zip; sourceTree = "<group>"; };
 		CD1AFAB617911066001F37B1 /* ChangeColorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangeColorViewController.h; sourceTree = "<group>"; };
 		CD1AFAB717911066001F37B1 /* ChangeColorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangeColorViewController.m; sourceTree = "<group>"; };
 		CD1EE70E177C93B0004CA188 /* goldIntroductionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = goldIntroductionViewController.h; sourceTree = "<group>"; };
@@ -1597,16 +1521,6 @@
 		CD74CC2E17DE245900C69F65 /* WeiXinShareViewCenterController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeiXinShareViewCenterController.m; sourceTree = "<group>"; };
 		CD7586B217F2DBCF0014EE33 /* GuaGuaKa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuaGuaKa.h; sourceTree = "<group>"; };
 		CD7586B317F2DBCF0014EE33 /* GuaGuaKa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuaGuaKa.m; sourceTree = "<group>"; };
-		CD77ABF617E69F950006A543 /* MiidiAdLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MiidiAdLib.a; sourceTree = "<group>"; };
-		CD77ABF717E69F950006A543 /* MiidiAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdView.h; sourceTree = "<group>"; };
-		CD77ABF817E69F950006A543 /* MiidiAdViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdViewDelegate.h; sourceTree = "<group>"; };
-		CD77ABF917E69F950006A543 /* MiidiAdWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWall.h; sourceTree = "<group>"; };
-		CD77ABFA17E69F950006A543 /* MiidiAdWallAwardPointsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallAwardPointsDelegate.h; sourceTree = "<group>"; };
-		CD77ABFB17E69F950006A543 /* MiidiAdWallGetPointsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallGetPointsDelegate.h; sourceTree = "<group>"; };
-		CD77ABFC17E69F950006A543 /* MiidiAdWallRequestToggleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallRequestToggleDelegate.h; sourceTree = "<group>"; };
-		CD77ABFD17E69F950006A543 /* MiidiAdWallShowAppOffersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallShowAppOffersDelegate.h; sourceTree = "<group>"; };
-		CD77ABFE17E69F950006A543 /* MiidiAdWallSpendPointsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallSpendPointsDelegate.h; sourceTree = "<group>"; };
-		CD77ABFF17E69F950006A543 /* MiidiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiManager.h; sourceTree = "<group>"; };
 		CD78077B17BB30500066A599 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		CD7915A01873C62800B12CD9 /* customSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customSwitchButton.h; sourceTree = "<group>"; };
 		CD7915A11873C62800B12CD9 /* customSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customSwitchButton.m; sourceTree = "<group>"; };
@@ -1628,46 +1542,6 @@
 		CD80C3601786FA42007BDC5C /* GoldExchangeLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoldExchangeLogViewController.m; sourceTree = "<group>"; };
 		CD81ECD218C96B3C00F269D9 /* MopanAdLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MopanAdLib.a; sourceTree = "<group>"; };
 		CD81ECD318C96B3C00F269D9 /* MopanAdWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MopanAdWall.h; sourceTree = "<group>"; };
-		CD81ECD818C9B9C800F269D9 /* ADCActivitiesTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCActivitiesTypeView.h; sourceTree = "<group>"; };
-		CD81ECD918C9B9C800F269D9 /* ADCADCPowerWallViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCADCPowerWallViewControllerDelegate.h; sourceTree = "<group>"; };
-		CD81ECDA18C9B9C800F269D9 /* ADCAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCAdvertiser.h; sourceTree = "<group>"; };
-		CD81ECDB18C9B9C800F269D9 /* ADCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCBannerView.h; sourceTree = "<group>"; };
-		CD81ECDC18C9B9C800F269D9 /* ADCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCError.h; sourceTree = "<group>"; };
-		CD81ECDD18C9B9C800F269D9 /* ADCNavigationBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCNavigationBarView.h; sourceTree = "<group>"; };
-		CD81ECDE18C9B9C800F269D9 /* ADCPowerWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCPowerWallViewController.h; sourceTree = "<group>"; };
-		CD81ECDF18C9B9C800F269D9 /* ADCProtocolEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCProtocolEngineDelegate.h; sourceTree = "<group>"; };
-		CD81ECE018C9B9C800F269D9 /* ADCRecommendView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCRecommendView.h; sourceTree = "<group>"; };
-		CD81ECE118C9B9C800F269D9 /* ADCRegisterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCRegisterDelegate.h; sourceTree = "<group>"; };
-		CD81ECE218C9B9C800F269D9 /* ADCSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCSplashView.h; sourceTree = "<group>"; };
-		CD81ECE318C9B9C800F269D9 /* ADCUrlImageQueueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCUrlImageQueueDelegate.h; sourceTree = "<group>"; };
-		CD81ECE418C9B9C800F269D9 /* ADCUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCUtility.h; sourceTree = "<group>"; };
-		CD81ECE518C9B9C800F269D9 /* appDriver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = appDriver.a; sourceTree = "<group>"; };
-		CD81ECE718C9B9C800F269D9 /* appdriver_appactivity_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_appactivity_off.png; sourceTree = "<group>"; };
-		CD81ECE818C9B9C800F269D9 /* appdriver_appactivity_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_appactivity_on.png; sourceTree = "<group>"; };
-		CD81ECE918C9B9C800F269D9 /* appdriver_appinfo_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_appinfo_bg.png; sourceTree = "<group>"; };
-		CD81ECEA18C9B9C800F269D9 /* appdriver_arrow_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_arrow_icon.png; sourceTree = "<group>"; };
-		CD81ECEB18C9B9C800F269D9 /* appdriver_cell_backgroundImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_cell_backgroundImage.png; sourceTree = "<group>"; };
-		CD81ECEC18C9B9C800F269D9 /* appdriver_cell_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_cell_icon.png; sourceTree = "<group>"; };
-		CD81ECED18C9B9C800F269D9 /* appdriver_defaultAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_defaultAppIcon.png; sourceTree = "<group>"; };
-		CD81ECEE18C9B9C800F269D9 /* appdriver_download_app_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_download_app_off.png; sourceTree = "<group>"; };
-		CD81ECEF18C9B9C800F269D9 /* appdriver_download_app_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_download_app_on.png; sourceTree = "<group>"; };
-		CD81ECF018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_ecommerceactivity_off.png; sourceTree = "<group>"; };
-		CD81ECF118C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_ecommerceactivity_on.png; sourceTree = "<group>"; };
-		CD81ECF218C9B9C800F269D9 /* appdriver_freeapp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_freeapp.png; sourceTree = "<group>"; };
-		CD81ECF318C9B9C800F269D9 /* appdriver_head_bar_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_head_bar_bg.png; sourceTree = "<group>"; };
-		CD81ECF418C9B9C800F269D9 /* appdriver_header_line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_header_line.png; sourceTree = "<group>"; };
-		CD81ECF518C9B9C800F269D9 /* appdriver_navback_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_navback_off.png; sourceTree = "<group>"; };
-		CD81ECF618C9B9C800F269D9 /* appdriver_navback_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_navback_on.png; sourceTree = "<group>"; };
-		CD81ECF718C9B9C800F269D9 /* appdriver_numbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_numbackground.png; sourceTree = "<group>"; };
-		CD81ECF818C9B9C800F269D9 /* appdriver_recommend_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_recommend_bg.png; sourceTree = "<group>"; };
-		CD81ECF918C9B9C800F269D9 /* appdriver_recommendactivity_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_recommendactivity_off.png; sourceTree = "<group>"; };
-		CD81ECFA18C9B9C800F269D9 /* appdriver_recommendactivity_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_recommendactivity_on.png; sourceTree = "<group>"; };
-		CD81ECFB18C9B9C800F269D9 /* appdriver_reward_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_reward_icon.png; sourceTree = "<group>"; };
-		CD81ECFC18C9B9C800F269D9 /* appdriver_rewardtask.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_rewardtask.png; sourceTree = "<group>"; };
-		CD81ECFD18C9B9C800F269D9 /* appdriver_splashclose.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_splashclose.png; sourceTree = "<group>"; };
-		CD81ECFE18C9B9C800F269D9 /* appdriver_web_download.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_web_download.png; sourceTree = "<group>"; };
-		CD81ECFF18C9B9C800F269D9 /* appdriver_webactivity_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_webactivity_off.png; sourceTree = "<group>"; };
-		CD81ED0018C9B9C800F269D9 /* appdriver_webactivity_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appdriver_webactivity_on.png; sourceTree = "<group>"; };
 		CD85988B179B7DD60006F78B /* STScratchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STScratchView.h; sourceTree = "<group>"; };
 		CD85988C179B7DD60006F78B /* STScratchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STScratchView.m; sourceTree = "<group>"; };
 		CD85988E179BEC270006F78B /* CGPointTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPointTool.h; sourceTree = "<group>"; };
@@ -1692,6 +1566,47 @@
 		CD9CCFAE1781883D000126A9 /* Users.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Users.m; sourceTree = "<group>"; };
 		CDA20F8B18138DC700469669 /* sharePic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharePic@2x.png"; sourceTree = "<group>"; };
 		CDA20F8F181397ED00469669 /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
+		CDA27CE618E17FC900B461E0 /* AdwoOfferWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdwoOfferWall.h; sourceTree = "<group>"; };
+		CDA27CE718E17FC900B461E0 /* libAdwoOfferWall2.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libAdwoOfferWall2.0.a; sourceTree = "<group>"; };
+		CDA27CE918E17FC900B461E0 /* libminizip.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libminizip.a; sourceTree = "<group>"; };
+		CDA27CEA18E17FC900B461E0 /* wall_template.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = wall_template.zip; sourceTree = "<group>"; };
+		CDA27CF818E18A8200B461E0 /* MiidiAdDesc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdDesc.h; sourceTree = "<group>"; };
+		CDA27CF918E18A8200B461E0 /* MiidiAdLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = MiidiAdLib.a; sourceTree = "<group>"; };
+		CDA27CFA18E18A8200B461E0 /* MiidiAdSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdSpot.h; sourceTree = "<group>"; };
+		CDA27CFB18E18A8200B461E0 /* MiidiAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdView.h; sourceTree = "<group>"; };
+		CDA27CFC18E18A8200B461E0 /* MiidiAdViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdViewDelegate.h; sourceTree = "<group>"; };
+		CDA27CFD18E18A8200B461E0 /* MiidiAdWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWall.h; sourceTree = "<group>"; };
+		CDA27CFE18E18A8200B461E0 /* MiidiAdWallAwardPointsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallAwardPointsDelegate.h; sourceTree = "<group>"; };
+		CDA27CFF18E18A8200B461E0 /* MiidiAdWallGetPointsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallGetPointsDelegate.h; sourceTree = "<group>"; };
+		CDA27D0018E18A8200B461E0 /* MiidiAdWallRequestToggleDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallRequestToggleDelegate.h; sourceTree = "<group>"; };
+		CDA27D0118E18A8200B461E0 /* MiidiAdWallShowAppOffersDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallShowAppOffersDelegate.h; sourceTree = "<group>"; };
+		CDA27D0218E18A8200B461E0 /* MiidiAdWallSpendPointsDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiAdWallSpendPointsDelegate.h; sourceTree = "<group>"; };
+		CDA27D0318E18A8200B461E0 /* MiidiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiidiManager.h; sourceTree = "<group>"; };
+		CDA27D0818E1916200B461E0 /* ADCAdvertiser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCAdvertiser.h; sourceTree = "<group>"; };
+		CDA27D0918E1916200B461E0 /* ADCBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCBannerView.h; sourceTree = "<group>"; };
+		CDA27D0A18E1916200B461E0 /* ADCError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCError.h; sourceTree = "<group>"; };
+		CDA27D0B18E1916200B461E0 /* ADCPowerWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCPowerWallViewController.h; sourceTree = "<group>"; };
+		CDA27D0C18E1916200B461E0 /* ADCPowerWallViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCPowerWallViewControllerDelegate.h; sourceTree = "<group>"; };
+		CDA27D0D18E1916200B461E0 /* ADCProtocolEngineDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCProtocolEngineDelegate.h; sourceTree = "<group>"; };
+		CDA27D0E18E1916200B461E0 /* ADCRegisterDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCRegisterDelegate.h; sourceTree = "<group>"; };
+		CDA27D0F18E1916200B461E0 /* ADCSplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCSplashView.h; sourceTree = "<group>"; };
+		CDA27D1018E1916200B461E0 /* ADCUrlImageQueueDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCUrlImageQueueDelegate.h; sourceTree = "<group>"; };
+		CDA27D1118E1916200B461E0 /* ADCUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADCUtility.h; sourceTree = "<group>"; };
+		CDA27D1218E1916200B461E0 /* appDriver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = appDriver.a; sourceTree = "<group>"; };
+		CDA27D1318E1916200B461E0 /* AppdriverResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppdriverResources.bundle; sourceTree = "<group>"; };
+		CDA27D1D18E1939900B461E0 /* YouMiConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiConfig.h; sourceTree = "<group>"; };
+		CDA27D1E18E1939900B461E0 /* YouMiDelegateProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiDelegateProtocol.h; sourceTree = "<group>"; };
+		CDA27D1F18E1939900B461E0 /* YouMiPointsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiPointsManager.h; sourceTree = "<group>"; };
+		CDA27D2018E1939900B461E0 /* YouMiSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiSpot.h; sourceTree = "<group>"; };
+		CDA27D2118E1939900B461E0 /* YouMiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiView.h; sourceTree = "<group>"; };
+		CDA27D2218E1939900B461E0 /* YouMiWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWall.h; sourceTree = "<group>"; };
+		CDA27D2318E1939900B461E0 /* YouMiWallAppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallAppModel.h; sourceTree = "<group>"; };
+		CDA27D2418E1939900B461E0 /* YouMiWallSpot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpot.h; sourceTree = "<group>"; };
+		CDA27D2518E1939900B461E0 /* YouMiWallSpotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouMiWallSpotView.h; sourceTree = "<group>"; };
+		CDA27D2618E1939900B461E0 /* libOpenIDFA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libOpenIDFA.a; sourceTree = "<group>"; };
+		CDA27D2718E1939900B461E0 /* libYouMi.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libYouMi.a; sourceTree = "<group>"; };
+		CDA27D3118E19A6400B461E0 /* AdWalker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AdWalker.bundle; sourceTree = "<group>"; };
+		CDA27D3218E19A6400B461E0 /* AdWalker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AdWalker.framework; sourceTree = "<group>"; };
 		CDA285D617F41E4E003034F9 /* GuaGuaKaLogViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuaGuaKaLogViewController.h; sourceTree = "<group>"; };
 		CDA285D717F41E4E003034F9 /* GuaGuaKaLogViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GuaGuaKaLogViewController.m; sourceTree = "<group>"; };
 		CDA285D917F41FB3003034F9 /* GuaGuaKaLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuaGuaKaLog.h; sourceTree = "<group>"; };
@@ -1730,6 +1645,17 @@
 		CDAA578D185ADDD400D9E1F8 /* track_left_sigin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_left_sigin@2x.png"; sourceTree = "<group>"; };
 		CDAA578E185ADDD400D9E1F8 /* track_mark_bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_mark_bg@2x.png"; sourceTree = "<group>"; };
 		CDAA578F185ADDD400D9E1F8 /* track_right_sigin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_right_sigin@2x.png"; sourceTree = "<group>"; };
+		CDAC866418D162D1001D4C30 /* libMobiSageOfferWall.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libMobiSageOfferWall.a; sourceTree = "<group>"; };
+		CDAC866618D162D1001D4C30 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		CDAC866718D162D1001D4C30 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		CDAC866818D162D1001D4C30 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		CDAC866918D162D1001D4C30 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		CDAC866A18D162D1001D4C30 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		CDAC866B18D162D1001D4C30 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		CDAC866C18D162D1001D4C30 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		CDAC866D18D162D1001D4C30 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		CDAC866E18D162D1001D4C30 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		CDAC866F18D162D1001D4C30 /* MobiSageOfferWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobiSageOfferWallViewController.h; sourceTree = "<group>"; };
 		CDADA7871865479D00DA2928 /* track_small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_small@2x.png"; sourceTree = "<group>"; };
 		CDADA78B1865536D00DA2928 /* track_small_mask@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "track_small_mask@2x.png"; sourceTree = "<group>"; };
 		CDAEEAA4179FCB0800D429CC /* ReflectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReflectionView.h; sourceTree = "<group>"; };
@@ -1894,9 +1820,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD09048318D189A20088A438 /* CoreMotion.framework in Frameworks */,
 				CD1D08CD18CD9FE50065835D /* CoreMedia.framework in Frameworks */,
 				CD81ECD418C96B3C00F269D9 /* MopanAdLib.a in Frameworks */,
 				CD0EDD98187AC5A20022A1AB /* AVFoundation.framework in Frameworks */,
+				CDA27D2C18E1939900B461E0 /* libYouMi.a in Frameworks */,
+				CDA27D3718E19A6400B461E0 /* AdWalker.framework in Frameworks */,
 				CD0EDD97187AC5750022A1AB /* OpenGLES.framework in Frameworks */,
 				CDAF78C417E4CF30005CEBD5 /* StoreKit.framework in Frameworks */,
 				CD5F7FE717A213F100670862 /* CoreText.framework in Frameworks */,
@@ -1906,13 +1835,14 @@
 				CDC973A0177ECACB001AF58F /* libz.1.2.5.dylib in Frameworks */,
 				CDC9738C177EC9A1001AF58F /* AudioToolbox.framework in Frameworks */,
 				CD237E3C189B5224008B8C42 /* WapsOffer.framework in Frameworks */,
+				CDAC867018D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDF8A29A177A913E00F86A52 /* AdSupport.framework in Frameworks */,
 				CD983418176FFE630035D10F /* CoreData.framework in Frameworks */,
 				CDC9738E177EC9BC001AF58F /* CoreTelephony.framework in Frameworks */,
 				CD2EB6DE1744C1C700A222D6 /* CoreGraphics.framework in Frameworks */,
 				CDF68DBF17783ADF003B3B9A /* CoreLocation.framework in Frameworks */,
+				CDA27D2818E1939900B461E0 /* libOpenIDFA.a in Frameworks */,
 				CD9B447717EE8EB3009CD31D /* Escore.framework in Frameworks */,
-				CD81ED0118C9B9C800F269D9 /* appDriver.a in Frameworks */,
 				CDC9738A177EC992001AF58F /* CFNetwork.framework in Frameworks */,
 				CDC97391177EC9C9001AF58F /* EventKit.framework in Frameworks */,
 				CDC97392177EC9C9001AF58F /* EventKitUI.framework in Frameworks */,
@@ -1924,16 +1854,16 @@
 				CDF68DBD17783850003B3B9A /* MapKit.framework in Frameworks */,
 				CDC9739A177ECA67001AF58F /* QuartzCore.framework in Frameworks */,
 				CDC9739E177ECAA5001AF58F /* SystemConfiguration.framework in Frameworks */,
+				CDA27CEF18E17FCA00B461E0 /* libminizip.a in Frameworks */,
 				CDC9739C177ECA87001AF58F /* Security.framework in Frameworks */,
 				CD2EB6DA1744C1C700A222D6 /* UIKit.framework in Frameworks */,
-				CD1574B517E384D900D55D51 /* libAdwoOfferWall1.2.0.a in Frameworks */,
+				CDA27D0418E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
+				CDA27D1418E1916200B461E0 /* appDriver.a in Frameworks */,
 				CD8DFB6F17EFDE89005EA47D /* libWeChatSDK.a in Frameworks */,
 				CD3B2BA717F352A70007435A /* libDianRuAdWall.a in Frameworks */,
 				CD1574AA17E3831D00D55D51 /* immobSDK.framework in Frameworks */,
-				CD1574B617E384D900D55D51 /* libminizip.a in Frameworks */,
-				CD1574AC17E383AE00D55D51 /* libYouMi.a in Frameworks */,
 				DD114F5BDC1C4C5F94D08D36 /* libPods.a in Frameworks */,
-				CD77AC0017E69F950006A543 /* MiidiAdLib.a in Frameworks */,
+				CDA27CEB18E17FC900B461E0 /* libAdwoOfferWall2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1941,9 +1871,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD09048218D1899A0088A438 /* CoreMotion.framework in Frameworks */,
 				CDCFA43F18CD9FA4001DDFD3 /* CoreMedia.framework in Frameworks */,
 				CD81ECD518C96B3C00F269D9 /* MopanAdLib.a in Frameworks */,
 				CD8FDF25182088BD006730F1 /* AVFoundation.framework in Frameworks */,
+				CDA27D2D18E1939900B461E0 /* libYouMi.a in Frameworks */,
+				CDA27D3818E19A6400B461E0 /* AdWalker.framework in Frameworks */,
 				CD8FDF24182088B7006730F1 /* OpenGLES.framework in Frameworks */,
 				CDAF02C0180F964C0073A9FC /* StoreKit.framework in Frameworks */,
 				CDAF02C1180F964C0073A9FC /* CoreText.framework in Frameworks */,
@@ -1953,13 +1886,14 @@
 				CDAF02C4180F964C0073A9FC /* libz.1.2.5.dylib in Frameworks */,
 				CDAF02C5180F964C0073A9FC /* AudioToolbox.framework in Frameworks */,
 				CD237E3D189B5224008B8C42 /* WapsOffer.framework in Frameworks */,
+				CDAC867118D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDAF02C6180F964C0073A9FC /* AdSupport.framework in Frameworks */,
 				CDAF02C7180F964C0073A9FC /* CoreData.framework in Frameworks */,
 				CDAF02C8180F964C0073A9FC /* CoreTelephony.framework in Frameworks */,
 				CDAF02C9180F964C0073A9FC /* CoreGraphics.framework in Frameworks */,
 				CDAF02CA180F964C0073A9FC /* CoreLocation.framework in Frameworks */,
+				CDA27D2918E1939900B461E0 /* libOpenIDFA.a in Frameworks */,
 				CDAF02CB180F964C0073A9FC /* Escore.framework in Frameworks */,
-				CD81ED0218C9B9C800F269D9 /* appDriver.a in Frameworks */,
 				CDAF02CC180F964C0073A9FC /* CFNetwork.framework in Frameworks */,
 				CDAF02CE180F964C0073A9FC /* EventKit.framework in Frameworks */,
 				CDAF02CF180F964C0073A9FC /* EventKitUI.framework in Frameworks */,
@@ -1971,16 +1905,16 @@
 				CDAF02D4180F964C0073A9FC /* MapKit.framework in Frameworks */,
 				CDAF02D5180F964C0073A9FC /* QuartzCore.framework in Frameworks */,
 				CDAF02D6180F964C0073A9FC /* SystemConfiguration.framework in Frameworks */,
+				CDA27CF018E17FCA00B461E0 /* libminizip.a in Frameworks */,
 				CDAF02D7180F964C0073A9FC /* Security.framework in Frameworks */,
 				CDAF02D8180F964C0073A9FC /* UIKit.framework in Frameworks */,
-				CDAF02D9180F964C0073A9FC /* libAdwoOfferWall1.2.0.a in Frameworks */,
+				CDA27D0518E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
+				CDA27D1518E1916200B461E0 /* appDriver.a in Frameworks */,
 				CDAF02DA180F964C0073A9FC /* libWeChatSDK.a in Frameworks */,
 				CDAF02DB180F964C0073A9FC /* libDianRuAdWall.a in Frameworks */,
 				CDAF02DC180F964C0073A9FC /* immobSDK.framework in Frameworks */,
-				CDAF02DD180F964C0073A9FC /* libminizip.a in Frameworks */,
-				CDAF02DE180F964C0073A9FC /* libYouMi.a in Frameworks */,
 				CDAF02DF180F964C0073A9FC /* libPods.a in Frameworks */,
-				CDAF02E1180F964C0073A9FC /* MiidiAdLib.a in Frameworks */,
+				CDA27CEC18E17FC900B461E0 /* libAdwoOfferWall2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1988,9 +1922,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD09048018D189860088A438 /* CoreMotion.framework in Frameworks */,
 				CD1D08CE18CD9FF20065835D /* CoreMedia.framework in Frameworks */,
 				CD81ECD618C96B3C00F269D9 /* MopanAdLib.a in Frameworks */,
 				CD033D73181EA98F00484912 /* AVFoundation.framework in Frameworks */,
+				CDA27D2E18E1939900B461E0 /* libYouMi.a in Frameworks */,
+				CDA27D3918E19A6400B461E0 /* AdWalker.framework in Frameworks */,
 				CDD3FC72181EA7B9002B8EC1 /* OpenGLES.framework in Frameworks */,
 				CDD3FB91181E96E6002B8EC1 /* StoreKit.framework in Frameworks */,
 				CDD3FB92181E96E6002B8EC1 /* CoreText.framework in Frameworks */,
@@ -2000,13 +1937,14 @@
 				CDD3FB95181E96E6002B8EC1 /* libz.1.2.5.dylib in Frameworks */,
 				CDD3FB96181E96E6002B8EC1 /* AudioToolbox.framework in Frameworks */,
 				CD237E3E189B5224008B8C42 /* WapsOffer.framework in Frameworks */,
+				CDAC867218D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDD3FB97181E96E6002B8EC1 /* AdSupport.framework in Frameworks */,
 				CDD3FB98181E96E6002B8EC1 /* CoreData.framework in Frameworks */,
 				CDD3FB99181E96E6002B8EC1 /* CoreTelephony.framework in Frameworks */,
 				CDD3FB9A181E96E6002B8EC1 /* CoreGraphics.framework in Frameworks */,
 				CDD3FB9B181E96E6002B8EC1 /* CoreLocation.framework in Frameworks */,
+				CDA27D2A18E1939900B461E0 /* libOpenIDFA.a in Frameworks */,
 				CDD3FB9C181E96E6002B8EC1 /* Escore.framework in Frameworks */,
-				CD81ED0318C9B9C800F269D9 /* appDriver.a in Frameworks */,
 				CDD3FB9D181E96E6002B8EC1 /* CFNetwork.framework in Frameworks */,
 				CDD3FB9F181E96E6002B8EC1 /* EventKit.framework in Frameworks */,
 				CDD3FBA0181E96E6002B8EC1 /* EventKitUI.framework in Frameworks */,
@@ -2018,16 +1956,16 @@
 				CDD3FBA5181E96E6002B8EC1 /* MapKit.framework in Frameworks */,
 				CDD3FBA6181E96E6002B8EC1 /* QuartzCore.framework in Frameworks */,
 				CDD3FBA7181E96E6002B8EC1 /* SystemConfiguration.framework in Frameworks */,
+				CDA27CF118E17FCA00B461E0 /* libminizip.a in Frameworks */,
 				CDD3FBA8181E96E6002B8EC1 /* Security.framework in Frameworks */,
 				CDD3FBA9181E96E6002B8EC1 /* UIKit.framework in Frameworks */,
-				CDD3FBAA181E96E6002B8EC1 /* libAdwoOfferWall1.2.0.a in Frameworks */,
+				CDA27D0618E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
+				CDA27D1618E1916200B461E0 /* appDriver.a in Frameworks */,
 				CDD3FBAB181E96E6002B8EC1 /* libWeChatSDK.a in Frameworks */,
 				CDD3FBAC181E96E6002B8EC1 /* libDianRuAdWall.a in Frameworks */,
 				CDD3FBAD181E96E6002B8EC1 /* immobSDK.framework in Frameworks */,
-				CDD3FBAE181E96E6002B8EC1 /* libminizip.a in Frameworks */,
-				CDD3FBAF181E96E6002B8EC1 /* libYouMi.a in Frameworks */,
 				CDD3FBB0181E96E6002B8EC1 /* libPods.a in Frameworks */,
-				CDD3FBB2181E96E6002B8EC1 /* MiidiAdLib.a in Frameworks */,
+				CDA27CED18E17FC900B461E0 /* libAdwoOfferWall2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2035,9 +1973,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD09048118D189900088A438 /* CoreMotion.framework in Frameworks */,
 				CD1D08CF18CD9FFB0065835D /* CoreMedia.framework in Frameworks */,
 				CDD5B6A318CCC0D00091D2C2 /* MopanAdLib.a in Frameworks */,
 				CDD5B6A418CCC0D00091D2C2 /* AVFoundation.framework in Frameworks */,
+				CDA27D2F18E1939900B461E0 /* libYouMi.a in Frameworks */,
+				CDA27D3A18E19A6400B461E0 /* AdWalker.framework in Frameworks */,
 				CDD5B6A518CCC0D00091D2C2 /* OpenGLES.framework in Frameworks */,
 				CDD5B6A618CCC0D00091D2C2 /* StoreKit.framework in Frameworks */,
 				CDD5B6A718CCC0D00091D2C2 /* CoreText.framework in Frameworks */,
@@ -2047,13 +1988,14 @@
 				CDD5B6AB18CCC0D00091D2C2 /* libz.1.2.5.dylib in Frameworks */,
 				CDD5B6AC18CCC0D00091D2C2 /* AudioToolbox.framework in Frameworks */,
 				CDD5B6AD18CCC0D00091D2C2 /* WapsOffer.framework in Frameworks */,
+				CDAC867318D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDD5B6AE18CCC0D00091D2C2 /* AdSupport.framework in Frameworks */,
 				CDD5B6AF18CCC0D00091D2C2 /* CoreData.framework in Frameworks */,
 				CDD5B6B018CCC0D00091D2C2 /* CoreTelephony.framework in Frameworks */,
 				CDD5B6B118CCC0D00091D2C2 /* CoreGraphics.framework in Frameworks */,
 				CDD5B6B218CCC0D00091D2C2 /* CoreLocation.framework in Frameworks */,
+				CDA27D2B18E1939900B461E0 /* libOpenIDFA.a in Frameworks */,
 				CDD5B6B318CCC0D00091D2C2 /* Escore.framework in Frameworks */,
-				CDD5B6B418CCC0D00091D2C2 /* appDriver.a in Frameworks */,
 				CDD5B6B518CCC0D00091D2C2 /* CFNetwork.framework in Frameworks */,
 				CDD5B6B618CCC0D00091D2C2 /* EventKit.framework in Frameworks */,
 				CDD5B6B718CCC0D00091D2C2 /* EventKitUI.framework in Frameworks */,
@@ -2065,16 +2007,16 @@
 				CDD5B6BC18CCC0D00091D2C2 /* MapKit.framework in Frameworks */,
 				CDD5B6BD18CCC0D00091D2C2 /* QuartzCore.framework in Frameworks */,
 				CDD5B6BE18CCC0D00091D2C2 /* SystemConfiguration.framework in Frameworks */,
+				CDA27CF218E17FCA00B461E0 /* libminizip.a in Frameworks */,
 				CDD5B6BF18CCC0D00091D2C2 /* Security.framework in Frameworks */,
 				CDD5B6C018CCC0D00091D2C2 /* UIKit.framework in Frameworks */,
-				CDD5B6C118CCC0D00091D2C2 /* libAdwoOfferWall1.2.0.a in Frameworks */,
+				CDA27D0718E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
+				CDA27D1718E1916200B461E0 /* appDriver.a in Frameworks */,
 				CDD5B6C218CCC0D00091D2C2 /* libWeChatSDK.a in Frameworks */,
 				CDD5B6C318CCC0D00091D2C2 /* libDianRuAdWall.a in Frameworks */,
 				CDD5B6C418CCC0D00091D2C2 /* immobSDK.framework in Frameworks */,
-				CDD5B6C518CCC0D00091D2C2 /* libminizip.a in Frameworks */,
-				CDD5B6C618CCC0D00091D2C2 /* libYouMi.a in Frameworks */,
 				CDD5B6C718CCC0D00091D2C2 /* libPods.a in Frameworks */,
-				CDD5B6C918CCC0D00091D2C2 /* MiidiAdLib.a in Frameworks */,
+				CDA27CEE18E17FCA00B461E0 /* libAdwoOfferWall2.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2123,45 +2065,22 @@
 		CD060B6A1783CE5F0012AA58 /* youmi_lib */ = {
 			isa = PBXGroup;
 			children = (
-				CD15749F17E3806F00D55D51 /* include */,
-				CD1574A817E3806F00D55D51 /* libYouMi.a */,
+				CDA27D1C18E1939900B461E0 /* include */,
+				CDA27D2618E1939900B461E0 /* libOpenIDFA.a */,
+				CDA27D2718E1939900B461E0 /* libYouMi.a */,
 			);
 			path = youmi_lib;
-			sourceTree = "<group>";
-		};
-		CD15749F17E3806F00D55D51 /* include */ = {
-			isa = PBXGroup;
-			children = (
-				CD1574A017E3806F00D55D51 /* YouMiConfig.h */,
-				CD1574A117E3806F00D55D51 /* YouMiDelegateProtocol.h */,
-				CD1574A217E3806F00D55D51 /* YouMiPointsManager.h */,
-				CD1574A317E3806F00D55D51 /* YouMiSpot.h */,
-				CD1574A417E3806F00D55D51 /* YouMiView.h */,
-				CD1574A517E3806F00D55D51 /* YouMiWall.h */,
-				CD1574A617E3806F00D55D51 /* YouMiWallAppModel.h */,
-				CD1574A717E3806F00D55D51 /* YouMiWallBanner.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		CD1574AF17E384D900D55D51 /* anwo */ = {
 			isa = PBXGroup;
 			children = (
-				CD1574B017E384D900D55D51 /* AdwoOfferWall.h */,
-				CD1574B117E384D900D55D51 /* libAdwoOfferWall1.2.0.a */,
-				CD1574B217E384D900D55D51 /* res */,
+				CDA27CE618E17FC900B461E0 /* AdwoOfferWall.h */,
+				CDA27CE718E17FC900B461E0 /* libAdwoOfferWall2.0.a */,
+				CDA27CE818E17FC900B461E0 /* res */,
 			);
 			name = anwo;
 			path = weixingSDK/anwo;
-			sourceTree = "<group>";
-		};
-		CD1574B217E384D900D55D51 /* res */ = {
-			isa = PBXGroup;
-			children = (
-				CD1574B317E384D900D55D51 /* libminizip.a */,
-				CD1574B417E384D900D55D51 /* wall_template.zip */,
-			);
-			path = res;
 			sourceTree = "<group>";
 		};
 		CD2EB6CD1744C1C700A222D6 = {
@@ -2188,6 +2107,7 @@
 		CD2EB6D81744C1C700A222D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD09047F18D189860088A438 /* CoreMotion.framework */,
 				CDCFA43E18CD9FA4001DDFD3 /* CoreMedia.framework */,
 				CD237E3B189B5224008B8C42 /* WapsOffer.framework */,
 				CD033D72181EA98F00484912 /* AVFoundation.framework */,
@@ -2566,10 +2486,12 @@
 		CD4136AE1771541200F246C3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CDA27D3018E19A6400B461E0 /* xingyun */,
+				CDA27CF718E18A8200B461E0 /* midiLib */,
+				CDAC866318D162D1001D4C30 /* MobiSageOfferWallSDK */,
 				CD3BDABA18CD951A00B0E12F /* DMOfferWallSDK */,
 				CD81ECD718C9B9C800F269D9 /* AppDriverSDK */,
 				CD81ECD118C96B3C00F269D9 /* mopanSdk */,
-				CD77ABF517E69F950006A543 /* midi */,
 				CDAF78C517E4D503005CEBD5 /* yijifen */,
 				CD1574AF17E384D900D55D51 /* anwo */,
 				CD95753817A129DA0056015E /* sound */,
@@ -2743,23 +2665,6 @@
 			name = Tools;
 			sourceTree = "<group>";
 		};
-		CD77ABF517E69F950006A543 /* midi */ = {
-			isa = PBXGroup;
-			children = (
-				CD77ABF617E69F950006A543 /* MiidiAdLib.a */,
-				CD77ABF717E69F950006A543 /* MiidiAdView.h */,
-				CD77ABF817E69F950006A543 /* MiidiAdViewDelegate.h */,
-				CD77ABF917E69F950006A543 /* MiidiAdWall.h */,
-				CD77ABFA17E69F950006A543 /* MiidiAdWallAwardPointsDelegate.h */,
-				CD77ABFB17E69F950006A543 /* MiidiAdWallGetPointsDelegate.h */,
-				CD77ABFC17E69F950006A543 /* MiidiAdWallRequestToggleDelegate.h */,
-				CD77ABFD17E69F950006A543 /* MiidiAdWallShowAppOffersDelegate.h */,
-				CD77ABFE17E69F950006A543 /* MiidiAdWallSpendPointsDelegate.h */,
-				CD77ABFF17E69F950006A543 /* MiidiManager.h */,
-			);
-			path = midi;
-			sourceTree = "<group>";
-		};
 		CD79159F1873C60D00B12CD9 /* customSwitchButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -2801,56 +2706,20 @@
 		CD81ECD718C9B9C800F269D9 /* AppDriverSDK */ = {
 			isa = PBXGroup;
 			children = (
-				CD81ECD818C9B9C800F269D9 /* ADCActivitiesTypeView.h */,
-				CD81ECD918C9B9C800F269D9 /* ADCADCPowerWallViewControllerDelegate.h */,
-				CD81ECDA18C9B9C800F269D9 /* ADCAdvertiser.h */,
-				CD81ECDB18C9B9C800F269D9 /* ADCBannerView.h */,
-				CD81ECDC18C9B9C800F269D9 /* ADCError.h */,
-				CD81ECDD18C9B9C800F269D9 /* ADCNavigationBarView.h */,
-				CD81ECDE18C9B9C800F269D9 /* ADCPowerWallViewController.h */,
-				CD81ECDF18C9B9C800F269D9 /* ADCProtocolEngineDelegate.h */,
-				CD81ECE018C9B9C800F269D9 /* ADCRecommendView.h */,
-				CD81ECE118C9B9C800F269D9 /* ADCRegisterDelegate.h */,
-				CD81ECE218C9B9C800F269D9 /* ADCSplashView.h */,
-				CD81ECE318C9B9C800F269D9 /* ADCUrlImageQueueDelegate.h */,
-				CD81ECE418C9B9C800F269D9 /* ADCUtility.h */,
-				CD81ECE518C9B9C800F269D9 /* appDriver.a */,
-				CD81ECE618C9B9C800F269D9 /* images */,
+				CDA27D0818E1916200B461E0 /* ADCAdvertiser.h */,
+				CDA27D0918E1916200B461E0 /* ADCBannerView.h */,
+				CDA27D0A18E1916200B461E0 /* ADCError.h */,
+				CDA27D0B18E1916200B461E0 /* ADCPowerWallViewController.h */,
+				CDA27D0C18E1916200B461E0 /* ADCPowerWallViewControllerDelegate.h */,
+				CDA27D0D18E1916200B461E0 /* ADCProtocolEngineDelegate.h */,
+				CDA27D0E18E1916200B461E0 /* ADCRegisterDelegate.h */,
+				CDA27D0F18E1916200B461E0 /* ADCSplashView.h */,
+				CDA27D1018E1916200B461E0 /* ADCUrlImageQueueDelegate.h */,
+				CDA27D1118E1916200B461E0 /* ADCUtility.h */,
+				CDA27D1218E1916200B461E0 /* appDriver.a */,
+				CDA27D1318E1916200B461E0 /* AppdriverResources.bundle */,
 			);
 			path = AppDriverSDK;
-			sourceTree = "<group>";
-		};
-		CD81ECE618C9B9C800F269D9 /* images */ = {
-			isa = PBXGroup;
-			children = (
-				CD81ECE718C9B9C800F269D9 /* appdriver_appactivity_off.png */,
-				CD81ECE818C9B9C800F269D9 /* appdriver_appactivity_on.png */,
-				CD81ECE918C9B9C800F269D9 /* appdriver_appinfo_bg.png */,
-				CD81ECEA18C9B9C800F269D9 /* appdriver_arrow_icon.png */,
-				CD81ECEB18C9B9C800F269D9 /* appdriver_cell_backgroundImage.png */,
-				CD81ECEC18C9B9C800F269D9 /* appdriver_cell_icon.png */,
-				CD81ECED18C9B9C800F269D9 /* appdriver_defaultAppIcon.png */,
-				CD81ECEE18C9B9C800F269D9 /* appdriver_download_app_off.png */,
-				CD81ECEF18C9B9C800F269D9 /* appdriver_download_app_on.png */,
-				CD81ECF018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png */,
-				CD81ECF118C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png */,
-				CD81ECF218C9B9C800F269D9 /* appdriver_freeapp.png */,
-				CD81ECF318C9B9C800F269D9 /* appdriver_head_bar_bg.png */,
-				CD81ECF418C9B9C800F269D9 /* appdriver_header_line.png */,
-				CD81ECF518C9B9C800F269D9 /* appdriver_navback_off.png */,
-				CD81ECF618C9B9C800F269D9 /* appdriver_navback_on.png */,
-				CD81ECF718C9B9C800F269D9 /* appdriver_numbackground.png */,
-				CD81ECF818C9B9C800F269D9 /* appdriver_recommend_bg.png */,
-				CD81ECF918C9B9C800F269D9 /* appdriver_recommendactivity_off.png */,
-				CD81ECFA18C9B9C800F269D9 /* appdriver_recommendactivity_on.png */,
-				CD81ECFB18C9B9C800F269D9 /* appdriver_reward_icon.png */,
-				CD81ECFC18C9B9C800F269D9 /* appdriver_rewardtask.png */,
-				CD81ECFD18C9B9C800F269D9 /* appdriver_splashclose.png */,
-				CD81ECFE18C9B9C800F269D9 /* appdriver_web_download.png */,
-				CD81ECFF18C9B9C800F269D9 /* appdriver_webactivity_off.png */,
-				CD81ED0018C9B9C800F269D9 /* appdriver_webactivity_on.png */,
-			);
-			path = images;
 			sourceTree = "<group>";
 		};
 		CD85988A179B7DD60006F78B /* STScratchView */ = {
@@ -2925,6 +2794,59 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		CDA27CE818E17FC900B461E0 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				CDA27CE918E17FC900B461E0 /* libminizip.a */,
+				CDA27CEA18E17FC900B461E0 /* wall_template.zip */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		CDA27CF718E18A8200B461E0 /* midiLib */ = {
+			isa = PBXGroup;
+			children = (
+				CDA27CF818E18A8200B461E0 /* MiidiAdDesc.h */,
+				CDA27CF918E18A8200B461E0 /* MiidiAdLib.a */,
+				CDA27CFA18E18A8200B461E0 /* MiidiAdSpot.h */,
+				CDA27CFB18E18A8200B461E0 /* MiidiAdView.h */,
+				CDA27CFC18E18A8200B461E0 /* MiidiAdViewDelegate.h */,
+				CDA27CFD18E18A8200B461E0 /* MiidiAdWall.h */,
+				CDA27CFE18E18A8200B461E0 /* MiidiAdWallAwardPointsDelegate.h */,
+				CDA27CFF18E18A8200B461E0 /* MiidiAdWallGetPointsDelegate.h */,
+				CDA27D0018E18A8200B461E0 /* MiidiAdWallRequestToggleDelegate.h */,
+				CDA27D0118E18A8200B461E0 /* MiidiAdWallShowAppOffersDelegate.h */,
+				CDA27D0218E18A8200B461E0 /* MiidiAdWallSpendPointsDelegate.h */,
+				CDA27D0318E18A8200B461E0 /* MiidiManager.h */,
+			);
+			path = midiLib;
+			sourceTree = "<group>";
+		};
+		CDA27D1C18E1939900B461E0 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CDA27D1D18E1939900B461E0 /* YouMiConfig.h */,
+				CDA27D1E18E1939900B461E0 /* YouMiDelegateProtocol.h */,
+				CDA27D1F18E1939900B461E0 /* YouMiPointsManager.h */,
+				CDA27D2018E1939900B461E0 /* YouMiSpot.h */,
+				CDA27D2118E1939900B461E0 /* YouMiView.h */,
+				CDA27D2218E1939900B461E0 /* YouMiWall.h */,
+				CDA27D2318E1939900B461E0 /* YouMiWallAppModel.h */,
+				CDA27D2418E1939900B461E0 /* YouMiWallSpot.h */,
+				CDA27D2518E1939900B461E0 /* YouMiWallSpotView.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		CDA27D3018E19A6400B461E0 /* xingyun */ = {
+			isa = PBXGroup;
+			children = (
+				CDA27D3118E19A6400B461E0 /* AdWalker.bundle */,
+				CDA27D3218E19A6400B461E0 /* AdWalker.framework */,
+			);
+			path = xingyun;
+			sourceTree = "<group>";
+		};
 		CDAA5771185ADDD400D9E1F8 /* images2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -2975,6 +2897,32 @@
 				CD7915AF1874590B00B12CD9 /* light_yellow@2x.png */,
 			);
 			path = images2;
+			sourceTree = "<group>";
+		};
+		CDAC866318D162D1001D4C30 /* MobiSageOfferWallSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC866418D162D1001D4C30 /* libMobiSageOfferWall.a */,
+				CDAC866518D162D1001D4C30 /* minizip */,
+				CDAC866F18D162D1001D4C30 /* MobiSageOfferWallViewController.h */,
+			);
+			path = MobiSageOfferWallSDK;
+			sourceTree = "<group>";
+		};
+		CDAC866518D162D1001D4C30 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				CDAC866618D162D1001D4C30 /* crypt.h */,
+				CDAC866718D162D1001D4C30 /* ioapi.c */,
+				CDAC866818D162D1001D4C30 /* ioapi.h */,
+				CDAC866918D162D1001D4C30 /* mztools.c */,
+				CDAC866A18D162D1001D4C30 /* mztools.h */,
+				CDAC866B18D162D1001D4C30 /* unzip.c */,
+				CDAC866C18D162D1001D4C30 /* unzip.h */,
+				CDAC866D18D162D1001D4C30 /* zip.c */,
+				CDAC866E18D162D1001D4C30 /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 		CDAEEAA3179FCB0800D429CC /* ReflectionView */ = {
@@ -3356,7 +3304,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD81ED4C18C9B9C800F269D9 /* appdriver_webactivity_off.png in Resources */,
 				CD3B2B5D17F352A70007435A /* dianru_blue_dianru_download.png in Resources */,
 				CD3B2B9717F352A70007435A /* dianru_purple_left_cell.png in Resources */,
 				CD3B2B6417F352A70007435A /* dianru_blue_right_cell.png in Resources */,
@@ -3376,11 +3323,10 @@
 				CD33288E175C91B7001D9BEF /* Lato-Black.ttf in Resources */,
 				CD33288F175C91B7001D9BEF /* Lato-BlackItalic.ttf in Resources */,
 				CD3B2B7017F352A70007435A /* dianru_help.png in Resources */,
-				CD81ED4F18C9B9C800F269D9 /* appdriver_webactivity_on.png in Resources */,
 				CD3B2B5B17F352A70007435A /* dianru_blue_all_cell.png in Resources */,
-				CD81ED1318C9B9C800F269D9 /* appdriver_cell_icon.png in Resources */,
 				CD3B2BA217F352A70007435A /* dianru_red_dianru_triangle.png in Resources */,
 				CD3BDAC218CD951A00B0E12F /* DomobOfferWallBundle.bundle in Resources */,
+				CDA27D3318E19A6400B461E0 /* AdWalker.bundle in Resources */,
 				CD3B2B7D17F352A70007435A /* dianru_green_dianru_info.png in Resources */,
 				CDAF037F180FDB7B0073A9FC /* sharePic@2x.png in Resources */,
 				CD332890175C91B7001D9BEF /* Lato-Bold.ttf in Resources */,
@@ -3390,10 +3336,8 @@
 				CD332893175C91B7001D9BEF /* Lato-HairlineItalic.ttf in Resources */,
 				CD3B2B5C17F352A70007435A /* dianru_blue_dianru_bottom.png in Resources */,
 				CDAF0372180FDB7B0073A9FC /* Default-568h@2x.png in Resources */,
-				CD81ED1618C9B9C800F269D9 /* appdriver_defaultAppIcon.png in Resources */,
 				CD332894175C91B7001D9BEF /* Lato-Italic.ttf in Resources */,
 				CD3B2B7917F352A70007435A /* dianru_yuanjiao_horizontal.png in Resources */,
-				CD81ED2518C9B9C800F269D9 /* appdriver_freeapp.png in Resources */,
 				CD3B2BA017F352A70007435A /* dianru_red_dianru_iphone_download.png in Resources */,
 				CD3B2B6717F352A70007435A /* dianru_back_btn.png in Resources */,
 				CDAF0381180FDB7B0073A9FC /* ticket_short@2x.png in Resources */,
@@ -3408,58 +3352,45 @@
 				CD332895175C91B7001D9BEF /* Lato-Light.ttf in Resources */,
 				CDAF0380180FDB7B0073A9FC /* ticket_big@2x.png in Resources */,
 				CD3B2B6D17F352A70007435A /* dianru_DRBGLogo.png in Resources */,
-				CD81ED0D18C9B9C800F269D9 /* appdriver_arrow_icon.png in Resources */,
+				CDA27CF318E17FCA00B461E0 /* wall_template.zip in Resources */,
 				CD3B2B9B17F352A70007435A /* dianru_red_all_cell.png in Resources */,
 				CD332896175C91B7001D9BEF /* Lato-LightItalic.ttf in Resources */,
 				CDAF0376180FDB7B0073A9FC /* Icon-518.png in Resources */,
 				CDAF0379180FDB7B0073A9FC /* Icon-Small.png in Resources */,
 				CDAF0382180FDB7B0073A9FC /* white@2x.png in Resources */,
-				CD81ED3A18C9B9C800F269D9 /* appdriver_recommendactivity_off.png in Resources */,
 				CD332897175C91B7001D9BEF /* Lato-Regular.ttf in Resources */,
+				CDA27D1818E1916200B461E0 /* AppdriverResources.bundle in Resources */,
 				CD3B2B8D17F352A70007435A /* dianru_orange_left_view.png in Resources */,
 				CD3B2B9417F352A70007435A /* dianru_purple_dianru_iphone_download.png in Resources */,
 				CD3B2B9E17F352A70007435A /* dianru_red_dianru_download.png in Resources */,
 				CD8DF9F418A9C59A00E3D9CF /* dianrubutton.png in Resources */,
-				CD81ED1C18C9B9C800F269D9 /* appdriver_download_app_on.png in Resources */,
 				CD3B2B8C17F352A70007435A /* dianru_orange_left_cell.png in Resources */,
 				CD3B2BA117F352A70007435A /* dianru_red_dianru_titlebg.jpg in Resources */,
 				CDAF037B180FDB7B0073A9FC /* Icon.png in Resources */,
 				CD3B2B6117F352A70007435A /* dianru_blue_dianru_triangle.png in Resources */,
 				CD3B2B8417F352A70007435A /* dianru_green_right_view.png in Resources */,
-				CD81ED2E18C9B9C800F269D9 /* appdriver_navback_off.png in Resources */,
-				CD81ED2B18C9B9C800F269D9 /* appdriver_header_line.png in Resources */,
 				CD56C9A217603F00003F2A3D /* MenuView.xib in Resources */,
 				CD3B2B8117F352A70007435A /* dianru_green_left_cell.png in Resources */,
 				CD225071177D26680008DF1E /* goldToMoneyScrollView.xib in Resources */,
 				CD3B2BA417F352A70007435A /* dianru_red_left_view.png in Resources */,
-				CD81ED1018C9B9C800F269D9 /* appdriver_cell_backgroundImage.png in Resources */,
-				CD81ED3718C9B9C800F269D9 /* appdriver_recommend_bg.png in Resources */,
 				CD3B2B9017F352A70007435A /* dianru_purple_all_cell.png in Resources */,
 				CD8DF9F118A9C59A00E3D9CF /* DianruBrowserController.xib in Resources */,
 				CDAF0371180FDB7B0073A9FC /* buy_btn@2x.png in Resources */,
-				CD1574B717E384D900D55D51 /* wall_template.zip in Resources */,
 				CDAF0374180FDB7B0073A9FC /* Icon-120.png in Resources */,
 				CD3B2B8517F352A70007435A /* dianru_orange_all_cell.png in Resources */,
 				CD3B2B9F17F352A70007435A /* dianru_red_dianru_info.png in Resources */,
 				CD3B2B7117F352A70007435A /* dianru_logo.png in Resources */,
 				CDAF0373180FDB7B0073A9FC /* Default@2x.png in Resources */,
 				CD3B2B8917F352A70007435A /* dianru_orange_dianru_iphone_download.png in Resources */,
-				CD81ED1918C9B9C800F269D9 /* appdriver_download_app_off.png in Resources */,
-				CD81ED4018C9B9C800F269D9 /* appdriver_reward_icon.png in Resources */,
 				CD3B2BA517F352A70007435A /* dianru_red_right_cell.png in Resources */,
 				CD3B2B9917F352A70007435A /* dianru_purple_right_cell.png in Resources */,
-				CD81ED4618C9B9C800F269D9 /* appdriver_splashclose.png in Resources */,
 				CDAF037C180FDB7B0073A9FC /* Icon@2x.png in Resources */,
 				CD3B2B7217F352A70007435A /* dianru_msg.png in Resources */,
-				CD81ED4318C9B9C800F269D9 /* appdriver_rewardtask.png in Resources */,
 				CD3B2B6517F352A70007435A /* dianru_blue_right_view.png in Resources */,
-				CD81ED4918C9B9C800F269D9 /* appdriver_web_download.png in Resources */,
 				CD3B2B9D17F352A70007435A /* dianru_red_dianru_bottom.png in Resources */,
 				CD3B2B8217F352A70007435A /* dianru_green_left_view.png in Resources */,
 				CD9B447617EE8EB3009CD31D /* Escore.bundle in Resources */,
-				CD81ED0718C9B9C800F269D9 /* appdriver_appactivity_on.png in Resources */,
 				CD3B2B9C17F352A70007435A /* dianru_red_all_cell11.png in Resources */,
-				CD81ED0A18C9B9C800F269D9 /* appdriver_appinfo_bg.png in Resources */,
 				CDAF0377180FDB7B0073A9FC /* Icon-72.png in Resources */,
 				CD3B2B8A17F352A70007435A /* dianru_orange_dianru_titlebg.jpg in Resources */,
 				CD3B2B8817F352A70007435A /* dianru_orange_dianru_info.png in Resources */,
@@ -3469,7 +3400,6 @@
 				CD3B2B9117F352A70007435A /* dianru_purple_dianru_bottom.png in Resources */,
 				CD3B2B8617F352A70007435A /* dianru_orange_dianru_bottom.png in Resources */,
 				CDE174AB17DB321900A1022F /* Harpy.bundle in Resources */,
-				CD81ED2818C9B9C800F269D9 /* appdriver_head_bar_bg.png in Resources */,
 				CD3B2B9517F352A70007435A /* dianru_purple_dianru_titlebg.jpg in Resources */,
 				CD3FDABF178BB69400B25AFE /* weixing_step1@2x.png in Resources */,
 				CDD3FC57181EA609002B8EC1 /* ZuanZuanZuanViewController.xib in Resources */,
@@ -3479,10 +3409,8 @@
 				CD3B2B5E17F352A70007435A /* dianru_blue_dianru_info.png in Resources */,
 				CD3B2B7B17F352A70007435A /* dianru_green_dianru_bottom.png in Resources */,
 				CD3B2B8F17F352A70007435A /* dianru_orange_right_view.png in Resources */,
-				CD81ED1F18C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png in Resources */,
 				CD3FDAC5178BB7E800B25AFE /* weixing_step3@2x.jpg in Resources */,
 				CD3B2B8B17F352A70007435A /* dianru_orange_dianru_triangle.png in Resources */,
-				CD81ED2218C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png in Resources */,
 				CDB9404B179E621000199D7A /* TicketView.xib in Resources */,
 				CD3B2B8717F352A70007435A /* dianru_orange_dianru_download.png in Resources */,
 				CD3B2BA617F352A70007435A /* dianru_red_right_view.png in Resources */,
@@ -3491,11 +3419,7 @@
 				CD3B2B9217F352A70007435A /* dianru_purple_dianru_download.png in Resources */,
 				CD3B2B7717F352A70007435A /* dianru_titlebg.jpg in Resources */,
 				CD3B2B8317F352A70007435A /* dianru_green_right_cell.png in Resources */,
-				CD81ED3418C9B9C800F269D9 /* appdriver_numbackground.png in Resources */,
-				CD81ED0418C9B9C800F269D9 /* appdriver_appactivity_off.png in Resources */,
 				CD3B2B6F17F352A70007435A /* dianru_DRDefaultIcon.png in Resources */,
-				CD81ED3D18C9B9C800F269D9 /* appdriver_recommendactivity_on.png in Resources */,
-				CD81ED3118C9B9C800F269D9 /* appdriver_navback_on.png in Resources */,
 				CD3B2B6817F352A70007435A /* dianru_background.png in Resources */,
 				CD3B2B7E17F352A70007435A /* dianru_green_dianru_iphone_download.png in Resources */,
 				CD3B2B6B17F352A70007435A /* dianru_cell_.jpg in Resources */,
@@ -3511,16 +3435,13 @@
 			files = (
 				CDAF0398180FDBA20073A9FC /* Icon.png in Resources */,
 				CDAF02E3180F964C0073A9FC /* dianru_blue_dianru_download.png in Resources */,
-				CD81ED1718C9B9C800F269D9 /* appdriver_defaultAppIcon.png in Resources */,
 				CDAF02E4180F964C0073A9FC /* dianru_purple_left_cell.png in Resources */,
 				CDAF02E5180F964C0073A9FC /* dianru_blue_right_cell.png in Resources */,
 				CDAF02E6180F964C0073A9FC /* InfoPlist.strings in Resources */,
 				CDAF02E7180F964C0073A9FC /* Default.png in Resources */,
-				CD81ED2018C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png in Resources */,
 				CDAF02E9180F964C0073A9FC /* dianru_DRBGLogo@2x.png in Resources */,
 				CDAF0396180FDBA20073A9FC /* Icon-Small.png in Resources */,
 				CDAF02EA180F964C0073A9FC /* dianru_back.png in Resources */,
-				CD81ED0518C9B9C800F269D9 /* appdriver_appactivity_off.png in Resources */,
 				CDAF02EB180F964C0073A9FC /* dianru_purple_dianru_triangle.png in Resources */,
 				CDAF02ED180F964C0073A9FC /* dianru_banner.png in Resources */,
 				CDAF02EE180F964C0073A9FC /* dianru_cell_head.png in Resources */,
@@ -3532,8 +3453,6 @@
 				CDAF02F3180F964C0073A9FC /* MainStoryboard.storyboard in Resources */,
 				CDAF02F4180F964C0073A9FC /* dianru_set_btn.png in Resources */,
 				CDAF02F5180F964C0073A9FC /* Lato-Black.ttf in Resources */,
-				CD81ED2618C9B9C800F269D9 /* appdriver_freeapp.png in Resources */,
-				CD81ED5018C9B9C800F269D9 /* appdriver_webactivity_on.png in Resources */,
 				CDAF02F6180F964C0073A9FC /* Lato-BlackItalic.ttf in Resources */,
 				CDAF02F7180F964C0073A9FC /* dianru_help.png in Resources */,
 				CDAF02F8180F964C0073A9FC /* dianru_blue_all_cell.png in Resources */,
@@ -3543,19 +3462,18 @@
 				CDAF02FC180F964C0073A9FC /* Lato-BoldItalic.ttf in Resources */,
 				CDAF02FD180F964C0073A9FC /* dianru_green_dianru_download.png in Resources */,
 				CDAF02FE180F964C0073A9FC /* Lato-Hairline.ttf in Resources */,
-				CD81ED3518C9B9C800F269D9 /* appdriver_numbackground.png in Resources */,
 				CDAF039A180FDBA20073A9FC /* iTunesArtwork.png in Resources */,
 				CDAF02FF180F964C0073A9FC /* Lato-HairlineItalic.ttf in Resources */,
 				CDAF0391180FDBA20073A9FC /* Default@2x.png in Resources */,
 				CD8DF9F518A9C59A00E3D9CF /* dianrubutton.png in Resources */,
 				CDAF0300180F964C0073A9FC /* dianru_blue_dianru_bottom.png in Resources */,
 				CDA20F8C18138DC700469669 /* sharePic@2x.png in Resources */,
+				CDA27D1918E1916200B461E0 /* AppdriverResources.bundle in Resources */,
 				CDAF0301180F964C0073A9FC /* Lato-Italic.ttf in Resources */,
 				CDAF0302180F964C0073A9FC /* dianru_yuanjiao_horizontal.png in Resources */,
-				CD81ED3218C9B9C800F269D9 /* appdriver_navback_on.png in Resources */,
-				CD81ED4418C9B9C800F269D9 /* appdriver_rewardtask.png in Resources */,
 				CDD3FC58181EA609002B8EC1 /* ZuanZuanZuanViewController.xib in Resources */,
 				CDAF0303180F964C0073A9FC /* dianru_red_dianru_iphone_download.png in Resources */,
+				CDA27D3418E19A6400B461E0 /* AdWalker.bundle in Resources */,
 				CDAF0304180F964C0073A9FC /* dianru_back_btn.png in Resources */,
 				CDAF0305180F964C0073A9FC /* dianru_green_dianru_titlebg.jpg in Resources */,
 				CDAF0306180F964C0073A9FC /* dianru_orange_right_cell.png in Resources */,
@@ -3580,9 +3498,7 @@
 				CDAF0318180F964C0073A9FC /* goldToMoneyScrollView.xib in Resources */,
 				CDAF0319180F964C0073A9FC /* dianru_red_left_view.png in Resources */,
 				CDAF031B180F964C0073A9FC /* dianru_purple_all_cell.png in Resources */,
-				CDAF0321180F964C0073A9FC /* wall_template.zip in Resources */,
-				CD81ED0818C9B9C800F269D9 /* appdriver_appactivity_on.png in Resources */,
-				CD81ED0E18C9B9C800F269D9 /* appdriver_arrow_icon.png in Resources */,
+				CDA27CF418E17FCA00B461E0 /* wall_template.zip in Resources */,
 				CDAF0395180FDBA20073A9FC /* Icon-80.png in Resources */,
 				CDAF0322180F964C0073A9FC /* dianru_orange_all_cell.png in Resources */,
 				CDAF0323180F964C0073A9FC /* dianru_red_dianru_info.png in Resources */,
@@ -3590,13 +3506,10 @@
 				CDAF0327180F964C0073A9FC /* dianru_orange_dianru_iphone_download.png in Resources */,
 				CDAF0329180F964C0073A9FC /* dianru_red_right_cell.png in Resources */,
 				CD3BDAC318CD951A00B0E12F /* DomobOfferWallBundle.bundle in Resources */,
-				CD81ED2C18C9B9C800F269D9 /* appdriver_header_line.png in Resources */,
 				CDAF0394180FDBA20073A9FC /* Icon-72.png in Resources */,
-				CD81ED3B18C9B9C800F269D9 /* appdriver_recommendactivity_off.png in Resources */,
 				CDAF032A180F964C0073A9FC /* dianru_purple_right_cell.png in Resources */,
 				CDAF032B180F964C0073A9FC /* dianru_msg.png in Resources */,
 				CDAF032C180F964C0073A9FC /* dianru_blue_right_view.png in Resources */,
-				CD81ED1118C9B9C800F269D9 /* appdriver_cell_backgroundImage.png in Resources */,
 				CDAF032D180F964C0073A9FC /* dianru_red_dianru_bottom.png in Resources */,
 				CDAF032E180F964C0073A9FC /* dianru_green_left_view.png in Resources */,
 				CDAF032F180F964C0073A9FC /* Escore.bundle in Resources */,
@@ -3605,7 +3518,6 @@
 				CDAF0332180F964C0073A9FC /* dianru_orange_dianru_titlebg.jpg in Resources */,
 				CDAF0333180F964C0073A9FC /* dianru_orange_dianru_info.png in Resources */,
 				CDAF0334180F964C0073A9FC /* dianru_cell.jpg in Resources */,
-				CD81ED1A18C9B9C800F269D9 /* appdriver_download_app_off.png in Resources */,
 				CDAF0335180F964C0073A9FC /* dianru_title_1.jpg in Resources */,
 				CDAF0399180FDBA20073A9FC /* Icon@2x.png in Resources */,
 				CDAF0336180F964C0073A9FC /* dianru_title.jpg in Resources */,
@@ -3615,39 +3527,27 @@
 				CDAF033B180F964C0073A9FC /* Harpy.bundle in Resources */,
 				CDAF033C180F964C0073A9FC /* dianru_purple_dianru_titlebg.jpg in Resources */,
 				CDAF033D180F964C0073A9FC /* weixing_step1@2x.png in Resources */,
-				CD81ED4118C9B9C800F269D9 /* appdriver_reward_icon.png in Resources */,
 				CDAF033E180F964C0073A9FC /* dianru_purple_right_view.png in Resources */,
-				CD81ED4718C9B9C800F269D9 /* appdriver_splashclose.png in Resources */,
 				CDAF033F180F964C0073A9FC /* weixing_step2@2x.png in Resources */,
-				CD81ED2318C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png in Resources */,
 				CDAF0340180F964C0073A9FC /* dianru_blue_dianru_info.png in Resources */,
 				CDAF0341180F964C0073A9FC /* dianru_green_dianru_bottom.png in Resources */,
 				CDAF0342180F964C0073A9FC /* dianru_orange_right_view.png in Resources */,
 				CD8DF9F818A9C59A00E3D9CF /* dianrulogo.png in Resources */,
-				CD81ED0B18C9B9C800F269D9 /* appdriver_appinfo_bg.png in Resources */,
 				CDAF0343180F964C0073A9FC /* weixing_step3@2x.jpg in Resources */,
-				CD81ED2F18C9B9C800F269D9 /* appdriver_navback_off.png in Resources */,
 				CDAF0344180F964C0073A9FC /* dianru_orange_dianru_triangle.png in Resources */,
-				CD81ED2918C9B9C800F269D9 /* appdriver_head_bar_bg.png in Resources */,
 				CDAF0345180F964C0073A9FC /* TicketView.xib in Resources */,
 				CDAF0392180FDBA20073A9FC /* Icon-120.png in Resources */,
 				CDAF0346180F964C0073A9FC /* dianru_orange_dianru_download.png in Resources */,
 				CDAF0347180F964C0073A9FC /* dianru_red_right_view.png in Resources */,
 				CDAF0348180F964C0073A9FC /* dianru_blue_left_view.png in Resources */,
-				CD81ED1418C9B9C800F269D9 /* appdriver_cell_icon.png in Resources */,
-				CD81ED3818C9B9C800F269D9 /* appdriver_recommend_bg.png in Resources */,
 				CD8DF9F218A9C59A00E3D9CF /* DianruBrowserController.xib in Resources */,
-				CD81ED3E18C9B9C800F269D9 /* appdriver_recommendactivity_on.png in Resources */,
 				CDAF0349180F964C0073A9FC /* dianru_green_dianru_triangle.png in Resources */,
 				CDAF034C180F964C0073A9FC /* dianru_purple_dianru_download.png in Resources */,
-				CD81ED4A18C9B9C800F269D9 /* appdriver_web_download.png in Resources */,
 				CDAF034F180F964C0073A9FC /* dianru_titlebg.jpg in Resources */,
 				CDAF0350180F964C0073A9FC /* dianru_green_right_cell.png in Resources */,
 				CDAF0351180F964C0073A9FC /* dianru_DRDefaultIcon.png in Resources */,
 				CDAF0352180F964C0073A9FC /* dianru_background.png in Resources */,
 				CDAF0353180F964C0073A9FC /* dianru_green_dianru_iphone_download.png in Resources */,
-				CD81ED4D18C9B9C800F269D9 /* appdriver_webactivity_off.png in Resources */,
-				CD81ED1D18C9B9C800F269D9 /* appdriver_download_app_on.png in Resources */,
 				CDAF0354180F964C0073A9FC /* dianru_cell_.jpg in Resources */,
 				CDAF0355180F964C0073A9FC /* dianru_green_all_cell.png in Resources */,
 				CDAF0356180F964C0073A9FC /* dianru_blue_dianru_titlebg.jpg in Resources */,
@@ -3669,7 +3569,6 @@
 				CDD3FBB9181E96E6002B8EC1 /* dianru_DRBGLogo@2x.png in Resources */,
 				CD237E40189B5878008B8C42 /* sharePic@2x.png in Resources */,
 				CDAA5793185ADDD400D9E1F8 /* betTen_btn_nomal@2x.png in Resources */,
-				CD81ED3C18C9B9C800F269D9 /* appdriver_recommendactivity_off.png in Resources */,
 				CDD3FBBA181E96E6002B8EC1 /* dianru_back.png in Resources */,
 				CD8DF9F918A9C59A00E3D9CF /* dianrulogo.png in Resources */,
 				CD7915B11874590B00B12CD9 /* light_bg@2x.png in Resources */,
@@ -3685,26 +3584,19 @@
 				CDD3FBC2181E96E6002B8EC1 /* MainStoryboard.storyboard in Resources */,
 				CDD3FBC3181E96E6002B8EC1 /* dianru_set_btn.png in Resources */,
 				CD7915A61874078500B12CD9 /* track_mask@2x.png in Resources */,
-				CD81ED4818C9B9C800F269D9 /* appdriver_splashclose.png in Resources */,
 				CDD3FBC4181E96E6002B8EC1 /* Lato-Black.ttf in Resources */,
 				CDD3FBC5181E96E6002B8EC1 /* Lato-BlackItalic.ttf in Resources */,
 				CDD3FBC6181E96E6002B8EC1 /* dianru_help.png in Resources */,
 				CDAA57A5185ADDD400D9E1F8 /* swith_rect@2x.png in Resources */,
 				CDAA57A8185ADDD400D9E1F8 /* top@2x.png in Resources */,
-				CD81ED4E18C9B9C800F269D9 /* appdriver_webactivity_off.png in Resources */,
-				CD81ED1218C9B9C800F269D9 /* appdriver_cell_backgroundImage.png in Resources */,
-				CD81ED2718C9B9C800F269D9 /* appdriver_freeapp.png in Resources */,
 				CDD3FBC7181E96E6002B8EC1 /* dianru_blue_all_cell.png in Resources */,
 				CDD3FBC8181E96E6002B8EC1 /* dianru_red_dianru_triangle.png in Resources */,
-				CD81ED0918C9B9C800F269D9 /* appdriver_appactivity_on.png in Resources */,
 				CDC080C818716F2D00447DD2 /* iTunesArtwork@2x.png in Resources */,
 				CDAA579C185ADDD400D9E1F8 /* lucky_apple@2x.png in Resources */,
-				CD81ED4B18C9B9C800F269D9 /* appdriver_web_download.png in Resources */,
 				CDD3FBCA181E96E6002B8EC1 /* dianru_green_dianru_info.png in Resources */,
 				CDAA57A3185ADDD400D9E1F8 /* start_btn_clicked@2x.png in Resources */,
 				CD7915B41874590B00B12CD9 /* light_red@2x.png in Resources */,
 				CDC080BF18716F2D00447DD2 /* Icon-76.png in Resources */,
-				CD81ED5118C9B9C800F269D9 /* appdriver_webactivity_on.png in Resources */,
 				CDC080C518716F2D00447DD2 /* Icon.png in Resources */,
 				CDD3FBCC181E96E6002B8EC1 /* Lato-Bold.ttf in Resources */,
 				CDC080C118716F2D00447DD2 /* Icon-Small-50.png in Resources */,
@@ -3717,7 +3609,6 @@
 				CDD3FBCF181E96E6002B8EC1 /* Lato-Hairline.ttf in Resources */,
 				CDD3FBD0181E96E6002B8EC1 /* Lato-HairlineItalic.ttf in Resources */,
 				CDD3FBD1181E96E6002B8EC1 /* dianru_blue_dianru_bottom.png in Resources */,
-				CD81ED2A18C9B9C800F269D9 /* appdriver_head_bar_bg.png in Resources */,
 				CDD3FBD3181E96E6002B8EC1 /* Lato-Italic.ttf in Resources */,
 				CD033D81181EAACC00484912 /* dropCoin1.wav in Resources */,
 				CD033D83181EAACC00484912 /* loopj.wav in Resources */,
@@ -3730,7 +3621,6 @@
 				CD24109C189D01FA009215C3 /* top_rule_fruits@2x.png in Resources */,
 				CDADA78C1865536D00DA2928 /* track_small_mask@2x.png in Resources */,
 				CDAA5795185ADDD400D9E1F8 /* earnGold_btn_normal@2x.png in Resources */,
-				CD81ED4518C9B9C800F269D9 /* appdriver_rewardtask.png in Resources */,
 				CD8DF9F618A9C59A00E3D9CF /* dianrubutton.png in Resources */,
 				CDD3FBD9181E96E6002B8EC1 /* dianru_orange_right_cell.png in Resources */,
 				CDD3FBDA181E96E6002B8EC1 /* dianru_purple_dianru_info.png in Resources */,
@@ -3738,6 +3628,7 @@
 				CD033D80181EAACC00484912 /* beforeSping2.wav in Resources */,
 				CDB83922189FB6B8007D20DD /* Icon-80.png in Resources */,
 				CDD3FBDD181E96E6002B8EC1 /* dianru_blue_dianru_iphone_download.png in Resources */,
+				CDA27D3518E19A6400B461E0 /* AdWalker.bundle in Resources */,
 				CDAA5799185ADDD400D9E1F8 /* laohuji_bg@2x.png in Resources */,
 				CDAA57AA185ADDD400D9E1F8 /* track@2x.png in Resources */,
 				CDD3FBDF181E96E6002B8EC1 /* Lato-Light.ttf in Resources */,
@@ -3749,12 +3640,10 @@
 				CDAA5797185ADDD400D9E1F8 /* exchange_btn_nomal@2x.png in Resources */,
 				CDAA579D185ADDD400D9E1F8 /* lucky_banana@2x.png in Resources */,
 				CDB83928189FB74F007D20DD /* iTunesArtwork.png in Resources */,
-				CD81ED1518C9B9C800F269D9 /* appdriver_cell_icon.png in Resources */,
 				CDC080BD18716F2D00447DD2 /* Icon-72.png in Resources */,
 				CDC080C318716F2D00447DD2 /* Icon-Small.png in Resources */,
 				CDD3FBE6181E96E6002B8EC1 /* white@2x.png in Resources */,
 				CDD3FBE7181E96E6002B8EC1 /* Lato-Regular.ttf in Resources */,
-				CD81ED1818C9B9C800F269D9 /* appdriver_defaultAppIcon.png in Resources */,
 				CDD3FBE8181E96E6002B8EC1 /* dianru_orange_left_view.png in Resources */,
 				CDAA5791185ADDD400D9E1F8 /* betOne_btn_nomal@2x.png in Resources */,
 				CDAA57AB185ADDD400D9E1F8 /* track_left_sigin@2x.png in Resources */,
@@ -3768,9 +3657,7 @@
 				CDD3FBEE181E96E6002B8EC1 /* dianru_blue_dianru_triangle.png in Resources */,
 				CDD3FBEF181E96E6002B8EC1 /* dianru_green_right_view.png in Resources */,
 				CDD3FBF0181E96E6002B8EC1 /* MenuView.xib in Resources */,
-				CD81ED2D18C9B9C800F269D9 /* appdriver_header_line.png in Resources */,
 				CDAA57AD185ADDD400D9E1F8 /* track_right_sigin@2x.png in Resources */,
-				CD81ED3618C9B9C800F269D9 /* appdriver_numbackground.png in Resources */,
 				CD033DAA181EABEE00484912 /* stars2.png in Resources */,
 				CDD3FBF1181E96E6002B8EC1 /* dianru_green_left_cell.png in Resources */,
 				CDD3FBF2181E96E6002B8EC1 /* goldToMoneyScrollView.xib in Resources */,
@@ -3779,19 +3666,14 @@
 				CDD3FBF4181E96E6002B8EC1 /* dianru_purple_all_cell.png in Resources */,
 				CDAA57A7185ADDD400D9E1F8 /* swith_track_on@2x.png in Resources */,
 				CDD3FBF5181E96E6002B8EC1 /* buy_btn@2x.png in Resources */,
-				CDD3FBF6181E96E6002B8EC1 /* wall_template.zip in Resources */,
 				CD033D86181EAACC00484912 /* winTwo.wav in Resources */,
 				CD8DF9F318A9C59A00E3D9CF /* DianruBrowserController.xib in Resources */,
 				CD7915B51874590B00B12CD9 /* light_small_grey@2x.png in Resources */,
 				CDD3FBF8181E96E6002B8EC1 /* dianru_orange_all_cell.png in Resources */,
 				CDAA579F185ADDD400D9E1F8 /* lucky_grape@2x.png in Resources */,
-				CD81ED3918C9B9C800F269D9 /* appdriver_recommend_bg.png in Resources */,
-				CD81ED3018C9B9C800F269D9 /* appdriver_navback_off.png in Resources */,
 				CDAA57A2185ADDD400D9E1F8 /* number_bg@2x.png in Resources */,
 				CD7915B71874590B00B12CD9 /* light_yellow@2x.png in Resources */,
-				CD81ED3318C9B9C800F269D9 /* appdriver_navback_on.png in Resources */,
 				CD033DA0181EABEE00484912 /* coin.png in Resources */,
-				CD81ED2118C9B9C800F269D9 /* appdriver_ecommerceactivity_off.png in Resources */,
 				CDD3FBF9181E96E6002B8EC1 /* dianru_red_dianru_info.png in Resources */,
 				CDD3FBFA181E96E6002B8EC1 /* dianru_logo.png in Resources */,
 				CDC080C418716F2D00447DD2 /* Icon-Small@2x.png in Resources */,
@@ -3799,10 +3681,7 @@
 				CDD3FBFD181E96E6002B8EC1 /* dianru_red_right_cell.png in Resources */,
 				CDD3FBFE181E96E6002B8EC1 /* dianru_purple_right_cell.png in Resources */,
 				CDD3FC00181E96E6002B8EC1 /* dianru_msg.png in Resources */,
-				CD81ED0C18C9B9C800F269D9 /* appdriver_appinfo_bg.png in Resources */,
 				CDD3FC01181E96E6002B8EC1 /* dianru_blue_right_view.png in Resources */,
-				CD81ED0618C9B9C800F269D9 /* appdriver_appactivity_off.png in Resources */,
-				CD81ED1B18C9B9C800F269D9 /* appdriver_download_app_off.png in Resources */,
 				CDD3FC02181E96E6002B8EC1 /* dianru_red_dianru_bottom.png in Resources */,
 				CDC080BB18716F2D00447DD2 /* Icon-60.png in Resources */,
 				CDD3FC03181E96E6002B8EC1 /* dianru_green_left_view.png in Resources */,
@@ -3814,6 +3693,7 @@
 				CDAA5792185ADDD400D9E1F8 /* betTen_btn_clicked@2x.png in Resources */,
 				CDC080B918716F2D00447DD2 /* Icon-40.png in Resources */,
 				CDD3FC08181E96E6002B8EC1 /* dianru_orange_dianru_info.png in Resources */,
+				CDA27CF518E17FCA00B461E0 /* wall_template.zip in Resources */,
 				CD033D85181EAACC00484912 /* winThree.wav in Resources */,
 				CDD3FC09181E96E6002B8EC1 /* dianru_cell.jpg in Resources */,
 				CDAA5796185ADDD400D9E1F8 /* exchange_btn_clicked@2x.png in Resources */,
@@ -3822,9 +3702,7 @@
 				CDAA57A9185ADDD400D9E1F8 /* top_bg@2x.png in Resources */,
 				CDD3FC0A181E96E6002B8EC1 /* dianru_title_1.jpg in Resources */,
 				CDAA5798185ADDD400D9E1F8 /* gold@2x.png in Resources */,
-				CD81ED0F18C9B9C800F269D9 /* appdriver_arrow_icon.png in Resources */,
 				CDD3FC0B181E96E6002B8EC1 /* dianru_title.jpg in Resources */,
-				CD81ED4218C9B9C800F269D9 /* appdriver_reward_icon.png in Resources */,
 				CDAA5790185ADDD400D9E1F8 /* betOne_btn_clicked@2x.png in Resources */,
 				CDD3FC0D181E96E6002B8EC1 /* dianru_purple_dianru_bottom.png in Resources */,
 				CD3BDAC418CD951A00B0E12F /* DomobOfferWallBundle.bundle in Resources */,
@@ -3845,22 +3723,20 @@
 				CD7915B21874590B00B12CD9 /* light_blue@2x.png in Resources */,
 				CDAA579B185ADDD400D9E1F8 /* lucky_ watermelon@2x.png in Resources */,
 				CDD3FC17181E96E6002B8EC1 /* dianru_orange_right_view.png in Resources */,
-				CD81ED3F18C9B9C800F269D9 /* appdriver_recommendactivity_on.png in Resources */,
 				CDD3FC18181E96E6002B8EC1 /* weixing_step3@2x.jpg in Resources */,
 				CDD3FC19181E96E6002B8EC1 /* dianru_orange_dianru_triangle.png in Resources */,
 				CDD3FC1A181E96E6002B8EC1 /* TicketView.xib in Resources */,
 				CDD3FC1B181E96E6002B8EC1 /* dianru_orange_dianru_download.png in Resources */,
-				CD81ED1E18C9B9C800F269D9 /* appdriver_download_app_on.png in Resources */,
 				CDD3FC1C181E96E6002B8EC1 /* dianru_red_right_view.png in Resources */,
 				CDD3FC1D181E96E6002B8EC1 /* dianru_blue_left_view.png in Resources */,
 				CDC080A618716F2500447DD2 /* Default-568h@2x.png in Resources */,
 				CDC080EB18718F4800447DD2 /* sound_text@2x.png in Resources */,
-				CD81ED2418C9B9C800F269D9 /* appdriver_ecommerceactivity_on.png in Resources */,
 				CDD3FC1E181E96E6002B8EC1 /* dianru_green_dianru_triangle.png in Resources */,
 				CDD3FC1F181E96E6002B8EC1 /* dianru_purple_dianru_download.png in Resources */,
 				CDD3FC20181E96E6002B8EC1 /* dianru_titlebg.jpg in Resources */,
 				CDD3FC21181E96E6002B8EC1 /* dianru_green_right_cell.png in Resources */,
 				CDD3FC22181E96E6002B8EC1 /* dianru_DRDefaultIcon.png in Resources */,
+				CDA27D1A18E1916200B461E0 /* AppdriverResources.bundle in Resources */,
 				CDD3FC23181E96E6002B8EC1 /* dianru_background.png in Resources */,
 				CDC080C618716F2D00447DD2 /* Icon@2x.png in Resources */,
 				CDD3FC24181E96E6002B8EC1 /* dianru_green_dianru_iphone_download.png in Resources */,
@@ -3875,17 +3751,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDD5B6CC18CCC0D00091D2C2 /* dianru_blue_dianru_download.png in Resources */,
-				CDD5B6CD18CCC0D00091D2C2 /* appdriver_defaultAppIcon.png in Resources */,
 				CDD5B6CE18CCC0D00091D2C2 /* dianru_purple_left_cell.png in Resources */,
 				CDD5B6CF18CCC0D00091D2C2 /* dianru_blue_right_cell.png in Resources */,
 				CDD5B6D018CCC0D00091D2C2 /* InfoPlist.strings in Resources */,
 				CDD5B77718CCC2560091D2C2 /* Icon.png in Resources */,
 				CDD5B6D118CCC0D00091D2C2 /* Default.png in Resources */,
-				CDD5B6D218CCC0D00091D2C2 /* appdriver_ecommerceactivity_off.png in Resources */,
 				CDD5B6D318CCC0D00091D2C2 /* dianru_DRBGLogo@2x.png in Resources */,
 				CDD5B77818CCC2560091D2C2 /* Icon@2x.png in Resources */,
 				CDD5B6D518CCC0D00091D2C2 /* dianru_back.png in Resources */,
-				CDD5B6D618CCC0D00091D2C2 /* appdriver_appactivity_off.png in Resources */,
 				CDD5B6D718CCC0D00091D2C2 /* dianru_purple_dianru_triangle.png in Resources */,
 				CDD5B77318CCC2560091D2C2 /* Icon-72.png in Resources */,
 				CDD5B77518CCC2560091D2C2 /* Icon-Small.png in Resources */,
@@ -3898,8 +3771,6 @@
 				CDD5B6DF18CCC0D00091D2C2 /* MainStoryboard.storyboard in Resources */,
 				CDD5B6E018CCC0D00091D2C2 /* dianru_set_btn.png in Resources */,
 				CDD5B6E118CCC0D00091D2C2 /* Lato-Black.ttf in Resources */,
-				CDD5B6E218CCC0D00091D2C2 /* appdriver_freeapp.png in Resources */,
-				CDD5B6E318CCC0D00091D2C2 /* appdriver_webactivity_on.png in Resources */,
 				CDD5B6E418CCC0D00091D2C2 /* Lato-BlackItalic.ttf in Resources */,
 				CDD5B6E518CCC0D00091D2C2 /* dianru_help.png in Resources */,
 				CDD5B6E618CCC0D00091D2C2 /* dianru_blue_all_cell.png in Resources */,
@@ -3909,18 +3780,17 @@
 				CDD5B6EA18CCC0D00091D2C2 /* Lato-BoldItalic.ttf in Resources */,
 				CDD5B6EB18CCC0D00091D2C2 /* dianru_green_dianru_download.png in Resources */,
 				CDD5B6EC18CCC0D00091D2C2 /* Lato-Hairline.ttf in Resources */,
-				CDD5B6ED18CCC0D00091D2C2 /* appdriver_numbackground.png in Resources */,
 				CDD5B6EF18CCC0D00091D2C2 /* Lato-HairlineItalic.ttf in Resources */,
 				CDD5B6F118CCC0D00091D2C2 /* dianrubutton.png in Resources */,
 				CDD5B6F218CCC0D00091D2C2 /* dianru_blue_dianru_bottom.png in Resources */,
 				CDD5B6F418CCC0D00091D2C2 /* Lato-Italic.ttf in Resources */,
 				CDD5B6F518CCC0D00091D2C2 /* dianru_yuanjiao_horizontal.png in Resources */,
-				CDD5B6F618CCC0D00091D2C2 /* appdriver_navback_on.png in Resources */,
-				CDD5B6F718CCC0D00091D2C2 /* appdriver_rewardtask.png in Resources */,
+				CDA27D1B18E1916200B461E0 /* AppdriverResources.bundle in Resources */,
 				CDD5B6F818CCC0D00091D2C2 /* ZuanZuanZuanViewController.xib in Resources */,
 				CDD5B6F918CCC0D00091D2C2 /* dianru_red_dianru_iphone_download.png in Resources */,
 				CDD5B6FA18CCC0D00091D2C2 /* dianru_back_btn.png in Resources */,
 				CDD5B6FB18CCC0D00091D2C2 /* dianru_green_dianru_titlebg.jpg in Resources */,
+				CDA27D3618E19A6400B461E0 /* AdWalker.bundle in Resources */,
 				CDD5B6FC18CCC0D00091D2C2 /* dianru_orange_right_cell.png in Resources */,
 				CDD5B6FD18CCC0D00091D2C2 /* dianru_purple_dianru_info.png in Resources */,
 				CDD5B6FE18CCC0D00091D2C2 /* dianru_blue_left_cell.png in Resources */,
@@ -3943,24 +3813,19 @@
 				CDD5B70F18CCC0D00091D2C2 /* goldToMoneyScrollView.xib in Resources */,
 				CDD5B71018CCC0D00091D2C2 /* dianru_red_left_view.png in Resources */,
 				CDD5B71118CCC0D00091D2C2 /* dianru_purple_all_cell.png in Resources */,
-				CDD5B71218CCC0D00091D2C2 /* wall_template.zip in Resources */,
-				CDD5B71318CCC0D00091D2C2 /* appdriver_appactivity_on.png in Resources */,
-				CDD5B71418CCC0D00091D2C2 /* appdriver_arrow_icon.png in Resources */,
 				CDD5B77918CCC2560091D2C2 /* iTunesArtwork.png in Resources */,
 				CDD5B71618CCC0D00091D2C2 /* dianru_orange_all_cell.png in Resources */,
+				CDA27CF618E17FCA00B461E0 /* wall_template.zip in Resources */,
 				CDD5B71718CCC0D00091D2C2 /* dianru_red_dianru_info.png in Resources */,
 				CDD5B71818CCC0D00091D2C2 /* dianru_logo.png in Resources */,
 				CDD5B71918CCC0D00091D2C2 /* dianru_orange_dianru_iphone_download.png in Resources */,
 				CDD5B71A18CCC0D00091D2C2 /* dianru_red_right_cell.png in Resources */,
-				CDD5B71B18CCC0D00091D2C2 /* appdriver_header_line.png in Resources */,
 				CDD5B77A18CCC2560091D2C2 /* sharePic@2x.png in Resources */,
 				CD3BDAC518CD951A00B0E12F /* DomobOfferWallBundle.bundle in Resources */,
-				CDD5B71D18CCC0D00091D2C2 /* appdriver_recommendactivity_off.png in Resources */,
 				CDD5B77218CCC2560091D2C2 /* Icon-518.png in Resources */,
 				CDD5B71E18CCC0D00091D2C2 /* dianru_purple_right_cell.png in Resources */,
 				CDD5B71F18CCC0D00091D2C2 /* dianru_msg.png in Resources */,
 				CDD5B72018CCC0D00091D2C2 /* dianru_blue_right_view.png in Resources */,
-				CDD5B72118CCC0D00091D2C2 /* appdriver_cell_backgroundImage.png in Resources */,
 				CDD5B72218CCC0D00091D2C2 /* dianru_red_dianru_bottom.png in Resources */,
 				CDD5B72318CCC0D00091D2C2 /* dianru_green_left_view.png in Resources */,
 				CDD5B72418CCC0D00091D2C2 /* Escore.bundle in Resources */,
@@ -3968,7 +3833,6 @@
 				CDD5B72718CCC0D00091D2C2 /* dianru_orange_dianru_titlebg.jpg in Resources */,
 				CDD5B72818CCC0D00091D2C2 /* dianru_orange_dianru_info.png in Resources */,
 				CDD5B72918CCC0D00091D2C2 /* dianru_cell.jpg in Resources */,
-				CDD5B72A18CCC0D00091D2C2 /* appdriver_download_app_off.png in Resources */,
 				CDD5B72B18CCC0D00091D2C2 /* dianru_title_1.jpg in Resources */,
 				CDD5B72D18CCC0D00091D2C2 /* dianru_title.jpg in Resources */,
 				CDD5B73018CCC0D00091D2C2 /* dianru_purple_dianru_bottom.png in Resources */,
@@ -3976,43 +3840,31 @@
 				CDD5B73218CCC0D00091D2C2 /* Harpy.bundle in Resources */,
 				CDD5B73318CCC0D00091D2C2 /* dianru_purple_dianru_titlebg.jpg in Resources */,
 				CDD5B73418CCC0D00091D2C2 /* weixing_step1@2x.png in Resources */,
-				CDD5B73518CCC0D00091D2C2 /* appdriver_reward_icon.png in Resources */,
 				CDD5B73618CCC0D00091D2C2 /* dianru_purple_right_view.png in Resources */,
-				CDD5B73718CCC0D00091D2C2 /* appdriver_splashclose.png in Resources */,
 				CDD5B73818CCC0D00091D2C2 /* weixing_step2@2x.png in Resources */,
-				CDD5B73918CCC0D00091D2C2 /* appdriver_ecommerceactivity_on.png in Resources */,
 				CDD5B73A18CCC0D00091D2C2 /* dianru_blue_dianru_info.png in Resources */,
 				CDD5B77018CCC2560091D2C2 /* Icon-120.png in Resources */,
 				CDD5B77618CCC2560091D2C2 /* Icon-Small@2x.png in Resources */,
 				CDD5B73B18CCC0D00091D2C2 /* dianru_green_dianru_bottom.png in Resources */,
 				CDD5B73C18CCC0D00091D2C2 /* dianru_orange_right_view.png in Resources */,
 				CDD5B73D18CCC0D00091D2C2 /* dianrulogo.png in Resources */,
-				CDD5B73E18CCC0D00091D2C2 /* appdriver_appinfo_bg.png in Resources */,
 				CDD5B73F18CCC0D00091D2C2 /* weixing_step3@2x.jpg in Resources */,
-				CDD5B74018CCC0D00091D2C2 /* appdriver_navback_off.png in Resources */,
 				CDD5B74118CCC0D00091D2C2 /* dianru_orange_dianru_triangle.png in Resources */,
-				CDD5B74218CCC0D00091D2C2 /* appdriver_head_bar_bg.png in Resources */,
 				CDD5B74318CCC0D00091D2C2 /* TicketView.xib in Resources */,
 				CDD5B74518CCC0D00091D2C2 /* dianru_orange_dianru_download.png in Resources */,
 				CDD5B74618CCC0D00091D2C2 /* dianru_red_right_view.png in Resources */,
 				CDD5B74718CCC0D00091D2C2 /* dianru_blue_left_view.png in Resources */,
 				CDD5B77418CCC2560091D2C2 /* Icon-80.png in Resources */,
-				CDD5B74818CCC0D00091D2C2 /* appdriver_cell_icon.png in Resources */,
 				CDD5B76F18CCC2560091D2C2 /* Default@2x.png in Resources */,
 				CDD5B76E18CCC2560091D2C2 /* Default-568h@2x.png in Resources */,
-				CDD5B74918CCC0D00091D2C2 /* appdriver_recommend_bg.png in Resources */,
 				CDD5B74A18CCC0D00091D2C2 /* DianruBrowserController.xib in Resources */,
-				CDD5B74B18CCC0D00091D2C2 /* appdriver_recommendactivity_on.png in Resources */,
 				CDD5B74C18CCC0D00091D2C2 /* dianru_green_dianru_triangle.png in Resources */,
 				CDD5B74D18CCC0D00091D2C2 /* dianru_purple_dianru_download.png in Resources */,
-				CDD5B74E18CCC0D00091D2C2 /* appdriver_web_download.png in Resources */,
 				CDD5B74F18CCC0D00091D2C2 /* dianru_titlebg.jpg in Resources */,
 				CDD5B75018CCC0D00091D2C2 /* dianru_green_right_cell.png in Resources */,
 				CDD5B75118CCC0D00091D2C2 /* dianru_DRDefaultIcon.png in Resources */,
 				CDD5B75218CCC0D00091D2C2 /* dianru_background.png in Resources */,
 				CDD5B75318CCC0D00091D2C2 /* dianru_green_dianru_iphone_download.png in Resources */,
-				CDD5B75418CCC0D00091D2C2 /* appdriver_webactivity_off.png in Resources */,
-				CDD5B75518CCC0D00091D2C2 /* appdriver_download_app_on.png in Resources */,
 				CDD5B75618CCC0D00091D2C2 /* dianru_cell_.jpg in Resources */,
 				CDD5B75718CCC0D00091D2C2 /* dianru_green_all_cell.png in Resources */,
 				CDD5B75818CCC0D00091D2C2 /* dianru_blue_dianru_titlebg.jpg in Resources */,
@@ -4147,6 +3999,7 @@
 				CD6D9711187AC7AA00A1990C /* FBLCDFontView.m in Sources */,
 				CD0EDD9C187AC6B20022A1AB /* ZCWScrollNumView.m in Sources */,
 				CD0EDD9A187AC69A0022A1AB /* TheLightsView.m in Sources */,
+				CDAC867C18D162D1001D4C30 /* unzip.c in Sources */,
 				CD2EB6E61744C1C800A222D6 /* main.m in Sources */,
 				CD2EB6EA1744C1C800A222D6 /* AppDelegate.m in Sources */,
 				CD2EB6F61744C1C800A222D6 /* ViewController.m in Sources */,
@@ -4215,6 +4068,7 @@
 				CD49CF4217E6AA6400A797FE /* NSManagedObject+MagicalRecord.m in Sources */,
 				CD49CF4C17E6AA6400A797FE /* MagicalRecord+ErrorHandling.m in Sources */,
 				CD225074177D2A590008DF1E /* DMScrollingTicker.m in Sources */,
+				CDAC867418D162D1001D4C30 /* ioapi.c in Sources */,
 				CDD3FC48181EA609002B8EC1 /* coinImageView.m in Sources */,
 				CDC973A9177EEBAC001AF58F /* GoldCoreData.m in Sources */,
 				CD9CCFAF1781883D000126A9 /* Users.m in Sources */,
@@ -4252,8 +4106,10 @@
 				CD49CF4417E6AA6400A797FE /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				CDA2CE78178E58CF007FC95E /* WeiXinGoldShareViewController.m in Sources */,
 				CD1AFAB817911066001F37B1 /* ChangeColorViewController.m in Sources */,
+				CDAC868018D162D1001D4C30 /* zip.c in Sources */,
 				CDF78B65179A951200B5D000 /* GuagualeViewController.m in Sources */,
 				CD85988D179B7DD60006F78B /* STScratchView.m in Sources */,
+				CDAC867818D162D1001D4C30 /* mztools.c in Sources */,
 				CD49CF4317E6AA6400A797FE /* NSManagedObject+MagicalRequests.m in Sources */,
 				CD49CF4E17E6AA6400A797FE /* MagicalRecord+Options.m in Sources */,
 				CD859890179BEC270006F78B /* CGPointTool.m in Sources */,
@@ -4274,6 +4130,7 @@
 				CDD5B78218CCC4EC0091D2C2 /* FBLCDFont.m in Sources */,
 				CDD5B78318CCC4EC0091D2C2 /* FBLCDFontView.m in Sources */,
 				CD8FDF2618208909006730F1 /* ZCWScrollNumView.m in Sources */,
+				CDAC867D18D162D1001D4C30 /* unzip.c in Sources */,
 				CDAF0256180F964C0073A9FC /* main.m in Sources */,
 				CDAF0257180F964C0073A9FC /* AppDelegate.m in Sources */,
 				CDAF0258180F964C0073A9FC /* ViewController.m in Sources */,
@@ -4342,6 +4199,7 @@
 				CDAF0291180F964C0073A9FC /* NSNumber+MagicalDataImport.m in Sources */,
 				CDAF0292180F964C0073A9FC /* NSManagedObject+MagicalRecord.m in Sources */,
 				CDAF0293180F964C0073A9FC /* MagicalRecord+ErrorHandling.m in Sources */,
+				CDAC867518D162D1001D4C30 /* ioapi.c in Sources */,
 				CDAF0294180F964C0073A9FC /* DMScrollingTicker.m in Sources */,
 				CDD3FC49181EA609002B8EC1 /* coinImageView.m in Sources */,
 				CDAF0295180F964C0073A9FC /* GoldCoreData.m in Sources */,
@@ -4379,8 +4237,10 @@
 				CDAF02B2180F964C0073A9FC /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				CDAF02B3180F964C0073A9FC /* WeiXinGoldShareViewController.m in Sources */,
 				CDAF02B4180F964C0073A9FC /* ChangeColorViewController.m in Sources */,
+				CDAC868118D162D1001D4C30 /* zip.c in Sources */,
 				CDAF02B5180F964C0073A9FC /* GuagualeViewController.m in Sources */,
 				CDAF02B6180F964C0073A9FC /* STScratchView.m in Sources */,
+				CDAC867918D162D1001D4C30 /* mztools.c in Sources */,
 				CDAF02B7180F964C0073A9FC /* NSManagedObject+MagicalRequests.m in Sources */,
 				CDAF02B8180F964C0073A9FC /* MagicalRecord+Options.m in Sources */,
 				CDAF02B9180F964C0073A9FC /* CGPointTool.m in Sources */,
@@ -4401,6 +4261,7 @@
 				CDD3FB2A181E96E6002B8EC1 /* FUIAlertView.m in Sources */,
 				CDD3FB2B181E96E6002B8EC1 /* FUIButton.m in Sources */,
 				CDD3FB2C181E96E6002B8EC1 /* GuaGuaKa.m in Sources */,
+				CDAC867618D162D1001D4C30 /* ioapi.c in Sources */,
 				CDD3FB2D181E96E6002B8EC1 /* FUICellBackgroundView.m in Sources */,
 				CDD3FB2E181E96E6002B8EC1 /* GuaGuaKaLog.m in Sources */,
 				CDD3FB2F181E96E6002B8EC1 /* FUISegmentedControl.m in Sources */,
@@ -4460,6 +4321,7 @@
 				CDD3FB5D181E96E6002B8EC1 /* GetGoldViewController.m in Sources */,
 				CDD3FB5E181E96E6002B8EC1 /* RootNavigationViewController.m in Sources */,
 				CDD3FC68181EA694002B8EC1 /* UIView+Helpers.m in Sources */,
+				CDAC867A18D162D1001D4C30 /* mztools.c in Sources */,
 				CDD3FB5F181E96E6002B8EC1 /* MagicalRecord+ShorthandSupport.m in Sources */,
 				CDC080E1187175F600447DD2 /* FBSquareFontView.m in Sources */,
 				CDD3FB60181E96E6002B8EC1 /* goldIntroductionViewController.m in Sources */,
@@ -4471,6 +4333,7 @@
 				CDD3FC4A181EA609002B8EC1 /* coinImageView.m in Sources */,
 				CDD3FB66181E96E6002B8EC1 /* GoldCoreData.m in Sources */,
 				CDD3FB67181E96E6002B8EC1 /* Users.m in Sources */,
+				CDAC867E18D162D1001D4C30 /* unzip.c in Sources */,
 				CDD3FB68181E96E6002B8EC1 /* UserGold.m in Sources */,
 				CDD3FB69181E96E6002B8EC1 /* BaseGoldViewController.m in Sources */,
 				CDD3FB6A181E96E6002B8EC1 /* GoldExchangeLog.m in Sources */,
@@ -4488,6 +4351,7 @@
 				CDD3FC53181EA609002B8EC1 /* ParticleEmitter3D.m in Sources */,
 				CDC080DB187175F600447DD2 /* FBBitmapFont.m in Sources */,
 				CDD3FB73181E96E6002B8EC1 /* UIToolbar+FlatUI.m in Sources */,
+				CDAC868218D162D1001D4C30 /* zip.c in Sources */,
 				CDC080DE187175F600447DD2 /* FBLCDFont.m in Sources */,
 				CDD3FB74181E96E6002B8EC1 /* GoldExchangeLogViewController.m in Sources */,
 				CDD3FB75181E96E6002B8EC1 /* GuaGuaKaLogViewController.m in Sources */,
@@ -4533,6 +4397,7 @@
 				CDD5B77F18CCC4440091D2C2 /* FBLCDFontView.m in Sources */,
 				CDD5B77C18CCC4140091D2C2 /* TheLightsView.m in Sources */,
 				CDD5B62F18CCC0D00091D2C2 /* ZCWScrollNumView.m in Sources */,
+				CDAC867F18D162D1001D4C30 /* unzip.c in Sources */,
 				CDD5B63018CCC0D00091D2C2 /* main.m in Sources */,
 				CDD5B63118CCC0D00091D2C2 /* AppDelegate.m in Sources */,
 				CDD5B63218CCC0D00091D2C2 /* ViewController.m in Sources */,
@@ -4601,6 +4466,7 @@
 				CDD5B67118CCC0D00091D2C2 /* NSNumber+MagicalDataImport.m in Sources */,
 				CDD5B67218CCC0D00091D2C2 /* NSManagedObject+MagicalRecord.m in Sources */,
 				CDD5B67318CCC0D00091D2C2 /* MagicalRecord+ErrorHandling.m in Sources */,
+				CDAC867718D162D1001D4C30 /* ioapi.c in Sources */,
 				CDD5B67418CCC0D00091D2C2 /* DMScrollingTicker.m in Sources */,
 				CDD5B67518CCC0D00091D2C2 /* coinImageView.m in Sources */,
 				CDD5B67618CCC0D00091D2C2 /* GoldCoreData.m in Sources */,
@@ -4638,8 +4504,10 @@
 				CDD5B69618CCC0D00091D2C2 /* NSManagedObjectContext+MagicalObserving.m in Sources */,
 				CDD5B69718CCC0D00091D2C2 /* WeiXinGoldShareViewController.m in Sources */,
 				CDD5B69818CCC0D00091D2C2 /* ChangeColorViewController.m in Sources */,
+				CDAC868318D162D1001D4C30 /* zip.c in Sources */,
 				CDD5B69918CCC0D00091D2C2 /* GuagualeViewController.m in Sources */,
 				CDD5B69A18CCC0D00091D2C2 /* STScratchView.m in Sources */,
+				CDAC867B18D162D1001D4C30 /* mztools.c in Sources */,
 				CDD5B69B18CCC0D00091D2C2 /* NSManagedObject+MagicalRequests.m in Sources */,
 				CDD5B69C18CCC0D00091D2C2 /* MagicalRecord+Options.m in Sources */,
 				CDD5B69D18CCC0D00091D2C2 /* CGPointTool.m in Sources */,
@@ -4740,6 +4608,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4757,6 +4626,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BC83FFDF-A511-4BA7-A1E9-22F62439B768";
@@ -4778,6 +4654,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4795,6 +4672,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "CA1A0E8B-EA88-4BE3-9D42-416CEB1A1454";
@@ -4816,6 +4700,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4833,6 +4718,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = Kfc;
 				PROVISIONING_PROFILE = "88332DB0-4D88-41C6-8653-B4C03843AE71";
@@ -4854,6 +4746,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4871,6 +4764,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = Kfc;
 				PROVISIONING_PROFILE = "BB0854C3-7742-4854-859B-8E19DB8EC50C";
@@ -4892,6 +4792,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4909,6 +4810,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = "GuaGuaLe copy";
 				PROVISIONING_PROFILE = "B32E81A5-7F45-4F95-97F7-EF793FA577EF";
@@ -4930,6 +4838,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4947,6 +4856,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = "GuaGuaLe copy";
 				PROVISIONING_PROFILE = "0DF4BD04-4283-4834-82CF-4EDACD330D00";
@@ -4968,6 +4884,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4985,6 +4902,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = "Kfc copy";
 				PROVISIONING_PROFILE = "F50057CC-5008-4586-ADD3-707111467C84";
@@ -5006,6 +4930,7 @@
 					"$(SRCROOT)",
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
+					"$(PROJECT_DIR)/FlatUILearning/xingyun",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -5023,6 +4948,13 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/lib/bannar,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/mopanSdk,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/AppDriverSDK,
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK",
+					"$(PROJECT_DIR)/FlatUILearning/MobiSageOfferWallSDK/MobiSageSDK",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo",
+					"$(PROJECT_DIR)/FlatUILearning/weixingSDK/anwo/res",
+					"$(PROJECT_DIR)/FlatUILearning/midiLib",
+					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
+					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
 				);
 				PRODUCT_NAME = "Kfc copy";
 				PROVISIONING_PROFILE = "5D965ADD-E245-41A6-86F5-056A75470135";

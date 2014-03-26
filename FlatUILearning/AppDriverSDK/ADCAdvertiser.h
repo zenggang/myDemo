@@ -16,7 +16,7 @@
             @siteKey，AppDriver生成，开发者从AppDriver网站上可获得。
             @advertisement，AppDriver生成，开发者从AppDriver网站上可获得。
             @campaignId，活动id。AppDriver生成，开发者从AppDriver网站上可获得。
-            @sandBox，NO用正是环境，YES用测试环境
+            @sandBox，YES用正是环境，NO用测试环境
  */
 
 + (void)advertiserWithSiteId:(NSString *)siteId

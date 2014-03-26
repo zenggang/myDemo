@@ -11,8 +11,10 @@
 
 #import <UIKit/UIKit.h>
 
-// 当前Adwo积分墙版本号——1.2.0
-#define ADWOOW_SDK_VERSION_VALUE                120
+// 当前Adwo积分墙版本号——2.0.0
+#define ADWOOW_SDK_VERSION_VALUE                200
+#define ADWOOW_SDK_VERSION              0x200
+
 
 // Adwo积分墙返回的错误码
 enum ADWO_OFFER_WALL_ERRORCODE
@@ -38,7 +40,13 @@ enum ADWO_OFFER_WALL_ERRORCODE
     ADWO_OFFER_WALL_ERRORCODE_EXCEED_MAX_SHOW_COUNT,        // 18: 超出当天积分墙最大展示次数
     ADWO_OFFER_WALL_ERRORCODE_EXCEED_MAX_INIT_COUNT,        // 19: 超出当天积分墙最大登录次数
     ADWO_OFFER_WALL_ERRORCODE_CURRENT_POINTS_NOT_ENOUGH,    // 20: 当前积分不够消费
-    ADWO_OFFER_WALL_ERRORCODE_POINTS_CONSUMPTION_UNAVAILABLE    // 21: 当前积分消费不可用
+    ADWO_OFFER_WALL_ERRORCODE_POINTS_CONSUMPTION_UNAVAILABLE,    // 21: 当前积分消费不可用
+    
+    ADWO_OFFER_WALL_ERRORCODE_POINTS_CONSUMPTION_NEGATIVE,   // 22: 当前积分为负数
+   
+    ADWO_OFFER_WALL_ERRORCODE_POINTS_ERROR,                  //23 当前分数不可用
+    
+    ADWO_OFFER_WALL_ERRORCODE_REQUEST_ERROR                  //网络请求错误
 };
 
 // 当前嵌积分墙应用的审核状态
@@ -57,7 +65,13 @@ enum ADWO_OFFER_WALL_RESPONSE_EVENTS
     // 积分墙弹出响应事件
     ADWO_OFFER_WALL_RESPONSE_EVENTS_WALL_PRESENT = 0x1 << 0,
     // 积分墙退出响应事件
-    ADWO_OFFER_WALL_RESPONSE_EVENTS_WALL_DISMISS = 0x1 << 1
+    ADWO_OFFER_WALL_RESPONSE_EVENTS_WALL_DISMISS = 0x1 << 1,
+    // 积分墙刷新总积分响应事件
+    ADWO_OFFER_WALL_REFRESH_POINT = 0x1 << 2,
+    // 积分墙消费响应事件
+    ADWO_OFFER_WALL_CONSUMEPOINTS_POINT = 0x1 << 3,
+    // 积分墙更新信息获取事件
+    ADWO_OFFER_WALL_SUMMARY_MESSAGE = 0x1 << 4,
 };
 
 // Adwo积分墙禁止使用特征
@@ -79,22 +93,57 @@ extern "C" {
 extern BOOL AdwoOWPresentOfferWall(NSString *pid,UIViewController *baseViewController);
 
 /** 设置关键字
- * 参数：关键字数组。每个元素都必须是一个NSString*对象
+ * 参数：关键字数组。
+    每个元素都必须是一个NSString*对象,用于特殊广告对象。
 */
 extern BOOL AdwoOWSetKeywords(NSArray *keywords);
 
-/** 获取Adwo积分墙最近一次的错误码 */
+/*刷新服务器上的最新积分，开发者调用这个接口，可以获得服务器最新的总积分数
+    此方法必须配合 积分墙消费响应事件ADWO_OFFER_WALL_REFRESH_POINT使用，开发者使用响应事件获得该接口响应是否成功，可以通过AdwoOWFetchLatestErrorCode()函数来查看错误状态信息。
+    若响应事件AdwoOWFetchLatestErrorCode返回为ADWO_OFFER_WALL_ERRORCODE_SUCCESS说明获取刷新成功，否则刷新获取失败。*/
+extern void AdwoOWRefreshPoint();
+
+/** 查询Adwo积分墙最近服务器上得更新信息
+    此方法必须配合 积分墙消费响应事件ADWO_OFFER_WALL_SUMMARY_MESSAGE使用，开发者使用响应事件获得该接口响应是否成功，可以通过AdwoOWFetchLatestErrorCode()函数来查看错误状态信息。
+      若响应事件AdwoOWFetchLatestErrorCode返回为ADWO_OFFER_WALL_ERRORCODE_SUCCESS说明获取信息成功，否则获取信息失败。*/
+extern void AdwoOWRefreshSummeryMessage();
+
+/*获取Adwo积分墙最近服务器上得更新信息
+ 
+ 开发者可以获取的信息为 :
+ {
+ "numOfAds" : int,               // 可用的广告数量
+ "numOfNewAds" : string,         // 新广告的数量
+ "avgPoint" : string,            // 每个广告的平均积分
+ "maxPoint" : double,            // 最大的积分数
+ "errordesc" : string,           // errorcode不为0时，错误描述
+ "errorcode" : int               // 0表示成功，1表示未知错误，2表示此接口关闭状态
+ “currencyUnit”:string,          //当前金币名称
+ “totalPoint”:int ,              //总积分数
+ “tradeRatio”:double          //兑换比例
+ }
+ */
+NSDictionary *AdwoOWGetSummaryMessage(void);
+
+    /** 积分消费，该接口返回为YES说明消费状态正常，否则说明消费状态不可用：
+     此方法必须配合 积分墙消费响应事件ADWO_OFFER_WALL_CONSUMEPOINTS_POINT使用，开发者使用响应事件获得该接口响应是否成功，可以通过AdwoOWFetchLatestErrorCode()函数来查看错误状态信息。
+     若响应事件AdwoOWFetchLatestErrorCode返回为ADWO_OFFER_WALL_ERRORCODE_SUCCESS说明消费成功，否则消费失败。*/
+extern BOOL AdwoOWConsumePoints(NSInteger value);
+    
+    
+    /* 当前积分获取接口，该接口返回为YES说明积分墙状态正常，否则说明积分墙状态不可用。
+     开发者若要获得当前服务器的最新总积分，需要再调用此接口之前调用积分刷新接口
+     参数：
+     * pRemainPoints：传出当前剩余积分。该值为当前积分剩余减去消费积分（value）后的值。
+     */
+    
+BOOL AdwoOWGetCurrentPoints( NSInteger *pRemainPoints);
+    
+/* 获取Adwo积分墙最近一次的错误码 */
 extern enum ADWO_OFFER_WALL_ERRORCODE AdwoOWFetchLatestErrorCode(void);
 
-/** 积分消费：若返回为YES说明积分消费成功，否则积分消费失败。
- * 可以通过AdwoOWFetchLatestErrorCode()函数来查看错误状态信息。
- * 参数：
- * value：所要消费的积分点数
- * pRemainPoints：传出当前剩余积分。该值为当前积分剩余减去消费积分（value）后的值。
- * 若开发者要查询当前剩余积分，则直接调用此接口，将value值设为0即可。
-*/
-extern BOOL AdwoOWConsumePoints(NSInteger value, NSInteger *pRemainPoints);
-
+    
+    
 /** 查询当前嵌积分墙的应用的审核状态
  * 参数：
  * pOutState：输出审核状态的枚举值

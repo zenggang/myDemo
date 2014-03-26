@@ -71,18 +71,12 @@
 - (NSNumber *)getWallAdvertisementListResponse:(NSNumber *)aRequestId withObject:(id)aResponseObject;
 
 /*
- function: 获得每日推荐表数据返回
+ function: 获得积分墙banner数据
  parameter: @aRequestId, http请求id
  @aResponseObject
  */
-- (NSNumber *)getWallAdvertisementRecommendDailyListResponse:(NSNumber *)aRequestId withObject:(id)aResponseObject;
+- (NSNumber *)getWallAdvertisementBannerListResponse:(NSNumber *)aRequestId withObject:(id)aResponseObject;
 
-/*
- function: 获得特别赞助列表数据返回
- parameter: @aRequestId, http请求id
- @aResponseObject
- */
-- (NSNumber *)getWallAdvertisementSponsorListResponse:(NSNumber *)aRequestId withObject:(id)aResponseObject;
 
 /*
  function: 发送已经成功安装的app到服务器数据返回
@@ -118,13 +112,6 @@
             @aResponseObject
  */
 - (NSNumber *)sendAdvertisementActionForAdvertiserResponse:(NSNumber *)aRequestId withObject:(id)aResponseObject;
-
-/*
- function: 特别赞助搜索，调用该接口，发送相应检索关键字到服务器数据返回
- parameter: @aRequestId, http请求id
- @aResponseObject
- */
-- (NSNumber *)getWallAdvertisementSponsorSearchResponse:(NSNumber *)aRequestId withObject:(id)aResponseObject;
 
 /*
  function: web to app 使用时检测点击，根据返回值确定是否需要跳转浏览器

@@ -22,6 +22,10 @@
 @property (nonatomic,strong) FUIButton *WANPUButton;
 @property (nonatomic,strong) FUIButton *ANWOButton;
 @property (nonatomic,strong) FUIButton *YiJiFenButton;
+@property (nonatomic,strong) FUIButton *MoPanButton;
+@property (nonatomic,strong) FUIButton *AiPuDongLiButton;
+@property (nonatomic,strong) FUIButton *AiDeSiQiButton;
+@property (nonatomic,strong) FUIButton *XingYunButton;
 
 
 @property (nonatomic,strong) FUIButton *awardQqButton;
@@ -102,10 +106,16 @@
                 [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YiJiFenButton andTitle:@"易积分平台" withAction:@selector(OpenYiJIFenWall)];
                 break;
             case AIPUDONGLI_ID_INT:
-                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YiJiFenButton andTitle:@"爱普动力" withAction:@selector(openAiPuDongLiWall)];
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_AiPuDongLiButton andTitle:@"爱普动力" withAction:@selector(openAiPuDongLiWall)];
                 break;
             case MOPAN_ID_INT:
-                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_YiJiFenButton andTitle:@"磨盘平台" withAction:@selector(openMoPanWall)];
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_MoPanButton andTitle:@"磨盘平台" withAction:@selector(openMoPanWall)];
+                break;
+            case AIDESIQI_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_AiDeSiQiButton andTitle:@"艾德思奇" withAction:@selector(openAiDeSiQiWall)];
+                break;
+            case XINGYUN_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_XingYunButton andTitle:@"行云平台" withAction:@selector(openXingYunWall)];
                 break;
             default:
                 break;

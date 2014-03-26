@@ -7,8 +7,8 @@
 //
   
 //APP
-#define APP_NAME @"GuaGuaLe"
-#define VERSION_STRING @"2.10"
+#define APP_NAME @"ZuanZuanZuan"
+#define VERSION_STRING @"4.30"
 #define SYS_OS [[UIDevice currentDevice] systemVersion] 
 
 //McDonald 版本 1.00 2.0 3.0 4.0
@@ -25,7 +25,7 @@
 //#define VERSION 1.0
 
 //麦当劳优惠劵  全民刮刮赚  肯德基优惠劵 老虎机转转赚
-#define APP_FIRST_TAB_NAME @"全民刮刮赚"
+#define APP_FIRST_TAB_NAME @"老虎机转转赚" 
 
 
 #define PRIVATE_SECRET_KEY @"javababyzenggang"

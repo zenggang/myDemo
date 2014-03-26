@@ -24,7 +24,6 @@ typedef enum {
 
 
 @interface YouMiWall : NSObject
-
 /*! 启动有米积分墙
  */
 + (void)enable;
@@ -37,9 +36,22 @@ typedef enum {
  */
 + (BOOL)showOffers:(BOOL)rewarded didShowBlock:(void (^)(void))didShowBlock didDismissBlock:(void (^)(void))didDismissBlock;
 
+/*!是否显示用户获取积分指南
+ *建议设置为true，默认不设置是true。
+ */
++ (void)showGuideMap:(BOOL)isShowGuideMap;
+
+
 /*! 获取积分墙的App广告列表
  * \param rewarded 是不是有积分模式
+ * \param page 请求的数据第几页
+ * \param count 每页有多少个广告（比如设置的requestPage为1，adCountPage为3.那么数据就可以看成是每页3个应用的形式在服务器上，每次请求服务器就把对应页的3个应用返回）
  * \param recievedBlock 接收广告列表的block, 其中NSArray的内容是 @[YouMiWallAppModel, YouMiWallAppModel...]; 获取列表失败, 在NSError里有记录.
+ */
++ (void)requestOffersOpenData:(BOOL)rewarded page:(NSInteger)requestPage count:(NSInteger)adCountPage revievedBlock:(void (^)(NSArray*, NSError *))recievedBlock;
+
+/*
+ *\这个默认请求第1页数据，每页10个
  */
 + (void)requestOffersOpenData:(BOOL)rewarded revievedBlock:(void (^)(NSArray*, NSError *))recievedBlock;
 

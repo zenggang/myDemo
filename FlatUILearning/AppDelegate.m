@@ -16,7 +16,8 @@
 #import "Harpy.h"
 #import <Escore/YJFUserMessage.h>
 #import <Escore/YJFInitServer.h>
-
+#import <AdWalker/GuUserConfig.h>
+#import <AdWalker/GuInitServer.h>
 #define LOOP_CHECK_FIRST_TIME_DELAY 1
 
 @implementation AppDelegate
@@ -194,7 +195,7 @@
                     // 参数 appPassword	:开发者的安全密钥 ;  开发者到 www.miidi.net 上提交应用时候,获取id和密码
                     // 参数 testMode		:广告条请求模式 ;    正式发布应用,务必设置为NO,否则不能计费
                     //
-                    [MiidiManager setAppPublisher:_MidiPlatform.appKey  withAppSecret:_MidiPlatform.appSecret withTestMode:NO];
+                    [MiidiManager setAppPublisher:_MidiPlatform.appKey  withAppSecret:_MidiPlatform.appSecret ];
             }
                 break;
             case YOUMI_ID_INT:
@@ -247,6 +248,22 @@
             {
                 _MoPanPlatform=platform;
             }
+                break;
+            case AIDESIQI_ID_INT:
+            {
+                _AiDeSiQiPlatform=platform;
+            }
+                break;
+            case XINGYUN_ID_INT:
+            {
+                _XingYunPlatform=platform;
+                //初始化配置
+                [GuUserConfig getInstance].guAppKey =_XingYunPlatform.appKey;//应用key
+                [GuUserConfig getInstance].guChannel =@"IOS2.1.0";//渠道(选填)
+                //应用启动时候初始化..
+                GuInitServer *initServer = [[GuInitServer alloc]init];
+                [initServer getInit];
+            }
             default:
                 break;
         }
@@ -254,7 +271,6 @@
 }
 
 -(void) initUserInfo:(Users *) user{
-    _isOldVesionUser=NO;
     _loginUser=user;
     _userGoldAmont=0;
    // _userGoldDict=[NSMutableDictionary dictionary];
@@ -262,11 +278,6 @@
        // [_userGoldDict setObject:[NSNumber numberWithInt:gold.goldAmount ] forKey:[NSString stringWithFormat:@"%d",gold.pid]];
         if (gold.pid==SYS_GIF_ID_INT) {
             _userGoldAmont=gold.goldAmount;
-        }
-        
-        if (gold.pid>1 && gold.goldAmount) {
-            _isOldVesionUser=YES;
-            _oldVesionUserPlatIdCount++;
         }
     }
 }
