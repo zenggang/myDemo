@@ -43,9 +43,6 @@
 		CD225074177D2A590008DF1E /* DMScrollingTicker.m in Sources */ = {isa = PBXBuildFile; fileRef = CD225073177D2A590008DF1E /* DMScrollingTicker.m */; };
 		CD22D1E2177C344E00F4A856 /* GetGoldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD22D1E1177C344E00F4A856 /* GetGoldViewController.m */; };
 		CD22D1E5177C371F00F4A856 /* RootNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CD22D1E4177C371F00F4A856 /* RootNavigationViewController.m */; };
-		CD237E3C189B5224008B8C42 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD237E3B189B5224008B8C42 /* WapsOffer.framework */; };
-		CD237E3D189B5224008B8C42 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD237E3B189B5224008B8C42 /* WapsOffer.framework */; };
-		CD237E3E189B5224008B8C42 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD237E3B189B5224008B8C42 /* WapsOffer.framework */; };
 		CD237E40189B5878008B8C42 /* sharePic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD237E3F189B5878008B8C42 /* sharePic@2x.png */; };
 		CD24109B189D01FA009215C3 /* top_rule_7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD241099189D01FA009215C3 /* top_rule_7@2x.png */; };
 		CD24109C189D01FA009215C3 /* top_rule_fruits@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CD24109A189D01FA009215C3 /* top_rule_fruits@2x.png */; };
@@ -631,6 +628,14 @@
 		CDAF0399180FDBA20073A9FC /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAF038E180FDBA20073A9FC /* Icon@2x.png */; };
 		CDAF039A180FDBA20073A9FC /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = CDAF038F180FDBA20073A9FC /* iTunesArtwork.png */; };
 		CDAF78C417E4CF30005CEBD5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD78077B17BB30500066A599 /* StoreKit.framework */; };
+		CDB0EC7F18EAA02100A15400 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC7E18EAA02100A15400 /* WapsOffer.framework */; };
+		CDB0EC8018EAA02100A15400 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC7E18EAA02100A15400 /* WapsOffer.framework */; };
+		CDB0EC8118EAA02100A15400 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC7E18EAA02100A15400 /* WapsOffer.framework */; };
+		CDB0EC8218EAA02100A15400 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC7E18EAA02100A15400 /* WapsOffer.framework */; };
+		CDB0EC8918EAA92300A15400 /* JupengSdkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC8718EAA92300A15400 /* JupengSdkLib.a */; };
+		CDB0EC8A18EAA92300A15400 /* JupengSdkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC8718EAA92300A15400 /* JupengSdkLib.a */; };
+		CDB0EC8B18EAA92300A15400 /* JupengSdkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC8718EAA92300A15400 /* JupengSdkLib.a */; };
+		CDB0EC8C18EAA92300A15400 /* JupengSdkLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDB0EC8718EAA92300A15400 /* JupengSdkLib.a */; };
 		CDB83922189FB6B8007D20DD /* Icon-80.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB8391F189FB6B8007D20DD /* Icon-80.png */; };
 		CDB83923189FB6B8007D20DD /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB83920189FB6B8007D20DD /* Icon-120.png */; };
 		CDB83924189FB6B8007D20DD /* Icon-144.png in Resources */ = {isa = PBXBuildFile; fileRef = CDB83921189FB6B8007D20DD /* Icon-144.png */; };
@@ -1067,7 +1072,6 @@
 		CDD5B6AA18CCC0D00091D2C2 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD060B771783CE850012AA58 /* ImageIO.framework */; };
 		CDD5B6AB18CCC0D00091D2C2 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9739F177ECACB001AF58F /* libz.1.2.5.dylib */; };
 		CDD5B6AC18CCC0D00091D2C2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9738B177EC9A1001AF58F /* AudioToolbox.framework */; };
-		CDD5B6AD18CCC0D00091D2C2 /* WapsOffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD237E3B189B5224008B8C42 /* WapsOffer.framework */; };
 		CDD5B6AE18CCC0D00091D2C2 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDF8A299177A913E00F86A52 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		CDD5B6AF18CCC0D00091D2C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD983417176FFE630035D10F /* CoreData.framework */; };
 		CDD5B6B018CCC0D00091D2C2 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC9738D177EC9BC001AF58F /* CoreTelephony.framework */; };
@@ -1216,6 +1220,14 @@
 		CDD5B78518CCC5060091D2C2 /* FBFontSymbol.m in Sources */ = {isa = PBXBuildFile; fileRef = CDC080D2187175F600447DD2 /* FBFontSymbol.m */; };
 		CDE174AB17DB321900A1022F /* Harpy.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE174A817DB321900A1022F /* Harpy.bundle */; };
 		CDE174AC17DB321900A1022F /* Harpy.m in Sources */ = {isa = PBXBuildFile; fileRef = CDE174AA17DB321900A1022F /* Harpy.m */; };
+		CDE38CAE18EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE38CAB18EBE36A00B68CAB /* GuomobWallBundle.bundle */; };
+		CDE38CAF18EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE38CAB18EBE36A00B68CAB /* GuomobWallBundle.bundle */; };
+		CDE38CB018EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE38CAB18EBE36A00B68CAB /* GuomobWallBundle.bundle */; };
+		CDE38CB118EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CDE38CAB18EBE36A00B68CAB /* GuomobWallBundle.bundle */; };
+		CDE38CB218EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE38CAD18EBE36A00B68CAB /* libGuoMobWall.a */; };
+		CDE38CB318EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE38CAD18EBE36A00B68CAB /* libGuoMobWall.a */; };
+		CDE38CB418EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE38CAD18EBE36A00B68CAB /* libGuoMobWall.a */; };
+		CDE38CB518EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE38CAD18EBE36A00B68CAB /* libGuoMobWall.a */; };
 		CDF68DB5177827C7003B3B9A /* Restaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF68DB4177827C7003B3B9A /* Restaurant.m */; };
 		CDF68DB81778341C003B3B9A /* RestaurantListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF68DB71778341C003B3B9A /* RestaurantListViewController.m */; };
 		CDF68DBB17783838003B3B9A /* BaseLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CDF68DBA17783838003B3B9A /* BaseLocationViewController.m */; };
@@ -1266,7 +1278,6 @@
 		CD22D1E1177C344E00F4A856 /* GetGoldViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetGoldViewController.m; sourceTree = "<group>"; };
 		CD22D1E3177C371F00F4A856 /* RootNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootNavigationViewController.h; sourceTree = "<group>"; };
 		CD22D1E4177C371F00F4A856 /* RootNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootNavigationViewController.m; sourceTree = "<group>"; };
-		CD237E3B189B5224008B8C42 /* WapsOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WapsOffer.framework; path = FlatUILearning/WapsOffer.framework; sourceTree = "<group>"; };
 		CD237E3F189B5878008B8C42 /* sharePic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sharePic@2x.png"; sourceTree = "<group>"; };
 		CD241099189D01FA009215C3 /* top_rule_7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_rule_7@2x.png"; sourceTree = "<group>"; };
 		CD24109A189D01FA009215C3 /* top_rule_fruits@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_rule_fruits@2x.png"; sourceTree = "<group>"; };
@@ -1689,6 +1700,12 @@
 		CDAF038D180FDBA20073A9FC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		CDAF038E180FDBA20073A9FC /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		CDAF038F180FDBA20073A9FC /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
+		CDB0EC7E18EAA02100A15400 /* WapsOffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WapsOffer.framework; path = FlatUILearning/WapsOffer.framework; sourceTree = "<group>"; };
+		CDB0EC8418EAA92300A15400 /* JupengAdOpenData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JupengAdOpenData.h; sourceTree = "<group>"; };
+		CDB0EC8518EAA92300A15400 /* JupengConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JupengConfig.h; sourceTree = "<group>"; };
+		CDB0EC8618EAA92300A15400 /* JupengPopScreenADs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JupengPopScreenADs.h; sourceTree = "<group>"; };
+		CDB0EC8718EAA92300A15400 /* JupengSdkLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = JupengSdkLib.a; sourceTree = "<group>"; };
+		CDB0EC8818EAA92300A15400 /* JupengWall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JupengWall.h; sourceTree = "<group>"; };
 		CDB8391F189FB6B8007D20DD /* Icon-80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-80.png"; sourceTree = "<group>"; };
 		CDB83920189FB6B8007D20DD /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
 		CDB83921189FB6B8007D20DD /* Icon-144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-144.png"; sourceTree = "<group>"; };
@@ -1795,6 +1812,9 @@
 		CDE174A817DB321900A1022F /* Harpy.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Harpy.bundle; sourceTree = "<group>"; };
 		CDE174A917DB321900A1022F /* Harpy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Harpy.h; sourceTree = "<group>"; };
 		CDE174AA17DB321900A1022F /* Harpy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Harpy.m; sourceTree = "<group>"; };
+		CDE38CAB18EBE36A00B68CAB /* GuomobWallBundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuomobWallBundle.bundle; sourceTree = "<group>"; };
+		CDE38CAC18EBE36A00B68CAB /* GuoMobWallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuoMobWallViewController.h; sourceTree = "<group>"; };
+		CDE38CAD18EBE36A00B68CAB /* libGuoMobWall.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGuoMobWall.a; sourceTree = "<group>"; };
 		CDF68DB3177827C7003B3B9A /* Restaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Restaurant.h; sourceTree = "<group>"; };
 		CDF68DB4177827C7003B3B9A /* Restaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Restaurant.m; sourceTree = "<group>"; };
 		CDF68DB61778341C003B3B9A /* RestaurantListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantListViewController.h; sourceTree = "<group>"; };
@@ -1831,10 +1851,10 @@
 				CD5F7FE717A213F100670862 /* CoreText.framework in Frameworks */,
 				CD8DF9FA18A9C59A00E3D9CF /* libDianRuSDK.a in Frameworks */,
 				CD060B7A1783CEAD0012AA58 /* libsqlite3.dylib in Frameworks */,
+				CDB0EC8918EAA92300A15400 /* JupengSdkLib.a in Frameworks */,
 				CD060B781783CE850012AA58 /* ImageIO.framework in Frameworks */,
 				CDC973A0177ECACB001AF58F /* libz.1.2.5.dylib in Frameworks */,
 				CDC9738C177EC9A1001AF58F /* AudioToolbox.framework in Frameworks */,
-				CD237E3C189B5224008B8C42 /* WapsOffer.framework in Frameworks */,
 				CDAC867018D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDF8A29A177A913E00F86A52 /* AdSupport.framework in Frameworks */,
 				CD983418176FFE630035D10F /* CoreData.framework in Frameworks */,
@@ -1849,12 +1869,14 @@
 				CD2EB6DC1744C1C700A222D6 /* Foundation.framework in Frameworks */,
 				CDC97398177ECA07001AF58F /* MessageUI.framework in Frameworks */,
 				CDC97396177EC9FA001AF58F /* MobileCoreServices.framework in Frameworks */,
+				CDB0EC7F18EAA02100A15400 /* WapsOffer.framework in Frameworks */,
 				CD3BDAC618CD951A00B0E12F /* libDomobOfferWallSDK.a in Frameworks */,
 				CDC97394177EC9E4001AF58F /* MediaPlayer.framework in Frameworks */,
 				CDF68DBD17783850003B3B9A /* MapKit.framework in Frameworks */,
 				CDC9739A177ECA67001AF58F /* QuartzCore.framework in Frameworks */,
 				CDC9739E177ECAA5001AF58F /* SystemConfiguration.framework in Frameworks */,
 				CDA27CEF18E17FCA00B461E0 /* libminizip.a in Frameworks */,
+				CDE38CB218EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */,
 				CDC9739C177ECA87001AF58F /* Security.framework in Frameworks */,
 				CD2EB6DA1744C1C700A222D6 /* UIKit.framework in Frameworks */,
 				CDA27D0418E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
@@ -1882,10 +1904,10 @@
 				CDAF02C1180F964C0073A9FC /* CoreText.framework in Frameworks */,
 				CD8DF9FB18A9C59A00E3D9CF /* libDianRuSDK.a in Frameworks */,
 				CDAF02C2180F964C0073A9FC /* libsqlite3.dylib in Frameworks */,
+				CDB0EC8A18EAA92300A15400 /* JupengSdkLib.a in Frameworks */,
 				CDAF02C3180F964C0073A9FC /* ImageIO.framework in Frameworks */,
 				CDAF02C4180F964C0073A9FC /* libz.1.2.5.dylib in Frameworks */,
 				CDAF02C5180F964C0073A9FC /* AudioToolbox.framework in Frameworks */,
-				CD237E3D189B5224008B8C42 /* WapsOffer.framework in Frameworks */,
 				CDAC867118D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDAF02C6180F964C0073A9FC /* AdSupport.framework in Frameworks */,
 				CDAF02C7180F964C0073A9FC /* CoreData.framework in Frameworks */,
@@ -1900,12 +1922,14 @@
 				CDAF02D0180F964C0073A9FC /* Foundation.framework in Frameworks */,
 				CDAF02D1180F964C0073A9FC /* MessageUI.framework in Frameworks */,
 				CDAF02D2180F964C0073A9FC /* MobileCoreServices.framework in Frameworks */,
+				CDB0EC8018EAA02100A15400 /* WapsOffer.framework in Frameworks */,
 				CD3BDAC718CD951A00B0E12F /* libDomobOfferWallSDK.a in Frameworks */,
 				CDAF02D3180F964C0073A9FC /* MediaPlayer.framework in Frameworks */,
 				CDAF02D4180F964C0073A9FC /* MapKit.framework in Frameworks */,
 				CDAF02D5180F964C0073A9FC /* QuartzCore.framework in Frameworks */,
 				CDAF02D6180F964C0073A9FC /* SystemConfiguration.framework in Frameworks */,
 				CDA27CF018E17FCA00B461E0 /* libminizip.a in Frameworks */,
+				CDE38CB318EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */,
 				CDAF02D7180F964C0073A9FC /* Security.framework in Frameworks */,
 				CDAF02D8180F964C0073A9FC /* UIKit.framework in Frameworks */,
 				CDA27D0518E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
@@ -1933,10 +1957,10 @@
 				CDD3FB92181E96E6002B8EC1 /* CoreText.framework in Frameworks */,
 				CD8DF9FC18A9C59A00E3D9CF /* libDianRuSDK.a in Frameworks */,
 				CDD3FB93181E96E6002B8EC1 /* libsqlite3.dylib in Frameworks */,
+				CDB0EC8B18EAA92300A15400 /* JupengSdkLib.a in Frameworks */,
 				CDD3FB94181E96E6002B8EC1 /* ImageIO.framework in Frameworks */,
 				CDD3FB95181E96E6002B8EC1 /* libz.1.2.5.dylib in Frameworks */,
 				CDD3FB96181E96E6002B8EC1 /* AudioToolbox.framework in Frameworks */,
-				CD237E3E189B5224008B8C42 /* WapsOffer.framework in Frameworks */,
 				CDAC867218D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDD3FB97181E96E6002B8EC1 /* AdSupport.framework in Frameworks */,
 				CDD3FB98181E96E6002B8EC1 /* CoreData.framework in Frameworks */,
@@ -1951,12 +1975,14 @@
 				CDD3FBA1181E96E6002B8EC1 /* Foundation.framework in Frameworks */,
 				CDD3FBA2181E96E6002B8EC1 /* MessageUI.framework in Frameworks */,
 				CDD3FBA3181E96E6002B8EC1 /* MobileCoreServices.framework in Frameworks */,
+				CDB0EC8118EAA02100A15400 /* WapsOffer.framework in Frameworks */,
 				CD3BDAC818CD951A00B0E12F /* libDomobOfferWallSDK.a in Frameworks */,
 				CDD3FBA4181E96E6002B8EC1 /* MediaPlayer.framework in Frameworks */,
 				CDD3FBA5181E96E6002B8EC1 /* MapKit.framework in Frameworks */,
 				CDD3FBA6181E96E6002B8EC1 /* QuartzCore.framework in Frameworks */,
 				CDD3FBA7181E96E6002B8EC1 /* SystemConfiguration.framework in Frameworks */,
 				CDA27CF118E17FCA00B461E0 /* libminizip.a in Frameworks */,
+				CDE38CB418EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */,
 				CDD3FBA8181E96E6002B8EC1 /* Security.framework in Frameworks */,
 				CDD3FBA9181E96E6002B8EC1 /* UIKit.framework in Frameworks */,
 				CDA27D0618E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
@@ -1984,10 +2010,10 @@
 				CDD5B6A718CCC0D00091D2C2 /* CoreText.framework in Frameworks */,
 				CDD5B6A818CCC0D00091D2C2 /* libDianRuSDK.a in Frameworks */,
 				CDD5B6A918CCC0D00091D2C2 /* libsqlite3.dylib in Frameworks */,
+				CDB0EC8C18EAA92300A15400 /* JupengSdkLib.a in Frameworks */,
 				CDD5B6AA18CCC0D00091D2C2 /* ImageIO.framework in Frameworks */,
 				CDD5B6AB18CCC0D00091D2C2 /* libz.1.2.5.dylib in Frameworks */,
 				CDD5B6AC18CCC0D00091D2C2 /* AudioToolbox.framework in Frameworks */,
-				CDD5B6AD18CCC0D00091D2C2 /* WapsOffer.framework in Frameworks */,
 				CDAC867318D162D1001D4C30 /* libMobiSageOfferWall.a in Frameworks */,
 				CDD5B6AE18CCC0D00091D2C2 /* AdSupport.framework in Frameworks */,
 				CDD5B6AF18CCC0D00091D2C2 /* CoreData.framework in Frameworks */,
@@ -2002,12 +2028,14 @@
 				CDD5B6B818CCC0D00091D2C2 /* Foundation.framework in Frameworks */,
 				CDD5B6B918CCC0D00091D2C2 /* MessageUI.framework in Frameworks */,
 				CDD5B6BA18CCC0D00091D2C2 /* MobileCoreServices.framework in Frameworks */,
+				CDB0EC8218EAA02100A15400 /* WapsOffer.framework in Frameworks */,
 				CD3BDAC918CD951A00B0E12F /* libDomobOfferWallSDK.a in Frameworks */,
 				CDD5B6BB18CCC0D00091D2C2 /* MediaPlayer.framework in Frameworks */,
 				CDD5B6BC18CCC0D00091D2C2 /* MapKit.framework in Frameworks */,
 				CDD5B6BD18CCC0D00091D2C2 /* QuartzCore.framework in Frameworks */,
 				CDD5B6BE18CCC0D00091D2C2 /* SystemConfiguration.framework in Frameworks */,
 				CDA27CF218E17FCA00B461E0 /* libminizip.a in Frameworks */,
+				CDE38CB518EBE36A00B68CAB /* libGuoMobWall.a in Frameworks */,
 				CDD5B6BF18CCC0D00091D2C2 /* Security.framework in Frameworks */,
 				CDD5B6C018CCC0D00091D2C2 /* UIKit.framework in Frameworks */,
 				CDA27D0718E18A8200B461E0 /* MiidiAdLib.a in Frameworks */,
@@ -2107,9 +2135,9 @@
 		CD2EB6D81744C1C700A222D6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CDB0EC7E18EAA02100A15400 /* WapsOffer.framework */,
 				CD09047F18D189860088A438 /* CoreMotion.framework */,
 				CDCFA43E18CD9FA4001DDFD3 /* CoreMedia.framework */,
-				CD237E3B189B5224008B8C42 /* WapsOffer.framework */,
 				CD033D72181EA98F00484912 /* AVFoundation.framework */,
 				CDD3FC71181EA7B9002B8EC1 /* OpenGLES.framework */,
 				CD78077B17BB30500066A599 /* StoreKit.framework */,
@@ -2486,6 +2514,7 @@
 		CD4136AE1771541200F246C3 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				CDB0EC8318EAA92300A15400 /* JuPengLib */,
 				CDA27D3018E19A6400B461E0 /* xingyun */,
 				CDA27CF718E18A8200B461E0 /* midiLib */,
 				CDAC866318D162D1001D4C30 /* MobiSageOfferWallSDK */,
@@ -2497,6 +2526,7 @@
 				CD95753817A129DA0056015E /* sound */,
 				CD7B6F3B178DBC180034E3C3 /* weixingSDK */,
 				CD060B6A1783CE5F0012AA58 /* youmi_lib */,
+				CDE38CAA18EBE36A00B68CAB /* GuomobWallSDK */,
 				CD55765E1783186A00D4EE37 /* lib */,
 				CD3971231772F42E00BD5F57 /* images */,
 				CD4136AF1771546600F246C3 /* AllStringDefine.h */,
@@ -3003,6 +3033,18 @@
 			path = yijifen;
 			sourceTree = "<group>";
 		};
+		CDB0EC8318EAA92300A15400 /* JuPengLib */ = {
+			isa = PBXGroup;
+			children = (
+				CDB0EC8418EAA92300A15400 /* JupengAdOpenData.h */,
+				CDB0EC8518EAA92300A15400 /* JupengConfig.h */,
+				CDB0EC8618EAA92300A15400 /* JupengPopScreenADs.h */,
+				CDB0EC8718EAA92300A15400 /* JupengSdkLib.a */,
+				CDB0EC8818EAA92300A15400 /* JupengWall.h */,
+			);
+			path = JuPengLib;
+			sourceTree = "<group>";
+		};
 		CDC080A818716F2D00447DD2 /* icon */ = {
 			isa = PBXGroup;
 			children = (
@@ -3164,6 +3206,16 @@
 				CDE174AA17DB321900A1022F /* Harpy.m */,
 			);
 			path = Harpy;
+			sourceTree = "<group>";
+		};
+		CDE38CAA18EBE36A00B68CAB /* GuomobWallSDK */ = {
+			isa = PBXGroup;
+			children = (
+				CDE38CAB18EBE36A00B68CAB /* GuomobWallBundle.bundle */,
+				CDE38CAC18EBE36A00B68CAB /* GuoMobWallViewController.h */,
+				CDE38CAD18EBE36A00B68CAB /* libGuoMobWall.a */,
+			);
+			path = GuomobWallSDK;
 			sourceTree = "<group>";
 		};
 		CDF19431175D9A8C00DA2C8B /* FUIExtend */ = {
@@ -3373,6 +3425,7 @@
 				CD3B2B8117F352A70007435A /* dianru_green_left_cell.png in Resources */,
 				CD225071177D26680008DF1E /* goldToMoneyScrollView.xib in Resources */,
 				CD3B2BA417F352A70007435A /* dianru_red_left_view.png in Resources */,
+				CDE38CAE18EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */,
 				CD3B2B9017F352A70007435A /* dianru_purple_all_cell.png in Resources */,
 				CD8DF9F118A9C59A00E3D9CF /* DianruBrowserController.xib in Resources */,
 				CDAF0371180FDB7B0073A9FC /* buy_btn@2x.png in Resources */,
@@ -3460,6 +3513,7 @@
 				CDAF02FA180F964C0073A9FC /* dianru_green_dianru_info.png in Resources */,
 				CDAF02FB180F964C0073A9FC /* Lato-Bold.ttf in Resources */,
 				CDAF02FC180F964C0073A9FC /* Lato-BoldItalic.ttf in Resources */,
+				CDE38CAF18EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */,
 				CDAF02FD180F964C0073A9FC /* dianru_green_dianru_download.png in Resources */,
 				CDAF02FE180F964C0073A9FC /* Lato-Hairline.ttf in Resources */,
 				CDAF039A180FDBA20073A9FC /* iTunesArtwork.png in Resources */,
@@ -3618,6 +3672,7 @@
 				CDD3FBD7181E96E6002B8EC1 /* ticket_short@2x.png in Resources */,
 				CDC080A718716F2500447DD2 /* Default@2x.png in Resources */,
 				CDD3FBD8181E96E6002B8EC1 /* dianru_green_dianru_titlebg.jpg in Resources */,
+				CDE38CB018EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */,
 				CD24109C189D01FA009215C3 /* top_rule_fruits@2x.png in Resources */,
 				CDADA78C1865536D00DA2928 /* track_small_mask@2x.png in Resources */,
 				CDAA5795185ADDD400D9E1F8 /* earnGold_btn_normal@2x.png in Resources */,
@@ -3777,6 +3832,7 @@
 				CDD5B6E718CCC0D00091D2C2 /* dianru_red_dianru_triangle.png in Resources */,
 				CDD5B6E818CCC0D00091D2C2 /* dianru_green_dianru_info.png in Resources */,
 				CDD5B6E918CCC0D00091D2C2 /* Lato-Bold.ttf in Resources */,
+				CDE38CB118EBE36A00B68CAB /* GuomobWallBundle.bundle in Resources */,
 				CDD5B6EA18CCC0D00091D2C2 /* Lato-BoldItalic.ttf in Resources */,
 				CDD5B6EB18CCC0D00091D2C2 /* dianru_green_dianru_download.png in Resources */,
 				CDD5B6EC18CCC0D00091D2C2 /* Lato-Hairline.ttf in Resources */,
@@ -4609,6 +4665,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4633,6 +4690,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "BC83FFDF-A511-4BA7-A1E9-22F62439B768";
@@ -4655,6 +4714,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4679,6 +4739,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "CA1A0E8B-EA88-4BE3-9D42-416CEB1A1454";
@@ -4701,6 +4763,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4725,6 +4788,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = Kfc;
 				PROVISIONING_PROFILE = "88332DB0-4D88-41C6-8653-B4C03843AE71";
@@ -4747,6 +4812,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4771,6 +4837,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = Kfc;
 				PROVISIONING_PROFILE = "BB0854C3-7742-4854-859B-8E19DB8EC50C";
@@ -4793,6 +4861,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4817,6 +4886,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = "GuaGuaLe copy";
 				PROVISIONING_PROFILE = "B32E81A5-7F45-4F95-97F7-EF793FA577EF";
@@ -4839,6 +4910,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4863,6 +4935,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = "GuaGuaLe copy";
 				PROVISIONING_PROFILE = "0DF4BD04-4283-4834-82CF-4EDACD330D00";
@@ -4885,6 +4959,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4909,6 +4984,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = "Kfc copy";
 				PROVISIONING_PROFILE = "F50057CC-5008-4586-ADD3-707111467C84";
@@ -4931,6 +5008,7 @@
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning,
 					/Users/javababy/Documents/FlatUILearning/FlatUILearning/yijifen,
 					"$(PROJECT_DIR)/FlatUILearning/xingyun",
+					"$(PROJECT_DIR)/FlatUILearning",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlatUILearning/FlatUILearning-Prefix.pch";
@@ -4955,6 +5033,8 @@
 					"$(PROJECT_DIR)/FlatUILearning/midiLib",
 					"$(PROJECT_DIR)/FlatUILearning/AppDriverSDK",
 					"$(PROJECT_DIR)/FlatUILearning/youmi_lib",
+					"$(PROJECT_DIR)/FlatUILearning/JuPengLib",
+					"$(PROJECT_DIR)/FlatUILearning/GuomobWallSDK",
 				);
 				PRODUCT_NAME = "Kfc copy";
 				PROVISIONING_PROFILE = "5D965ADD-E245-41A6-86F5-056A75470135";

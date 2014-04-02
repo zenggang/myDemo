@@ -31,6 +31,10 @@
 #import <AdWalker/GuScoreWall.h>
 #import <AdWalker/PobFrameWall.h>
 #import <AdWalker/GuScore.h>
+#import "JupengConfig.h"
+#import "JupengWall.h"
+#import "GuoMobWallViewController.h"
+
 
 #define exchangeGoldAlertTag 234
 #define goldNotEnoughAlertTag  235
@@ -39,7 +43,7 @@
 
 @interface BaseGoldViewController : BaseListViewController<DMOfferWallDelegate,immobViewDelegate,DianRuAdWallDelegate,DianRuSDKDelegate,MiidiAdWallShowAppOffersDelegate,MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
-, MiidiAdWallGetPointsDelegate,YJFIntegralWallDelegate,MopanAdWallDelegate,ADCPowerWallViewControllerDelegate,DMOfferWallManagerDelegate,MobiSageOfferWallDelegate,GuHotWallDelegate,GuScoreWallDelegate>
+, MiidiAdWallGetPointsDelegate,YJFIntegralWallDelegate,MopanAdWallDelegate,ADCPowerWallViewControllerDelegate,DMOfferWallManagerDelegate,MobiSageOfferWallDelegate,GuHotWallDelegate,GuScoreWallDelegate,GuoMobWallDelegate>
 
 -(void) afterGoldReloaded;
 -(void) reduceGold;
@@ -52,5 +56,6 @@
 @property (nonatomic,strong) MopanAdWall *mopanAdWallControl;
 @property (nonatomic,strong) ADCPowerWallViewController *powerWallViewController;
 @property (nonatomic,strong) MobiSageOfferWallViewController *owViewController;
+@property (nonatomic,strong)  GuoMobWallViewController *guoMengWallVc;
 
 @end

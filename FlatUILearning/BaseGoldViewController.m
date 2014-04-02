@@ -37,7 +37,8 @@
 @property (nonatomic,assign) NSInteger addGoldMoPanToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldAiDeSiQiToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldXingYunToSysGoldAmount;
-
+@property (nonatomic,assign) NSInteger addGoldJuPengToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldGuoMengToSysGoldAmount;
 
 @property (nonatomic,assign) BOOL isRuduceGold;
 @property (nonatomic,strong) NSMutableString *reduceGoldData;
@@ -177,6 +178,15 @@
         AdwoOWRegisterResponseEvent(ADWO_OFFER_WALL_REFRESH_POINT, self, @selector(adwoOWRefreshPoint));
     }
     
+    //果盟
+    if (APPDELEGATE.GuoMengPlatForm.state==1) {
+        _guoMengWallVc=[[GuoMobWallViewController alloc] initWithId:APPDELEGATE.GuoMengPlatForm.appKey];
+        _guoMengWallVc.delegate=self;
+        _guoMengWallVc.updatetime=0;
+        //设置积分墙是否显示状态栏 默认隐藏
+        _guoMengWallVc.isStatusBarHidden=NO;
+    }
+    
 }
 
 
@@ -305,6 +315,49 @@
     [GuScore getScore:self];
 }
 
+//巨朋平台
+-(void) openJuPengWall
+{
+    [JupengWall showOffers:self
+              didShowBlock:^{
+                  NSLog(@"巨朋积分墙已显示");
+              } didDismissBlock:^{
+                  NSLog(@"巨朋积分墙已退出");
+              }];
+}
+
+-(void) getJuPengScore
+{
+    [JupengWall getScore:^(NSError* error,NSInteger userTotalScore)
+     {
+         if(error == nil){
+             
+             NSString *warning = [NSString stringWithFormat:@"巨朋查询积分成功，总共%d 个积分",userTotalScore];
+             NSLog(@"%@",warning);
+             [self handlePlatformGoldReturnWithGold:userTotalScore andPid:JUPENG_ID_INT pidStr:JUPENG_ID];
+        }
+         
+         else{
+             NSLog(@"巨朋查询积分失败");
+             [self handleErrorLoadGoldWithPid:JUPENG_ID_INT];
+         }
+     }];
+}
+
+//果盟广告
+- (void)showGuoMengWall
+{
+    //第一个参数YES表示允许旋转,NO表示禁止旋转
+    
+    //第二个参数isHscreen表示应用如果禁止旋转，那么固定是横还是竖，YES是横、NO是竖
+    [_guoMengWallVc pushGuoMobWall:NO Hscreen:NO];
+}
+
+-(void)getGuoMengGold
+{
+    [_guoMengWallVc updatePoint];
+}
+
 
 
 -(void) reloadGoldAmount
@@ -355,6 +408,9 @@
         }
         if (APPDELEGATE.XingYunPlatform.state==1) {
             [self getXingYunScore];
+        }
+        if (APPDELEGATE.JuPengPlatForm.state==1) {
+            [self getJuPengScore];
         }
         
     } failure:^(id error) {
@@ -479,6 +535,12 @@
             case XINGYUN_ID_INT:
                 _addGoldXingYunToSysGoldAmount=totalPoint;
                 break;
+            case JUPENG_ID_INT:
+                _addGoldJuPengToSysGoldAmount=totalPoint;
+                break;
+            case GUOMENG_ID_INT:
+                _addGoldGuoMengToSysGoldAmount=totalPoint;
+                break;
             default:
                 break;
         }
@@ -542,6 +604,19 @@
         [_owViewController requestOnlineConsumeWithPoint:reduceAmount];
     }else if ([pidStr isEqualToString:XINGYUN_ID])
         [GuScore consumptionScore:reduceAmount delegate:self];
+    else if ([pidStr isEqualToString:JUPENG_ID]){
+        [JupengWall spendScore:reduceAmount didSpendBlock:^(NSError* error,NSInteger userTotalScore)
+         {
+             if(error == nil){
+                 [self handleReducePlatformGoldWithPid:JUPENG_ID_INT];
+             }else{
+                 [self handleErrorReduceGoldWithPid:JUPENG_ID_INT];
+             }
+         }];
+    }else if ([pidStr isEqualToString:GUOMENG_ID]){
+        [self handleReducePlatformGoldWithPid:GUOMENG_ID_INT];
+    }
+        
 }
 
 -(void) handleErrorReduceGoldWithPid:(int ) pid
@@ -591,6 +666,12 @@
                 break;
             case XINGYUN_ID_INT:
                 addGold=_addGoldXingYunToSysGoldAmount;
+                break;
+            case JUPENG_ID_INT:
+                addGold=_addGoldJuPengToSysGoldAmount;
+                break;
+            case GUOMENG_ID_INT:
+                addGold=_addGoldGuoMengToSysGoldAmount;
                 break;
             default:
                 break;
@@ -1110,6 +1191,18 @@
 {
     NSLog(@"消耗失败:%@",error);
     [self handleErrorReduceGoldWithPid:XINGYUN_ID_INT];
+}
+
+#pragma mark - 果盟回调
+//刷新积分的错误
+- (void)GMUpdatePointError:(NSString *)error
+{
+    [self handleErrorLoadGoldWithPid:GUOMENG_ID_INT];
+}
+//appname 返回打开或下载的应用名字  point返回积分
+- (void)checkPoint:(NSString *)appname point:(int)point
+{
+    [self handlePlatformGoldReturnWithGold:point andPid:GUOMENG_ID_INT pidStr:GUOMENG_ID];
 }
 
 @end

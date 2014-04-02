@@ -7,26 +7,26 @@
 //
   
 //APP
-#define APP_NAME @"ZuanZuanZuan"
-#define VERSION_STRING @"4.30"
+#define APP_NAME @"Kfc"
+#define VERSION_STRING @"3.2"
 #define SYS_OS [[UIDevice currentDevice] systemVersion] 
 
-//McDonald 版本 1.00 2.0 3.0 4.0
-#define APPNAME_MCDONALD @"McDonald"
+//McDonald 版本 1.00 2.0 3.0 4.0 5.0
+#define APPNAME_MCDONALD @"McDonald" 
 
-//GuaGuale 刮刮乐 1.10 2.10
+//GuaGuale 刮刮乐 1.10 2.10 3.10
 #define APPNAME_GUAGUALE @"GuaGuaLe"
 
-//GuaGuale 肯德基 1.20 2.20
+//GuaGuale 肯德基 1.20 2.20 3.2
 #define APPNAME_KFC @"Kfc"
  
-//ZuanZuanZuan 转转赚 1.30 2.30 3.30
+//ZuanZuanZuan 转转赚 1.30 2.30 3.30 4.30
 #define APPNAME_ZuanZuanZuan @"ZuanZuanZuan"
 //#define VERSION 1.0
 
 //麦当劳优惠劵  全民刮刮赚  肯德基优惠劵 老虎机转转赚
-#define APP_FIRST_TAB_NAME @"老虎机转转赚" 
-
+#define APP_FIRST_TAB_NAME @"肯德基优惠劵"
+ 
 
 #define PRIVATE_SECRET_KEY @"javababyzenggang"
  

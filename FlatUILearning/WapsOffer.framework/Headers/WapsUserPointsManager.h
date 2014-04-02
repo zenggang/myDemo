@@ -3,11 +3,10 @@
 #import "AppConnect.h"
 #import "WapsTBXML.h"
 
-
 typedef enum {
     kWapsUserAccountRequestTagGetPoints = 0,
-    kWapsUserAccountRequestTagSpendPoints,
-    kWapsUserAccountRequestTagAwardPoints,
+    kWapsUserAccountRequestTagSpendPoints = 1,
+    kWapsUserAccountRequestTagAwardPoints = 2,
     kWapsUserAccountRequestTagMAX
 } WapsUserAccountRequestTag;
 
@@ -18,9 +17,11 @@ typedef enum {
     WapsUserPoints *userPointsObj_;
     WapsUserPointsRequestHandler *userPointsGetPointsObj_;
     WapsUserPointsRequestHandler *userPointsSpendPointsObj_;
-
+    WapsUserPointsRequestHandler *userPointsAwardPointsObj_;
     BOOL waitingForResponse_;
 }
+
+@property(nonatomic, retain) id <AppConnectDelegate> delegate;
 
 + (WapsUserPointsManager *)sharedWapsUserPointsManager;
 
@@ -30,15 +31,13 @@ typedef enum {
 
 - (void)awardPoints:(int)points;
 
-- (void)fetchResponseSuccessWithData:(void *)dataObj withRequestTag:(int)aTag;
+- (void)fetchResponseSuccessWithData:(WapsCoreFetcher *)dataObj withRequestTag:(int)aTag;
 
 - (void)fetchResponseError:(WapsResponseError)errorType errorDescription:(id)errorDescObj requestTag:(int)aTag;
 
 - (void)updateUserAccountObjWithTBXMLElement:(WapsTBXMLElement *)userAccElement;
 
 - (void)releaseUserAccount;
-
-@property(nonatomic, readonly) WapsUserPoints *userPointsObj;
 
 @end
 
@@ -53,8 +52,6 @@ typedef enum {
 
 + (void)showEarnedPoints;
 
-+ (void)showDefaultEarnedCurrencyAlert;
-
-//+ (void)showDefaultEarnedCurrencyAlert;
++ (void)showDefaultEarnedCurrencyAlert:(NSNotification *)notifyObj;
 
 @end

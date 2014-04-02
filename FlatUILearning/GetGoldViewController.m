@@ -26,7 +26,7 @@
 @property (nonatomic,strong) FUIButton *AiPuDongLiButton;
 @property (nonatomic,strong) FUIButton *AiDeSiQiButton;
 @property (nonatomic,strong) FUIButton *XingYunButton;
-
+@property (nonatomic,strong) FUIButton *JuPengButton;
 
 @property (nonatomic,strong) FUIButton *awardQqButton;
 @property (nonatomic,strong) FUIButton *awardWeiXinButton;
@@ -116,6 +116,9 @@
                 break;
             case XINGYUN_ID_INT:
                 [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_XingYunButton andTitle:@"行云平台" withAction:@selector(openXingYunWall)];
+                break;
+            case JUPENG_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_JuPengButton andTitle:@"巨朋平台" withAction:@selector(openJuPengWall)];
                 break;
             default:
                 break;

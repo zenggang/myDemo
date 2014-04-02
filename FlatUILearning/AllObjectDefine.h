@@ -34,10 +34,12 @@
 #define MOPAN_ID  @"11"
 #define AIDESIQI_ID @"12"
 #define XINGYUN_ID @"13"
+#define JUPENG_ID @"14" 
+#define GUOMENG_ID @"15"
 
 #define SYS_GIF_ID_INT   1
 #define DOMO_ID_INT 2
-#define LIMEI_ID_INT 3
+#define LIMEI_ID_INT 3 
 #define DIANRU_ID_INT 4
 #define MIDI_ID_INT 5
 #define YOUMI_ID_INT   6
@@ -48,5 +50,5 @@
 #define MOPAN_ID_INT  11
 #define AIDESIQI_ID_INT 12
 #define XINGYUN_ID_INT 13
-
-
+#define JUPENG_ID_INT 14
+#define GUOMENG_ID_INT 15

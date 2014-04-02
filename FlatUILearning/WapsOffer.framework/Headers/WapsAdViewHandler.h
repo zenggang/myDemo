@@ -20,7 +20,11 @@
 
 + (void)displayAd:(UIViewController *)vController adSize:(NSString *)aSize showX:(CGFloat)x showY:(CGFloat)y ;
 
++ (UIView *)displayAd:(NSString *)aSize;
+
 - (void)removeAdH5;
+
++ (void)closeBannerAd;
 
 @end
 
@@ -28,10 +32,16 @@
 
 - (void)displayAd:(UIViewController *)vController adSize:(NSString *)aSize showX:(CGFloat)x showY:(CGFloat)y;
 
+- (UIView *)displayAd:(NSString *)aSize;
+
+- (void)closeBannerAd;
+
 @end
 
 
 @interface AppConnect (WapsAdViewHandler)
+
++ (UIView *)displayAdForSize:(NSString *)aSize;
 
 + (void)displayAd:(UIViewController *)vController adSize:(NSString *)aSize showX:(CGFloat)x showY:(CGFloat)y;
 
@@ -40,6 +50,8 @@
 + (void)displayAd:(UIViewController *)vController;
 
 + (void)displayAd:(UIViewController *)vController showX:(CGFloat)x showY:(CGFloat)y;
+
++ (void)closeBannerAd;
 @end
 
 

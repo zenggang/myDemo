@@ -229,15 +229,18 @@
                 case YIJIFEN_ID_INT:
             {
                 _YiJiFenPlatform = platform;
-                //开发者
-                YJFUserMessage *user = [[YJFUserMessage alloc]init];
-                [user setAppId:_YiJiFenPlatform.appSecret];//应用ID
-                [user setDevId:@"10620"];//开发者ID
-                [user setAppKey:_YiJiFenPlatform.appKey];//appKey
-                [user setChannel:@"IOS1.2.2"];//渠道号，默认当前SDK版本号
-                //初始化
-                YJFInitServer *InitData  = [[YJFInitServer alloc]init];
-                [InitData  getInitEscoreData];
+                if (_YiJiFenPlatform.state==1) {
+                    //开发者
+                    YJFUserMessage *user = [[YJFUserMessage alloc]init];
+                    [user setAppId:_YiJiFenPlatform.appSecret];//应用ID
+                    [user setDevId:@"10620"];//开发者ID
+                    [user setAppKey:_YiJiFenPlatform.appKey];//appKey
+                    [user setChannel:@"IOS1.2.2"];//渠道号，默认当前SDK版本号
+                    //初始化
+                    YJFInitServer *InitData  = [[YJFInitServer alloc]init];
+                    [InitData  getInitEscoreData];
+                }
+                
             }
                 break;
             case AIPUDONGLI_ID_INT:
@@ -257,15 +260,34 @@
             case XINGYUN_ID_INT:
             {
                 _XingYunPlatform=platform;
-                //初始化配置
-                [GuUserConfig getInstance].guAppKey =_XingYunPlatform.appKey;//应用key
-                [GuUserConfig getInstance].guChannel =@"IOS2.1.0";//渠道(选填)
-                //应用启动时候初始化..
-                GuInitServer *initServer = [[GuInitServer alloc]init];
-                [initServer getInit];
+                if (_XingYunPlatform.state==1) {
+                    //初始化配置
+                    [GuUserConfig getInstance].guAppKey =_XingYunPlatform.appKey;//应用key
+                    [GuUserConfig getInstance].guChannel =@"IOS2.1.0";//渠道(选填)
+                    //应用启动时候初始化..
+                    GuInitServer *initServer = [[GuInitServer alloc]init];
+                    [initServer getInit];
+                }
             }
-            default:
                 break;
+            case JUPENG_ID_INT:
+            {
+                // www.jpmob.com上，提交应用，获取信息
+                // 初始化信息
+                // 替换下面的appID和appSecret为你的appid和appSecret
+                _JuPengPlatForm=platform;
+                if (_JuPengPlatForm.state==1) {
+                    [JupengConfig launchWithAppID:_JuPengPlatForm.appKey withAppSecret:_JuPengPlatForm.appSecret];
+                }
+            }
+                break;
+            case GUOMENG_ID_INT:
+            {
+                _GuoMengPlatForm=platform;
+            }
+                break;
+            default:
+                break; 
         }
     }
 }

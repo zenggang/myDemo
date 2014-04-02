@@ -1,7 +1,10 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIkit.h>
 
-#define WAPS_SDK_VERSION_NUMBER            @"1.5.0"
+#define WAPS_SDK_VERSION_NUMBER            @"1.6.2"
+
+@protocol AppConnectDelegate;
+@class WapsUserPoints;
 
 enum WapsConnectionType {
     WAPS_CONNECT_TYPE_CONNECT = 0,
@@ -20,6 +23,7 @@ enum WapsConnectionType {
     NSMutableData *data_;
     int connectAttempts_;
     BOOL isInitialConnect_;
+    BOOL isAutoGetPoints_;
     int responseCode_;
     NSURLConnection *connectConnection_;
     NSURLConnection *userIDConnection_;
@@ -37,11 +41,13 @@ enum WapsConnectionType {
 @property(nonatomic, copy) NSString *appCount;
 @property(nonatomic, copy) NSString *appleID;
 @property(assign) BOOL isInitialConnect;
+@property(assign) BOOL isAutoGetPoints;
+@property(nonatomic, retain) id <AppConnectDelegate> delegate;
 
 
 + (AppConnect *)getConnect:(NSString *)appID;
 
-+ (AppConnect *)getConnect:(NSString *)appID pid:(NSString*)appChannel;
++ (AppConnect *)getConnect:(NSString *)appID pid:(NSString *)appChannel;
 
 + (AppConnect *)getConnect:(NSString *)appID pid:(NSString *)appChannel userID:(NSString *)theUserID;
 
@@ -58,10 +64,6 @@ enum WapsConnectionType {
 + (NSString *)getUserID;
 
 + (NSMutableDictionary *)getConfigItems;
-
-+ (BOOL *)isShowBannerAd;
-
-+ (void)setIsShowBannerAd:(BOOL *)isShow;
 
 - (void)connectWithType:(int)connectionType withParams:(NSDictionary *)params;
 
@@ -85,7 +87,7 @@ enum WapsConnectionType {
 
 + (void)clearCache;
 
-+ (NSString*)getOpenID;
++ (NSString *)getOpenID;
 
 + (NSString *)getIDFA;
 
@@ -101,5 +103,56 @@ enum WapsConnectionType {
 
 + (NSString *)getTimeStamp;
 
++ (void)autoGetPoints:(BOOL)isAuto;
+
 @end
+
+
+@protocol AppConnectDelegate
+@required
+
+- (void)onWapsConnectSuccess;
+
+- (void)onWapsConnectFailed;
+
+- (void)onWapsUpdatePoints:(WapsUserPoints *)userPoints;
+
+- (void)onWapsGetPointsSuccess:(WapsUserPoints *)userPoints;
+
+- (void)onWapsGetPointsFailed:(NSString *)error;
+
+- (void)onWapsAwardPointsSuccess:(int)awardPoint;
+
+- (void)onWapsAwardPointsFailed:(NSString *)error;
+
+- (void)onWapsSpendPointsSuccess:(int)spendPoint;
+
+- (void)onWapsSpendPointsFailed:(NSString *)error;
+
+- (void)onWapsOfferClose;
+
+- (void)onWapsBannerShow;
+
+- (void)onWapsBannerShowFailed;
+
+- (void)onWapsBannerClick;
+
+- (void)onWapsBannerClose;
+
+- (void)onWapsPopAdInitSuccess;
+
+- (void)onWapsPopAdInitFailed:(NSString *)error;
+
+- (void)onWapsPopAdInitNull:(NSString *)error;
+
+- (void)onWapsPopAdShowSuccess;
+
+- (void)onWapsPopAdShowFailed:(NSString *)error;
+
+- (void)onWapsPopAdClose;
+
+- (void)onWapsPopAdClick;
+
+@end
+
 #import "AppConnectConstants.h"

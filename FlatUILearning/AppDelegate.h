@@ -11,6 +11,8 @@
 #import "Users.h"
 #import "GWVersion.h"
 #import "WXApi.h"
+#import "JupengConfig.h"
+
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WXApiDelegate>
 
@@ -60,6 +62,9 @@
 @property (nonatomic,strong) GoldPlatForm *AiPuDongLiPlatform;
 @property (nonatomic,strong) GoldPlatForm *AiDeSiQiPlatform;
 @property (nonatomic,strong) GoldPlatForm *XingYunPlatform;
+@property (nonatomic,strong) GoldPlatForm *JuPengPlatForm;
+@property (nonatomic,strong) GoldPlatForm *GuoMengPlatForm;
+
 
 -(void) initUserInfo:(Users *) user;
 - (void) registPushNotification;

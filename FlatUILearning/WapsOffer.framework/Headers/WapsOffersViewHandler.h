@@ -1,7 +1,7 @@
 #import <UIKit/UIKit.h>
-#import "WapsCallsWrapper.h"
-#import "WapsOffersWebView.h"
 #import "AppConnect.h"
+
+@class WapsOffersController;
 
 typedef enum {
     WAPS_GROUPBUY,
@@ -11,54 +11,31 @@ typedef enum {
     WAPS_OWNER_APPS
 } WanpuMod;
 
-@class WapsOffersWebView;
-
 @interface WapsOffersViewHandler : NSObject {
-    WapsOffersWebView *offersWebView_;
+    WapsOffersController * _wapsOffersController;
 }
 
-@property(nonatomic, retain) WapsOffersWebView *offersWebView;
+@property (nonatomic, retain) WapsOffersController * wapsOffersController;
+
+- (void)closeOffers;
 
 - (void)removeOffersWebView;
 
+- (UIView *)getOfferContentView;
+
 + (WapsOffersViewHandler *)sharedWapsOffersViewHandler;
 
-+ (UIView *)showOffers;
-
-+ (UIView *)showOffersWithURL:(NSString *)url;
-
-+ (void)showOffers:(UIViewController *)vController;
-
-+ (void)showFeedBack:(UIViewController *)vController;
-
-+ (void)showOwnerApps:(UIViewController *)vController WanpuMod:(WanpuMod)mod;
-
-@end
-
-
-@interface WapsCallsWrapper (WapsOffersViewHandler)
-- (UIView *)showOffersWithFrame:(CGRect)frame URL:(NSString *)url autoJudge:(BOOL)judge;
-
-//
-- (UIView *)showOffers;
-
-- (UIView *)showOffersWhitURL:(NSString *)url View:(UIView *)baseView;
-
-- (UIView *)showOffersWhitURL:(NSString *)url View:(UIView *)baseView showNavBar:(BOOL)flg;
-
-- (void)showOffers:(UIViewController *)vController;
+- (void)showOffer:(UIViewController *)controller;
 
 - (void)showOffers:(UIViewController *)vController showNavBar:(BOOL)visible;
 
-- (void)showOffersWithURL:(NSString *)url_ Controller:(UIViewController *)vController showNavBar:(BOOL)visible;
+- (void)showOffers:(UIViewController *)controller navBar:(UIView *)userNavBar;
 
-- (void)showOffers:(UIViewController *)vController showNavBar:(BOOL)visible autoJudge:(BOOL)judge;
+- (void)showOffersWithURL:(NSString *)url Controller:(UIViewController *)controller;
 
-- (UIView *)showOffersWithSize:(CGSize)size;
+- (void)showFeedBack:(UIViewController *)controller;
 
-- (void)showFeedBack:(UIViewController *)vController;
-
-- (void)showOwnerApps:(UIViewController *)vController  WanpuMod:(WanpuMod)mod;
+- (void)loadViewWithURL:(NSString *)url Controller:(UIViewController *)controller;
 
 @end
 
@@ -68,30 +45,20 @@ typedef enum {
 #pragma mark -
 #pragma mark offer主要调用方法
 
-+ (void)showOffers:(UIViewController *)vController;
++ (void)closeOffers;
 
-+ (UIView *)showOffersWithSize:(CGSize)size;
++ (void)showOffers:(UIViewController *)controller;
 
-+ (UIView *)showOffers;
++ (void)showOffers:(UIViewController *)controller showNavBar:(BOOL)visible;
 
-+ (UIView *)showOffersWithURL:(NSString *)url;
++ (UIView *)getOfferContentView;
 
-+ (UIView *)showOffersWithURL:(NSString *)url View:(UIView *)baseView;
++ (void)showOffers:(UIViewController *)controller navBar:(UIView *)userNavBar;
 
-+ (void)showOffersWithURL:(NSString *)url Controller:(UIViewController *)vController showNavBar:(BOOL)visible;
++ (void)showOffersWithURL:(NSString *)url Controller:(UIViewController *)viewController;
 
-+ (void)showOffers:(UIViewController *)vController showNavBar:(BOOL)visible;
++ (void)showFeedBack:(UIViewController *)controller;
 
-+ (void)showOffers:(UIViewController *)vController showNavBar:(BOOL)visible autoJudge:(BOOL)judge;
-
-+ (void)showFeedBack:(UIViewController *)vController;
-
-+ (void)showAppList:(UIViewController *)vController;
-
-+ (void)showAppSite:(UIViewController *)vController;
-
-+ (void)showAppBBS:(UIViewController *)vController;
-
-+ (void)showAppArticle:(UIViewController *)vController;
++ (void)loadViewWithURL:(NSString *)url Controller:(UIViewController *)controller;
 
 @end

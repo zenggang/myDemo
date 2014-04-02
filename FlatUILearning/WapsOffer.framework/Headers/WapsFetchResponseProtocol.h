@@ -1,4 +1,7 @@
 #import <Foundation/Foundation.h>
+#import "WapsTBXML.h"
+
+@class WapsCoreFetcher;
 
 typedef enum WapsResponseError {
     kWapsInternetFailure = 0,
@@ -9,7 +12,7 @@ typedef enum WapsResponseError {
 @protocol WapsFetchResponseDelegate <NSObject>
 @required
 
-- (void)fetchResponseSuccessWithData:(void *)dataObj withRequestTag:(int)aTag;
+- (void)fetchResponseSuccessWithData:(WapsCoreFetcher *)dataObj withRequestTag:(int)aTag;
 
 - (void)fetchResponseError:(WapsResponseError)errorType errorDescription:(id)errorDescObj requestTag:(int)aTag;
 @end
