@@ -12,7 +12,7 @@
 #import "GWVersion.h"
 #import "WXApi.h"
 #import "JupengConfig.h"
-
+#import "QumiConfigTool.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate,WXApiDelegate>
 
@@ -64,6 +64,8 @@
 @property (nonatomic,strong) GoldPlatForm *XingYunPlatform;
 @property (nonatomic,strong) GoldPlatForm *JuPengPlatForm;
 @property (nonatomic,strong) GoldPlatForm *GuoMengPlatForm;
+@property (nonatomic,strong) GoldPlatForm *QuMiPlatForm;
+@property (nonatomic,strong) GoldPlatForm *ChuKongPlatForm;
 
 
 -(void) initUserInfo:(Users *) user;

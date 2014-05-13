@@ -55,14 +55,14 @@
 
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(delayInit) name:APPINFO_DID_LOADED object:nil];
     if (APPDELEGATE.appVersionInfo.isHide==1) {
-        [DianRuSDK requestAdmobileViewWithDelegate:self];
+        [self reqeustQuMIBannar];
     }
 }
 
 -(void) delayInit
 {
     if (APPDELEGATE.appVersionInfo.isHide==1) {
-        [DianRuSDK requestAdmobileViewWithDelegate:self];
+       [self reqeustQuMIBannar];
     }
     
     if (!APPDELEGATE.isFirstTime && APPDELEGATE.appVersionInfo.isHide==0){
@@ -138,16 +138,32 @@
 //    }
 //}
 
-//此处需要判断一下sdkView是否已设置，如果已存在直接更新Frame即可
--(void)didReceiveAdView:(UIView*)adView
+//趣米bananr广告条
+-(void) reqeustQuMIBannar
 {
-    
-    if(!_dianruBannarView)
-    {
-        _dianruBannarView = (DianRuSDK *)adView;
-        [self.view addSubview:_dianruBannarView];
-        self.dianruBannarView.center=CGPointMake(160, 23);
-    }
+    _qumiBannerAD = [[QumiBannerAD alloc] initWithQumiBannerAD];
+    self.qumiBannerAD.frame = CGRectMake(0, 0, 320, 50);
+    self.qumiBannerAD.center=CGPointMake(160, 23);
+    //设置代理
+    self.qumiBannerAD.delegate = self;
+    //设置根式图
+    self.qumiBannerAD.rootViewController = self;
+    //开始加载和展示广告
+    [self.qumiBannerAD loadBannerAd];
+    //将广告视图添加到父视图中去
+    [self.view addSubview:self.qumiBannerAD];
+}
+#pragma mark -
+#pragma mark QumiBannerADDelegate Methods
+//加载广告成功后，回调该方法
+- (void)qmAdViewSuccessToLoadAd:(QumiBannerAD *)adView
+{
+    NSLog(@"banner广告加载成功！");
+}
+//加载广告失败后，回调该方法
+- (void)qmAdViewFailToLoadAd:(QumiBannerAD *)adView withError:(NSError *)error
+{
+    NSLog(@"banner广告加载失败，失败信息是：%@",error);
 }
 
 #pragma mark -
@@ -282,32 +298,5 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark -
-#pragma mark DianRu delegate
 
-- (NSString *)applicationKey {
-    if (APPDELEGATE.appVersionInfo.isHide==1) {
-        return @"00001304090000C5";
-    }else
-        return APPDELEGATE.DianRuPlatform.appKey;
-}
-
-- (int) adType
-{
-    return 0;
-}
-
-
-- (NSString *)keyWords
-{
-    return @"生活";
-}
-- (UIViewController *)viewControllerForPresentingModalView {
-    return self;
-}
-
-- (BOOL)shouldUsingOrientationRelatedContent
-{
-    return YES;
-}
 @end

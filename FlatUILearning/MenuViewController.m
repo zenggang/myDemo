@@ -8,6 +8,8 @@
 
 #import "ZuanZuanZuanViewController.h"
 #import "MenuViewController.h"
+#import "DaZuanPanViewController.h"
+#import "YaoQianZuanViewController.h"
 
 @interface MenuViewController ()
 
@@ -85,7 +87,13 @@
     if (isStoryBord) {
          newTopViewController= [self.storyboard instantiateViewControllerWithIdentifier:identifier];
     }else{
-        newTopViewController = [[ZuanZuanZuanViewController alloc] initWithNibName:@"ZuanZuanZuanViewController" bundle:nil];
+        if ([identifier isEqualToString:@"DaZuanPanViewController"]) {
+            newTopViewController = [[DaZuanPanViewController alloc] initWithNibName:@"DaZuanPanViewController" bundle:nil];
+        }else if([identifier isEqualToString:@"ZuanZuanZuanViewController"]){
+            newTopViewController = [[ZuanZuanZuanViewController alloc] initWithNibName:@"ZuanZuanZuanViewController" bundle:nil];
+        }else if([identifier isEqualToString:@"YaoQianZuanViewController"]){
+            newTopViewController = [[YaoQianZuanViewController alloc] initWithNibName:@"YaoQianZuanViewController" bundle:nil];
+        }
     }
     
     
@@ -158,6 +166,12 @@
                 identifier=@"guagualeViewController";
             }else if ([APP_NAME isEqualToString:APPNAME_ZuanZuanZuan]){
                 identifier=@"ZuanZuanZuanViewController";
+                isStoryBord=NO;
+            }else if ([APP_NAME isEqualToString:APPNAME_DAZUANPAN]){
+                identifier=@"DaZuanPanViewController";
+                isStoryBord=NO;
+            }else if ([APP_NAME isEqualToString:APPNAME_YAOQIANZUAN]){
+                identifier=@"YaoQianZuanViewController";
                 isStoryBord=NO;
             }
         }

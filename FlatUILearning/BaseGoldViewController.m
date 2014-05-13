@@ -12,15 +12,17 @@
 #import "MiidiAdWall.h"
 #import "WapsOffer/AppConnect.h"
 #import "AdwoOfferWall.h"
+#import "PunchBoxAd.h"
 
 
-@interface BaseGoldViewController()
+@interface BaseGoldViewController()<PBOfferWallDelegate>
+
 @property (nonatomic,strong) DMOfferWallViewController *DMOWallController;
 @property (nonatomic,strong) DMOfferWallManager *offerWallManager;
 
 @property (nonatomic,strong) immobView *liMei_AdWall;
 @property (nonatomic,strong)  YJFIntegralWall *integralWall;
-//@property (atomic,assign) int latestGoldAmount;
+@property (nonatomic,strong)     QumiOfferWall *qumiViewController;
 @property (atomic,assign) int platformRoundCheckCount;
 @property (nonatomic,assign) BOOL isAllGoldLoaded;
 @property (nonatomic, retain) YouMiWall *youmiWall;
@@ -39,6 +41,8 @@
 @property (nonatomic,assign) NSInteger addGoldXingYunToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldJuPengToSysGoldAmount;
 @property (nonatomic,assign) NSInteger addGoldGuoMengToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldQuMiToSysGoldAmount;
+@property (nonatomic,assign) NSInteger addGoldChuKongToSysGoldAmount;
 
 @property (nonatomic,assign) BOOL isRuduceGold;
 @property (nonatomic,strong) NSMutableString *reduceGoldData;
@@ -66,13 +70,13 @@
         }
         if (APPDELEGATE.appVersionInfo.isHide==1) {
             [self showFUIAlertViewWithTitle:@"欢迎使用!" message:@"您是第一次使用,系统将赠送给您一份神秘大礼!" withTag:GIFT_ALERVIEW_TAG cancleButtonTitle:@"确认接收" otherButtonTitles:nil];
-            [DianRuSDK requestAdmobileViewWithDelegate:self];
+            [self reqeustQuMIBannar];
         }else
             [self showFUIAlertViewWithTitle:@"欢迎使用!" message:@"您是第一次使用免费赚金币功能,系统将赠送给您一份神秘大礼!" withTag:GIFT_ALERVIEW_TAG cancleButtonTitle:@"确认接收"  otherButtonTitles:nil];
     }else{
         [self reloadGoldAmount];
         if (APPDELEGATE.appVersionInfo.isHide==1) {
-             [DianRuSDK requestAdmobileViewWithDelegate:self];
+             [self reqeustQuMIBannar];
         }else{
             if (APPDELEGATE.appVersionInfo.announcementId!=APPDELEGATE.announcementId) {
                 if (APPDELEGATE.appVersionInfo.announcement && APPDELEGATE.appVersionInfo.announcement.length>0) {
@@ -93,6 +97,33 @@
 {
     [super viewWillAppear:animated];
     
+}
+
+//趣米bananr广告条
+-(void) reqeustQuMIBannar
+{
+    _qumiBannerAD = [[QumiBannerAD alloc] initWithQumiBannerAD];
+    self.qumiBannerAD.frame = CGRectMake(0, 0, 320, 50);
+    //设置代理
+    self.qumiBannerAD.delegate = self;
+    //设置根式图
+    self.qumiBannerAD.rootViewController = self;
+    //开始加载和展示广告
+    [self.qumiBannerAD loadBannerAd];
+    //将广告视图添加到父视图中去
+    [self.view addSubview:self.qumiBannerAD];
+}
+#pragma mark -
+#pragma mark QumiBannerADDelegate Methods
+//加载广告成功后，回调该方法
+- (void)qmAdViewSuccessToLoadAd:(QumiBannerAD *)adView
+{
+    NSLog(@"banner广告加载成功！");
+}
+//加载广告失败后，回调该方法
+- (void)qmAdViewFailToLoadAd:(QumiBannerAD *)adView withError:(NSError *)error
+{
+    NSLog(@"banner广告加载失败，失败信息是：%@",error);
 }
 
 -(void)viewDidUnload
@@ -185,6 +216,17 @@
         _guoMengWallVc.updatetime=0;
         //设置积分墙是否显示状态栏 默认隐藏
         _guoMengWallVc.isStatusBarHidden=NO;
+    }
+    
+    if (APPDELEGATE.QuMiPlatForm.state==1) {
+        //创建积分墙广告 pointUserId可选，根据需要开发者自己设置，设置pointUserId可以实现在不同设备上同步该用户的积分。
+        _qumiViewController = [[QumiOfferWall alloc] initwithPointUserID:nil];
+        _qumiViewController.delegate = self;
+        _qumiViewController.rootViewController = self;
+    }
+    
+    if (APPDELEGATE.ChuKongPlatForm.state==1) {
+        [PBOfferWall sharedOfferWall].delegate = self;
     }
     
 }
@@ -330,22 +372,17 @@
 {
     [JupengWall getScore:^(NSError* error,NSInteger userTotalScore)
      {
-         if(error == nil){
+        if(error == nil){
              
-             NSString *warning = [NSString stringWithFormat:@"巨朋查询积分成功，总共%d 个积分",userTotalScore];
-             NSLog(@"%@",warning);
              [self handlePlatformGoldReturnWithGold:userTotalScore andPid:JUPENG_ID_INT pidStr:JUPENG_ID];
-        }
-         
-         else{
-             NSLog(@"巨朋查询积分失败");
+        }else{
              [self handleErrorLoadGoldWithPid:JUPENG_ID_INT];
          }
      }];
 }
 
 //果盟广告
-- (void)showGuoMengWall
+- (void)openGuoMengWall
 {
     //第一个参数YES表示允许旋转,NO表示禁止旋转
     
@@ -358,7 +395,39 @@
     [_guoMengWallVc updatePoint];
 }
 
+//趣米平台
+//打开趣米积分墙
+- (void)openQumiWall
+{
+    [_qumiViewController presentQumiOfferWall];
+}
 
+//领取积分
+- (void)getQuMiScore
+{
+    [_qumiViewController getPointsQueue];
+}
+
+//触控平台
+- (void)openChuKongWall
+{
+    [[PBOfferWall sharedOfferWall] showOfferWallWithScale:0.9f];
+}
+-(void) queryChuKongCoinForThread
+{
+    [[PBOfferWall sharedOfferWall] queryRewardCoin:^(NSArray *taskCoins, PBRequestError *error) {
+        if (taskCoins.count>0) {
+            int goldAmount =0;
+            for (NSDictionary *task in taskCoins) {
+                goldAmount=goldAmount+[[task objectForKey:@"task"] integerValue];
+            }
+            [self handlePlatformGoldReturnWithGold:goldAmount andPid:CHUKONG_ID_INT pidStr:CHUKONG_ID];
+        }else{
+            [self handlePlatformGoldReturnWithGold:0 andPid:CHUKONG_ID_INT pidStr:CHUKONG_ID];
+        }
+        
+    }];
+}
 
 -(void) reloadGoldAmount
 {
@@ -412,7 +481,15 @@
         if (APPDELEGATE.JuPengPlatForm.state==1) {
             [self getJuPengScore];
         }
-        
+        if (APPDELEGATE.GuoMengPlatForm.state==1) {
+            [self getGuoMengGold];
+        }
+        if (APPDELEGATE.QuMiPlatForm.state==1) {
+            [self getQuMiScore];
+        }
+        if (APPDELEGATE.ChuKongPlatForm.state==1) {
+            [NSThread detachNewThreadSelector:@selector(queryChuKongCoinForThread) toTarget:self withObject:nil];
+        }
     } failure:^(id error) {
         [self handleErrorLoadGoldWithPid:SYS_GIF_ID_INT];
     }];
@@ -497,7 +574,7 @@
 -(void) handlePlatformGoldReturnWithGold:(int) totalPoint andPid:(int) pid pidStr:(NSString *) pidStr
 {    @synchronized(self)
     {
-        NSLog(@"return %d %d %d",pid,_platformRoundCheckCount,totalPoint);
+        NSLog(@"return 平台id:%d 顺序: %d %d",pid,_platformRoundCheckCount,totalPoint);
         switch (pid) {
             case DOMO_ID_INT:
                 _addGoldDOMOToSysGoldAmount=totalPoint;
@@ -540,6 +617,12 @@
                 break;
             case GUOMENG_ID_INT:
                 _addGoldGuoMengToSysGoldAmount=totalPoint;
+                break;
+            case QUMI_ID_INT:
+                _addGoldQuMiToSysGoldAmount=totalPoint;
+                break;
+            case CHUKONG_ID_INT:
+                _addGoldChuKongToSysGoldAmount=totalPoint;
                 break;
             default:
                 break;
@@ -615,6 +698,11 @@
          }];
     }else if ([pidStr isEqualToString:GUOMENG_ID]){
         [self handleReducePlatformGoldWithPid:GUOMENG_ID_INT];
+    }else if([pidStr isEqualToString:QUMI_ID]){
+        
+        [_qumiViewController consumePoints:reduceAmount];
+    }else if ([pidStr isEqualToString:CHUKONG_ID]){
+        [self handleReducePlatformGoldWithPid:CHUKONG_ID_INT];
     }
         
 }
@@ -672,6 +760,12 @@
                 break;
             case GUOMENG_ID_INT:
                 addGold=_addGoldGuoMengToSysGoldAmount;
+                break;
+            case QUMI_ID_INT:
+                addGold=_addGoldQuMiToSysGoldAmount;
+                break;
+            case CHUKONG_ID_INT:
+                addGold=_addGoldChuKongToSysGoldAmount;
                 break;
             default:
                 break;
@@ -910,49 +1004,6 @@
 {
     [self handleErrorLoadGoldWithPid:WANPU_ID_INT];
 }
-#pragma mark -
-#pragma mark DianRu delegate
-
-- (NSString *)applicationKey {
-    if (APPDELEGATE.appVersionInfo.isHide==1) {
-        return @"00001304090000C5";
-    }else
-        return APPDELEGATE.DianRuPlatform.appKey;
-}
-
-- (int) adType
-{
-    return 0;
-}
-
-
-- (NSString *)keyWords
-{
-    return @"生活";
-}
-
-
-- (UIViewController *)viewControllerForPresentingModalView {
-    return self;
-}
-
-- (BOOL)shouldUsingOrientationRelatedContent
-{
-    return YES;
-}
-
-//此处需要判断一下sdkView是否已设置，如果已存在直接更新Frame即可
--(void)didReceiveAdView:(UIView*)adView
-{
-    
-    if(!_dianruBannarView)
-    {
-        _dianruBannarView = (DianRuSDK *)adView;
-        [self.view addSubview:_dianruBannarView];
-        self.dianruBannarView.center=CGPointMake(160, -25);
-    }
-}
-
 
 #pragma mark Point Check Callbacks
 // 积分墙开始加载数据。
@@ -1203,6 +1254,87 @@
 - (void)checkPoint:(NSString *)appname point:(int)point
 {
     [self handlePlatformGoldReturnWithGold:point andPid:GUOMENG_ID_INT pidStr:GUOMENG_ID];
+}
+
+#pragma mark -趣米回调
+
+//请求领取积分成功方法的回调
+- (void)qumiAdWallGetPointSuccess:(NSString *)getPointState
+{
+    [_qumiViewController queryRemainPoints];
+}
+
+//请求领取积分失败方法的回调
+- (void)qumiAdWallGetPointFailed:(NSError *)error
+{
+    [self handleErrorLoadGoldWithPid:QUMI_ID_INT];
+}
+
+//请求检查剩余积分成功后，回调该方法，获得总积分数和返回的积分数。
+- (void)QumiAdWallCheckPointsSuccess:(NSInteger)remainPoints
+{
+    [self handlePlatformGoldReturnWithGold:remainPoints andPid:QUMI_ID_INT pidStr:QUMI_ID];
+}
+
+//请求检查剩余积分失败后，回调该方法，返回检查积分失败信息
+-(void)QumiAdWallCheckPointsFailWithError:(NSError *)error
+{
+    [self handleErrorLoadGoldWithPid:QUMI_ID_INT];
+}
+
+//消费请求成功之后，回调该方法，返回消费情况(消费成功，或者当前的余额不足)，以及当前的总积分数
+- (void)QumiAdWallConsumePointsSuccess:(NSString *)ConsumeState remainPoints:(NSInteger)points
+{
+    [self handleReducePlatformGoldWithPid:QUMI_ID_INT];
+}
+
+//消费请求失败之后，回调该方法，返回失败信息。
+- (void)QumiAdWallConsumePointsFailWithError:(NSError *)error
+{
+    [self handleErrorReduceGoldWithPid:QUMI_ID_INT];
+}
+
+#pragma mark -
+#pragma mark QumiOfferWall GetPointsFromWall Methods
+//点击积分墙上的领取按钮，获得的积分
+- (void)QumiADWallGetPointsFromWall:(NSInteger)points
+{
+    //如果领取积分成功，失败信息就填写nil，如果失败，就填写失败的内容。
+    NSString *error = @"nil";
+    //如果用户领取积分成功，那么就发送成功信息
+    //用户是否获取积分成功  如果获取积分成功，就发送成功的状态，如果失败，就发送失败的信息
+    BOOL isSuccess = YES;
+    NSDictionary *dictionary = [[NSDictionary alloc] init] ;
+    NSString *getScoreState = nil;
+    if (isSuccess)
+    {
+        NSLog(@"用户获取了%d积分！",points);
+        //领取积分之后，开发者需要调用追加积分的方法。
+        [_qumiViewController appendPoints:points];
+        dictionary = [NSDictionary dictionaryWithObjectsAndKeys:QUMI_GET_POINTS_SUCCESS,QUMI_GET_POINTS_KEY_STATES,error,QUMI_GET_POINTS_ERROR, nil];
+        getScoreState = @"恭喜您获取积分成功";
+        [_qumiViewController queryRemainPoints];
+    }
+    else
+    {
+        dictionary = [NSDictionary dictionaryWithObjectsAndKeys:QUMI_GET_POINTS_FAILED,QUMI_GET_POINTS_KEY_STATES,error,QUMI_GET_POINTS_ERROR, nil];
+        getScoreState = @"获取积分失败";
+        [self handlePlatformGoldReturnWithGold:0 andPid:QUMI_ID_INT pidStr:QUMI_ID];
+    }
+    [[NSNotificationCenter defaultCenter] postNotificationName:QUMI_GET_POINTS_STATES object:self userInfo:dictionary];
+}
+
+#pragma mark - ChuKongWallDelagte
+
+- (void)pbOfferWall:(PBOfferWall *)pbOfferWall queryResult:(NSArray *)taskCoins
+          withError:(PBRequestError *)error
+{
+    
+}
+
+- (void)pbOfferWallDidPresentScreen:(PBOfferWall *)pbOfferWall
+{
+    NSLog(@"打开触控墙");
 }
 
 @end

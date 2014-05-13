@@ -5,28 +5,33 @@
 //  Created by gang zeng on 13-6-19.
 //  Copyright (c) 2013年 gang zeng. All rights reserved.
 //
-  
+
 //APP
-#define APP_NAME @"Kfc"
-#define VERSION_STRING @"3.2"
+#define APP_NAME @"YaoQianZuan"
+#define VERSION_STRING @"1.50"
 #define SYS_OS [[UIDevice currentDevice] systemVersion] 
 
 //McDonald 版本 1.00 2.0 3.0 4.0 5.0
 #define APPNAME_MCDONALD @"McDonald" 
 
-//GuaGuale 刮刮乐 1.10 2.10 3.10
+//GuaGuale 刮刮乐 1.10 2.10 3.10 4.10
 #define APPNAME_GUAGUALE @"GuaGuaLe"
 
 //GuaGuale 肯德基 1.20 2.20 3.2
 #define APPNAME_KFC @"Kfc"
- 
-//ZuanZuanZuan 转转赚 1.30 2.30 3.30 4.30
+  
+//ZuanZuanZuan 转转赚 1.30 2.30 3.30 4.30 5.3
 #define APPNAME_ZuanZuanZuan @"ZuanZuanZuan"
-//#define VERSION 1.0
 
-//麦当劳优惠劵  全民刮刮赚  肯德基优惠劵 老虎机转转赚
-#define APP_FIRST_TAB_NAME @"肯德基优惠劵"
- 
+//DaZuanPan 全民大赚盘 1.40
+#define APPNAME_DAZUANPAN @"DaZuanPan"
+
+//DaZuanPan 全民摇钱赚 1.50
+#define APPNAME_YAOQIANZUAN @"YaoQianZuan"
+
+//麦当劳优惠劵  全民刮刮赚  肯德基优惠劵 老虎机转转赚  全民大赚盘 全民摇钱赚
+#define APP_FIRST_TAB_NAME @"全民摇钱赚"
+  
 
 #define PRIVATE_SECRET_KEY @"javababyzenggang"
  
@@ -103,6 +108,10 @@
 #define GOLDRequestLaoHuJiList [NSString stringWithFormat:@"%@/api/laohuji/typeList",BaseUrl]
 #define GOLDRequestBuyLaoHuJi(udid)  [NSString stringWithFormat:@"%@/api/laohuji/StartLaohuji/%@",BaseUrl,udid]
 
+#define GOLDRequestDazuanpanList [NSString stringWithFormat:@"%@/api/dazuanpan/typeList",BaseUrl]
+#define GOLDRequestBuyDazuanpan(udid)  [NSString stringWithFormat:@"%@/api/dazuanpan/StartDazuanpan/%@",BaseUrl,udid]
+
+#define GOLDRequestBuyDazuanpan(udid)  [NSString stringWithFormat:@"%@/api/touzi/StartTouzi/%@",BaseUrl,udid]
 
 
 //NSUserdefaults property key name

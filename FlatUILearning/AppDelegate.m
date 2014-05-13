@@ -18,6 +18,7 @@
 #import <Escore/YJFInitServer.h>
 #import <AdWalker/GuUserConfig.h>
 #import <AdWalker/GuInitServer.h>
+#import "PunchBoxAd.h"
 #define LOOP_CHECK_FIRST_TIME_DELAY 1
 
 @implementation AppDelegate
@@ -276,9 +277,14 @@
                 // 初始化信息
                 // 替换下面的appID和appSecret为你的appid和appSecret
                 _JuPengPlatForm=platform;
+                if ([AppUtilities isIOS5]) {
+                    _JuPengPlatForm.state=0;
+                    _platformCount--;
+                }
                 if (_JuPengPlatForm.state==1) {
                     [JupengConfig launchWithAppID:_JuPengPlatForm.appKey withAppSecret:_JuPengPlatForm.appSecret];
                 }
+                
             }
                 break;
             case GUOMENG_ID_INT:
@@ -286,9 +292,22 @@
                 _GuoMengPlatForm=platform;
             }
                 break;
+                case QUMI_ID_INT:
+            {
+                _QuMiPlatForm=platform;
+                QumiConfigTool *qumiConfigTool = [QumiConfigTool sharedInstance];
+                [qumiConfigTool connectWithAppID:_QuMiPlatForm.appKey secretKey:_QuMiPlatForm.appSecret appChannel:100005];
+            }
+                break;
+            case CHUKONG_ID_INT:
+            {
+                _ChuKongPlatForm=platform;
+                [PunchBoxAd startSession:_ChuKongPlatForm.appKey];
+            }
+                break;
             default:
                 break; 
-        }
+        } 
     }
 }
 
@@ -362,6 +381,17 @@
     if (_needUpdateWall) {
         [self reloadWallArrayInfo];
     }
+//    PBADRequest *adRequest0 = [PBADRequest request];
+//    adRequest0.placementID = @"";
+//    [[PBInterstitial sharedInterstitial] loadInterstitial:adRequest0];
+//    //
+//    PBADRequest *adRequest1 = [PBADRequest request];
+//    adRequest1.placementID = @"";
+//    [[PBMoreGame sharedMoreGame] loadMoreGame:adRequest1];
+//    //
+//    PBADRequest *adRequest2 = [PBADRequest request];
+//    adRequest2.placementID = @"";
+//    [[PBOfferWall sharedOfferWall] loadOfferWall:adRequest2];
 
 }
 

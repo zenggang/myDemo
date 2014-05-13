@@ -27,6 +27,9 @@
 @property (nonatomic,strong) FUIButton *AiDeSiQiButton;
 @property (nonatomic,strong) FUIButton *XingYunButton;
 @property (nonatomic,strong) FUIButton *JuPengButton;
+@property (nonatomic,strong) FUIButton *GuoMengButton;
+@property (nonatomic,strong) FUIButton *QuMiButton;
+@property (nonatomic,strong) FUIButton *ChuKongButton;
 
 @property (nonatomic,strong) FUIButton *awardQqButton;
 @property (nonatomic,strong) FUIButton *awardWeiXinButton;
@@ -120,6 +123,16 @@
             case JUPENG_ID_INT:
                 [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_JuPengButton andTitle:@"巨朋平台" withAction:@selector(openJuPengWall)];
                 break;
+            case GUOMENG_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_GuoMengButton andTitle:@"果盟平台" withAction:@selector(openGuoMengWall)];
+                break;
+            case QUMI_ID_INT:
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_QuMiButton andTitle:@"趣米平台" withAction:@selector(openQumiWall)];
+                break;
+            case CHUKONG_ID_INT:
+                
+                [self creatGoldButtonWithFrame:CGRectMake(thex, theY, 90, 40) andButton:_ChuKongButton andTitle:@"触控平台" withAction:@selector(openChuKongWall)];
+                break;
             default:
                 break;
         }
@@ -197,7 +210,10 @@
             [_scrollTextView removeFromSuperview];
         }
         NSArray *textArray=APPDELEGATE.exchangeArrayForWall;
-        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && [APP_NAME isEqualToString:APPNAME_ZuanZuanZuan] && !APPDELEGATE.isChangeStatusBarY){
+        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && ([APP_NAME isEqualToString:APPNAME_ZuanZuanZuan] ||
+                                                                 [APP_NAME isEqualToString:APPNAME_DAZUANPAN]  ||
+                                                                 [APP_NAME isEqualToString:APPNAME_YAOQIANZUAN]
+                                                                 ) && !APPDELEGATE.isChangeStatusBarY){
             _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 20, 320, 20) withTextArray:textArray];
         }else
             _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 0, 320, 20) withTextArray:textArray];

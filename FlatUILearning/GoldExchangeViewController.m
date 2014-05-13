@@ -51,7 +51,9 @@
             [_scrollTextView removeFromSuperview];
         }
         NSArray *textArray=APPDELEGATE.exchangeArrayForWall;
-        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && [APP_NAME isEqualToString:APPNAME_ZuanZuanZuan] && !APPDELEGATE.isChangeStatusBarY){
+        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && ([APP_NAME isEqualToString:APPNAME_ZuanZuanZuan] ||
+                                                                 [APP_NAME isEqualToString:APPNAME_DAZUANPAN]  ||
+                                                                 [APP_NAME isEqualToString:APPNAME_YAOQIANZUAN]) && !APPDELEGATE.isChangeStatusBarY){
             _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 20, 320, 20) withTextArray:textArray];
         }else
             _scrollTextView =[self createTextScrollViewWithFrame:CGRectMake(0, 0, 320, 20) withTextArray:textArray];

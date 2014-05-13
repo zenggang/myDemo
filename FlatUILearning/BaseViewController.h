@@ -31,6 +31,8 @@
 
 #pragma mark Custom metod
 -(DMScrollingTicker *) createTextScrollViewWithFrame:(CGRect) frame withTextArray:(NSArray *) textArray;
+-(DMScrollingTicker *) createBlackTextScrollViewWithFrame:(CGRect) frame withTextArray:(NSArray *) textArray;
+
 -(void) createNavigationRightButtonWithTitle:(NSString *) title action:(SEL) action;
 -(void) createNavigationLeftButtonWithTitle:(NSString *) title action:(SEL) action;
 -(FUIButton *) createFUIButtonWithFrame:(CGRect)frame cornerRadius:(float) cornerRadius clickAction:(SEL) action fontSize:(UIFont *) font buttonColor:(UIColor *)buttonColor shadowColor:(UIColor *)shadowColor titleColor:(UIColor *) titleColor withText:(NSString *) text;

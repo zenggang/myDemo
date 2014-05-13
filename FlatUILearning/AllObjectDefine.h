@@ -36,6 +36,8 @@
 #define XINGYUN_ID @"13"
 #define JUPENG_ID @"14" 
 #define GUOMENG_ID @"15"
+#define QUMI_ID @"16"
+#define CHUKONG_ID @"17"
 
 #define SYS_GIF_ID_INT   1
 #define DOMO_ID_INT 2
@@ -52,3 +54,5 @@
 #define XINGYUN_ID_INT 13
 #define JUPENG_ID_INT 14
 #define GUOMENG_ID_INT 15
+#define QUMI_ID_INT 16
+#define CHUKONG_ID_INT 17 

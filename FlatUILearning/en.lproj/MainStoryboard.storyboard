@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12E40" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="O8Z-mo-mgD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5053" systemVersion="12E40" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="O8Z-mo-mgD">
     <dependencies>
         <deployment defaultVersion="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -357,7 +357,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">为了提供更好的后续服务,我们特地开通了微信公共账号:&lt;优惠劵金币兑换信息中心>(微信号: duihuanjinbi).
-	该账号目的是向所有优惠劵系类应用使用金币兑换服务的用户提供:金币任务信息,发布各类奖励/惩罚信息. 此外收集用户反馈,收集用户活动反馈,接受各种意见!
+	该账号目的是向所有金币系列应用使用金币兑换服务的用户提供:金币任务信息,发布各类奖励/惩罚信息. 此外收集用户反馈,收集用户活动反馈,接受各种意见!
 	现在处于推广期,每位关注官方微信账号的用户将会收到30金币的奖励!
 	操作方法是:微信'添加朋友'-'查找公共账号'-'搜索duihuanjinbi'-'添加关注'.最后在对话窗口发送你的绑定QQ号,客服会往您的设备上赠送30金币!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>

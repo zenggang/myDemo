@@ -616,12 +616,12 @@
 
 -(void) showBannerAd
 {
-    if(self.dianruBannarView){
+    if(self.qumiBannerAD){
         [UIView animateWithDuration:1.0f animations:^{
-            self.dianruBannarView.center=CGPointMake(160, 25);
+            self.qumiBannerAD.center=CGPointMake(160, 25);
         } completion:^(BOOL finished) {
             [UIView animateWithDuration:1 delay:4 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-                self.dianruBannarView.center=CGPointMake(160, -25);
+                self.qumiBannerAD.center=CGPointMake(160, -25);
             } completion:^(BOOL finished) {
             }];
         }];

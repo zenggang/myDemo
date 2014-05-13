@@ -41,7 +41,9 @@
     }
     NSLog(@"view %@", self.view);
     if (!isHideStatusBar) {
-        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && [APP_NAME isEqualToString:APPNAME_ZuanZuanZuan]){
+        if (([AppUtilities isIOS6] || [AppUtilities isIOS5]) && ([APP_NAME isEqualToString:APPNAME_ZuanZuanZuan] ||
+                                                                 [APP_NAME isEqualToString:APPNAME_DAZUANPAN] ||
+                                                                 [APP_NAME isEqualToString:APPNAME_YAOQIANZUAN])){
             if(APPDELEGATE.isChangeStatusBarY){
                 [self.view setFrameOriginY:0];
                 [self.view setFrameSizeHeight:[UIScreen mainScreen].bounds.size.height];
@@ -204,6 +206,33 @@
         LPScrollingTickerLabelItem *label = [[LPScrollingTickerLabelItem alloc] initWithTitle:[NSString stringWithFormat:@""]
                                                                                   description:text];
         label.descriptionLabel.textColor=[UIColor midnightBlueColor];
+        label.descriptionLabel.font=[UIFont flatFontOfSize:14];
+        [label layoutSubviews];
+        [sizes addObject:[NSValue valueWithCGSize:label.frame.size]];
+        [l addObject:label];
+    }
+    
+    [scrollingTicker beginAnimationWithViews:l
+                                   direction:LPScrollingDirection_FromRight
+                                       speed:40
+                                       loops:40
+                                completition:^(NSUInteger loopsDone, BOOL isFinished) {
+                                    //NSLog(@"loop %d, finished? %d",loopsDone,isFinished);
+                                }];
+    return scrollingTicker;
+}
+-(DMScrollingTicker *) createBlackTextScrollViewWithFrame:(CGRect) frame withTextArray:(NSArray *) textArray
+{
+    DMScrollingTicker *scrollingTicker = [[DMScrollingTicker alloc] initWithFrame:frame];
+    
+    scrollingTicker.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
+    //[self.view addSubview:scrollingTicker];
+    NSMutableArray *l = [[NSMutableArray alloc] init];
+    NSMutableArray *sizes = [[NSMutableArray alloc] init];
+    for (NSString *text in textArray) {
+        LPScrollingTickerLabelItem *label = [[LPScrollingTickerLabelItem alloc] initWithTitle:[NSString stringWithFormat:@""]
+                                                                                  description:text];
+        label.descriptionLabel.textColor=[UIColor cloudsColor];
         label.descriptionLabel.font=[UIFont flatFontOfSize:14];
         [label layoutSubviews];
         [sizes addObject:[NSValue valueWithCGSize:label.frame.size]];

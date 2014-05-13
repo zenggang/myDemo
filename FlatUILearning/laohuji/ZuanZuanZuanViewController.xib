@@ -103,19 +103,19 @@
         </view>
     </objects>
     <resources>
-        <image name="betOne_btn_clicked.png" width="87" height="39"/>
-        <image name="betOne_btn_nomal.png" width="87" height="39"/>
-        <image name="betTen_btn_clicked.png" width="87" height="39"/>
-        <image name="betTen_btn_nomal.png" width="87" height="39"/>
-        <image name="earnGold_btn_clicked.png" width="72" height="38"/>
-        <image name="earnGold_btn_normal.png" width="72" height="38"/>
-        <image name="exchange_btn_clicked.png" width="87" height="38"/>
-        <image name="exchange_btn_nomal.png" width="87" height="38"/>
+        <image name="betOne_btn_clicked.png" width="87" height="40"/>
+        <image name="betOne_btn_nomal.png" width="87" height="40"/>
+        <image name="betTen_btn_clicked.png" width="87" height="40"/>
+        <image name="betTen_btn_nomal.png" width="87" height="40"/>
+        <image name="earnGold_btn_clicked.png" width="73" height="40"/>
+        <image name="earnGold_btn_normal.png" width="73" height="40"/>
+        <image name="exchange_btn_clicked.png" width="87" height="40"/>
+        <image name="exchange_btn_nomal.png" width="87" height="40"/>
         <image name="laohuji_bg.png" width="320" height="568"/>
-        <image name="line_break.png" width="319" height="2"/>
+        <image name="line_break.png" width="320" height="3"/>
         <image name="music_text.png" width="31" height="18"/>
         <image name="sound_text.png" width="34" height="17"/>
-        <image name="start_btn_clicked.png" width="80" height="80"/>
-        <image name="start_btn_normal.png" width="80" height="80"/>
+        <image name="start_btn_clicked.png" width="82" height="85"/>
+        <image name="start_btn_normal.png" width="82" height="85"/>
     </resources>
 </document>

@@ -34,16 +34,17 @@
 #import "JupengConfig.h"
 #import "JupengWall.h"
 #import "GuoMobWallViewController.h"
-
+#import "QumiOfferWall.h"
+#import "QumiBannerAD.h"
 
 #define exchangeGoldAlertTag 234
 #define goldNotEnoughAlertTag  235
 #define exchangeGoldNotSetNumberAlertTag 236
 #define ReduceGoldSuccessAlertTag 237
 
-@interface BaseGoldViewController : BaseListViewController<DMOfferWallDelegate,immobViewDelegate,DianRuAdWallDelegate,DianRuSDKDelegate,MiidiAdWallShowAppOffersDelegate,MiidiAdWallAwardPointsDelegate
+@interface BaseGoldViewController : BaseListViewController<DMOfferWallDelegate,immobViewDelegate,DianRuAdWallDelegate,MiidiAdWallShowAppOffersDelegate,MiidiAdWallAwardPointsDelegate
 , MiidiAdWallSpendPointsDelegate
-, MiidiAdWallGetPointsDelegate,YJFIntegralWallDelegate,MopanAdWallDelegate,ADCPowerWallViewControllerDelegate,DMOfferWallManagerDelegate,MobiSageOfferWallDelegate,GuHotWallDelegate,GuScoreWallDelegate,GuoMobWallDelegate>
+, MiidiAdWallGetPointsDelegate,YJFIntegralWallDelegate,MopanAdWallDelegate,ADCPowerWallViewControllerDelegate,DMOfferWallManagerDelegate,MobiSageOfferWallDelegate,GuHotWallDelegate,GuScoreWallDelegate,GuoMobWallDelegate,QMOfferWallDelegate,QumiBannerADDelegate>
 
 -(void) afterGoldReloaded;
 -(void) reduceGold;
@@ -52,10 +53,12 @@
 @property (nonatomic,strong) NSString *exchangeNumber;
 @property (nonatomic,assign) BOOL isGuaGuaLeDeduce;
 @property (nonatomic,assign) int guaGuaLeDeduceGoldAmount;
-@property (nonatomic,strong) DianRuSDK *dianruBannarView;
 @property (nonatomic,strong) MopanAdWall *mopanAdWallControl;
 @property (nonatomic,strong) ADCPowerWallViewController *powerWallViewController;
 @property (nonatomic,strong) MobiSageOfferWallViewController *owViewController;
 @property (nonatomic,strong)  GuoMobWallViewController *guoMengWallVc;
+@property (nonatomic,retain)  QumiBannerAD  *qumiBannerAD;
+
+
 
 @end

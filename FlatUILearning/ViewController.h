@@ -10,14 +10,15 @@
 #import "BaseViewController.h"
 #import "iCarousel.h"
 #import "NSMutableArray+SSToolkitAdditions.h"
-#import "DianRuSDK.h"
+#import "QumiBannerAD.h"
 
-@interface ViewController :BaseViewController <iCarouselDataSource, iCarouselDelegate,McDownloadDelegate,DianRuSDKDelegate>
+
+@interface ViewController :BaseViewController <iCarouselDataSource, iCarouselDelegate,McDownloadDelegate,QumiBannerADDelegate>
 
 
 @property (nonatomic,strong) iCarousel *carouseView;
 @property (nonatomic,strong) NSMutableArray *dataArray;
 @property (nonatomic,strong) NSMutableArray *unDownLoadPicArray;
-@property (nonatomic,strong) DianRuSDK *dianruBannarView;
+@property (nonatomic,retain)  QumiBannerAD  *qumiBannerAD;
 
 @end

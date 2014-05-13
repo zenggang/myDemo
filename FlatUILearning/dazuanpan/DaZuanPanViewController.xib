@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5053" systemVersion="12E40" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+    <dependencies>
+        <deployment defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DaZuanPanViewController">
+            <connections>
+                <outlet property="backGroudImageView" destination="FTl-H3-t3S" id="ag8-YD-hpy"/>
+                <outlet property="betOneButton" destination="Lgv-b5-F18" id="eN3-jk-d0E"/>
+                <outlet property="betTenutton" destination="OZ8-rw-jm1" id="RuY-KK-Iru"/>
+                <outlet property="coinGoldLableBgImageView" destination="RTX-k2-fyY" id="P7h-3B-Z3N"/>
+                <outlet property="exchangeButton" destination="akZ-bA-4sD" id="01J-aR-YFn"/>
+                <outlet property="getGoldButton" destination="Zql-j9-QmJ" id="j9Q-3Q-ad1"/>
+                <outlet property="lineBreakImageView" destination="1Bx-Q8-WrC" id="cRf-sa-zKs"/>
+                <outlet property="mainGoldLableBgImageView" destination="7zb-Ra-IIx" id="4b7-rR-Oki"/>
+                <outlet property="musicText" destination="UMK-FN-coa" id="gBb-ax-mGE"/>
+                <outlet property="soundText" destination="W72-r4-pAu" id="kmG-Tk-D5x"/>
+                <outlet property="startButton" destination="vQd-Zs-FaV" id="wpG-vS-6yk"/>
+                <outlet property="view" destination="Dt7-gp-PFa" id="LLg-MX-fRz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Dt7-gp-PFa">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dazuanpan_bg.png" id="FTl-H3-t3S">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vQd-Zs-FaV">
+                    <rect key="frame" x="230" y="335" width="80" height="80"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                    <state key="normal" image="start_btn_normal.png">
+                        <color key="titleColor" red="0.49803924560000001" green="0.19215688110000001" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="start_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OZ8-rw-jm1">
+                    <rect key="frame" x="117" y="404" width="87" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="betTen_btn_nomal.png">
+                        <color key="titleColor" red="0.49803924560000001" green="0.19215688110000001" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="betTen_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Lgv-b5-F18">
+                    <rect key="frame" x="14" y="404" width="87" height="39"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" image="betOne_btn_nomal.png">
+                        <color key="titleColor" red="0.49803924560000001" green="0.19215688110000001" blue="0.1019607931" alpha="1" colorSpace="deviceRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="betOne_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="akZ-bA-4sD">
+                    <rect key="frame" x="145" y="463" width="87" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="exchange_btn_nomal.png">
+                        <color key="titleColor" red="0.20392156859999999" green="0.15686274510000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="exchange_btn_clicked.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zql-j9-QmJ">
+                    <rect key="frame" x="238" y="463" width="72" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" image="earnGold_btn_normal.png">
+                        <color key="titleColor" red="0.20392156859999999" green="0.15686274510000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="highlighted" image="earnGold_btn_clicked.png"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_break.png" id="1Bx-Q8-WrC">
+                    <rect key="frame" x="0.0" y="451" width="320" height="3"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="RTX-k2-fyY">
+                    <rect key="frame" x="15" y="308" width="75" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="7zb-Ra-IIx">
+                    <rect key="frame" x="103" y="308" width="129" height="47"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="music_text.png" id="UMK-FN-coa">
+                    <rect key="frame" x="90" y="463" width="31" height="18"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sound_text.png" id="W72-r4-pAu">
+                    <rect key="frame" x="90" y="489" width="34" height="17"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="betOne_btn_clicked.png" width="87" height="40"/>
+        <image name="betOne_btn_nomal.png" width="87" height="40"/>
+        <image name="betTen_btn_clicked.png" width="87" height="40"/>
+        <image name="betTen_btn_nomal.png" width="87" height="40"/>
+        <image name="dazuanpan_bg.png" width="320" height="568"/>
+        <image name="earnGold_btn_clicked.png" width="73" height="40"/>
+        <image name="earnGold_btn_normal.png" width="73" height="40"/>
+        <image name="exchange_btn_clicked.png" width="87" height="40"/>
+        <image name="exchange_btn_nomal.png" width="87" height="40"/>
+        <image name="line_break.png" width="320" height="3"/>
+        <image name="music_text.png" width="31" height="18"/>
+        <image name="sound_text.png" width="34" height="17"/>
+        <image name="start_btn_clicked.png" width="82" height="85"/>
+        <image name="start_btn_normal.png" width="82" height="85"/>
+    </resources>
+</document>

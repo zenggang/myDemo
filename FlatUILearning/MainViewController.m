@@ -12,6 +12,8 @@
 #import "SetMenuCoreData.h"
 #import "ZuanZuanZuanViewController.h"
 #import "SingleMenuCoreData.h"
+#import "DaZuanPanViewController.h"
+#import "YaoQianZuanViewController.h"
 
 @interface MainViewController ()
 
@@ -52,6 +54,11 @@
         self.topViewController =
         
         [[ZuanZuanZuanViewController alloc] initWithNibName:@"ZuanZuanZuanViewController" bundle:nil];
+    }else if ([APP_NAME isEqualToString:APPNAME_DAZUANPAN]){
+        self.topViewController=[[DaZuanPanViewController alloc] initWithNibName:@"DaZuanPanViewController" bundle:nil];
+        
+    }else if ([APP_NAME isEqualToString:APPNAME_YAOQIANZUAN]){
+        self.topViewController=[[YaoQianZuanViewController alloc] initWithNibName:@"YaoQianZuanViewController" bundle:nil];
     }
 }
 

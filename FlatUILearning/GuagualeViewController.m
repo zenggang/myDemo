@@ -106,13 +106,19 @@
     
 }
 
--(void)didReceiveAdView:(UIView*)adView
+#pragma mark -
+#pragma mark QumiBannerADDelegate Methods
+//加载广告成功后，回调该方法
+- (void)qmAdViewSuccessToLoadAd:(QumiBannerAD *)adView
 {
-    [super didReceiveAdView:adView];
-    if(self.dianruBannarView)
-    {
-        self.dianruBannarView.center=CGPointMake(160, 23);
-    }
+    NSLog(@"banner广告加载成功！");
+    self.qumiBannerAD.center=CGPointMake(160, 23);
+}
+//加载广告失败后，回调该方法
+- (void)qmAdViewFailToLoadAd:(QumiBannerAD *)adView withError:(NSError *)error
+{
+    NSLog(@"banner广告加载失败，失败信息是：%@",error);
+    self.qumiBannerAD.center=CGPointMake(160, 23);
 }
 
 #pragma mark ---customer Actions

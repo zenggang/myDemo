@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DaZuanPan.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>GuaGuaKa.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -19,6 +24,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>YaoQianZuan.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>ZuanZuanZuan.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -28,6 +38,16 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>CD2EB6D51744C1C700A222D6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD81F22F191E2DB90080656C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD9F5BD8190E5CA700100AED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
